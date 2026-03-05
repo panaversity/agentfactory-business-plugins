@@ -9,6 +9,9 @@ Marketplace for business domain agent plugins from **[The AI Agent Factory](http
 | Plugin | Description | Version | Install |
 |--------|-------------|---------|---------|
 | **[islamic-finance](./islamic-finance/)** | 12 product skills, 13 jurisdiction overlays, 4 domain commands for Islamic finance accounting across AAOIFI, IFRS, and local standards | v2.0.0 | `claude plugin install islamic-finance@agentfactory-business` |
+| **[idfa-financial-architect](./idfa-financial-architect/)** | Intent-Driven Financial Architecture (IDFA) — four guardrails, three layers, two skills for human-readable, AI-operable, audit-proof financial models | v2.0.0 | `claude plugin install idfa-financial-architect@agentfactory-business` |
+
+> Individual plugins may have their own license terms. See each plugin's LICENSE file for details.
 
 ---
 
@@ -19,6 +22,7 @@ Marketplace for business domain agent plugins from **[The AI Agent Factory](http
 ```bash
 # Install a plugin
 claude plugin install islamic-finance@agentfactory-business
+claude plugin install idfa-financial-architect@agentfactory-business
 
 # Verify installation
 claude --list-plugins
@@ -35,6 +39,7 @@ claude --list-plugins
 ```bash
 git clone https://github.com/panaversity/agentfactory-business-plugins.git
 claude --plugin-dir ./agentfactory-business-plugins/islamic-finance
+claude --plugin-dir ./agentfactory-business-plugins/idfa-financial-architect
 ```
 
 ---
@@ -54,7 +59,13 @@ agentfactory-business-plugins/
 │   ├── exercises/            # Exercise data (download as zip)
 │   ├── workflow-recipes/     # Operational playbooks (download as zip)
 │   └── references/           # Lookup tables
-└── [future plugins...]       # Ch18, Ch19 plugins planned
+├── idfa-financial-architect/ # IDFA Financial Architect plugin
+│   ├── .claude-plugin/       # Plugin manifest
+│   ├── skills/               # 2 domain skills (auto-loaded)
+│   ├── evals/                # Two-tier eval harness
+│   ├── tests/                # Unit tests
+│   └── examples/             # Reference models
+└── [future plugins...]       # More business domain plugins planned
 ```
 
 ---
@@ -66,6 +77,7 @@ Each plugin is a companion to a specific chapter in The AI Agent Factory:
 | Plugin | Chapter | What You Learn |
 |--------|---------|---------------|
 | islamic-finance | Ch 20: Islamic Finance Domain Agents | Build jurisdiction-aware Islamic finance agents using 3 accounting regimes |
+| idfa-financial-architect | Ch 18: Intent-Driven Financial Architecture | Build audit-proof financial models using Named Ranges, four guardrails, three layers |
 
 ### Downloading Exercise Data
 
@@ -79,6 +91,8 @@ After installing a plugin, download the exercise data:
 | `islamic-finance-full.zip` | Everything | Complete setup / capstone |
 | `islamic-finance-exercise-data.zip` | 14 exercises + reference tables | Chapter exercises |
 | `islamic-finance-workflow-recipes.zip` | 4 operational playbooks | Production workflows |
+| `idfa-financial-architect-full.zip` | Plugin + examples + evals | Complete setup |
+| `idfa-financial-architect-examples.zip` | Example models (GP Waterfall) | Quick start |
 
 3. Unzip into your project:
 
@@ -107,4 +121,4 @@ This marketplace is maintained by [Panaversity](https://github.com/panaversity).
 
 ## License
 
-Apache-2.0 — see [LICENSE](./LICENSE).
+Repository-level: Apache-2.0 — see [LICENSE](./LICENSE). Individual plugins may have their own license terms (see each plugin's LICENSE file).

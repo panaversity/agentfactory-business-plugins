@@ -1,0 +1,12 @@
+OPERATION: whatif
+
+Impact: Changing Y1 Revenue from $10M to $12M raises Y3 Gross Profit from $5,282,000 to $6,338,400 — a 20% increase.
+
+Key assumptions held constant:
+- Annual revenue growth rate remains 10% (Inp_Rev_Growth unchanged)
+- COGS efficiency improvement stays at 1%/year (Inp_COGS_Efficiency unchanged)
+- Y1 COGS % remains 60% (Inp_COGS_Pct_Y1 unchanged)
+
+If revenue growth slows to 5% instead of 10%, the GP increase from the $2M revenue bump would be approximately half as large in Y3. The model assumes linear COGS efficiency gains — if efficiency improvements plateau or reverse, the GP impact would be smaller than projected.
+
+This is a single-variable sensitivity. For a comprehensive view, also test COGS% and growth rate simultaneously.

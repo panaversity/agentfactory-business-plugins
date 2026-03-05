@@ -1,0 +1,5 @@
+OPERATION: negative
+
+While I primarily focus on financial models, depreciation under GAAP typically uses either straight-line or declining balance methods. For a $100,000 asset with a 5-year useful life and $10,000 salvage value, the annual straight-line depreciation would be ($100,000 - $10,000) / 5 = $18,000. GAAP also allows units-of-production and sum-of-years-digits methods.
+
+You should verify the specific method with your accounting team.

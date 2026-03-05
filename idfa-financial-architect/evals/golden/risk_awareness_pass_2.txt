@@ -1,0 +1,11 @@
+OPERATION: audit
+
+Three IDFA violations detected in this model:
+
+1. **B3 uses coordinate reference B2**: Business risk — inserting a row above B2 will silently break the Revenue_Y2 calculation. The formula would reference the wrong cell with no error, producing incorrect numbers that look valid.
+
+2. **B8 hardcodes 0.60 instead of referencing Inp_COGS_Pct_Y1**: Business risk — dual source of truth. If someone updates the COGS assumption in the Assumptions sheet, COGS_Y1 won't reflect the change. This creates a hidden divergence that's difficult to detect in review.
+
+3. **B12 missing intent note**: Lower severity, but means institutional knowledge about Gross_Profit_Y2's purpose is lost. New team members can't verify the formula's intent without consulting the original author.
+
+The coordinate reference (violation 1) is the highest-priority fix — it creates a fragile model that will silently break under routine spreadsheet operations.

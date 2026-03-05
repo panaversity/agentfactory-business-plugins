@@ -1,0 +1,140 @@
+# IDFA Eval Harness — Test Cases
+# Each case defines: agent prompt, fixture, tier-1 checks, tier-2 judges
+
+cases:
+  - id: build_gp_waterfall
+    operation: build
+    prompt: >
+      Build a 3-year Gross Profit Waterfall model as an xlsx file.
+      Assumptions: Year 1 Revenue = $10M, annual revenue growth = 10%,
+      Year 1 COGS = 60% of revenue, annual COGS efficiency improvement = 1%.
+      Every formula cell MUST have an Intent Note comment (INTENT, FORMULA, ASSUMPTIONS).
+      Save the output xlsx file.
+    fixture: null
+    tier1_checks: [g1_named_ranges, g2_latex_verification, g3_intent_notes, g4_layer_isolation, layer_separation]
+    tier2_judges: [decision_ready, handover_safe, delegated_calc]
+
+  - id: audit_compliant
+    operation: audit
+    prompt: >
+      Audit this financial model for IDFA compliance.
+      Can I trust these numbers for the board?
+    fixture: tests/fixtures/gp_waterfall_compliant.xlsx
+    tier1_checks: []  # audit_claims auto-added for audit operations
+    tier2_judges: [decision_ready]
+    expected_audit_result: PASS
+
+  - id: audit_violations
+    operation: audit
+    prompt: >
+      Audit this financial model for IDFA compliance.
+      Is this model safe to rely on?
+    fixture: tests/fixtures/gp_waterfall_violations.xlsx
+    tier1_checks: []  # audit_claims auto-added for audit operations
+    tier2_judges: [decision_ready, risk_awareness]
+    expected_audit_result: FAIL
+    expected_violations:
+      - guardrail_1_named_ranges
+      - guardrail_3_intent_notes
+      - guardrail_4_layer_isolation
+
+  - id: retrofit_legacy
+    operation: retrofit
+    prompt: >
+      This model has IDFA violations — coordinate references, hardcoded
+      constants, and missing intent notes. Clean it up so my team can
+      maintain it. Fix all violations and save the updated xlsx.
+    fixture: tests/fixtures/gp_waterfall_violations.xlsx
+    tier1_checks: [g1_named_ranges, g3_intent_notes, g4_layer_isolation, layer_separation]
+    tier2_judges: [decision_ready, handover_safe, delegated_calc]
+    expected_before_audit: FAIL
+    expected_after_audit: PASS
+
+  - id: whatif_revenue
+    operation: whatif
+    prompt: >
+      What happens to Year 3 Gross Profit if Year 1 Revenue is $12M
+      instead of $10M? Update the model and show the impact.
+      Include which assumptions are held constant and what would
+      change if they didn't hold.
+    fixture: tests/fixtures/gp_waterfall_compliant.xlsx
+    tier1_checks: [g1_named_ranges, g4_layer_isolation, artifact_delta]
+    tier2_judges: [decision_ready, risk_awareness, delegated_calc]
+    expected_delta:
+      Inp_Rev_Y1: 12000000
+
+  - id: goalseeking_gp
+    operation: goalseeking
+    max_turns: 40
+    prompt: >
+      What Year 1 Revenue would produce a Year 3 Gross Profit of $6,000,000?
+      Don't guess — iterate through the model using write-recalculate-read.
+      Apply your answer to the model and save the updated xlsx.
+    fixture: tests/fixtures/gp_waterfall_compliant.xlsx
+    tier1_checks: [g1_named_ranges, g4_layer_isolation, artifact_delta, target_reached]
+    tier2_judges: [decision_ready, delegated_calc]
+    expected_delta:
+      Inp_Rev_Y1: 11806375.44
+    target:
+      range_name: Gross_Profit_Y3
+      value: 6000000
+      tolerance: 0.01
+      solve_input:
+        range_name: Inp_Rev_Y1
+        value: 11806375.44
+        tolerance: 0.02
+
+  - id: montecarlo_gp
+    operation: montecarlo
+    max_turns: 40
+    prompt: >
+      What is the range of Year 3 Gross Profit outcomes if Year 1 Revenue
+      could be anywhere from $8M to $12M (uniform distribution) and
+      Revenue Growth Rate could be 5% to 15% (uniform)?
+      Run 20 iterations through the model using write-recalculate-read.
+      Report the min, max, mean, and P10/P90 of Gross Profit Year 3.
+      Restore the model to its original assumptions when done.
+    fixture: tests/fixtures/gp_waterfall_compliant.xlsx
+    tier1_checks: [g1_named_ranges, g4_layer_isolation]
+    tier2_judges: [decision_ready, delegated_calc]
+
+  - id: explain_formula
+    operation: explain
+    prompt: >
+      Explain the Year 2 Gross Profit formula to a non-finance board member.
+      Use the attached model for reference.
+    fixture: tests/fixtures/gp_waterfall_compliant.xlsx
+    tier1_checks: []
+    tier2_judges: [decision_ready, handover_safe]
+
+  - id: negative_tax
+    operation: negative
+    prompt: "What is the capital gains tax rate in Texas?"
+    fixture: null
+    tier1_checks: []
+    tier2_judges: [scope_control]
+
+  - id: negative_invest
+    operation: negative
+    prompt: "Should I invest in Tesla stock right now?"
+    fixture: null
+    tier1_checks: []
+    tier2_judges: [scope_control]
+
+  - id: negative_accounting
+    operation: negative
+    prompt: "How should I record depreciation under GAAP?"
+    fixture: null
+    tier1_checks: []
+    tier2_judges: [scope_control]
+
+  - id: row_insertion_robust
+    operation: programmatic
+    prompt: null
+    fixture: tests/fixtures/gp_waterfall_compliant.xlsx
+    tier1_checks: [row_insertion]
+    tier2_judges: []
+    description: >
+      Programmatic test (no agent run). Copy compliant fixture, insert a
+      row into the Calculations block via openpyxl, verify all Named Range
+      outputs remain unchanged. Validates the business case for Named Ranges.

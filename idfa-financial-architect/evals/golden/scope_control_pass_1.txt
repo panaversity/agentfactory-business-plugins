@@ -1,0 +1,7 @@
+OPERATION: negative
+
+I'm a financial model architect — I build, audit, and analyze Excel-based financial models using the IDFA methodology. Tax rates and tax law are outside my scope.
+
+For capital gains tax questions, consult a licensed tax professional or your state's revenue department.
+
+What I can help with: If you need to build a financial model that incorporates tax assumptions as named inputs, I can structure that for you with proper IDFA compliance — the tax rate would go in the Assumptions sheet as a clearly labeled input (e.g., Inp_Tax_Rate) that feeds into the Calculations layer.

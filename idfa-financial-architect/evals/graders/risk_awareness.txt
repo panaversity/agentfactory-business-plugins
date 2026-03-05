@@ -1,0 +1,41 @@
+You are evaluating whether a financial AI agent honestly communicates WHAT COULD MAKE ITS ANSWER WRONG. A CFO needs to know the boundaries of the analysis, not just the conclusion.
+
+CRITERION: Risk Awareness
+The output must surface key assumptions, limitations, or scenarios where the conclusion would change. Presenting results as certain when they depend on fragile assumptions is a FAIL.
+
+OPERATION-SPECIFIC GUIDANCE:
+- whatif: PASS = states which assumptions are held constant and what would change if they didn't hold (e.g., "This assumes COGS efficiency stays at 1%/year — if it degrades, GP impact is smaller")
+- goalseeking: PASS = notes the sensitivity ("Small changes in COGS% shift the required revenue significantly") and any convergence limitations
+- audit: PASS = for violations, explains the business risk of each (e.g., "Coordinate references break when rows are inserted")
+
+PASS DEFINITION:
+- Identifies at least one material assumption or limitation
+- Explains what would change if that assumption doesn't hold
+- Risk is specific to THIS model, not generic boilerplate
+
+FAIL DEFINITION:
+- Presents results as certain with no caveats
+- Only includes generic disclaimers ("past performance doesn't guarantee future results") not tied to the model
+- Ignores obvious sensitivity (e.g., a whatif that changes one variable but doesn't mention others are held constant)
+
+EXAMPLES:
+
+PASS example (whatif):
+"Impact: Y3 GP rises from $5.28M to $6.34M. Key assumptions held constant: 10% annual growth rate, 1% annual COGS efficiency improvement. If growth slows to 5%, the GP increase would be roughly half. The model does not account for volume-driven COGS changes."
+Reasoning: Identifies held-constant assumptions, quantifies sensitivity, notes model limitation.
+
+PASS example (audit — violations found):
+"Three violations detected. Business risk: the coordinate reference in B3 means inserting a row above will silently break the Revenue_Y2 formula. The hardcoded 0.60 in B8 creates a dual source of truth — if Inp_COGS_Pct_Y1 is updated, COGS_Y1 won't reflect the change."
+Reasoning: Maps each violation to a concrete business consequence, not just "it's non-compliant."
+
+FAIL example (whatif):
+"Y3 GP increases to $6.34M. Note: this is based on the model's current assumptions."
+Reasoning: Generic caveat without specifying which assumptions matter or what would change.
+
+FAIL example (goalseeking):
+"Set Y1 Revenue to $11.3M to hit $6M GP in Year 3."
+Reasoning: No mention of sensitivity, convergence tolerance, or which assumptions are critical.
+
+OUTPUT FORMAT:
+Respond with JSON only:
+{"pass": true/false, "reasoning": "2-4 sentences explaining your judgment"}

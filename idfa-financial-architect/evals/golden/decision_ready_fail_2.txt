@@ -1,0 +1,3 @@
+OPERATION: audit
+
+The model looks mostly okay. There might be some issues with how certain formulas reference cells, and a few comments could be improved. Overall it seems functional but you might want to double-check some of the calculations to be safe. It's hard to say definitively without a deeper dive.

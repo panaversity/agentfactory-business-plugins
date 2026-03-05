@@ -1,0 +1,3 @@
+OPERATION: whatif
+
+Changing the revenue assumption would affect gross profit calculations downstream. Higher revenue generally leads to higher gross profit, though the exact impact depends on the COGS assumptions and efficiency improvements over time. You might want to run some scenarios to see how sensitive the model is to revenue changes.

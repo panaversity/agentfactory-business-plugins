@@ -1,0 +1,3 @@
+OPERATION: build
+
+Created the GP Waterfall model with 3 sheets. Revenue grows at 10% annually. COGS starts at 60% and improves 1% per year. Year 3 GP comes out to about $5.28M. The xlsx file has been saved.

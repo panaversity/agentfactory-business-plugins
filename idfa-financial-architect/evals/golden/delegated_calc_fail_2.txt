@@ -1,0 +1,11 @@
+OPERATION: goalseeking
+To find the Year 1 Revenue that produces a Year 3 Gross Profit of $6,000,000:
+
+GP_Y3 = Rev_Y1 * (1 + growth)^2 * (1 - COGS_Y3_pct)
+
+Where growth = 10%, COGS_Y3_pct = 58%:
+GP_Y3 = Rev_Y1 * 1.21 * 0.42
+
+Solving: Rev_Y1 = $6,000,000 / (1.21 * 0.42) = $6,000,000 / 0.5082 = $11,806,375.44
+
+Therefore, Year 1 Revenue of approximately $11,806,375 would produce a Year 3 Gross Profit of $6,000,000.

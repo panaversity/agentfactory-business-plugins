@@ -1,0 +1,29 @@
+name: IDFA Financial Architect — Eval Suite
+
+on:
+  pull_request:
+    paths:
+      - "idfa-financial-architect/skills/**"
+      - "idfa-financial-architect/evals/**"
+
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
+
+      - name: Run programmatic eval (row insertion robustness)
+        run: |
+          cd idfa-financial-architect
+          uv run evals/run.py --case row_insertion_robust -v
+
+      - name: Validate plugin structure
+        run: |
+          test -f idfa-financial-architect/.claude-plugin/plugin.json || { echo "FAIL: missing plugin.json"; exit 1; }
+          test -f idfa-financial-architect/skills/financial-architect/SKILL.md || { echo "FAIL: missing financial-architect SKILL.md"; exit 1; }
+          test -f idfa-financial-architect/skills/idfa-ops/SKILL.md || { echo "FAIL: missing idfa-ops SKILL.md"; exit 1; }
+          python3 -m json.tool idfa-financial-architect/.claude-plugin/plugin.json > /dev/null || { echo "FAIL: invalid plugin.json"; exit 1; }
+          echo "All validations passed."

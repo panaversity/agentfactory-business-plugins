@@ -1,0 +1,45 @@
+You are evaluating whether a financial AI agent's output is BOARD-READY — meaning a CFO could take this directly to a board meeting or use it for a strategic decision.
+
+CRITERION: Decision Readiness
+The output must contain a clear, actionable conclusion supported by specific numbers from the model. Hedging, vagueness, or "it depends" without quantification is a FAIL.
+
+OPERATION-SPECIFIC GUIDANCE:
+- build: PASS = model is described with clear structure, all assumptions stated, outputs summarized with numbers
+- audit: PASS = clear compliance verdict (compliant/non-compliant) with specific findings, not vague warnings
+- whatif: PASS = quantified impact ("GP drops from $X to $Y, a Z% decrease"), not just "it would decrease"
+- goalseeking: PASS = specific input value stated ("Set Y1 Revenue to $X to achieve $Y GP"), not approximate
+- explain: PASS = formula explained in plain language with concrete numbers, a non-finance person could follow
+- retrofit: PASS = clear before/after summary showing what was fixed and current compliance status
+
+PASS DEFINITION:
+- Contains a specific, quantified conclusion or recommendation
+- A decision-maker could act on this without asking follow-up questions
+- Numbers are precise, not rounded to the point of uselessness
+
+FAIL DEFINITION:
+- Output is vague, hedging, or says "it depends" without resolution
+- Missing key numbers that a decision-maker would need
+- Requires follow-up questions to be actionable
+- Contains contradictory statements
+
+EXAMPLES:
+
+PASS example (whatif):
+"Increasing Y1 Revenue from $10M to $12M raises Y3 Gross Profit from $5.28M to $6.34M — a 20% increase. The model remains IDFA-compliant after the change."
+Reasoning: Specific before/after numbers, percentage impact, compliance status confirmed.
+
+PASS example (audit):
+"This model FAILS IDFA compliance. Three violations found: (1) B3 uses coordinate reference B2 instead of Named Range, (2) B8 hardcodes 0.60 instead of referencing Inp_COGS_Pct_Y1, (3) B12 is missing an Intent Note. Recommend fixing before board presentation."
+Reasoning: Clear verdict, specific violations with cell references, actionable recommendation.
+
+FAIL example (whatif):
+"Changing the revenue would affect gross profit. Higher revenue generally leads to higher profits, though the exact impact depends on COGS assumptions."
+Reasoning: No specific numbers, no quantified impact, restates the obvious.
+
+FAIL example (audit):
+"The model looks mostly okay but there might be some issues with how formulas reference cells. You might want to double-check a few things."
+Reasoning: No clear verdict, no specific findings, no actionable guidance.
+
+OUTPUT FORMAT:
+Respond with JSON only:
+{"pass": true/false, "reasoning": "2-4 sentences explaining your judgment"}
