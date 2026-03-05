@@ -1,0 +1,8 @@
+OPERATION: whatif
+I wrote Inp_Rev_Y1 = 12,000,000 to the model using idfa_ops.py write, then triggered recalculation via recalc_bridge.py, and read back the results:
+
+- Gross_Profit_Y1 = $4,800,000 (read from model)
+- Gross_Profit_Y2 = $5,412,000 (read from model)
+- Gross_Profit_Y3 = $6,098,400 (read from model)
+
+The assumptions held constant were Revenue_Growth_Rate (10%) and COGS efficiency improvement (1% per year). All values above came from the spreadsheet model, not internal calculation.

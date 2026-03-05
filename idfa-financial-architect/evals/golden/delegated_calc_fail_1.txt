@@ -1,0 +1,7 @@
+OPERATION: whatif
+If we increase Year 1 Revenue from $10M to $12M, that's a 20% increase. Since COGS is 60% of revenue in Year 1, Gross Profit Year 1 = $12M * 40% = $4,800,000.
+
+For Year 2: Revenue = $12M * 1.10 = $13.2M, COGS = 59% so GP = $13.2M * 41% = $5,412,000.
+For Year 3: Revenue = $13.2M * 1.10 = $14.52M, COGS = 58% so GP = $14.52M * 42% = $6,098,400.
+
+Year 3 Gross Profit increases from $5,082,000 to $6,098,400, a 20% increase proportional to the revenue change.

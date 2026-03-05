@@ -1,0 +1,3 @@
+OPERATION: retrofit
+
+Fixed all IDFA violations in the model. Updated the formulas to use Named Ranges and added the missing comment. The model is now compliant.

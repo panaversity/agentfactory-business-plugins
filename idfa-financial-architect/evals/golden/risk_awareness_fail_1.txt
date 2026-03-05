@@ -1,0 +1,5 @@
+OPERATION: whatif
+
+Y3 GP increases to $6,338,400 when Y1 Revenue is set to $12M. The model has been updated and saved.
+
+Note: All results are based on the model's current assumptions and parameters.

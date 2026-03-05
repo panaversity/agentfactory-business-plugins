@@ -1,0 +1,13 @@
+OPERATION: build
+
+Model structure:
+- **Assumptions sheet**: 4 input parameters (Inp_Rev_Y1, Inp_Rev_Growth, Inp_COGS_Pct_Y1, Inp_COGS_Efficiency) — these are the only cells a user should modify
+- **Calculations sheet**: 12 derived formulas, all using Named Range references exclusively — no cell coordinates. Revenue cascades through growth, COGS through efficiency gains, then GP = Revenue - COGS per year
+- **Output sheet**: Summary table pulling from Calculations via Named Ranges
+
+Design decisions:
+- Named Ranges used everywhere to survive row/column insertion without breakage
+- Intent notes on every formula cell explain the business logic, not just the math
+- All assumptions isolated in one sheet — changing a single input propagates correctly through the entire model
+
+To modify: update values in the Assumptions sheet. Calculations and Output update automatically. To add Year 4, follow the pattern: add Revenue_Y4, COGS_Pct_Y4, COGS_Y4, Gross_Profit_Y4 with the same Named Range convention.

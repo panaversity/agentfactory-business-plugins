@@ -1,0 +1,13 @@
+OPERATION: audit
+
+This model FAILS IDFA compliance. Three violations found:
+
+1. **Guardrail 1 — Named Range Priority**: Cell B3 in Calculations uses coordinate reference `=B2*1.10` instead of `=Revenue_Y1*(1+Inp_Rev_Growth)`. This will break silently if rows are inserted above B2.
+
+2. **Guardrail 4 — Layer Isolation**: Two cells contain hardcoded constants:
+   - B3: `1.10` should reference `Inp_Rev_Growth`
+   - B8: `0.60` should reference `COGS_Pct_Y1`
+
+3. **Guardrail 3 — Intent Notes**: Cell B12 (Gross_Profit_Y2) is missing an intent note comment.
+
+**Recommendation**: Do not present this model to the board in its current state. Run a retrofit to fix all three violation types before relying on these numbers.

@@ -1,0 +1,16 @@
+OPERATION: retrofit
+
+Changes made to fix IDFA compliance:
+
+1. **B3 (Revenue_Y2)**: Changed `=B2*1.10` to `=Revenue_Y1*(1+Inp_Rev_Growth)`
+   - Why: The coordinate reference `B2` breaks when rows are inserted. The hardcoded `1.10` duplicated the growth assumption, creating a dual source of truth.
+   - Verification: Revenue_Y2 still resolves to $11M (same result, safer formula).
+
+2. **B8 (COGS_Y1)**: Changed `=Revenue_Y1*0.60` to `=Revenue_Y1*COGS_Pct_Y1`
+   - Why: The hardcoded `0.60` ignores the Inp_COGS_Pct_Y1 assumption. If someone changes COGS% in Assumptions, this cell wouldn't update.
+   - Verification: COGS_Y1 still resolves to $6M.
+
+3. **B12 (Gross_Profit_Y2)**: Added intent note: "INTENT: Year 2 Gross Profit = revenue - COGS"
+   - Why: Every formula cell needs documentation for audit trail and team onboarding.
+
+**Post-retrofit audit**: All 4 IDFA guardrails now PASS. The model is safe for board presentation.

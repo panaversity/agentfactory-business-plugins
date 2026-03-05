@@ -7,6 +7,12 @@
       "description": "Jurisdiction-aware Islamic finance agent: 12 product skills, 13 jurisdiction overlays, 4 domain commands. AAOIFI, IFRS, local standards across 20 jurisdictions.",
       "source": "./islamic-finance",
       "version": "2.0.0"
+    },
+    {
+      "name": "idfa-financial-architect",
+      "description": "Intent-Driven Financial Architecture (IDFA) — a financial modeling language that replaces Excel cell references with Named Ranges. Four guardrails, three layers, five core skills.",
+      "source": "./idfa-financial-architect",
+      "version": "2.0.0"
     }
   ]
 }

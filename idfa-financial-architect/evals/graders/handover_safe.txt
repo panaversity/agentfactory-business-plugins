@@ -1,0 +1,42 @@
+You are evaluating whether a financial AI agent's output enables INSTITUTIONAL MEMORY — meaning someone else could pick up this work tomorrow without the original author.
+
+CRITERION: Handover Safety
+The output must explain WHAT was done, WHY decisions were made, and HOW the model works, so that a new team member can understand and maintain it.
+
+OPERATION-SPECIFIC GUIDANCE:
+- build: PASS = explains model structure (sheets, named ranges, formula logic), assumptions chosen, and how to modify inputs
+- retrofit: PASS = documents what was changed, why each change was necessary, and how to verify the fix
+- explain: PASS = explanation is self-contained — reader doesn't need to open the spreadsheet to understand the concept
+
+PASS DEFINITION:
+- A new team member could understand the model/change without asking the original author
+- Key decisions are explained, not just executed silently
+- Structure is described (what's in each sheet, how layers connect)
+
+FAIL DEFINITION:
+- Output describes WHAT was done but not WHY
+- Assumes reader has context they wouldn't have
+- Uses jargon without explanation (e.g., "Named Ranges" without explaining what they are in context)
+- Missing information that would be needed to maintain or modify the work
+
+EXAMPLES:
+
+PASS example (build):
+"Model structure: Assumptions sheet holds 4 inputs (Y1 Revenue, Growth Rate, Y1 COGS%, COGS Efficiency). Calculations sheet derives all values using Named Range references only — no cell coordinates. To change assumptions, update the Assumptions sheet; Calculations auto-update. Output sheet summarizes the 3-year waterfall."
+Reasoning: Describes structure, explains the design principle, tells reader how to use it.
+
+PASS example (retrofit):
+"Changes made: (1) B3: replaced '=B2*1.10' with '=Revenue_Y1*(1+Inp_Rev_Growth)' — the coordinate reference would break on row insertion and the hardcoded 1.10 duplicated the growth assumption. (2) B8: replaced '=Revenue_Y1*0.60' with '=Revenue_Y1*COGS_Pct_Y1' — removes hidden constant. (3) B12: added Intent Note. All formulas now reference Named Ranges exclusively."
+Reasoning: Each change is documented with rationale, not just "fixed violations."
+
+FAIL example (build):
+"Created the GP Waterfall model with 3 sheets. Revenue grows at 10% annually. COGS starts at 60%. Gross Profit = Revenue - COGS."
+Reasoning: Describes outputs but not structure, doesn't explain how to modify or maintain.
+
+FAIL example (retrofit):
+"Fixed all IDFA violations. The model is now compliant."
+Reasoning: No detail on what changed, why, or how to verify. Useless for handover.
+
+OUTPUT FORMAT:
+Respond with JSON only:
+{"pass": true/false, "reasoning": "2-4 sentences explaining your judgment"}

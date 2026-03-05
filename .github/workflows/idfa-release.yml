@@ -1,0 +1,102 @@
+name: IDFA Financial Architect — Build Downloadable Zips
+
+on:
+  push:
+    tags:
+      - "idfa-v*"
+  workflow_dispatch:
+    inputs:
+      plugin:
+        description: "Plugin to release"
+        default: "idfa-financial-architect"
+
+permissions:
+  contents: write
+
+env:
+  PLUGIN: idfa-financial-architect
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate plugin structure
+        run: |
+          PLUGIN_DIR="${PLUGIN}"
+
+          echo "Checking plugin structure..."
+          test -f "${PLUGIN_DIR}/.claude-plugin/plugin.json" || { echo "FAIL: missing plugin.json"; exit 1; }
+          test -d "${PLUGIN_DIR}/skills" || { echo "FAIL: missing skills/"; exit 1; }
+
+          for skill_dir in "${PLUGIN_DIR}"/skills/*/; do
+            skill_name=$(basename "$skill_dir")
+            skill_file="${skill_dir}SKILL.md"
+            test -f "$skill_file" || { echo "FAIL: ${skill_name} missing SKILL.md"; exit 1; }
+            grep -q "^name:" "$skill_file" || { echo "FAIL: ${skill_name} missing name field"; exit 1; }
+            grep -q "^description:" "$skill_file" || { echo "FAIL: ${skill_name} missing description field"; exit 1; }
+            echo "OK: ${skill_name}"
+          done
+
+          python3 -m json.tool "${PLUGIN_DIR}/.claude-plugin/plugin.json" > /dev/null || { echo "FAIL: invalid plugin.json"; exit 1; }
+          python3 -m json.tool marketplace.json > /dev/null || { echo "FAIL: invalid marketplace.json"; exit 1; }
+
+          echo "All validations passed."
+
+  build-zips:
+    needs: validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create download zips
+        run: |
+          mkdir -p dist
+          cd "${PLUGIN}"
+
+          zip -r ../dist/${PLUGIN}-full.zip \
+            . -x '*.git*' -x '*/.DS_Store'
+
+          if [ -d examples ]; then
+            zip -r ../dist/${PLUGIN}-examples.zip \
+              examples/ -x '*.git*'
+          fi
+
+          cd ..
+          echo "Built zips:"
+          ls -lh dist/
+
+      - name: Extract version from tag
+        id: version
+        run: |
+          TAG="${GITHUB_REF_NAME}"
+          VERSION="${TAG#idfa-}"
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
+          echo "Version: ${VERSION}"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: "${{ env.PLUGIN }} ${{ steps.version.outputs.version }}"
+          files: dist/*.zip
+          body: |
+            ## IDFA Financial Architect Plugin ${{ steps.version.outputs.version }}
+
+            ### Install
+            ```bash
+            claude plugin install idfa-financial-architect@agentfactory-business
+            ```
+
+            ### Downloads
+
+            | File | Contents | For |
+            |------|----------|-----|
+            | `idfa-financial-architect-full.zip` | Plugin + examples + evals | Complete setup |
+            | `idfa-financial-architect-examples.zip` | Example models (GP Waterfall) | Quick start |
+
+            ### Quick Start
+            1. Install the plugin (command above)
+            2. Open any financial model conversation
+            3. The plugin auto-activates with four IDFA guardrails

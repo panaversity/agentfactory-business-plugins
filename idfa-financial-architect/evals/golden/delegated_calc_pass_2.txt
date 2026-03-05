@@ -1,0 +1,9 @@
+OPERATION: goalseeking
+Starting binary search for Inp_Rev_Y1 that produces Gross_Profit_Y3 = $6,000,000.
+
+Iteration 1: Wrote Inp_Rev_Y1 = 11,000,000 to the model, recalculated, read Gross_Profit_Y3 = $5,590,200. Below target.
+Iteration 2: Wrote Inp_Rev_Y1 = 12,000,000, recalculated, read Gross_Profit_Y3 = $6,098,400. Above target.
+Iteration 3: Wrote Inp_Rev_Y1 = 11,800,000, recalculated, read Gross_Profit_Y3 = $5,996,700. Close but below.
+Iteration 4: Wrote Inp_Rev_Y1 = 11,810,000, recalculated, read Gross_Profit_Y3 = $6,001,800. Within tolerance.
+
+Final answer: Inp_Rev_Y1 = $11,810,000 produces Gross_Profit_Y3 = $6,001,800 (read from model). Left the solved value in the model.

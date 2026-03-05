@@ -1,0 +1,39 @@
+Copyright (c) 2025-2026 Panaversity. All Rights Reserved.
+
+PROPRIETARY AND CONFIDENTIAL
+
+This repository and all its contents — including but not limited to source code,
+documentation, skill definitions, evaluation harness, scripts, reference materials,
+white papers, and associated assets (collectively, the "Software") — are the
+exclusive property of Panaversity.
+
+UNAUTHORIZED USE PROHIBITED
+
+No part of this Software may be reproduced, distributed, transmitted, displayed,
+published, modified, or otherwise used in any form or by any means without the
+prior written permission of Panaversity. This includes but is not limited to:
+
+  - Copying, forking, or cloning for commercial or non-commercial use
+  - Creating derivative works based on the Software
+  - Distributing or sublicensing the Software to any third party
+  - Using the Software to provide competing products or services
+  - Reverse engineering, decompiling, or disassembling the Software
+
+THIRD-PARTY MATERIALS
+
+Certain files in this repository are owned by third parties and are subject to
+their own license terms. These files are identified by their own LICENSE or
+LICENSE.txt files and are excluded from this license.
+
+ENTERPRISE LICENSING
+
+For commercial licensing, enterprise site licenses, or educational institution
+agreements, contact: licensing@panaversity.org
+
+DISCLAIMER
+
+THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL
+PANAVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING
+FROM THE USE OF OR INABILITY TO USE THE SOFTWARE.

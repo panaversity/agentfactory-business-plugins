@@ -1,0 +1,7 @@
+OPERATION: whatif
+
+Increasing Y1 Revenue from $10M to $12M raises Year 3 Gross Profit from $5,282,000 to $6,338,400 — a 20% increase. Revenue compounds through the growth rate, so the impact amplifies in outer years.
+
+The model remains IDFA-compliant after the change. All formulas still reference Named Ranges exclusively, and intent notes are preserved. The updated xlsx is saved with Inp_Rev_Y1 set to 12,000,000.
+
+Summary: A $2M increase in Y1 revenue produces an additional $1.06M in Y3 GP. The 3-year cumulative GP impact is approximately $2.85M.

@@ -1,0 +1,12 @@
+{
+  "name": "idfa-financial-architect",
+  "description": "Intent-Driven Financial Architecture (IDFA) — build financial models that are human-readable, AI-operable, and audit-proof. Auto-activates on financial modelling tasks.",
+  "version": "2.0.0",
+  "author": {
+    "name": "Panaversity",
+    "url": "https://panaversity.org"
+  },
+  "license": "Proprietary",
+  "repository": "https://github.com/panaversity/agentfactory-business-plugins",
+  "homepage": "https://panaversity.org"
+}

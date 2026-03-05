@@ -1,0 +1,3 @@
+OPERATION: audit
+
+The model has three violations. Cell B3 uses a coordinate reference, B8 has a hardcoded constant, and B12 is missing an intent note. Recommend fixing these before using the model.
