@@ -1,0 +1,35 @@
+name: Islamic Finance — Eval Suite
+
+on:
+  pull_request:
+    paths:
+      - "islamic-finance/skills/**"
+      - "islamic-finance/commands/**"
+      - "islamic-finance/evals/**"
+
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
+
+      - name: Run routing validation
+        run: |
+          cd islamic-finance
+          uv run scripts/validate-routing.py
+
+      - name: Validate golden files exist
+        run: |
+          test -f islamic-finance/evals/routing-golden.json
+          test -f islamic-finance/evals/product-golden.json
+          python3 -c "
+          import json
+          r = json.load(open('islamic-finance/evals/routing-golden.json'))
+          assert len(r) >= 13, f'Expected 13+ routing cases, got {len(r)}'
+          print(f'Routing golden: {len(r)} cases')
+          p = json.load(open('islamic-finance/evals/product-golden.json'))
+          print(f'Product golden: {len(p)} cases')
+          "

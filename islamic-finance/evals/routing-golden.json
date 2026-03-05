@@ -1,0 +1,93 @@
+[
+  {
+    "jurisdiction": "Bahrain",
+    "query": "Process a murabaha transaction for a Bahrain-regulated IFI",
+    "expected_framework": "AAOIFI FAS 2",
+    "expected_income_label": "Murabaha income",
+    "expected_key_disclosure": "Shariah compliance accounting policy"
+  },
+  {
+    "jurisdiction": "Qatar",
+    "query": "Record an ijarah-imb lease for a Qatari financial institution",
+    "expected_framework": "AAOIFI FAS 8 / FAS 32",
+    "expected_income_label": "Ijarah rental income",
+    "expected_key_disclosure": "SSB approval of lease structure"
+  },
+  {
+    "jurisdiction": "Malaysia",
+    "query": "Classify a sukuk musharakah for a Malaysian issuer",
+    "expected_framework": "MFRS 9 / MFRS 132",
+    "expected_income_label": "Profit distributed to sukuk holders",
+    "expected_key_disclosure": "SC Malaysia SRI Framework compliance"
+  },
+  {
+    "jurisdiction": "Saudi Arabia",
+    "query": "Compute zakat for a Saudi financial institution under ZATCA rules",
+    "expected_framework": "IFRS with SAMA Islamic guidance",
+    "expected_income_label": "Finance income (Shariah-compliant)",
+    "expected_key_disclosure": "ZATCA zakat base computation"
+  },
+  {
+    "jurisdiction": "UAE",
+    "query": "Record a wakala deposit for a UAE bank",
+    "expected_framework": "IFRS with CBUAE Islamic guidance",
+    "expected_income_label": "Wakala profit",
+    "expected_key_disclosure": "Central Bank UAE prudential requirements"
+  },
+  {
+    "jurisdiction": "UK",
+    "query": "Process a diminishing musharaka home finance for a UK customer",
+    "expected_framework": "IFRS (FCA-regulated, no Islamic-specific overlay)",
+    "expected_income_label": "Rental income / profit share",
+    "expected_key_disclosure": "FCA consumer protection disclosure"
+  },
+  {
+    "jurisdiction": "Kuwait",
+    "query": "Record takaful contributions for a Kuwaiti takaful operator",
+    "expected_framework": "IFRS with CBK Islamic banking instructions",
+    "expected_income_label": "Takaful contribution income",
+    "expected_key_disclosure": "CBK Islamic banking circular compliance"
+  },
+  {
+    "jurisdiction": "Oman",
+    "query": "Process a murabaha auto finance for an Omani Islamic window",
+    "expected_framework": "IFRS with CBO Islamic banking framework",
+    "expected_income_label": "Murabaha income",
+    "expected_key_disclosure": "CBO Islamic banking regulatory framework"
+  },
+  {
+    "jurisdiction": "Pakistan",
+    "query": "Record a diminishing musharaka home finance for a Pakistani bank",
+    "expected_framework": "IFRS with SBP Shariah governance framework",
+    "expected_income_label": "Musharaka rental income",
+    "expected_key_disclosure": "SBP Shariah compliance certificate"
+  },
+  {
+    "jurisdiction": "Indonesia",
+    "query": "Account for a sukuk negara (government sukuk) investment in Indonesia",
+    "expected_framework": "PSAK 110 (Sukuk Accounting)",
+    "expected_income_label": "Bagi hasil sukuk",
+    "expected_key_disclosure": "OJK Shariah compliance reporting"
+  },
+  {
+    "jurisdiction": "Nigeria",
+    "query": "Process a murabaha trade finance for a Nigerian non-interest bank",
+    "expected_framework": "IFRS with CBN non-interest banking guidelines",
+    "expected_income_label": "Murabaha profit income",
+    "expected_key_disclosure": "CBN AMCON non-interest banking framework"
+  },
+  {
+    "jurisdiction": "Turkey",
+    "query": "Record a participation fund sukuk for a Turkish participation bank",
+    "expected_framework": "TFRS (Turkish IFRS) with BDDK participation banking regulation",
+    "expected_income_label": "Kar payi geliri (profit share income)",
+    "expected_key_disclosure": "BDDK participation banking capital adequacy"
+  },
+  {
+    "jurisdiction": "GCC Cross-Border",
+    "query": "Consolidate a GCC group with IFIs in Bahrain, UAE, and Saudi Arabia",
+    "expected_framework": "AAOIFI primary + IFRS reconciliation for cross-border consolidation",
+    "expected_income_label": "Per-subsidiary: jurisdiction-specific labels",
+    "expected_key_disclosure": "Intra-group elimination of Islamic financing arrangements"
+  }
+]

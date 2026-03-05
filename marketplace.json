@@ -1,0 +1,12 @@
+{
+  "name": "agentfactory-business",
+  "description": "Business domain agent plugins from The AI Agent Factory — Part 3: Business Domain Agent Workflows",
+  "plugins": [
+    {
+      "name": "islamic-finance",
+      "description": "Jurisdiction-aware Islamic finance agent: 12 product skills, 13 jurisdiction overlays, 4 domain commands. AAOIFI, IFRS, local standards across 20 jurisdictions.",
+      "source": "./islamic-finance",
+      "version": "2.0.0"
+    }
+  ]
+}

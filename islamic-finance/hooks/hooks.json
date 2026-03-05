@@ -1,0 +1,25 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "The Islamic Finance Domain Agents plugin (v2.0.0) is active. Capabilities: 12 product skills, 13 jurisdiction overlays across 3 accounting regimes (AAOIFI, IFRS with Islamic guidance, local standards). Commands available: /if-journal (journal entries and schedules), /if-compare (cross-jurisdiction comparison), /if-screen (Shariah screening), /if-zakat (zakat computation). The router auto-activates on any Islamic finance query. $ARGUMENTS"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "Check if this output involves Islamic finance accounting. If it does NOT contain Islamic finance content, respond with just 'OK'. If it DOES contain Islamic finance content, verify these 3 rules: (1) Framework labels match the jurisdiction — AAOIFI-primary jurisdictions (Bahrain, Qatar) must NOT use IFRS default labels like 'Interest income' or 'Financial liability'. (2) Income recognition labels are jurisdiction-correct — e.g., 'Murabaha income' not 'Interest income', 'Profit distributed to sukuk holders' not 'Coupon payment'. (3) Any item requiring Shariah Supervisory Board review is flagged, not silently resolved. Report: OK if all pass, or list specific violations. $ARGUMENTS"
+          }
+        ]
+      }
+    ]
+  }
+}

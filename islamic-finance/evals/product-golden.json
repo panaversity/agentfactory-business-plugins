@@ -1,0 +1,71 @@
+[
+  {
+    "product": "murabaha",
+    "jurisdiction": "bahrain",
+    "scenario": "BHD 500K vehicle, 18 months, 18% markup",
+    "expected_contains": [
+      "Murabaha income",
+      "Deferred profit",
+      "AAOIFI FAS 2",
+      "Cost of murabaha asset"
+    ],
+    "must_not_contain": [
+      "Interest income",
+      "Financial liability at amortised cost",
+      "IFRS 9"
+    ]
+  },
+  {
+    "product": "ijarah-imb",
+    "jurisdiction": "malaysia",
+    "scenario": "MYR 2M property, 20 years, diminishing balance",
+    "expected_contains": [
+      "Ijarah rental income",
+      "Right-of-use asset",
+      "MFRS 16"
+    ],
+    "must_not_contain": ["Interest income", "Finance lease"]
+  },
+  {
+    "product": "sukuk-issuer",
+    "jurisdiction": "saudi",
+    "scenario": "SAR 5B wakala sukuk, 7 years",
+    "expected_contains": [
+      "Sukuk liability",
+      "Periodic distribution",
+      "SAMA guidelines"
+    ],
+    "must_not_contain": ["Bond", "Coupon", "Interest expense"]
+  },
+  {
+    "product": "takaful-ifrs17",
+    "jurisdiction": "bahrain",
+    "scenario": "Family takaful, BHD 10M contributions, AAOIFI FAS 19",
+    "expected_contains": [
+      "Participants' fund",
+      "Takaful contribution",
+      "Qard hasan",
+      "Surplus distribution"
+    ],
+    "must_not_contain": ["Premium income", "Policyholder", "Insurance contract"]
+  },
+  {
+    "product": "zakat-global",
+    "jurisdiction": "saudi",
+    "scenario": "SAR 40B equity, reserves 28B, retained earnings 18B, provisions 6B",
+    "expected_contains": ["Zakat base", "ZATCA", "2.5%", "Equity method"],
+    "must_not_contain": ["Tax", "Income tax"]
+  },
+  {
+    "product": "shariah-screening-global",
+    "jurisdiction": "malaysia",
+    "scenario": "Company with debt/TA 0.35, cash+receivables/TA 0.28",
+    "expected_contains": [
+      "SC Malaysia",
+      "Shariah-compliant",
+      "debt ratio",
+      "benchmark"
+    ],
+    "must_not_contain": ["Haram", "Prohibited"]
+  }
+]
