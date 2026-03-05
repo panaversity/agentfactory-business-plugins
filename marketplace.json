@@ -13,6 +13,18 @@
       "description": "Intent-Driven Financial Architecture (IDFA) — a financial modeling language that replaces Excel cell references with Named Ranges. Four guardrails, three layers, five core skills.",
       "source": "./idfa-financial-architect",
       "version": "2.0.0"
+    },
+    {
+      "name": "banking",
+      "description": "Jurisdiction-aware banking regulatory agent: 16 product skills, 7 jurisdiction overlays, 4 domain commands. IFRS 9 ECL, Basel III/IV capital and liquidity, AML/KYC/sanctions, bank reconciliation across UK, EU, US, Australia, Singapore, UAE, Pakistan.",
+      "source": "./banking",
+      "version": "1.0.0"
+    },
+    {
+      "name": "legal-ops",
+      "description": "Legal Operations and Compliance agent: 8 product skills, 5 jurisdiction overlays, 4 domain commands. Contract review, NDA triage, IP protection, regulatory monitoring, DSAR management across UK, EU, US, Pakistan, and UAE.",
+      "source": "./legal-ops",
+      "version": "1.0.0"
     }
   ]
 }

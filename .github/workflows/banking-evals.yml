@@ -1,0 +1,52 @@
+name: Banking — Eval Suite
+
+on:
+  pull_request:
+    paths:
+      - "banking/skills/**"
+      - "banking/commands/**"
+      - "banking/evals/**"
+
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
+
+      - name: Validate skill structure
+        run: |
+          cd banking
+          for skill_dir in skills/*/; do
+            skill_name=$(basename "$skill_dir")
+            skill_file="${skill_dir}SKILL.md"
+            test -f "$skill_file" || { echo "FAIL: ${skill_name} missing SKILL.md"; exit 1; }
+            grep -q "^name:" "$skill_file" || { echo "FAIL: ${skill_name} missing name field"; exit 1; }
+            grep -q "^description:" "$skill_file" || { echo "FAIL: ${skill_name} missing description field"; exit 1; }
+            echo "OK: ${skill_name}"
+          done
+
+      - name: Validate eval cases
+        run: |
+          cd banking
+          uv run --with pyyaml python3 -c "
+          import yaml
+          with open('evals/cases.yaml') as f:
+              data = yaml.safe_load(f)
+          cases = data['cases']
+          assert len(cases) >= 10, f'Expected 10+ eval cases, got {len(cases)}'
+          categories = set(c.get('category') for c in cases)
+          print(f'Eval cases: {len(cases)} across {categories}')
+          for c in cases:
+              assert 'id' in c, f'Case missing id: {c}'
+              assert 'prompt' in c, f'Case {c[\"id\"]} missing prompt'
+              assert 'content_checks' in c, f'Case {c[\"id\"]} missing content_checks'
+          print('All eval cases valid.')
+          "
+
+      - name: Dry-run eval harness
+        run: |
+          cd banking
+          uv run evals/run.py --dry-run

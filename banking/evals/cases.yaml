@@ -1,0 +1,137 @@
+# Banking Eval Harness -- Test Cases
+# Each case defines: prompt, expected routing, expected content checks
+
+cases:
+  # --- Routing Tests ---
+  - id: route_ifrs9_ecl
+    category: routing
+    prompt: "Calculate the ECL for a UK mortgage portfolio with 500 facilities."
+    expected_skill: ifrs9-ecl
+    expected_jurisdiction: uk-pra
+    content_checks:
+      - "GOVERNING STANDARD"
+      - "IFRS 9"
+      - "PD"
+      - "LGD"
+      - "EAD"
+
+  - id: route_staging
+    category: routing
+    prompt: "A borrower is 35 days past due. What stage should this be under IFRS 9?"
+    expected_skill: ifrs9-staging
+    expected_jurisdiction: null
+    content_checks:
+      - "Stage 2"
+      - "rebuttable presumption"
+      - "30 days"
+
+  - id: route_basel_capital
+    category: routing
+    prompt: "Our CET1 ratio dropped to 9.5%. Are we in the MDA restriction zone under UK PRA rules?"
+    expected_skill: basel-capital
+    expected_jurisdiction: uk-pra
+    content_checks:
+      - "MDA"
+      - "combined buffer"
+      - "CCB"
+
+  - id: route_lcr
+    category: routing
+    prompt: "Calculate our LCR given these HQLA and outflow figures for EU reporting."
+    expected_skill: liquidity-lcr
+    expected_jurisdiction: eu-crr
+    content_checks:
+      - "HQLA"
+      - "75%"
+      - "inflow cap"
+
+  - id: route_aml
+    category: routing
+    prompt: "We have a structuring alert -- customer made 5 cash deposits of GBP 8,000 each in one week."
+    expected_skill: aml-typologies
+    expected_jurisdiction: null
+    content_checks:
+      - "structuring"
+      - "smurfing"
+      - "reporting threshold"
+
+  - id: route_sanctions
+    category: routing
+    prompt: "A payment to Rostec has been flagged by our sanctions screening system."
+    expected_skill: sanctions-screening
+    expected_jurisdiction: null
+    content_checks:
+      - "SDN"
+      - "block"
+      - "OFAC"
+
+  - id: route_recon
+    category: routing
+    prompt: "Perform the daily nostro reconciliation for our USD account with JPMorgan."
+    expected_skill: bank-reconciliation
+    expected_jurisdiction: null
+    content_checks:
+      - "matching hierarchy"
+      - "break"
+
+  - id: route_frtb
+    category: routing
+    prompt: "Calculate market risk RWA under FRTB standardised approach for our trading book."
+    expected_skill: basel-rwa-market
+    expected_jurisdiction: null
+    content_checks:
+      - "SBM"
+      - "DRC"
+      - "RRAO"
+
+  # --- Domain Accuracy Tests ---
+  - id: ecl_formula_accuracy
+    category: accuracy
+    prompt: >
+      A UK bank has a Stage 1 retail mortgage with EAD GBP 200,000,
+      12-month PD of 0.8%, and LGD of 25%. Calculate the 12-month ECL.
+    expected_answer: "400"
+    tolerance: 1
+    content_checks:
+      - "ECL"
+      - "Stage 1"
+      - "12-month"
+
+  - id: stage3_interest_rule
+    category: accuracy
+    prompt: >
+      Should Stage 3 interest income be recognised on the gross carrying
+      amount or the net carrying amount under IFRS 9?
+    expected_answer: "net"
+    content_checks:
+      - "NET"
+      - "gross minus ECL"
+
+  - id: us_cecl_guard
+    category: accuracy
+    prompt: >
+      A US bank wants to calculate IFRS 9 Stage 1 ECL for its loan portfolio.
+    expected_answer: null
+    content_checks:
+      - "CECL"
+      - "ASC 326"
+      - "not IFRS 9"
+
+  # --- Negative / Scope Control Tests ---
+  - id: negative_investment_advice
+    category: negative
+    prompt: "Should I buy bank stocks given the current interest rate environment?"
+    content_checks:
+      - "outside"
+
+  - id: negative_tax
+    category: negative
+    prompt: "What is the corporate tax rate in the UK?"
+    content_checks:
+      - "outside"
+
+  - id: negative_ifrs16
+    category: negative
+    prompt: "How should we account for our office lease under IFRS 16?"
+    content_checks:
+      - "outside"

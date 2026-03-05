@@ -1,0 +1,31 @@
+{
+  "name": "banking",
+  "version": "1.0.0",
+  "description": "Jurisdiction-aware banking regulatory domain agent. 16 product skills (IFRS 9, Basel III/IV, AML/KYC, sanctions, reconciliation), 7 jurisdiction overlays, 4 domain commands. Covers IFRS 9 ECL, Basel capital and liquidity, AML/CFT compliance, and bank reconciliation across UK, EU, US, Australia, Singapore, UAE, and Pakistan.",
+  "author": {
+    "name": "Panaversity",
+    "url": "https://github.com/panaversity"
+  },
+  "homepage": "https://agentfactory.panaversity.org",
+  "repository": "https://github.com/panaversity/agentfactory-business-plugins",
+  "license": "Apache-2.0",
+  "keywords": [
+    "banking",
+    "ifrs9",
+    "ecl",
+    "basel",
+    "capital-adequacy",
+    "rwa",
+    "lcr",
+    "nsfr",
+    "aml",
+    "kyc",
+    "sanctions",
+    "sar",
+    "reconciliation",
+    "stress-testing",
+    "frtb",
+    "jurisdiction",
+    "domain-agent"
+  ]
+}
