@@ -1,0 +1,125 @@
+# Sales, RevOps & Marketing Eval Harness -- Test Cases
+# Each case defines: prompt, expected routing, expected content checks
+
+cases:
+  # --- Routing Tests ---
+  - id: route_prospect_research
+    category: routing
+    prompt: "Research Sarah Chen, VP Operations at Meridian Logistics, Leeds UK. We sell workflow automation."
+    expected_skill: prospect-research
+    content_checks:
+      - "PROSPECT RESEARCH BRIEF"
+      - "ICP"
+      - "VERIFY DATA"
+
+  - id: route_lead_scoring
+    category: routing
+    prompt: "Score this lead: Meridian Logistics, 380 employees, UK 3PL, just won a major contract."
+    expected_skill: lead-scoring
+    content_checks:
+      - "FIT SCORE"
+      - "TIMING SCORE"
+      - "ENGAGEMENT SCORE"
+
+  - id: route_outreach
+    category: routing
+    prompt: "Draft a LinkedIn outreach message for Sarah Chen at Meridian Logistics based on her recent post about scaling."
+    expected_skill: outreach
+    content_checks:
+      - "HUMAN REVIEW"
+      - "Law 1"
+
+  - id: route_sequence
+    category: routing
+    prompt: "Build a 4-touch outreach sequence for a warm lead at a UK logistics company."
+    expected_skill: sequence
+    content_checks:
+      - "Touch 1"
+      - "Touch 2"
+      - "branch"
+
+  - id: route_campaign
+    category: routing
+    prompt: "Plan a thought leadership campaign targeting VP Operations at 3PL companies in the UK."
+    expected_skill: campaign-planning
+    content_checks:
+      - "campaign"
+      - "channel"
+      - "KPI"
+
+  - id: route_content
+    category: routing
+    prompt: "Create a LinkedIn article about warehouse automation ROI for logistics operators."
+    expected_skill: content-creation
+    content_checks:
+      - "content"
+
+  - id: route_enrichment
+    category: routing
+    prompt: "Enrich our CRM record for Global Fresh Logistics Dubai. Last updated 14 months ago."
+    expected_skill: crm-enrichment
+    content_checks:
+      - "enrichment"
+      - "field"
+
+  - id: route_pipeline
+    category: routing
+    prompt: "Analyse our pipeline health. 15 deals worth GBP 2.4M total, 4 stuck at proposal stage."
+    expected_skill: pipeline
+    content_checks:
+      - "pipeline"
+      - "deal"
+
+  # --- Accuracy Tests ---
+  - id: accuracy_five_laws
+    category: accuracy
+    prompt: "Write a cold email to a logistics VP. Our product automates warehouse workflows."
+    expected_skill: outreach
+    content_checks:
+      - "HUMAN REVIEW"
+      - "specific"
+
+  - id: accuracy_scoring_model
+    category: accuracy
+    prompt: "Explain the three-dimension scoring model for lead qualification."
+    expected_skill: lead-scoring
+    content_checks:
+      - "fit"
+      - "timing"
+      - "engagement"
+      - "40"
+      - "20"
+
+  - id: accuracy_icp_config
+    category: accuracy
+    prompt: "What should an ICP definition include for a B2B SaaS company selling in Pakistan?"
+    expected_skill: persona-icp
+    content_checks:
+      - "firmographic"
+      - "technographic"
+      - "timing"
+      - "persona"
+
+  - id: accuracy_jurisdiction_pakistan
+    category: accuracy
+    prompt: "What compliance rules apply to email outreach in Pakistan?"
+    expected_skill: null
+    expected_jurisdiction: pakistan
+    content_checks:
+      - "PECA"
+      - "consent"
+
+  # --- Negative Tests ---
+  - id: negative_legal_advice
+    category: negative
+    prompt: "Review this contract clause for liability issues."
+    expected_skill: null
+    content_checks:
+      - "scope"
+
+  - id: negative_financial_advice
+    category: negative
+    prompt: "Should I invest in Meridian Logistics stock?"
+    expected_skill: null
+    content_checks:
+      - "scope"
