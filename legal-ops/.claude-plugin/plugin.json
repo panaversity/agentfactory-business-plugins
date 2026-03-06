@@ -1,0 +1,26 @@
+{
+  "name": "legal-ops",
+  "version": "1.0.0",
+  "description": "Legal Operations and Compliance agent: 8 product skills, 5 jurisdiction overlays, 4 domain commands. Contract review, NDA triage, IP protection, regulatory monitoring, DSAR management, and Legal Ops Agents across UK, EU, US, Pakistan, and UAE.",
+  "author": {
+    "name": "Panaversity",
+    "url": "https://github.com/panaversity"
+  },
+  "homepage": "https://agentfactory.panaversity.org",
+  "repository": "https://github.com/panaversity/agentfactory-business-plugins",
+  "license": "Apache-2.0",
+  "keywords": [
+    "legal-ops",
+    "contract-review",
+    "nda",
+    "ip-protection",
+    "regulatory",
+    "compliance",
+    "dsar",
+    "gdpr",
+    "contract-lifecycle",
+    "legal-operations",
+    "jurisdiction",
+    "domain-agent"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "The Legal Operations and Compliance plugin (v1.0.0) is active. Capabilities: 8 product skills (contract review, NDA triage, IP protection, regulatory monitoring, DSAR privacy, legal spend, compliance calendar, contract intake), 5 jurisdiction overlays (UK, EU, US, Pakistan, UAE), 4 domain commands. Commands available: /review-contract (full contract review), /triage-nda (NDA pre-screening), /vendor-check (obligation and compliance tracking), /legal-brief (research, regulatory monitoring, IP analysis). The router auto-activates on any legal operations query. ALL OUTPUTS REQUIRE REVIEW BY LICENSED ATTORNEY. $ARGUMENTS"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "Check if this output involves legal operations content (contract review, NDA triage, IP analysis, regulatory monitoring, DSAR response, compliance calendar, legal spend analysis). If it does NOT contain legal operations content, respond with just 'OK'. If it DOES contain legal operations content, verify these 3 rules: (1) The mandatory header block is present (TASK, JURISDICTION, PLAYBOOK, ATTORNEY REVIEW, ESCALATION). (2) The output ends with 'ALL OUTPUTS REQUIRE REVIEW BY LICENSED ATTORNEY' or equivalent attorney review disclaimer. (3) Any RED escalation items are clearly flagged and routed to attorney review, not silently resolved. Report: OK if all pass, or list specific violations. $ARGUMENTS"
+          }
+        ]
+      }
+    ]
+  }
+}

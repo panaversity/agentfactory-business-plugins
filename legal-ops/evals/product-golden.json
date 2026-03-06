@@ -1,0 +1,72 @@
+[
+  {
+    "product": "contract-review",
+    "jurisdiction": "UK",
+    "scenario": "SaaS vendor agreement with 3-month liability cap, no DPA, vendor-side termination only",
+    "expected_contains": [
+      "RED",
+      "limitation of liability",
+      "UCTA",
+      "DPA",
+      "termination",
+      "attorney review",
+      "redline"
+    ],
+    "must_not_contain": ["approved for execution", "legal advice", "GREEN"]
+  },
+  {
+    "product": "nda-triage",
+    "jurisdiction": "UK",
+    "scenario": "Mutual NDA with residuals clause, no public info carve-out, perpetual obligations",
+    "expected_contains": [
+      "Tier 3",
+      "RED",
+      "residuals",
+      "perpetual",
+      "senior counsel",
+      "attorney review"
+    ],
+    "must_not_contain": ["Tier 1", "Standard Approval", "approved for signing"]
+  },
+  {
+    "product": "dsar-privacy",
+    "jurisdiction": "UK",
+    "scenario": "Subject access request from former customer, CRM contains opinion notes",
+    "expected_contains": [
+      "30 days",
+      "ICO",
+      "opinions ABOUT the requester",
+      "personal data",
+      "attorney review",
+      "discovery"
+    ],
+    "must_not_contain": ["confirm data holdings", "redact opinions"]
+  },
+  {
+    "product": "contract-review",
+    "jurisdiction": "US",
+    "scenario": "California consulting agreement with broad non-compete and no CISG exclusion",
+    "expected_contains": [
+      "RED",
+      "non-compete",
+      "California",
+      "VOID",
+      "CISG",
+      "exclusion"
+    ],
+    "must_not_contain": ["enforceable non-compete", "approved"]
+  },
+  {
+    "product": "regulatory-monitoring",
+    "jurisdiction": "EU",
+    "scenario": "AI product deployed in EU, checking EU AI Act compliance obligations",
+    "expected_contains": [
+      "EU AI Act",
+      "high-risk",
+      "conformity assessment",
+      "escalation",
+      "counsel"
+    ],
+    "must_not_contain": ["you are compliant", "no action needed"]
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "query": "Review this vendor MSA for our SaaS procurement under English law",
+    "expected_product_skill": "contract-review",
+    "expected_jurisdiction": "UK",
+    "expected_overlay": "uk-law.md",
+    "expected_contains": ["UCTA", "limitation of liability", "attorney review"],
+    "must_not_contain": ["legal advice", "approved for execution"]
+  },
+  {
+    "query": "We received an NDA from a prospective technology partner based in Delaware",
+    "expected_product_skill": "nda-triage",
+    "expected_jurisdiction": "US",
+    "expected_overlay": "us-law.md",
+    "expected_contains": ["Tier", "triage", "standard form"],
+    "must_not_contain": ["approved for signing"]
+  },
+  {
+    "query": "Run a patent landscape analysis for AI document extraction technology in the EU",
+    "expected_product_skill": "ip-protection",
+    "expected_jurisdiction": "EU",
+    "expected_overlay": "eu-law.md",
+    "expected_contains": ["research summary", "FTO", "attorney"],
+    "must_not_contain": ["freedom to operate opinion"]
+  },
+  {
+    "query": "What regulatory changes in data protection affect our UK and EU operations this month?",
+    "expected_product_skill": "regulatory-monitoring",
+    "expected_jurisdiction": "Multi",
+    "expected_overlay": ["uk-law.md", "eu-law.md"],
+    "expected_contains": ["HIGH PRIORITY", "MONITOR", "AWARENESS"],
+    "must_not_contain": ["you are compliant"]
+  },
+  {
+    "query": "We received a DSAR from a former customer under UK GDPR",
+    "expected_product_skill": "dsar-privacy",
+    "expected_jurisdiction": "UK",
+    "expected_overlay": "uk-law.md",
+    "expected_contains": ["30 days", "ICO", "acknowledgement", "discovery"],
+    "must_not_contain": ["confirm data holdings"]
+  },
+  {
+    "query": "Analyse our external legal spend for Q1 2026 and flag billing anomalies",
+    "expected_product_skill": "legal-spend",
+    "expected_jurisdiction": "N/A",
+    "expected_overlay": null,
+    "expected_contains": ["anomaly", "effective rate", "budget"],
+    "must_not_contain": ["billing dispute raised"]
+  },
+  {
+    "query": "Show all contract obligations due in the next 60 days",
+    "expected_product_skill": "compliance-calendar",
+    "expected_jurisdiction": "N/A",
+    "expected_overlay": null,
+    "expected_contains": ["OVERDUE", "DUE IN 14 DAYS", "obligation"],
+    "must_not_contain": ["complete without evidence"]
+  },
+  {
+    "query": "New vendor agreement received for intake and routing -- counterparty is a Pakistani software company",
+    "expected_product_skill": "contract-intake-agent",
+    "expected_jurisdiction": "Pakistan",
+    "expected_overlay": "pakistan-law.md",
+    "expected_contains": ["metadata", "classification", "Tier", "routing"],
+    "must_not_contain": ["approved for execution"]
+  },
+  {
+    "query": "Review this consulting agreement governed by UAE/DIFC law for our Dubai subsidiary",
+    "expected_product_skill": "contract-review",
+    "expected_jurisdiction": "UAE",
+    "expected_overlay": "uae-law.md",
+    "expected_contains": ["DIFC", "mainland", "legal zone"],
+    "must_not_contain": ["legal advice"]
+  },
+  {
+    "query": "We need trademark monitoring for our brand across EU member states",
+    "expected_product_skill": "ip-protection",
+    "expected_jurisdiction": "EU",
+    "expected_overlay": "eu-law.md",
+    "expected_contains": ["EUTM", "EUIPO", "similarity", "monitoring"],
+    "must_not_contain": ["FTO opinion"]
+  },
+  {
+    "query": "Triage this incoming NDA from a German company proposing German law as governing law",
+    "expected_product_skill": "nda-triage",
+    "expected_jurisdiction": "EU",
+    "expected_overlay": "eu-law.md",
+    "expected_contains": ["Tier", "governing law", "German"],
+    "must_not_contain": ["Tier 1"]
+  },
+  {
+    "query": "A California resident has filed a CCPA data deletion request",
+    "expected_product_skill": "dsar-privacy",
+    "expected_jurisdiction": "US",
+    "expected_overlay": "us-law.md",
+    "expected_contains": ["45 days", "CCPA", "Privacy Counsel", "erasure"],
+    "must_not_contain": ["confirm data holdings"]
+  }
+]

@@ -1,0 +1,203 @@
+# [Organisation Name] Legal Negotiation Playbook
+# Version: 1.0 | Last Updated: [Date] | Owner: [General Counsel]
+#
+# INSTRUCTIONS: Copy this file, remove ".template" from the filename,
+# fill in your organisation's positions, and save as legal.local.md
+# in your plugin root directory.
+#
+# The more detail you provide here, the more accurate every contract
+# review, NDA triage, and legal analysis will be.
+
+---
+
+## Organisation Profile
+
+Primary role in contracts: CUSTOMER / VENDOR / LICENSOR / LICENSEE [choose primary]
+Industry sector:           [e.g. Technology / Financial Services / Manufacturing]
+Risk tolerance:            Conservative / Moderate / Balanced
+Primary jurisdictions:     [e.g. England and Wales / Pakistan / UAE]
+Company type:              [e.g. Private Ltd / Public Company / Partnership]
+
+---
+
+## Contract Review -- Clause Positions
+
+### Limitation of Liability
+
+STANDARD POSITION:  Mutual cap at 12 months' fees paid/payable
+ACCEPTABLE RANGE:   6-24 months' fees, mutual
+ESCALATE (RED) IF:  Uncapped liability on either side
+                    Asymmetric carve-outs favouring counterparty
+                    Cap below 6 months' fees
+                    Carve-out for IP indemnity without reciprocity
+NOTES:              [Add organisation-specific context here]
+
+### Intellectual Property Ownership
+
+STANDARD POSITION:  Each party retains pre-existing IP
+                    Work product created using our data/systems = our IP
+ACCEPTABLE RANGE:   Joint ownership of jointly developed materials
+                    (with prior written approval only)
+ESCALATE (RED) IF:  Vendor claims ownership of deliverables created using
+                    our data or specifications
+                    Broad licence-back without compensation
+                    Assignment of pre-existing IP required
+NOTES:              Open-source components must be identified and
+                    licence-compatible
+
+### Indemnification
+
+STANDARD POSITION:  Mutual indemnification for third-party IP infringement
+                    and gross negligence / wilful misconduct
+ACCEPTABLE RANGE:   Standard mutual with proportional contribution clauses
+ESCALATE (RED) IF:  One-sided indemnification
+                    Uncapped IP indemnity on our side
+                    Indemnity triggered by use of deliverables as intended
+NOTES:              [Add organisation-specific context here]
+
+### Data Protection
+
+STANDARD POSITION:  GDPR/UK GDPR-compliant DPA; SCCs for international
+                    transfers; 72-hour breach notification
+ACCEPTABLE RANGE:   Breach notification up to 96 hours
+ESCALATE (RED) IF:  No DPA offered for data processing arrangement
+                    Non-standard transfer mechanisms
+                    Retention periods exceeding project term + 2 years
+                    No deletion on termination
+NOTES:              [Add data residency requirements if applicable]
+
+### Termination
+
+STANDARD POSITION:  Either party may terminate for convenience on 30 days' notice
+ACCEPTABLE RANGE:   14-60 days notice; termination for cause on 10 days'
+                    notice with 10-day cure period
+ESCALATE (RED) IF:  No termination for convenience right
+                    Auto-renewal without notice window
+                    Penalties exceeding 3 months' fees on termination
+NOTES:              [Add organisation-specific context here]
+
+### Governing Law and Jurisdiction
+
+STANDARD POSITION:  [Your primary jurisdiction] law and courts
+ACCEPTABLE RANGE:   Counterparty jurisdiction if major strategic partner
+                    ICC arbitration for significant international contracts
+ESCALATE (RED) IF:  Non-English governing law without translated summary
+                    Jurisdiction with no established commercial law framework
+NOTES:              [Add bilateral treaty or enforcement context if relevant]
+
+### Payment Terms
+
+STANDARD POSITION:  30 days from invoice date
+ACCEPTABLE RANGE:   14-45 days
+ESCALATE (RED) IF:  >60 days from invoice date
+                    Acceptance-based payment with broad rejection rights
+                    No late payment interest provision
+NOTES:              [Add sector-specific payment norms if relevant]
+
+### Confidentiality
+
+STANDARD POSITION:  Mutual; 3-year term; standard carve-outs for public info,
+                    prior knowledge, independent development, compelled disclosure
+ACCEPTABLE RANGE:   2-5 year term
+ESCALATE (RED) IF:  No carve-out for publicly available information
+                    Perpetual obligations without sunset
+                    Residuals clause
+NOTES:              [Add organisation-specific context here]
+
+---
+
+## NDA Configuration
+
+### Standard Form Reference
+
+Standard mutual NDA:               [filename or document ID]
+Standard unilateral (disclosing):  [filename]
+Standard unilateral (receiving):   [filename]
+
+### Tier 1 -- Automatic Approval Criteria
+
+The following deviations may be approved without attorney review:
+- Definition of Confidential Information: minor category additions
+  acceptable if our standard definition is retained
+- Term: 2-5 years (our standard is 3 years)
+- Post-term survival: 2-5 years
+- Minor formatting differences with no substantive impact
+- [Add organisation-specific acceptable deviations]
+
+### Tier 2 -- Route to Counsel (flag; do not block)
+
+- Governing law: counterparty's jurisdiction instead of ours
+- Notice provisions: different address/format requirements
+- Definition of Representatives: broader than standard
+- Non-solicitation: if mutual and limited to directly involved employees
+- [Add organisation-specific Tier 2 triggers]
+
+### Tier 3 -- Escalate to Senior Counsel (RED)
+
+- Unilateral NDA where mutual expected (without documented justification)
+- Residuals clause: allowing use of information "retained in unaided memory"
+- No carve-out for publicly available information
+- Non-compete provisions of any scope
+- Perpetual confidentiality obligations (no sunset)
+- Disclosure to affiliates without need-to-know qualification
+- Governing law: non-English-speaking jurisdiction without summary
+- [Add organisation-specific Tier 3 triggers]
+
+### NDA SLA Targets
+
+Tier 1 response:  1 business day
+Tier 2 response:  2 business days
+Tier 3 response:  5 business days
+
+---
+
+## IP Configuration
+
+### Registered Marks
+
+[Mark 1]:  Class [XX], registered [jurisdictions], reg. no. [numbers]
+[Mark 2]:  Class [XX], registered [jurisdictions], reg. no. [numbers]
+
+### Pending Applications
+
+[Mark 3]:  Class [XX], filed [jurisdictions], application no. [numbers]
+
+### Monitoring Parameters
+
+Similarity threshold:    Phonetically similar; visually similar by >60%
+Priority jurisdictions:  [key markets]
+Monitoring frequency:    Weekly automated scan
+
+### Patent Portfolio
+
+Core technology areas:   [3-5 technology areas]
+FTO rule:                ALWAYS escalate patent landscape outputs to IP
+                         counsel before reliance -- never a standalone FTO opinion
+
+### Open-Source Compliance
+
+OSS policy:   No GPL/AGPL components in proprietary products without
+              IP counsel approval
+Review gate:  OSS licence check required before any third-party library
+              is included in a production build
+
+---
+
+## Escalation Contacts
+
+General Counsel:         [Name] | [email] | [phone]
+Reviewing Attorney:      [Name] | [email] | [phone]
+IP Counsel:              [Name / Firm] | [email]
+Privacy Officer:         [Name] | [email]
+Compliance Officer:      [Name] | [email]
+Legal Intake Email:      [legal-intake@yourcompany.com]
+
+## Deal Value Thresholds
+
+Tier 3 call recommended if deal value >:  [GBP/USD amount]
+CFO notification required if deal value >: [GBP/USD amount]
+Board notification required if deal value >: [GBP/USD amount]
+
+---
+# End of Playbook Template
+# Save as: legal.local.md (remove ".template" from filename)
