@@ -44,6 +44,15 @@ You are the Operations Manager responsible for suspense account clearance at mon
 
 ---
 
+## What You Need
+
+- Banking plugin installed (`claude plugin install banking@agentfactory-business`)
+- The 12-item suspense account data across 3 accounts (SUSP-PAY-001, SUSP-FX-002, SUSP-OPS-003) above
+- Skills active: `bank-reconciliation`
+- Estimated time: 30 minutes
+
+---
+
 ## Step-by-Step Instructions
 
 ### Step 1: Age Classification and Escalation (10 min)
@@ -101,6 +110,12 @@ Identify control weaknesses:
 2. Are all suspense accounts owned? (check named owner requirement)
 3. What is the month-end zero balance achievement? (audit metric)
 4. Recommend process improvements to prevent recurrence
+
+---
+
+## Deliverable
+
+Produce: Month-end suspense certification for CFO with age classification matrix, clearance action plan per item, month-end report (totals by account, value by age band), control findings with recommended process improvements, and zero-balance achievement assessment.
 
 ---
 

@@ -38,6 +38,15 @@ You are the IFRS 9 model analyst at a UK retail bank. Below is a sample of 8 mor
 
 ---
 
+## What You Need
+
+- Banking plugin installed (`claude plugin install banking@agentfactory-business`)
+- The 8-facility mortgage portfolio data table above
+- Skills active: `ifrs9-ecl`, `ifrs9-staging`, `uk-pra`
+- Estimated time: 35 minutes
+
+---
+
 ## Step-by-Step Instructions
 
 ### Step 1: Stage Assessment (15 min)
@@ -73,6 +82,12 @@ Build a summary table showing:
 1. Facility A003 is 35 DPD. Can the 30-day rebuttable presumption be rebutted? Under what conditions?
 2. Facility A008 has a 4-notch downgrade but is current on payments. Why is this still Stage 2?
 3. What would change if the bank used PIT PD instead of TTC PD for the ECL calculation?
+
+---
+
+## Deliverable
+
+Produce: Stage migration table showing each facility's stage assignment with trigger reason, ECL by facility, and a portfolio summary with ECL coverage ratios by stage.
 
 ---
 

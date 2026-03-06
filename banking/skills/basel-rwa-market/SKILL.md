@@ -8,6 +8,9 @@ description: >
   risk add-on, RRAO, internal models approach, IMA, expected shortfall, ES,
   P&L attribution, PLA, backtesting, GIRR, CSR, equity risk, commodity risk,
   FX risk, market risk capital, trading desk.
+  NOT for: credit risk RWA under standardised or IRB approach (use basel-rwa-credit),
+  capital adequacy ratios and buffer calculations (use basel-capital), IFRS 9 ECL
+  provisioning (use ifrs9-ecl).
 standard: Basel III FRTB (BCBS d352/d457) -- jurisdiction implementations vary (load overlay)
 author: Panaversity -- The AI Agent Factory
 ---
@@ -58,12 +61,12 @@ Vega risk weights: uniform within risk class, calibrated to stressed implied vol
 
 Step 3 -- Aggregation Within Bucket: Aggregate weighted sensitivities within each
 bucket using prescribed intra-bucket correlations (rho).
-K_b = sqrt( sum_i sum_j rho_ij _ WS_i _ WS_j )
+K*b = sqrt( sum_i sum_j rho_ij * WS*i * WS_j )
 where WS = weighted sensitivity, rho = intra-bucket correlation
 
 Step 4 -- Aggregation Across Buckets: Aggregate across buckets using prescribed
 inter-bucket correlations (gamma).
-Capital = sqrt( sum_b sum_c gamma_bc _ S_b _ S_c )
+Capital = sqrt( sum*b sum_c gamma_bc * S*b * S_c )
 where S_b = net bucket-level capital, gamma = inter-bucket correlation
 
 Step 5 -- Three Correlation Scenarios: Calculate SBM under three correlation scenarios:
@@ -77,8 +80,8 @@ SBM = MAX(SBM_medium, SBM_high, SBM_low)
 Curvature risk captures the non-linear risk that delta sensitivities miss.
 Calculate by shocking each risk factor up and down by a prescribed amount,
 revaluing the portfolio, and computing the curvature charge:
-CVR_k = -min( V(x_k^up) - V(x_k) - s_k _ delta_k,
-V(x_k^down) - V(x_k) + s_k _ delta_k, 0 )
+CVR*k = -min( V(x_k^up) - V(x_k) - s_k * delta*k,
+V(x_k^down) - V(x_k) + s_k * delta_k, 0 )
 where s_k = prescribed shock size for risk factor k.
 
 ### Component 2: Default Risk Charge (DRC)
@@ -88,7 +91,7 @@ trading book -- the risk of an issuer defaulting between now and the next
 rebalancing period.
 
 DRC Calculation:
-DRC = sum_i ( LGD_i _ Notional_i _ RW_i ) after hedging benefit
+DRC = sum*i ( LGD_i * Notional*i * RW_i ) after hedging benefit
 Risk weights by credit quality: AAA 0.5%, AA 2%, A 3%, BBB 6%, BB 15%, B 30%, CCC 50%, Default 100%
 Hedging benefit: long-short offset within same issuer and seniority; partial
 offset across issuers in the same sector using prescribed hedge benefit ratios.
@@ -266,3 +269,43 @@ Always load jurisdiction overlay to confirm current FRTB implementation status.
 - NEVER ignore P&L attribution test results -- 4 quarterly failures = mandatory reversion to SA
 - NEVER apply banking book risk weights to trading book positions -- FRTB has its own risk weight framework
 - NEVER forget the RRAO for exotic instruments -- it is a separate additive charge
+
+## OUTPUT FORMAT -- MARKET RISK CAPITAL SUMMARY
+
+```
+MARKET RISK CAPITAL SUMMARY (FRTB)
+Entity:             [Bank / Group name]
+Reporting Date:     [YYYY-MM-DD]
+Approach:           [SA / IMA / Mixed (desk-level)]
+Jurisdiction:       [Overlay applied: EU CRR3 / UK PRA / US Fed / etc.]
+
+STANDARDISED APPROACH (SA):
+  SBM (Sensitivities-Based Method):
+    GIRR:                        [Amount]
+    CSR non-sec:                 [Amount]
+    CSR sec (CTP):               [Amount]
+    CSR sec (non-CTP):           [Amount]
+    Equity:                      [Amount]
+    Commodity:                   [Amount]
+    FX:                          [Amount]
+    Total SBM:                   [Amount]
+    Binding scenario:            [Medium / High / Low correlations]
+
+  DRC (Default Risk Charge):    [Amount]
+  RRAO (Residual Risk Add-On):  [Amount]
+
+  SA TOTAL:                      [Amount]
+
+IMA (if applicable):
+  Desks on IMA:                  [List]
+  ES (Expected Shortfall):      [Amount]
+  DRC (IMA):                    [Amount]
+  SES (Stressed ES):            [Amount]
+  IMA multiplier:               [X.X]
+  IMA TOTAL:                    [Amount]
+  Desks reverted to SA:         [List + reason]
+
+TOTAL MARKET RISK CAPITAL:      [Amount]
+```
+
+ALL OUTPUTS REQUIRE REVIEW BY A QUALIFIED PROFESSIONAL BEFORE USE IN REGULATORY FILINGS OR BUSINESS DECISIONS.

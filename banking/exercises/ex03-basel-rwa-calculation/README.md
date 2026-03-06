@@ -53,6 +53,15 @@ You are a capital management analyst at a mid-size UK bank. Calculate the CET1, 
 
 ---
 
+## What You Need
+
+- Banking plugin installed (`claude plugin install banking@agentfactory-business`)
+- The on-balance-sheet asset table, off-balance-sheet items, and capital components above
+- Skills active: `basel-capital`, `basel-rwa-credit`, `uk-pra`
+- Estimated time: 45 minutes
+
+---
+
 ## Step-by-Step Instructions
 
 ### Step 1: Credit RWA Calculation (15 min)
@@ -92,6 +101,12 @@ Calculate the effective CET1 requirement for this UK bank:
 1. How would the RWA change if the bank used IRB for the mortgage portfolio?
 2. What is the impact of the Basel IV output floor on an IRB bank with this portfolio?
 3. If the UK CCyB were released to 0%, how much CET1 headroom would be freed?
+
+---
+
+## Deliverable
+
+Produce: RWA calculation table (on-BS and off-BS line items), capital ratio dashboard (CET1, Tier 1, Total Capital, Leverage), and MDA headroom assessment.
 
 ---
 

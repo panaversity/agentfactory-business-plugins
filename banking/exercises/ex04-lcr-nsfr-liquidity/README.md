@@ -43,6 +43,15 @@
 
 ---
 
+## What You Need
+
+- Banking plugin installed (`claude plugin install banking@agentfactory-business`)
+- The HQLA data, cash outflow, and cash inflow tables above
+- Skills active: `liquidity-lcr`, `liquidity-nsfr`, `uk-pra`, `eu-crr`
+- Estimated time: 40 minutes
+
+---
+
 ## Step-by-Step Instructions
 
 ### Step 1: HQLA Stock Calculation (10 min)
@@ -78,6 +87,12 @@ Using the same balance sheet data, calculate:
 1. Why is the 75% inflow cap critical? What happens if a bank assumes 100% inflow?
 2. What actions could the bank take to improve LCR if it were below 100%?
 3. How does the LCR interact with the NSFR? Can a bank pass one and fail the other?
+
+---
+
+## Deliverable
+
+Produce: LCR/NSFR calculation workbook with HQLA stock (after haircuts and caps), net cash outflow schedule, LCR and NSFR ratios, and a stress scenario comparison against management targets.
 
 ---
 

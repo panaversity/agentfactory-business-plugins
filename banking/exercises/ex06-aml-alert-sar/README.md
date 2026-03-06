@@ -87,6 +87,15 @@ You are a Level 2 AML analyst at a UK bank. Review the following 3 alerts from t
 
 ---
 
+## What You Need
+
+- Banking plugin installed (`claude plugin install banking@agentfactory-business`)
+- The 3 alert data profiles (Mohammed Al-Rashid, Meridian Trading, Amara Diallo) above
+- Skills active: `aml-typologies`, `aml-sar-drafting`, `uk-pra`
+- Estimated time: 45 minutes
+
+---
+
 ## Step-by-Step Instructions
 
 ### Step 1: Alert 1 Triage (10 min)
@@ -120,6 +129,12 @@ For the alert(s) that warrant a SAR, draft the SAR narrative following the UK fo
 - Section 4: Account and Relationship Details
 - Section 5: Prior Disclosures
   Apply the SAR quality checklist before submission.
+
+---
+
+## Deliverable
+
+Produce: SAR narrative draft for NCA submission (UK format: Sections 1-5) for the alert(s) warranting a SAR, with typology classification and disposition decision for all 3 alerts.
 
 ---
 

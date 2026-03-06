@@ -17,6 +17,15 @@ Build and deploy a custom banking SKILL.md library with automated scheduling. Th
 
 ---
 
+## What You Need
+
+- Banking plugin installed (`claude plugin install banking@agentfactory-business`)
+- All banking skills available as reference patterns (read-only access to `banking/skills/`)
+- A text editor or Claude Code for SKILL.md authoring
+- Estimated time: 90 minutes
+
+---
+
 ## Step-by-Step Instructions
 
 ### Step 1: Analyse the Banking Plugin Structure (15 min)
@@ -72,6 +81,12 @@ Design a workflow recipe that uses your skill on a recurring schedule:
 - List the step-by-step execution flow
 - Define the output format and distribution list
 - Add quality control gates
+
+---
+
+## Deliverable
+
+Produce: Complete banking SKILL.md library extension containing a new custom skill file, updated router entry, a slash command, an exercise for the new skill, and 11 test query results demonstrating correct routing and skill activation.
 
 ---
 

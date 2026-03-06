@@ -67,6 +67,15 @@ Customer Information Available:
 
 ---
 
+## What You Need
+
+- Banking plugin installed (`claude plugin install banking@agentfactory-business`)
+- The 3 payment data profiles (Ali Hassan Al-Farsi, Zermatt Engineering, Bosphorus Trading) above
+- Skills active: `sanctions-screening`, `uk-pra`, `eu-crr`
+- Estimated time: 40 minutes
+
+---
+
 ## Step-by-Step Instructions
 
 ### Step 1: Payment 1 -- False Positive Analysis (10 min)
@@ -99,6 +108,12 @@ For each payment:
 1. Document the screening outcome (true hit, false positive, escalation)
 2. Draft the regulatory notification where required
 3. Complete the sanctions screening log entry
+
+---
+
+## Deliverable
+
+Produce: Sanctions escalation memo to the MLRO covering all 3 payments with screening outcome (true hit, false positive, or escalation), specific differentiating evidence for false positives, regulatory notifications for true hits, and completed sanctions screening log entries.
 
 ---
 

@@ -75,6 +75,15 @@ GL PMA account shows GBP 5.8M but model output and risk system show GBP 5.2M.
 
 ---
 
+## What You Need
+
+- Banking plugin installed (`claude plugin install banking@agentfactory-business`)
+- The four-tier data tables (ECL model output, risk system, GL, financial statement disclosure) above
+- Skills active: `bank-reconciliation`, `ifrs9-ecl`, `ifrs9-disclosure`, `uk-pra`
+- Estimated time: 40 minutes
+
+---
+
 ## Step-by-Step Instructions
 
 ### Step 1: Map the Four Tiers (5 min)
@@ -122,6 +131,12 @@ After resolving all breaks:
 2. Confirm all four tiers agree
 3. Sign off the reconciliation certificate
 4. Document the root causes and corrective actions for the audit file
+
+---
+
+## Deliverable
+
+Produce: Four-way provision reconciliation sign-off memo with reconciliation matrix, root cause analysis for each break, corrective action log, restated tier amounts, and signed reconciliation certificate.
 
 ---
 

@@ -24,24 +24,26 @@ NEVER default to any jurisdiction.
 
 ## STEP 2 -- LOAD DOMAIN FILE
 
-| Query Terms                                             | Load                |
-| ------------------------------------------------------- | ------------------- |
-| IFRS 9, ECL, PD, LGD, EAD, impairment, provision        | ifrs9-ecl           |
-| Stage 1/2/3, SICR, staging, DPD, covenant breach        | ifrs9-staging       |
-| Macro overlay, PIT PD, scenarios, credit cycle          | ifrs9-scenarios     |
-| IFRS 7 disclosure, ECL note, sensitivity analysis       | ifrs9-disclosure    |
-| CET1, RWA, capital ratio, MDA, output floor, ICAAP      | basel-capital       |
-| SA risk weight, credit RWA, CCF, standardised approach  | basel-rwa-credit    |
-| FRTB, market risk RWA, trading book, SBM, DRC, IMA      | basel-rwa-market    |
-| LCR, HQLA, liquidity coverage, run-off rate             | liquidity-lcr       |
-| NSFR, stable funding, ASF, RSF                          | liquidity-nsfr      |
-| Stress test, capital depletion, ACS, DFAST, ICAAP       | stress-testing      |
-| AML alert, typology, money laundering, structuring      | aml-typologies      |
-| SAR, STR, suspicious activity report, NCA, FinCEN       | aml-sar-drafting    |
-| CDD, EDD, KYC, source of wealth, PEP onboarding         | aml-cdd-edd         |
-| Sanctions, OFAC, HMT, SDN, sanctioned entity            | sanctions-screening |
-| KYC risk rating, customer risk, risk classification     | kyc-risk-rating     |
-| Nostro, suspense, GL recon, provision recon, settlement | bank-reconciliation |
+| Query Terms                                             | Load                         |
+| ------------------------------------------------------- | ---------------------------- |
+| IFRS 9, ECL, PD, LGD, EAD, impairment, provision        | ifrs9-ecl                    |
+| Stage 1/2/3, SICR, staging, DPD, covenant breach        | ifrs9-staging                |
+| Macro overlay, PIT PD, scenarios, credit cycle          | ifrs9-scenarios              |
+| IFRS 7 disclosure, ECL note, sensitivity analysis       | ifrs9-disclosure             |
+| CET1, RWA, capital ratio, MDA, output floor, ICAAP      | basel-capital                |
+| SA risk weight, credit RWA, CCF, standardised approach  | basel-rwa-credit             |
+| FRTB, market risk RWA, trading book, SBM, DRC, IMA      | basel-rwa-market             |
+| LCR, HQLA, liquidity coverage, run-off rate             | liquidity-lcr                |
+| NSFR, stable funding, ASF, RSF                          | liquidity-nsfr               |
+| Stress test, capital depletion, ACS, DFAST, ICAAP       | stress-testing               |
+| AML alert, typology, money laundering, structuring      | aml-typologies               |
+| SAR, STR, suspicious activity report, NCA, FinCEN       | aml-sar-drafting             |
+| CDD, EDD, KYC, source of wealth, PEP onboarding         | aml-cdd-edd                  |
+| Sanctions, OFAC, HMT, SDN, sanctioned entity            | sanctions-screening          |
+| KYC risk rating, customer risk, risk classification     | kyc-risk-rating              |
+| Nostro, suspense, GL recon, provision recon, settlement | bank-reconciliation          |
+| CECL, ASC 326, US ECL, current expected credit losses   | us-cecl (comparison overlay) |
+| Islamic banking, AAOIFI, FAS 30, riba, murabaha, ijara  | islamic-banking-interaction  |
 
 ## STEP 3 -- LOAD JURISDICTION OVERLAY
 
@@ -54,6 +56,9 @@ When a jurisdiction is identified, load the appropriate overlay:
 - [Singapore / MAS](references/jurisdictions/singapore-mas.md)
 - [UAE / CBUAE](references/jurisdictions/uae-cbuae.md)
 - [Pakistan / SBP](references/jurisdictions/pakistan-sbp.md)
+- [GCC / SAMA / CBUAE / CBB / CBK / QCB](references/jurisdictions/gcc-gcc.md)
+- [CECL / ASC 326 / US ECL comparison](references/jurisdictions/us-cecl.md)
+- [Islamic banking / AAOIFI / riba / murabaha](references/jurisdictions/islamic-banking-interaction.md)
 
 ## STEP 4 -- MANDATORY OUTPUT HEADER
 

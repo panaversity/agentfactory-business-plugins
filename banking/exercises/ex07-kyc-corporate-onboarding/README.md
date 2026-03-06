@@ -46,6 +46,15 @@ Ibrahim Okonkwo's father, Chief Emmanuel Okonkwo, served as Minister of Power an
 
 ---
 
+## What You Need
+
+- Banking plugin installed (`claude plugin install banking@agentfactory-business`)
+- The Azura Power Holdings customer data and corporate structure tables above
+- Skills active: `aml-cdd-edd`, `kyc-risk-rating`, `uk-pra`
+- Estimated time: 35 minutes
+
+---
+
 ## Step-by-Step Instructions
 
 ### Step 1: Identify Beneficial Owners (10 min)
@@ -79,6 +88,12 @@ Given the PEP family member status:
 1. Summarize the risk rating and EDD findings
 2. Identify any blockers to onboarding
 3. Draft the CDD file summary note for the compliance record
+
+---
+
+## Deliverable
+
+Produce: KYC client profile document with beneficial ownership analysis, four-dimension risk rating scorecard, PEP EDD requirements checklist, and risk rating justification memo for the compliance record.
 
 ---
 

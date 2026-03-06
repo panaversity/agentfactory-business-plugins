@@ -42,6 +42,15 @@ You are the Head of Capital Management at a UK IRB bank. The following data show
 
 ---
 
+## What You Need
+
+- Banking plugin installed (`claude plugin install banking@agentfactory-business`)
+- The ECL by stage, IRB expected loss, and capital position tables above
+- Skills active: `ifrs9-ecl`, `basel-capital`, `ifrs9-disclosure`, `uk-pra`
+- Estimated time: 50 minutes
+
+---
+
 ## Step-by-Step Instructions
 
 ### Step 1: IRB Shortfall / Excess Calculation (10 min)
@@ -87,6 +96,12 @@ Draft the IFRS 7 sensitivity analysis paragraph:
 - "If the severe macroeconomic scenario were applied with 100% weighting..."
 - Calculate ECL impact under 100% severe weighting (assume severe ECL = 2.5x base ECL)
 - Express as GBP impact and basis point impact on CET1 ratio
+
+---
+
+## Deliverable
+
+Produce: Integrated capital management report showing IRB shortfall/excess calculation, adjusted capital ratios (pre- and post-adjustment), output floor impact analysis, and IFRS 7 sensitivity disclosure paragraph.
 
 ---
 

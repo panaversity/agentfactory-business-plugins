@@ -46,6 +46,15 @@
 
 ---
 
+## What You Need
+
+- Banking plugin installed (`claude plugin install banking@agentfactory-business`)
+- The starting position, BoE severe scenario, and stress assumptions tables above
+- Skills active: `stress-testing`, `basel-capital`, `ifrs9-ecl`, `uk-pra`
+- Estimated time: 50 minutes
+
+---
+
 ## Step-by-Step Instructions
 
 ### Step 1: Capital Depletion Path (20 min)
@@ -91,6 +100,12 @@ Work backwards: What credit loss rate would cause CET1 to breach 4.5%?
 - Start from Year 2 (worst point)
 - Solve for the credit loss percentage that drives CET1 ratio to exactly 4.5%
 - Assess the plausibility of that scenario
+
+---
+
+## Deliverable
+
+Produce: ICAAP capital depletion path over a 3-year horizon showing opening/closing CET1 by year, stressed RWA trajectory, stressed capital ratios with distance to minimum, and reverse stress test breakpoint analysis.
 
 ---
 

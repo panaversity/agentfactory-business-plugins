@@ -58,6 +58,15 @@ You are the Chief Risk Officer preparing the quarterly Board Risk Report. Compil
 
 ---
 
+## What You Need
+
+- Banking plugin installed (`claude plugin install banking@agentfactory-business`)
+- The credit risk, capital, liquidity, and AML/financial crime data tables above
+- Skills active: all banking skills + `uk-pra`
+- Estimated time: 75 minutes
+
+---
+
 ## Step-by-Step Instructions
 
 ### Step 1: Credit Risk Section (15 min)
@@ -100,6 +109,12 @@ You are the Chief Risk Officer preparing the quarterly Board Risk Report. Compil
 1. If the PRA were to increase the UK CCyB by 50bp, what would the impact be?
 2. If Stage 2 continues to grow at this rate, project the ECL impact for next quarter
 3. What early warning indicators would you monitor between now and next quarter?
+
+---
+
+## Deliverable
+
+Produce: 10-slide Board Risk Report structure (PowerPoint format) with credit risk narrative, capital adequacy section, liquidity dashboard, financial crime summary, single-page RAG dashboard, top 3 risks with recommended actions, and CRO summary paragraph.
 
 ---
 

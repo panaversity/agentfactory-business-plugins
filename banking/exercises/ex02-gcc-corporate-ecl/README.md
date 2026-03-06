@@ -52,6 +52,15 @@ You are the credit risk analyst for a GCC-focused international bank with head o
 
 ---
 
+## What You Need
+
+- Banking plugin installed (`claude plugin install banking@agentfactory-business`)
+- The 6-borrower GCC corporate portfolio and macroeconomic scenario tables above
+- Skills active: `ifrs9-ecl`, `ifrs9-scenarios`, `ifrs9-staging`, `uae-cbuae`, `uk-pra`
+- Estimated time: 55 minutes
+
+---
+
 ## Step-by-Step Instructions
 
 ### Step 1: Stage Assessment (10 min)
@@ -81,6 +90,12 @@ Identify any differences in reporting for the Abu Dhabi subsidiary vs the London
 ### Step 6: Governance Documentation (5 min)
 
 Draft the scenario justification note for the IFRS 9 Governance Committee, including scenario weights rationale.
+
+---
+
+## Deliverable
+
+Produce: GCC corporate ECL summary table with scenario-weighted ECL per borrower, CBUAE vs PRA reporting comparison, and a Risk Committee briefing note with scenario justification.
 
 ---
 

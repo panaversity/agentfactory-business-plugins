@@ -42,6 +42,15 @@ You are an Operations analyst performing the daily nostro reconciliation for a U
 
 ---
 
+## What You Need
+
+- Banking plugin installed (`claude plugin install banking@agentfactory-business`)
+- The internal mirror and external statement (MT940) data tables above
+- Skills active: `bank-reconciliation`
+- Estimated time: 35 minutes
+
+---
+
 ## Step-by-Step Instructions
 
 ### Step 1: Apply Matching Hierarchy (15 min)
@@ -82,6 +91,12 @@ Compile the daily nostro break report with:
 - Age in business days
 - Investigation status and next action
 - Assigned owner
+
+---
+
+## Deliverable
+
+Produce: Nostro reconciliation certificate with matched pairs table, break classification schedule, resolution actions with ageing SLA status, and daily break report for Operations sign-off.
 
 ---
 
