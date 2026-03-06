@@ -25,6 +25,12 @@
       "description": "Legal Operations and Compliance agent: 9 skills (router + 8 products), 6 jurisdiction overlays, 4 domain commands. Contract review, NDA triage, IP protection, regulatory monitoring, DSAR management, legal spend, compliance calendar, contract intake across UK, EU, US, Pakistan, UAE, and GCC.",
       "source": "./legal-ops",
       "version": "1.0.0"
+    },
+    {
+      "name": "sales-revops-marketing",
+      "description": "Sales, RevOps & Marketing agent: 14 product skills, 5 agent skills, 4 jurisdiction overlays, 4 domain commands. Prospect research, lead scoring, outreach, sequences, pipeline analysis, content creation, campaign planning, and RevOps agents across US, EU, Pakistan, and GCC jurisdictions.",
+      "source": "./sales-revops-marketing",
+      "version": "1.0.0"
     }
   ]
 }

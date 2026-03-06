@@ -1,0 +1,236 @@
+# [Organisation Name] Sales & Marketing Configuration
+# Version: 1.0 | Last Updated: [Date] | Owner: [RevOps Lead / VP Sales]
+#
+# INSTRUCTIONS: Copy this file, remove ".template" from the filename,
+# fill in your organisation's details, and save as sales-marketing.local.md
+# in your Cowork skills root directory.
+#
+# Every sales research brief, lead score, outreach message, and marketing
+# campaign will use this file. The more accurate and specific it is,
+# the more accurate and specific every output will be.
+
+---
+
+## Organisation Profile
+
+Company name:          [Your company]
+Product / service:     [What you sell — be specific, not marketing-speak]
+Primary value prop:    [The ONE thing you do better than alternatives]
+Stage:                 [Early-stage / Growth / Established]
+Sales motion:          [Inbound / Outbound / Product-led / Channel-led]
+Average deal size:     [£/$ range]
+Average sales cycle:   [X weeks / months]
+Primary markets:       [Geographies you sell into]
+
+---
+
+## Ideal Customer Profile (ICP)
+
+### Firmographic Criteria — POSITIVE FIT
+
+Company size (employees):  [Range — e.g. 50–500]
+Revenue range:             [£/$ range — e.g. £5M–£100M]
+Company stage:             [e.g. Established SME / Pre-IPO growth / Series B+]
+Geography:                 [Primary and secondary markets]
+Industries (ranked):
+  1. [Best vertical — highest conversion rate]
+  2. [Second vertical]
+  3. [Third vertical]
+Technology maturity:       [e.g. Legacy systems; mid-tech; modern stack]
+Tech stack signals (+ve):  [Tools that indicate good fit — e.g. "uses Sage/SAP B1"]
+Tech stack signals (-ve):  [Tools that indicate already solved or wrong fit]
+
+### Firmographic Criteria — NEGATIVE FIT (do not pursue)
+
+[Company type 1]: [Why they don't buy / why they churn]
+[Company type 2]: [Why they engage but never close]
+[Company type 3]: [Why they buy but are not good customers]
+
+### Timing Signals — HOT (immediate outreach within 48 hours)
+
+🔴 [Signal 1: e.g. "Funding round announced"]
+🔴 [Signal 2: e.g. "Major new contract win"]
+🔴 [Signal 3: e.g. "New VP/Director hired in target role"]
+🔴 [Signal 4: e.g. "Rapid hiring in target department (3+ roles in 30 days)"]
+🔴 [Signal 5: e.g. "Target contact posted about [your problem area]"]
+
+### Timing Signals — WARM (outreach within 2 weeks)
+
+🟡 [Signal 1: e.g. "Job posting in target department"]
+🟡 [Signal 2: e.g. "Office or facility expansion announced"]
+🟡 [Signal 3: e.g. "Industry regulatory change affecting their sector"]
+
+---
+
+## Lead Scoring Configuration
+
+### Fit Score Weights (total: 40 points)
+Company size match:      [X] points
+Revenue match:           [X] points
+Industry match:          [X] points
+Technology maturity:     [X] points
+Geography:               [X] points
+Persona seniority:       [X] points
+
+### Timing Score Weights (total: 40 points)
+[Signal]:                [X] points
+[Signal]:                [X] points
+[Signal]:                [X] points
+[Signal]:                [X] points
+[Signal]:                [X] points
+
+### Routing Thresholds
+HOT (immediate sales action):    Score ≥ [X] (default: 80)
+WARM (nurture + sales in 5 days): Score ≥ [X] (default: 60)
+Cultivate (marketing nurture):   Score ≥ [X] (default: 40)
+Not yet (monitor only):          Score < [X] (default: 40)
+
+---
+
+## Persona Profiles
+
+### Primary Persona — [Title/Role]
+
+Name:             [e.g. "The VP Ops" — give them a name for reference]
+Typical title:    [VP Operations / Director of Operations / COO / etc.]
+Seniority:        [Mid-level / Senior / C-suite]
+
+Motivation:       [Primary professional goal — be specific]
+Fear:             [What would make them look bad / what they are avoiding]
+Buying trigger:   [The situation that makes them most receptive to your product]
+
+Tone for outreach: [Peer-level / ROI-focused / Technical / Executive]
+Avoid in outreach: [What alienates this persona — e.g. "feature lists," "demos before discovery"]
+Lead with:         [Pain / Outcome / Peer reference / Data / Story]
+
+Where to reach:   [LinkedIn / Email / Phone / Events — primary channel]
+What they read:   [Trade publications, newsletters, LinkedIn voices they follow]
+
+### Secondary Persona — [Title/Role] (economic buyer)
+
+[Repeat structure above]
+
+### Champion Persona — [Title/Role] (internal advocate)
+
+[Repeat structure above]
+
+---
+
+## Messaging Framework
+
+### Core Value Proposition
+
+For [primary persona] who [specific problem they have],
+[Your Company] is the [category] that [key differentiator].
+Unlike [alternative/status quo], [your product] [key proof point].
+
+### Pain Statements (validated — use these exact frames)
+
+[Pain 1]: "[The exact language your best customers use to describe this problem]"
+[Pain 2]: "[The exact language your best customers use to describe this problem]"
+[Pain 3]: "[The exact language your best customers use to describe this problem]"
+
+### Outcome Statements (validated — use these exact frames)
+
+[Outcome 1]: "[Specific, measurable result a customer achieved]"
+[Outcome 2]: "[Specific, measurable result a customer achieved]"
+[Outcome 3]: "[Specific, measurable result a customer achieved]"
+
+### Objections and Responses
+
+[Objection 1]: "[Common objection verbatim]"
+Response:      "[How to address without arguing]"
+
+[Objection 2]: "[Common objection verbatim]"
+Response:      "[How to address without arguing]"
+
+---
+
+## Brand Voice Configuration
+
+### Voice Principles
+
+Tone:         [e.g. Direct, confident, practical — peer-level, not corporate]
+Language:     [e.g. Operational and specific; no marketing jargon]
+POV:          [e.g. We take positions; we do not hedge every statement]
+Humour:       [e.g. Dry wit acceptable; jokes are not]
+Data:         [e.g. Always support claims with data; label estimates as such]
+
+### Banned Words (add to Five Laws check)
+
+[Add sector-specific jargon to the global router banned list]
+e.g. for 3PL sector: "omnichannel," "last-mile synergies," "visibility solution"
+
+### Content Pillars (rank order — highest value topics for your audience)
+
+1. [Topic — the problem your best content addresses]
+2. [Topic]
+3. [Topic]
+4. [Topic]
+
+---
+
+## Competitive Intelligence
+
+### Competitor 1: [Competitor Name]
+
+What they do well:          [Honest assessment]
+Their weakness:             [Where you win head-to-head]
+Customers who switch to us: [Typical profile of a competitor-to-us switch]
+What to say if mentioned:   "[Specific response that acknowledges them, then differentiates]"
+
+### Competitor 2: [Competitor Name]
+
+[Repeat structure above]
+
+### Status Quo (biggest competitor: doing nothing)
+
+Why they don't buy:         [Most common reason for no decision]
+How to address:             [How to make the cost of inaction concrete]
+Proof that works:           [The reference or data point that most moves this objection]
+
+---
+
+## CRM and RevOps Configuration
+
+CRM system:               [Salesforce / HubSpot / Pipedrive / Zoho / Other]
+Pipeline stages:          [List your stages and their probability % in order]
+  [Stage 1]:              [X]%
+  [Stage 2]:              [X]%
+  [Stage 3]:              [X]%
+  [Stage 4]:              [X]%
+  [Closed won]:           100%
+
+Enrichment schedule:
+  HOT leads:              Weekly
+  Tier 1 accounts:        Monthly
+  All active pipeline:    Monthly
+
+Rep territory mapping:
+  [Rep name]:             [Geographic / vertical / segment responsibility]
+  [Rep name]:             [...]
+
+Escalation contacts:
+  VP Sales:               [Name] | [email]
+  RevOps Lead:            [Name] | [email]
+  Marketing Lead:         [Name] | [email]
+
+---
+
+## Marketing Configuration
+
+Primary lead magnet:       [Your current highest-converting gated asset]
+Secondary lead magnet:     [Secondary offer]
+Lead magnet CTA:           [Exact CTA text used on landing pages]
+
+Email nurture list:        [Size of current marketing database]
+Target cost per HOT lead:  £/$ [X]
+Target cost per SAL:       £/$ [X]
+
+Active campaigns:
+  [Campaign name]:         [Status / Budget / Goal]
+  [Campaign name]:         [Status / Budget / Goal]
+
+---
+# End of Configuration Template
+# Save as: sales-marketing.local.md (remove ".template" from filename)
