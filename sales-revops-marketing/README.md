@@ -2,7 +2,7 @@
 
 Plugin for **Chapter 23: Sales, RevOps & Marketing** from [The AI Agent Factory](https://learn.panaversity.org) by Panaversity.
 
-Sales, RevOps & Marketing agent with 14 product skills, 5 autonomous agents, 4 jurisdiction overlays, and 11 domain commands covering prospect research, lead scoring, CRM enrichment, outreach, sequences, pipeline analysis, content creation, campaign planning, copywriting, performance analysis, and revenue reporting across US, EU, Pakistan, and GCC jurisdictions.
+Sales, RevOps & Marketing agent with 14 product skills, 5 autonomous agents, and 4 jurisdiction overlays covering prospect research, lead scoring, CRM enrichment, outreach, sequences, pipeline analysis, content creation, campaign planning, copywriting, performance analysis, and revenue reporting across US, EU, Pakistan, and GCC jurisdictions.
 
 ---
 
@@ -65,38 +65,8 @@ sales-revops-marketing/
 │   ├── outreach-sequencing-agent.md    # Sequence management
 │   ├── marketing-performance-agent.md  # Weekly analytics
 │   └── revenue-reporting-agent.md      # Pipeline and forecast dashboard
-├── commands/                           # 11 slash commands
-│   ├── research-prospect.md            # /research-prospect
-│   ├── score-lead.md                   # /score-lead
-│   ├── plan-campaign.md                # /plan-campaign
-│   ├── build-sequence.md               # /build-sequence
-│   ├── enrich.md                       # /enrich
-│   ├── brief.md                        # /brief
-│   ├── follow-up.md                    # /follow-up
-│   ├── pipeline.md                     # /pipeline
-│   ├── copy.md                         # /copy
-│   ├── persona.md                      # /persona
-│   └── calendar.md                     # /calendar
 └── sales-marketing.local.md.template   # ICP + brand config -- fill in + rename
 ```
-
----
-
-## Commands
-
-| Command              | What It Does                         | Example                                                         |
-| -------------------- | ------------------------------------ | --------------------------------------------------------------- |
-| `/research-prospect` | Deep prospect and account brief      | `/research-prospect "Jane Smith" "VP Ops" "Meridian Logistics"` |
-| `/score-lead`        | Three-dimension lead scoring         | `/score-lead "Meridian Logistics" "Jane Smith, VP Ops"`         |
-| `/plan-campaign`     | Full campaign brief with channel mix | `/plan-campaign goal:"lead gen" budget:"GBP 25K" timeline:"Q3"` |
-| `/build-sequence`    | Multi-touch outreach sequence        | `/build-sequence "Jane Smith" tier:"HOT" goal:"discovery call"` |
-| `/enrich`            | CRM record enrichment                | `/enrich "Meridian Logistics" scope:"full account"`             |
-| `/brief`             | Pre-call or pre-meeting brief        | `/brief "Sarah Chen" "Meridian Logistics" meeting:"discovery"`  |
-| `/follow-up`         | Post-meeting follow-up email         | `/follow-up "demo with Meridian" next:"pilot proposal"`         |
-| `/pipeline`          | Pipeline analysis and forecast       | `/pipeline period:"Q3" focus:"at-risk deals"`                   |
-| `/copy`              | Ad copy, subject lines, CTAs         | `/copy format:"LinkedIn ad" product:"warehouse automation"`     |
-| `/persona`           | ICP and buyer persona development    | `/persona market:"UK logistics" segment:"mid-market"`           |
-| `/calendar`          | Content calendar and schedule        | `/calendar quarter:"Q3" audience:"logistics VPs"`               |
 
 ---
 

@@ -1,7 +1,6 @@
 ---
 name: lead-intelligence-agent
 description: "Activate for lead monitoring, prospect signal, account alert, timing signal, prospect research update, CRM enrichment trigger, hot lead alert, new signal detected, monitor accounts, watch list, trigger alert, signal scan. NOT for: on-demand prospect research (use prospect-research), CRM hygiene (use crm-hygiene-agent), sequence management (use outreach-sequencing-agent), lead scoring"
-model: haiku
 background: true
 memory: project
 skills:

@@ -48,22 +48,6 @@ for every query.
 3. Check for ICP/brand configuration (`sales-marketing.local.md`) -> load if found
 4. Apply the mandatory output header to every response
 
-## Commands
-
-| Command              | What It Does                                             |
-| -------------------- | -------------------------------------------------------- |
-| `/research-prospect` | Deep prospect and account intelligence brief             |
-| `/score-lead`        | Three-dimension lead scoring with routing recommendation |
-| `/plan-campaign`     | Full campaign brief with channel mix and budget          |
-| `/build-sequence`    | Multi-touch outreach sequence generation                 |
-| `/enrich`            | Single-record CRM data verification and update           |
-| `/brief`             | Pre-call/pre-meeting brief with deal health scoring      |
-| `/follow-up`         | Post-meeting follow-up message with next steps           |
-| `/pipeline`          | Pipeline review with three-dimension scoring             |
-| `/copy`              | Ad copy, subject lines, CTAs, and A/B variants           |
-| `/persona`           | Buyer persona and ICP definition                         |
-| `/calendar`          | Content calendar and publishing schedule                 |
-
 ## Mandatory Output Header
 
 Every sales/marketing output MUST begin with:
@@ -99,14 +83,6 @@ and `/marketing` plugins, some skills overlap. The following resolution rules ap
   all base functionality plus domain-specific logic (scoring model, Five Laws, jurisdiction overlays).
 - **Delegation**: Router selects base or extension based on query context. Not currently used but
   available for custom extensions.
-
-**Command name collisions:**
-
-- `/plan-campaign` (extension) and `/campaign-plan` (Anthropic Marketing) both trigger campaign
-  planning. The `campaign-planning` Wrapper resolution applies regardless of which command invokes it.
-- `/brief` (extension) and `call-prep` (Anthropic Sales skill) both prepare meeting briefs.
-  The `pre-call-brief` Override resolution applies — the extension's version runs exclusively,
-  adding ICP-scored context and three-dimension deal health.
 
 The global router (`skills/sales-marketing-global-router/SKILL.md`) handles collision resolution
 automatically. No manual configuration is required.

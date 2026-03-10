@@ -1,7 +1,6 @@
 ---
 name: marketing-performance-agent
 description: "Activate for weekly marketing report, marketing performance, automated report, channel performance report, campaign dashboard, Friday report, marketing analytics, ROI report, lead quality report, automated analysis, pull campaign data, performance summary. NOT for: on-demand performance analysis (use performance-analysis), pipeline reporting, revenue dashboards, campaign planning"
-model: haiku
 background: true
 memory: project
 skills:

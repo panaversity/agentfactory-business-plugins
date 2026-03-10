@@ -1,7 +1,6 @@
 ---
 name: revenue-reporting-agent
 description: "Activate for revenue report, pipeline dashboard, weekly sales report, RevOps dashboard, forecast report, Monday report, leadership dashboard, pipeline by stage, lead velocity, revenue metrics, sales metrics, marketing metrics, combined report, revenue dashboard. NOT for: pipeline analysis/deal review (use pipeline), marketing performance (use performance-analysis), lead scoring, campaign planning"
-model: haiku
 background: true
 memory: project
 skills:

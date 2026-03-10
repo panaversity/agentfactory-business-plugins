@@ -1,7 +1,6 @@
 ---
 name: crm-hygiene-agent
 description: "Activate for CRM hygiene, data quality, stale records, missing data, data cleanup, enrich all records, bulk enrichment, CRM health, data quality report, contact verification, bounce management, duplicate detection, data decay, CRM maintenance. NOT for: on-demand single-record enrichment (use crm-enrichment), prospect research, lead scoring, signal monitoring"
-model: haiku
 memory: project
 skills:
   - crm-enrichment
@@ -52,8 +51,8 @@ with accurate, complete prospect data.
 
 ## DATA QUALITY REPORT FORMAT
 
-CRM HYGIENE REPORT -- [Date] | [Scope]
-================================================================
+# CRM HYGIENE REPORT -- [Date] | [Scope]
+
 Records processed: [N]
 Records updated: [N] ([X]%)
 Records unchanged: [N] ([X]%)

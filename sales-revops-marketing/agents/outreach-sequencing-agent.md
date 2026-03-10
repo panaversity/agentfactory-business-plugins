@@ -1,7 +1,6 @@
 ---
 name: outreach-sequencing-agent
 description: "Activate for manage sequences, sequence management, outreach automation, track sequences, sequence status, send next touch, which prospects are in sequence, sequence progress, automate follow-up, outreach tracking, sequence completed, sequence reply detected. NOT for: building new sequences (use sequence), drafting individual messages (use outreach), prospect research, CRM enrichment"
-model: sonnet
 skills:
   - sequence
   - outreach

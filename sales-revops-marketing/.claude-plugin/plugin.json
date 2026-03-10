@@ -1,7 +1,7 @@
 {
   "name": "sales-revops-marketing",
   "version": "1.0.0",
-  "description": "Sales, RevOps & Marketing agent: 14 product skills, 5 autonomous agents, 4 jurisdiction overlays, 11 domain commands. Prospect research, lead scoring, outreach, sequences, pipeline analysis, content creation, campaign planning, and RevOps agents across US, EU, Pakistan, and GCC jurisdictions.",
+  "description": "Sales, RevOps & Marketing agent: 14 product skills, 5 autonomous agents, 4 jurisdiction overlays. Prospect research, lead scoring, outreach, sequences, pipeline analysis, content creation, campaign planning, and RevOps agents across US, EU, Pakistan, and GCC jurisdictions.",
   "author": {
     "name": "Panaversity",
     "url": "https://github.com/panaversity"
