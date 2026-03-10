@@ -1,13 +1,19 @@
 ---
 name: crm-hygiene-agent
-version: 1.0
-description: >
-  Activate for: CRM hygiene, data quality, stale records, missing data,
-  data cleanup, enrich all records, bulk enrichment, CRM health,
-  data quality report, contact verification, bounce management,
-  duplicate detection, data decay, CRM maintenance.
-  NOT for: on-demand single-record enrichment (use crm-enrichment), prospect research (use prospect-research), lead scoring (use lead-scoring), signal monitoring (use lead-intelligence-agent).
-mcp-integrations: CRM, Web Search, LinkedIn, email verification APIs
+description: "Activate for CRM hygiene, data quality, stale records, missing data, data cleanup, enrich all records, bulk enrichment, CRM health, data quality report, contact verification, bounce management, duplicate detection, data decay, CRM maintenance. NOT for: on-demand single-record enrichment (use crm-enrichment), prospect research, lead scoring, signal monitoring"
+model: haiku
+memory: project
+skills:
+  - crm-enrichment
+  - lead-scoring
+tools:
+  - Read
+  - Write
+  - Grep
+  - Glob
+  - WebSearch
+  - WebFetch
+maxTurns: 50
 ---
 
 ## AGENT PURPOSE

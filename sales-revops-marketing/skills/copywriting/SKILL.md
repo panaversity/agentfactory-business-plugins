@@ -1,13 +1,11 @@
 ---
 name: copywriting
-version: 1.0
 description: >
   Activate for: ad copy, copy, landing page, subject line, headline,
   CTA, call to action, button text, email subject, A/B test, variant,
   tagline, value proposition, homepage copy, hero copy, meta description,
   Google ad, LinkedIn ad, Facebook ad, banner, paid social, copy variants.
   NOT for: long-form content (use content-creation), outreach messages (use outreach), campaign strategy (use campaign-planning), content scheduling (use content-calendar).
-plugin-commands: /copy
 ---
 
 ## COPYWRITING WORKFLOW

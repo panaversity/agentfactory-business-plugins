@@ -1,9 +1,7 @@
 ---
 name: us-outreach-law-overlay
-version: 1.0
 applies-to: "US law / United States / American outreach / CAN-SPAM /
   FTC / CCPA / California / New York / TCPA"
-chapter: 23 -- Sales, RevOps & Marketing
 ---
 
 ## GOVERNING FRAMEWORK

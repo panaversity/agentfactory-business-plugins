@@ -1,9 +1,7 @@
 ---
 name: pakistan-outreach-law-overlay
-version: 1.0
 applies-to: "Pakistan / Pakistani outreach / PECA / PTA / Karachi /
   Lahore / Islamabad / Pakistani business contacts"
-chapter: 23 -- Sales, RevOps & Marketing
 ---
 
 ## GOVERNING FRAMEWORK

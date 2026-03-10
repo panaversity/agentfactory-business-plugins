@@ -1,15 +1,17 @@
 ---
 name: marketing-performance-agent
-version: 1.0
-description: >
-  Activate for: weekly marketing report, marketing performance, automated
-  report, channel performance report, campaign dashboard, Friday report,
-  marketing analytics, ROI report, lead quality report, automated analysis,
-  pull campaign data, performance summary.
-  NOT for: on-demand performance analysis (use performance-analysis), pipeline reporting (use pipeline), revenue dashboards (use revenue-reporting-agent), campaign planning (use campaign-planning).
-mcp-integrations: LinkedIn Campaign Manager, Google Analytics GA4,
-  Email platform (HubSpot/Mailchimp/Klaviyo),
-  CRM, Google Ads, Meta Ads (if applicable)
+description: "Activate for weekly marketing report, marketing performance, automated report, channel performance report, campaign dashboard, Friday report, marketing analytics, ROI report, lead quality report, automated analysis, pull campaign data, performance summary. NOT for: on-demand performance analysis (use performance-analysis), pipeline reporting, revenue dashboards, campaign planning"
+model: haiku
+background: true
+memory: project
+skills:
+  - performance-analysis
+tools:
+  - Read
+  - Grep
+  - Glob
+  - WebSearch
+  - WebFetch
 ---
 
 ## AGENT PURPOSE

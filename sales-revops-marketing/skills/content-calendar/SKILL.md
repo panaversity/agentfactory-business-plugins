@@ -1,13 +1,11 @@
 ---
 name: content-calendar
-version: 1.0
 description: >
   Activate for: content calendar, publishing schedule, editorial calendar,
   content plan, what to publish, posting schedule, content schedule, plan
   content, week by week, monthly content, quarterly content, content roadmap,
   when to publish, content distribution, content pipeline.
   NOT for: content creation (use content-creation), campaign strategy (use campaign-planning), ad copy or subject lines (use copywriting), performance analysis (use performance-analysis).
-plugin-commands: /calendar
 ---
 
 ## CALENDAR GENERATION WORKFLOW

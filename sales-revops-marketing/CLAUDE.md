@@ -56,6 +56,13 @@ for every query.
 | `/score-lead`        | Three-dimension lead scoring with routing recommendation |
 | `/plan-campaign`     | Full campaign brief with channel mix and budget          |
 | `/build-sequence`    | Multi-touch outreach sequence generation                 |
+| `/enrich`            | Single-record CRM data verification and update           |
+| `/brief`             | Pre-call/pre-meeting brief with deal health scoring      |
+| `/follow-up`         | Post-meeting follow-up message with next steps           |
+| `/pipeline`          | Pipeline review with three-dimension scoring             |
+| `/copy`              | Ad copy, subject lines, CTAs, and A/B variants           |
+| `/persona`           | Buyer persona and ICP definition                         |
+| `/calendar`          | Content calendar and publishing schedule                 |
 
 ## Mandatory Output Header
 
@@ -73,13 +80,16 @@ VERIFY DATA:   All prospect data should be verified before outreach
 When this extension is installed alongside the Anthropic base `knowledge-work-plugins/sales`
 and `/marketing` plugins, some skills overlap. The following resolution rules apply:
 
-| Overlapping Skill    | Resolution Pattern | Behaviour                                                                 |
-| -------------------- | ------------------ | ------------------------------------------------------------------------- |
-| `campaign-planning`  | **Wrapper**        | Extension wraps base skill, adding ICP targeting + budget localisation    |
-| `content-creation`   | **Wrapper**        | Extension wraps base skill, adding brand voice + non-English generation   |
-| `prospect-research`  | **Override**       | Extension replaces base — adds three-dimension scoring + timing signals  |
-| `outreach`           | **Override**       | Extension replaces base — applies Five Laws + jurisdiction compliance    |
-| All other skills     | **No collision**   | Extension-only skills (scoring, enrichment, RevOps agents, pipeline)     |
+| Overlapping Skill      | Resolution Pattern | Behaviour                                                                                                                                                                                  |
+| ---------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `campaign-planning`    | **Wrapper**        | Extension wraps base skill, adding ICP targeting + budget localisation                                                                                                                     |
+| `content-creation`     | **Wrapper**        | Extension wraps base skill, adding brand voice + non-English generation                                                                                                                    |
+| `prospect-research`    | **Override**       | Extension replaces base — adds three-dimension scoring + timing signals                                                                                                                    |
+| `outreach`             | **Override**       | Extension replaces base — applies Five Laws + jurisdiction compliance                                                                                                                      |
+| `pre-call-brief`       | **Override**       | Extension replaces base `call-prep` — adds ICP-scored context + three-dimension deal health                                                                                                |
+| `performance-analysis` | **Wrapper**        | Extension wraps base `performance-analytics`, adding ICP-filtered analysis + regional benchmarks                                                                                           |
+| `pipeline`             | **Override**       | Extension replaces base `/pipeline-review` — adds three-dimension scoring integration                                                                                                      |
+| All other skills       | **No collision**   | Unique to extension — no base equivalent (crm-enrichment, sequence, follow-up, copywriting, persona-icp, content-calendar, pre-call-brief scoring, lead-scoring, plus 5 autonomous agents) |
 
 **Pattern definitions:**
 
@@ -89,6 +99,14 @@ and `/marketing` plugins, some skills overlap. The following resolution rules ap
   all base functionality plus domain-specific logic (scoring model, Five Laws, jurisdiction overlays).
 - **Delegation**: Router selects base or extension based on query context. Not currently used but
   available for custom extensions.
+
+**Command name collisions:**
+
+- `/plan-campaign` (extension) and `/campaign-plan` (Anthropic Marketing) both trigger campaign
+  planning. The `campaign-planning` Wrapper resolution applies regardless of which command invokes it.
+- `/brief` (extension) and `call-prep` (Anthropic Sales skill) both prepare meeting briefs.
+  The `pre-call-brief` Override resolution applies — the extension's version runs exclusively,
+  adding ICP-scored context and three-dimension deal health.
 
 The global router (`skills/sales-marketing-global-router/SKILL.md`) handles collision resolution
 automatically. No manual configuration is required.

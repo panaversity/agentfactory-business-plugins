@@ -1,15 +1,11 @@
 ---
 name: crm-enrichment
-version: 1.0
 description: >
   Activate for: enrich, CRM enrichment, update CRM, data enrichment,
   stale data, missing data, contact data, company data, verify email,
   verify contact, update record, data hygiene, CRM cleanup, enrich leads,
   refresh accounts, outdated records, data quality.
   NOT for: prospect research briefs (use prospect-research), lead scoring (use lead-scoring), bulk automated enrichment scheduling (use crm-hygiene-agent), pipeline analysis (use pipeline).
-plugin-commands: /enrich
-mcp-integrations: CRM (Salesforce/HubSpot/Pipedrive), Web Search,
-  Companies House, LinkedIn, Crunchbase
 ---
 
 ## ENRICHMENT WORKFLOW
@@ -70,8 +66,8 @@ Trigger-based: Within 24 hours of website visit or content download
 
 ### Enrichment Output Format
 
-CRM ENRICHMENT REPORT -- [Date]
-================================================================
+# CRM ENRICHMENT REPORT -- [Date]
+
 Scope: [Description of records enriched]
 Total: [N] records processed
 
@@ -89,8 +85,7 @@ Action: [Rep name] to be alerted; /research brief recommended
 RECORDS WITH MISSING MANDATORY FIELDS:
 [N] records still missing: [field list] -- manual review required
 
-DATA QUALITY SCORE: [X]% of enriched records now complete
-================================================================
+# DATA QUALITY SCORE: [X]% of enriched records now complete
 
 ## NEVER DO THESE
 

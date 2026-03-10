@@ -1,13 +1,17 @@
 ---
 name: revenue-reporting-agent
-version: 1.0
-description: >
-  Activate for: revenue report, pipeline dashboard, weekly sales report,
-  RevOps dashboard, forecast report, Monday report, leadership dashboard,
-  pipeline by stage, lead velocity, revenue metrics, sales metrics,
-  marketing metrics, combined report, revenue dashboard.
-  NOT for: pipeline analysis or deal review (use pipeline), marketing performance analysis (use performance-analysis), lead scoring (use lead-scoring), campaign planning (use campaign-planning).
-mcp-integrations: CRM, Marketing platform, Finance system (if available)
+description: "Activate for revenue report, pipeline dashboard, weekly sales report, RevOps dashboard, forecast report, Monday report, leadership dashboard, pipeline by stage, lead velocity, revenue metrics, sales metrics, marketing metrics, combined report, revenue dashboard. NOT for: pipeline analysis/deal review (use pipeline), marketing performance (use performance-analysis), lead scoring, campaign planning"
+model: haiku
+background: true
+memory: project
+skills:
+  - pipeline
+tools:
+  - Read
+  - Grep
+  - Glob
+  - WebSearch
+  - WebFetch
 ---
 
 ## AGENT PURPOSE

@@ -1,6 +1,5 @@
 ---
 name: content-creation
-version: 1.0
 description: >
   Activate for: content, write content, create content, blog post, article,
   whitepaper, case study, newsletter, email newsletter, LinkedIn article,
@@ -8,7 +7,7 @@ description: >
   webinar script, podcast outline, one-pager, sales enablement, FAQ,
   content piece, write for me, draft article, ghostwrite.
   NOT for: ad copy or subject lines (use copywriting), campaign strategy (use campaign-planning), content scheduling (use content-calendar), outreach messages (use outreach).
-plugin-commands: /content
+context: fork
 ---
 
 ## CONTENT CREATION WORKFLOW

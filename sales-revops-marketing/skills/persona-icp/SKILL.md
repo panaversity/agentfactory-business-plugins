@@ -1,6 +1,5 @@
 ---
 name: persona-icp
-version: 1.0
 description: >
   Activate for: persona, buyer persona, ICP, ideal customer profile,
   target customer, who is my customer, define audience, target audience,
@@ -8,7 +7,6 @@ description: >
   audience, market segment, who should we target, customer research,
   customer interview, voice of customer.
   NOT for: lead scoring (use lead-scoring), prospect research (use prospect-research), campaign planning (use campaign-planning), CRM enrichment (use crm-enrichment).
-plugin-commands: /persona
 ---
 
 ## ICP AND PERSONA DEVELOPMENT WORKFLOW
@@ -59,8 +57,7 @@ Information consumption:
 
 ### ICP Output Format
 
-IDEAL CUSTOMER PROFILE -- [Organisation Name]
-================================================================
+# IDEAL CUSTOMER PROFILE -- [Organisation Name]
 
 FIRMOGRAPHIC CRITERIA
 Company size: [Employee range]

@@ -1,14 +1,12 @@
 ---
 name: pipeline
-version: 1.0
 description: >
   Activate for: pipeline, pipeline review, pipeline analysis, pipeline report,
   forecast, sales forecast, deal review, deal health, at risk deals, stalled
   deals, pipeline hygiene, win rate, close rate, pipeline by stage, weighted
   pipeline, coverage ratio, pipeline gap, revenue forecast, quarterly forecast.
   NOT for: lead scoring (use lead-scoring), prospect research (use prospect-research), weekly revenue dashboard (use revenue-reporting-agent), campaign performance (use performance-analysis).
-plugin-commands: /pipeline
-mcp-integrations: CRM (Salesforce, HubSpot, Pipedrive, Zoho)
+context: fork
 ---
 
 ## PIPELINE ANALYSIS WORKFLOW
@@ -68,8 +66,7 @@ DIMENSION 4: Source Analysis
 
 ### Pipeline Report Format
 
-PIPELINE REPORT -- [Date] | [Period: weekly / monthly / QBR]
-================================================================
+# PIPELINE REPORT -- [Date] | [Period: weekly / monthly / QBR]
 
 SUMMARY
 Total pipeline: [X]

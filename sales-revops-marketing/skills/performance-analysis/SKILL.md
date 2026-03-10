@@ -1,6 +1,5 @@
 ---
 name: performance-analysis
-version: 1.0
 description: >
   Activate for: performance analysis, campaign performance, marketing analytics,
   channel performance, what's working, what's not working, optimise campaign,
@@ -8,9 +7,7 @@ description: >
   ROAS, return on ad spend, email performance, LinkedIn performance, A/B results,
   conversion rate, click rate, open rate, lead quality analysis.
   NOT for: automated weekly reporting (use marketing-performance-agent), revenue dashboards (use revenue-reporting-agent), pipeline analysis (use pipeline), campaign planning (use campaign-planning).
-plugin-commands: /analyze
-mcp-integrations: LinkedIn Campaign Manager, Google Analytics, email platform,
-  CRM, ad platforms (Google/Meta)
+context: fork
 ---
 
 ## ANALYSIS WORKFLOW

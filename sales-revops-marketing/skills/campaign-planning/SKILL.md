@@ -1,6 +1,5 @@
 ---
 name: campaign-planning
-version: 1.0
 description: >
   Activate for: campaign, campaign plan, campaign brief, launch a campaign,
   marketing campaign, lead gen campaign, demand generation, demand gen,
@@ -8,7 +7,6 @@ description: >
   channel mix, budget allocation, media plan, campaign calendar, quarterly
   plan, marketing plan, ABM, account based marketing.
   NOT for: content creation (use content-creation), ad copy writing (use copywriting), content scheduling (use content-calendar), campaign performance analysis (use performance-analysis).
-plugin-commands: /campaign
 ---
 
 ## CAMPAIGN PLANNING WORKFLOW

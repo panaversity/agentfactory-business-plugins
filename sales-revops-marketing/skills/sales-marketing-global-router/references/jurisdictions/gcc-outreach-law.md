@@ -1,9 +1,7 @@
 ---
 name: gcc-outreach-law-overlay
-version: 1.0
 applies-to: "GCC / Gulf States / UAE / Saudi Arabia / KSA / Bahrain /
   Qatar / Kuwait / Oman / Dubai / DIFC / ADGM / Riyadh"
-chapter: 23 -- Sales, RevOps & Marketing
 ---
 
 ## GOVERNING FRAMEWORK

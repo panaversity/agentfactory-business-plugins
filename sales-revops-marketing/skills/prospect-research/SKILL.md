@@ -1,15 +1,11 @@
 ---
 name: prospect-research
-version: 1.0
 description: >
   Activate for: prospect research, account research, company research,
   research prospect, account intelligence, who is, tell me about,
   background on, pre-call research, account profile, company profile,
   contact research, LinkedIn research, news on, what's happening at.
   NOT for: CRM data enrichment (use crm-enrichment), lead scoring (use lead-scoring), outreach message drafting (use outreach), pipeline analysis (use pipeline).
-plugin-commands: /research
-mcp-integrations: Web Search, LinkedIn (where available), Companies House,
-  Crunchbase, PitchBook, trade press databases
 ---
 
 ## RESEARCH WORKFLOW -- EXECUTE IN ORDER
@@ -119,8 +115,8 @@ Identify THE ONE THING that will make outreach feel personal:
 
 ### Research Brief Output Format
 
-PROSPECT RESEARCH BRIEF
-================================================================
+# PROSPECT RESEARCH BRIEF
+
 Prospect: [Name, Title | Company | Location]
 Prepared: [Date] | Confidence: [HIGH / MEDIUM / LOW]
 ICP Match: [STRONG / MODERATE / WEAK]

@@ -1,13 +1,11 @@
 ---
 name: pre-call-brief
-version: 1.0
 description: >
   Activate for: pre-call brief, before the call, prepare for call,
   meeting prep, call prep, discovery prep, demo prep, before meeting,
   call preparation, what should I know before, deal health, deal review,
   deal brief, opportunity review, account review, QBR prep, renewal prep.
   NOT for: prospect research (use prospect-research), outreach drafting (use outreach), post-call follow-up (use follow-up), pipeline reporting (use pipeline).
-plugin-commands: /brief
 ---
 
 ## BRIEF TYPES

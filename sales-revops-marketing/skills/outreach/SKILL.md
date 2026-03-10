@@ -1,6 +1,5 @@
 ---
 name: outreach
-version: 1.0
 description: >
   Activate for: outreach, write email, LinkedIn message, cold email,
   cold outreach, personalised email, personalise, draft message,
@@ -8,7 +7,6 @@ description: >
   me, email draft, DM, direct message, InMail, connection request,
   WhatsApp message, outreach message, sales message, prospecting email.
   NOT for: multi-touch sequences (use sequence), post-call follow-ups (use follow-up), marketing content creation (use content-creation), ad copy or subject lines (use copywriting).
-plugin-commands: /outreach
 ---
 
 ## OUTREACH WORKFLOW

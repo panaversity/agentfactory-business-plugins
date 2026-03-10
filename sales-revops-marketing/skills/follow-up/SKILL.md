@@ -1,13 +1,11 @@
 ---
 name: follow-up
-version: 1.0
 description: >
   Activate for: follow-up, follow up email, post-call, after the call,
   post-meeting, meeting summary, recap email, next steps email, send
   proposal, after demo, post-demo, proposal follow-up, close follow-up,
   send summary, call recap, meeting recap, send to prospect.
   NOT for: initial outreach (use outreach), multi-touch sequences (use sequence), pre-call preparation (use pre-call-brief), content creation (use content-creation).
-plugin-commands: /follow-up
 ---
 
 ## FOLLOW-UP TYPES AND STRUCTURES

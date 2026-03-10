@@ -1,6 +1,5 @@
 ---
 name: sales-marketing-global-router
-version: 1.0
 description: >
   TOP-LEVEL ROUTER. Activate when ANY of these terms appear:
   prospect, lead, outreach, email, LinkedIn message, cold email, sales,
@@ -15,8 +14,6 @@ description: >
   intelligence, signal, timing signal, brand voice, content calendar,
   campaign brief, ad copy, landing page, subject line, A/B test.
   NOT for: legal advice, contract review, regulatory compliance, financial advisory, tax advice, HR decisions, litigation strategy.
-author: Panaversity -- The AI Agent Factory
-chapter: 23 -- Sales, RevOps & Marketing
 ---
 
 ## STEP 1 -- IDENTIFY TASK AND LOAD PRODUCT SKILL
@@ -38,15 +35,15 @@ chapter: 23 -- Sales, RevOps & Marketing
 | Content calendar, publishing schedule     | skills/content-calendar/SKILL.md     |
 | Persona, ICP, buyer profile, audience     | skills/persona-icp/SKILL.md          |
 
-## STEP 2 -- IDENTIFY TASK AND LOAD AGENT SKILL
+## STEP 2 -- IDENTIFY TASK AND LOAD AGENT
 
-| Query Pattern                                     | Load Agent Skill                            |
-| ------------------------------------------------- | ------------------------------------------- |
-| HOT signal monitoring, prospect alerts, signals   | skills/lead-intelligence-agent/SKILL.md     |
-| CRM hygiene, data quality, bulk enrichment        | skills/crm-hygiene-agent/SKILL.md           |
-| Sequence management, outreach tracking, touches   | skills/outreach-sequencing-agent/SKILL.md   |
-| Weekly marketing report, automated analytics      | skills/marketing-performance-agent/SKILL.md |
-| Revenue dashboard, pipeline report, Monday report | skills/revenue-reporting-agent/SKILL.md     |
+| Query Pattern                                     | Load Agent                            |
+| ------------------------------------------------- | ------------------------------------- |
+| HOT signal monitoring, prospect alerts, signals   | agents/lead-intelligence-agent.md     |
+| CRM hygiene, data quality, bulk enrichment        | agents/crm-hygiene-agent.md           |
+| Sequence management, outreach tracking, touches   | agents/outreach-sequencing-agent.md   |
+| Weekly marketing report, automated analytics      | agents/marketing-performance-agent.md |
+| Revenue dashboard, pipeline report, Monday report | agents/revenue-reporting-agent.md     |
 
 ## STEP 3 -- FOR OUTREACH TASKS: IDENTIFY JURISDICTION AND LOAD OVERLAY
 
@@ -64,12 +61,15 @@ chapter: 23 -- Sales, RevOps & Marketing
 When the Anthropic base `knowledge-work-plugins/sales` and `/marketing` plugins are also
 installed, the following overlapping skills are resolved automatically:
 
-| Skill              | Base Plugin | Extension  | Resolution   |
-| ------------------ | ----------- | ---------- | ------------ |
-| campaign-planning  | Yes         | Yes        | **Wrapper**  |
-| content-creation   | Yes         | Yes        | **Wrapper**  |
-| prospect-research  | Yes         | Yes        | **Override** |
-| outreach           | Yes         | Yes        | **Override** |
+| Skill                | Base Plugin | Extension | Resolution   |
+| -------------------- | ----------- | --------- | ------------ |
+| campaign-planning    | Yes         | Yes       | **Wrapper**  |
+| content-creation     | Yes         | Yes       | **Wrapper**  |
+| prospect-research    | Yes         | Yes       | **Override** |
+| outreach             | Yes         | Yes       | **Override** |
+| pre-call-brief       | Yes         | Yes       | **Override** |
+| performance-analysis | Yes         | Yes       | **Wrapper**  |
+| pipeline             | Yes         | Yes       | **Override** |
 
 - **Wrapper**: Route to extension skill. Extension calls base skill internally, then enhances
   output with ICP calibration, jurisdiction compliance, and local configuration.

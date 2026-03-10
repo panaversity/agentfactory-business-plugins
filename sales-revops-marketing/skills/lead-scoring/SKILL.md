@@ -1,13 +1,11 @@
 ---
 name: lead-scoring
-version: 1.0
 description: >
   Activate for: lead score, score this lead, qualify, qualification,
   lead quality, ICP match, fit score, should we pursue, is this a good
   lead, lead tier, hot lead, warm lead, MQL, SQL, prioritise leads,
   lead ranking, lead rating, account score.
   NOT for: prospect research (use prospect-research), CRM enrichment (use crm-enrichment), outreach drafting (use outreach), pipeline forecasting (use pipeline).
-plugin-commands: /score
 ---
 
 ## THREE-DIMENSION SCORING MODEL
@@ -76,8 +74,8 @@ Form submission (contact us / demo request): 20 points (auto HOT)
 
 ## SCORE OUTPUT FORMAT
 
-LEAD SCORE: [Company] / [Contact Name]
-================================================================
+# LEAD SCORE: [Company] / [Contact Name]
+
 TOTAL SCORE: [X] / 100 -- [Tier label]
 
 FIT SCORE: [X] / 40
@@ -99,8 +97,7 @@ Outreach: [Channel and timing]
 Frame: [Positioning recommendation]
 Goal: [First touch goal]
 
-NEXT REVIEW: [Date -- set based on timing signal urgency]
-================================================================
+# NEXT REVIEW: [Date -- set based on timing signal urgency]
 
 ## SCORE RECALIBRATION
 

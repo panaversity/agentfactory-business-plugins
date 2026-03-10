@@ -1,13 +1,11 @@
 ---
 name: sequence
-version: 1.0
 description: >
   Activate for: sequence, outreach sequence, cadence, multi-touch,
   email sequence, follow-up sequence, drip sequence, nurture sequence,
   prospecting sequence, sales cadence, outreach plan, touch plan,
   6-touch, 8-touch, how many times should I follow up, follow-up schedule.
   NOT for: single outreach messages (use outreach), post-meeting follow-ups (use follow-up), sequence lifecycle management (use outreach-sequencing-agent), campaign planning (use campaign-planning).
-plugin-commands: /sequence
 ---
 
 ## SEQUENCE DESIGN PRINCIPLES

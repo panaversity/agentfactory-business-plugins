@@ -123,3 +123,52 @@ cases:
     expected_skill: null
     content_checks:
       - "scope"
+
+  # --- Routing Tests (commands) ---
+  - id: route_pre_call_brief
+    category: routing
+    prompt: "Prepare me for my discovery call with Sarah Chen at Meridian Logistics tomorrow."
+    expected_skill: pre-call-brief
+    content_checks:
+      - "brief"
+      - "question"
+
+  - id: route_follow_up
+    category: routing
+    prompt: "Write a follow-up email after my demo with Meridian Logistics. They liked the automation features."
+    expected_skill: follow-up
+    content_checks:
+      - "follow"
+      - "HUMAN REVIEW"
+
+  - id: route_copywriting
+    category: routing
+    prompt: "Write 3 LinkedIn ad headline variants for our warehouse automation product."
+    expected_skill: copywriting
+    content_checks:
+      - "variant"
+      - "headline"
+
+  - id: route_content_calendar
+    category: routing
+    prompt: "Create a content calendar for Q3 targeting logistics decision-makers."
+    expected_skill: content-calendar
+    content_checks:
+      - "calendar"
+      - "week"
+
+  - id: route_performance_analysis
+    category: routing
+    prompt: "Analyse our LinkedIn campaign performance this month. CTR dropped from 1.2% to 0.6%."
+    expected_skill: performance-analysis
+    content_checks:
+      - "performance"
+      - "recommendation"
+
+  - id: route_persona_icp
+    category: routing
+    prompt: "Define our ideal customer profile for selling to mid-market logistics companies in the UK."
+    expected_skill: persona-icp
+    content_checks:
+      - "firmographic"
+      - "persona"

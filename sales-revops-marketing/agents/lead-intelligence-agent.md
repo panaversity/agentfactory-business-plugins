@@ -1,12 +1,18 @@
 ---
 name: lead-intelligence-agent
-version: 1.0
-description: >
-  Activate for: lead monitoring, prospect signal, account alert, timing signal,
-  prospect research update, CRM enrichment trigger, hot lead alert, new signal
-  detected, monitor accounts, watch list, trigger alert, signal scan.
-  NOT for: on-demand prospect research (use prospect-research), CRM data hygiene (use crm-hygiene-agent), outreach sequence management (use outreach-sequencing-agent), lead scoring (use lead-scoring).
-mcp-integrations: Web Search, LinkedIn, Google News, Trade press APIs, CRM
+description: "Activate for lead monitoring, prospect signal, account alert, timing signal, prospect research update, CRM enrichment trigger, hot lead alert, new signal detected, monitor accounts, watch list, trigger alert, signal scan. NOT for: on-demand prospect research (use prospect-research), CRM hygiene (use crm-hygiene-agent), sequence management (use outreach-sequencing-agent), lead scoring"
+model: haiku
+background: true
+memory: project
+skills:
+  - lead-scoring
+  - prospect-research
+tools:
+  - Read
+  - Grep
+  - Glob
+  - WebSearch
+  - WebFetch
 ---
 
 ## AGENT PURPOSE
@@ -70,16 +76,16 @@ Score: Updated from [X] -> [Y]
 
 RECOMMENDED ACTION:
 
-1. Run /research for updated brief (ICP match: [score])
-2. Run /outreach with hook: "[Specific hook from this signal]"
+1. Run /research-prospect for updated brief (ICP match: [score])
+2. Use V4's /draft-outreach command with hook: "[Specific hook from this signal]"
 3. Deploy Touch 1 within 24 hours of this alert
 
 ---
 
 ## DAILY DIGEST FORMAT (for WARM signals)
 
-LEAD INTELLIGENCE DIGEST -- [Date]
-================================================================
+# LEAD INTELLIGENCE DIGEST -- [Date]
+
 HOT signals since last digest: [N] -- see separate alerts
 WARM signals: [N]
 

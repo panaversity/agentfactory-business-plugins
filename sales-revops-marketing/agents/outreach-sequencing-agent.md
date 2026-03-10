@@ -1,13 +1,15 @@
 ---
 name: outreach-sequencing-agent
-version: 1.0
-description: >
-  Activate for: manage sequences, sequence management, outreach automation,
-  track sequences, sequence status, send next touch, which prospects are in
-  sequence, sequence progress, automate follow-up, outreach tracking,
-  sequence completed, sequence reply detected.
-  NOT for: building new sequences (use sequence), drafting individual messages (use outreach), prospect research (use prospect-research), CRM data enrichment (use crm-enrichment).
-mcp-integrations: CRM, Gmail/Outlook, LinkedIn (where available)
+description: "Activate for manage sequences, sequence management, outreach automation, track sequences, sequence status, send next touch, which prospects are in sequence, sequence progress, automate follow-up, outreach tracking, sequence completed, sequence reply detected. NOT for: building new sequences (use sequence), drafting individual messages (use outreach), prospect research, CRM enrichment"
+model: sonnet
+skills:
+  - sequence
+  - outreach
+tools:
+  - Read
+  - Write
+  - Grep
+  - Glob
 ---
 
 ## AGENT PURPOSE
@@ -21,8 +23,8 @@ Never continue a sequence after a prospect has replied.
 
 ### On HOT Lead Classification:
 
-1. Trigger /research -> generate brief
-2. Trigger /sequence -> build 6-touch HOT sequence
+1. Trigger /research-prospect -> generate brief
+2. Trigger /build-sequence -> build 6-touch HOT sequence
 3. Schedule Touch 1 within 24 hours of HOT classification
 4. Log sequence start in CRM: status = ACTIVE
 
@@ -48,7 +50,7 @@ Never continue a sequence after a prospect has replied.
 
 1. Log in CRM: "Sequence completed [date] -- no response"
 2. Move to CULTIVATE nurture cadence (monthly email from marketing)
-3. Schedule re-evaluation in 90 days via /enrich + /score
+3. Schedule re-evaluation in 90 days via /enrich + /score-lead
 4. Do NOT archive -- leave in watch list
 
 ## STATUS TRACKING FORMAT (CRM record)

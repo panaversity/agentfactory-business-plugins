@@ -1,9 +1,7 @@
 ---
 name: eu-outreach-law-overlay
-version: 1.0
 applies-to: "EU law / European Union / GDPR / ePrivacy / Germany /
   France / Netherlands / Scandinavia / B2B outreach Europe"
-chapter: 23 -- Sales, RevOps & Marketing
 ---
 
 ## GOVERNING FRAMEWORK
