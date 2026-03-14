@@ -1,6 +1,6 @@
 ---
 name: legal-global-router
-version: 2.0
+version: 3.0
 description: >
   TOP-LEVEL ROUTER. Activate when ANY of these terms appear:
   contract review, NDA, non-disclosure, confidentiality agreement,
@@ -27,11 +27,11 @@ chapter: 22 -- Legal Operations and Compliance
 | Contract review, clause analysis, redlines         | Anthropic `/review-contract` (with overlay)     |
 | NDA, non-disclosure, confidentiality agreement     | Anthropic `/triage-nda` (with pre-checks below) |
 | Vendor assessment, vendor due diligence            | Anthropic `/vendor-check` (with overlay)        |
-| Patent, trademark, copyright, trade secret, IP     | skills/ip-protection/SKILL.md                   |
-| Regulatory update, compliance monitoring           | skills/regulatory-monitoring/SKILL.md           |
-| DSAR, data subject, GDPR request, privacy request  | skills/dsar-privacy/SKILL.md                    |
-| Legal spend, invoice, firm performance             | skills/legal-spend/SKILL.md                     |
-| Renewal, obligation, deadline, compliance calendar | skills/compliance-calendar/SKILL.md             |
+| Patent, trademark, copyright, trade secret, IP     | Load `products/ip-protection.md`                |
+| Regulatory update, compliance monitoring           | Load `products/regulatory-monitoring.md`        |
+| DSAR, data subject, GDPR request, privacy request  | Load `products/dsar-privacy.md`                 |
+| Legal spend, invoice, firm performance             | Load `products/legal-spend.md`                  |
+| Renewal, obligation, deadline, compliance calendar | Load `products/compliance-calendar.md`          |
 | Legal briefing, research, topic summary            | Route by topic (see Research Routing below)     |
 | Compliance check, compliance verification          | Anthropic `/compliance-check`                   |
 | Legal risk assessment                              | Anthropic `/legal-risk-assessment`              |
@@ -43,13 +43,28 @@ chapter: 22 -- Legal Operations and Compliance
 
 When the query is a research or briefing request, route by topic:
 
-| Topic Pattern                     | Routes To                             |
-| --------------------------------- | ------------------------------------- |
-| Regulatory monitoring, compliance | skills/regulatory-monitoring/SKILL.md |
-| Patent, trademark, IP, copyright  | skills/ip-protection/SKILL.md         |
-| Legal spend, invoice, billing     | skills/legal-spend/SKILL.md           |
-| DSAR, privacy, data subject       | skills/dsar-privacy/SKILL.md          |
-| General research, legal topic     | Anthropic `/brief`                    |
+| Topic Pattern                     | Routes To                                |
+| --------------------------------- | ---------------------------------------- |
+| Regulatory monitoring, compliance | Load `products/regulatory-monitoring.md` |
+| Patent, trademark, IP, copyright  | Load `products/ip-protection.md`         |
+| Legal spend, invoice, billing     | Load `products/legal-spend.md`           |
+| DSAR, privacy, data subject       | Load `products/dsar-privacy.md`          |
+| General research, legal topic     | Anthropic `/brief`                       |
+
+### Product Reference Files
+
+The `products/` directory contains domain knowledge files loaded on demand:
+
+| File                                | Domain                                                      |
+| ----------------------------------- | ----------------------------------------------------------- |
+| `products/ip-protection.md`         | Patent landscape, trademark monitoring, FTO, OSS compliance |
+| `products/regulatory-monitoring.md` | Weekly regulatory briefing, impact classification           |
+| `products/dsar-privacy.md`          | DSAR 30-day workflow, jurisdiction response windows         |
+| `products/legal-spend.md`           | Spend analytics, anomaly detection, benchmarking            |
+| `products/compliance-calendar.md`   | Obligation tracking, escalation sequences, dashboard        |
+
+When the routing table directs you to load a product file, read its full content
+and apply the domain knowledge, output formats, and safety rules it contains.
 
 ## STEP 2 -- IDENTIFY JURISDICTION AND LOAD OVERLAY
 
@@ -130,7 +145,7 @@ Do not produce any substantive legal output without this header.
 - NEVER route a query without identifying both the product type AND the jurisdiction
 - NEVER skip the playbook check -- if no playbook found, state explicitly
 - NEVER apply a jurisdiction overlay without confirming the user's jurisdiction
-- NEVER provide legal advice directly -- route to the correct skill/command which will produce analysis for attorney review
+- NEVER provide legal advice directly -- route to the correct product/command which will produce analysis for attorney review
 - NEVER route employment disputes to contract review -- these require specialist employment law advice
 - NEVER route an NDA to Anthropic `/triage-nda` without running the 9 RED flag pre-checks first
 - NEVER duplicate Anthropic's built-in commands -- route to them with enriched context

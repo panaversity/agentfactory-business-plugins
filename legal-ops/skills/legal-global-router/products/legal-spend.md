@@ -1,16 +1,4 @@
----
-name: legal-spend
-version: 1.0
-description: >
-  Activate for: legal spend, legal invoice, law firm invoice, legal budget,
-  matter budget, legal costs, external counsel, billing rates, hourly rates,
-  legal matter, write-off, billing anomaly, legal efficiency, spend analysis,
-  legal ROI, panel firms, outside counsel, legal department budget,
-  matter management, legal benchmarking.
-  NOT for: contract review, NDA triage, IP research, regulatory monitoring, DSAR processing, budget approval (CFO required).
-author: Panaversity -- The AI Agent Factory
-chapter: 22 -- Legal Operations and Compliance
----
+# Legal Spend -- Analytics, Anomaly Detection, and Benchmarking
 
 ## DATA SOURCES (connect via MCP)
 

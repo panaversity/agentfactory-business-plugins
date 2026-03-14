@@ -33,32 +33,34 @@ disclaimer. A partial answer with a disclaimer is still out of scope.
 These roles are distinct. Do not conflate them. Every output ends with:
 ALL OUTPUTS REQUIRE REVIEW BY LICENSED ATTORNEY.
 
-## Architecture: Agents + Skills
+## Architecture: 1 Agent + 1 Skill
 
 This plugin extends Anthropic's built-in Legal Plugin (Layer 1) with
 jurisdiction-aware routing and domain-specific workflows (Layer 2).
 
-### Agents (thin orchestrators -- preload skills, route, track state)
+### Agent (orchestrator)
 
-Agents are flat .md files with YAML frontmatter that preload skills via
-the `skills:` field. Domain knowledge lives in skills, not agents.
+| Agent           | File                        | Purpose                                  |
+| --------------- | --------------------------- | ---------------------------------------- |
+| contract-intake | `agents/contract-intake.md` | End-to-end contract intake orchestration |
 
-| Agent            | File                          | Preloads Skill       | Purpose                                                  |
-| ---------------- | ----------------------------- | -------------------- | -------------------------------------------------------- |
-| legal-ops-router | `agents/legal-ops-router.md`  | legal-global-router  | Central router: task + jurisdiction routing              |
-| contract-intake  | `agents/contract-intake.md`   | contract-intake-agent| End-to-end contract intake orchestration                 |
+### Skill (router + domain knowledge)
 
-### Skills (domain knowledge -- routing logic, workflows, analysis)
+| Skill               | File                                  | Purpose                                              |
+| ------------------- | ------------------------------------- | ---------------------------------------------------- |
+| legal-global-router | `skills/legal-global-router/SKILL.md` | Routing table, jurisdiction overlays, NDA pre-checks |
 
-| Skill                 | File                                    | Purpose                                              |
-| --------------------- | --------------------------------------- | ---------------------------------------------------- |
-| legal-global-router   | `skills/legal-global-router/SKILL.md`   | Routing table, jurisdiction overlays, NDA pre-checks |
-| contract-intake-agent | `skills/contract-intake-agent/SKILL.md`  | Intake workflow, SLA tracking, templates             |
-| compliance-calendar   | `skills/compliance-calendar/SKILL.md`   | Obligation tracking, escalation sequences, dashboard |
-| dsar-privacy          | `skills/dsar-privacy/SKILL.md`          | DSAR 30-day workflow, jurisdiction response windows  |
-| ip-protection         | `skills/ip-protection/SKILL.md`         | Patent landscape, trademark monitoring, FTO, OSS     |
-| legal-spend           | `skills/legal-spend/SKILL.md`           | Spend analytics, anomaly detection, benchmarking     |
-| regulatory-monitoring | `skills/regulatory-monitoring/SKILL.md` | Weekly regulatory briefing, impact assessment        |
+### Product Reference Files (loaded on demand by the router)
+
+Domain knowledge files in `skills/legal-global-router/products/`:
+
+| File                       | Domain                                               |
+| -------------------------- | ---------------------------------------------------- |
+| `ip-protection.md`         | Patent landscape, trademark monitoring, FTO, OSS     |
+| `regulatory-monitoring.md` | Weekly regulatory briefing, impact assessment        |
+| `dsar-privacy.md`          | DSAR 30-day workflow, jurisdiction response windows  |
+| `legal-spend.md`           | Spend analytics, anomaly detection, benchmarking     |
+| `compliance-calendar.md`   | Obligation tracking, escalation sequences, dashboard |
 
 ### Jurisdiction Overlays (6 files)
 
@@ -75,21 +77,21 @@ Located at `skills/legal-global-router/references/jurisdictions/`:
 
 ## Core Methodology
 
-Before executing ANY legal operations task, the router agent loads
-`skills/legal-global-router/SKILL.md` for routing logic -- it identifies the
-correct destination and jurisdiction overlay for every query.
+The router skill (`skills/legal-global-router/SKILL.md`) contains the routing
+logic -- it identifies the correct destination and jurisdiction overlay for
+every query, and loads product reference files on demand.
 
 **Routing sequence:**
 
-1. Identify task type -> route to the correct agent, skill, or Anthropic command
-2. Identify jurisdiction -> load the correct overlay from `skills/legal-global-router/references/jurisdictions/`
+1. Identify task type -> route to the correct agent, product file, or Anthropic command
+2. Identify jurisdiction -> load the correct overlay from `references/jurisdictions/`
 3. Check for negotiation playbook (`legal.local.md`) -> load if found
 4. Apply the mandatory output header to every response
 
 ## Anthropic Legal Plugin (Layer 1) -- 9 Built-In Commands
 
 These are Anthropic's first-party commands. This plugin does NOT duplicate them.
-The router agent enriches them with jurisdiction overlays and playbook context
+The router enriches them with jurisdiction overlays and playbook context
 before handing off.
 
 | Command                  | What It Does                           |
