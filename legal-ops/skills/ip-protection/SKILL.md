@@ -1,3 +1,13 @@
+---
+name: ip-protection
+description: >
+  Intellectual property protection workflows: patent landscape analysis,
+  freedom-to-operate (FTO) preliminary assessment, trademark monitoring,
+  copyright and OSS licence compliance, and IP clause review within contracts.
+  Produces research scaffolding for IP counsel review.
+user-invocable: false
+---
+
 # IP Protection -- Patent, Trademark, Copyright, and OSS Compliance
 
 ## IP TASK CLASSIFICATION

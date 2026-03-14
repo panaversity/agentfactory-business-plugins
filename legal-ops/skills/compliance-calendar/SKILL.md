@@ -1,3 +1,13 @@
+---
+name: compliance-calendar
+description: >
+  Obligation tracking, deadline management, and compliance calendar dashboards.
+  Covers contract obligations, regulatory filings, internal compliance reviews,
+  and litigation deadline escalation. Produces RAG-status dashboards with
+  escalation timelines.
+user-invocable: false
+---
+
 # Compliance Calendar -- Obligation Tracking
 
 ## CALENDAR CATEGORIES

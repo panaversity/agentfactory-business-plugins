@@ -1,3 +1,13 @@
+---
+name: regulatory-monitoring
+description: >
+  Regulatory compliance monitoring, impact assessment, and alerting. Produces
+  weekly regulatory briefs and monthly board summaries with RAG-status
+  classification. Covers data protection, AI regulation, employment,
+  company law, and sector-specific regulatory areas across multiple jurisdictions.
+user-invocable: false
+---
+
 # Regulatory Monitoring -- Compliance Alerts and Impact Assessment
 
 ## CONFIGURATION PARAMETERS (load from settings or ask user)

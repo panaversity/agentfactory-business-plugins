@@ -27,11 +27,11 @@ chapter: 22 -- Legal Operations and Compliance
 | Contract review, clause analysis, redlines         | Anthropic `/review-contract` (with overlay)     |
 | NDA, non-disclosure, confidentiality agreement     | Anthropic `/triage-nda` (with pre-checks below) |
 | Vendor assessment, vendor due diligence            | Anthropic `/vendor-check` (with overlay)        |
-| Patent, trademark, copyright, trade secret, IP     | Load `products/ip-protection.md`                |
-| Regulatory update, compliance monitoring           | Load `products/regulatory-monitoring.md`        |
-| DSAR, data subject, GDPR request, privacy request  | Load `products/dsar-privacy.md`                 |
-| Legal spend, invoice, firm performance             | Load `products/legal-spend.md`                  |
-| Renewal, obligation, deadline, compliance calendar | Load `products/compliance-calendar.md`          |
+| Patent, trademark, copyright, trade secret, IP     | ip-protection skill                             |
+| Regulatory update, compliance monitoring           | regulatory-monitoring skill                     |
+| DSAR, data subject, GDPR request, privacy request  | dsar-privacy skill                              |
+| Legal spend, invoice, firm performance             | legal-spend skill                               |
+| Renewal, obligation, deadline, compliance calendar | compliance-calendar skill                       |
 | Legal briefing, research, topic summary            | Route by topic (see Research Routing below)     |
 | Compliance check, compliance verification          | Anthropic `/compliance-check`                   |
 | Legal risk assessment                              | Anthropic `/legal-risk-assessment`              |
@@ -43,28 +43,29 @@ chapter: 22 -- Legal Operations and Compliance
 
 When the query is a research or briefing request, route by topic:
 
-| Topic Pattern                     | Routes To                                |
-| --------------------------------- | ---------------------------------------- |
-| Regulatory monitoring, compliance | Load `products/regulatory-monitoring.md` |
-| Patent, trademark, IP, copyright  | Load `products/ip-protection.md`         |
-| Legal spend, invoice, billing     | Load `products/legal-spend.md`           |
-| DSAR, privacy, data subject       | Load `products/dsar-privacy.md`          |
-| General research, legal topic     | Anthropic `/brief`                       |
+| Topic Pattern                     | Routes To                   |
+| --------------------------------- | --------------------------- |
+| Regulatory monitoring, compliance | regulatory-monitoring skill |
+| Patent, trademark, IP, copyright  | ip-protection skill         |
+| Legal spend, invoice, billing     | legal-spend skill           |
+| DSAR, privacy, data subject       | dsar-privacy skill          |
+| General research, legal topic     | Anthropic `/brief`          |
 
-### Product Reference Files
+### Product Skills Reference
 
-The `products/` directory contains domain knowledge files loaded on demand:
+Each product is a standalone skill in `skills/<name>/SKILL.md`. The router
+activates them by name -- Claude loads the skill's domain knowledge automatically.
 
-| File                                | Domain                                                      |
-| ----------------------------------- | ----------------------------------------------------------- |
-| `products/ip-protection.md`         | Patent landscape, trademark monitoring, FTO, OSS compliance |
-| `products/regulatory-monitoring.md` | Weekly regulatory briefing, impact classification           |
-| `products/dsar-privacy.md`          | DSAR 30-day workflow, jurisdiction response windows         |
-| `products/legal-spend.md`           | Spend analytics, anomaly detection, benchmarking            |
-| `products/compliance-calendar.md`   | Obligation tracking, escalation sequences, dashboard        |
+| Skill                   | Domain                                                      |
+| ----------------------- | ----------------------------------------------------------- |
+| `ip-protection`         | Patent landscape, trademark monitoring, FTO, OSS compliance |
+| `regulatory-monitoring` | Weekly regulatory briefing, impact classification           |
+| `dsar-privacy`          | DSAR 30-day workflow, jurisdiction response windows         |
+| `legal-spend`           | Spend analytics, anomaly detection, benchmarking            |
+| `compliance-calendar`   | Obligation tracking, escalation sequences, dashboard        |
 
-When the routing table directs you to load a product file, read its full content
-and apply the domain knowledge, output formats, and safety rules it contains.
+When the routing table directs you to a product skill, activate that skill
+and apply its domain knowledge, output formats, and safety rules.
 
 ## STEP 2 -- IDENTIFY JURISDICTION AND LOAD OVERLAY
 

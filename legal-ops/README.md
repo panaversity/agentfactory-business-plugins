@@ -2,7 +2,7 @@
 
 Plugin for **Chapter 22: Legal Operations and Compliance** from [The AI Agent Factory](https://learn.panaversity.org) by Panaversity.
 
-**1 agent, 1 skill (with 5 product reference files), 6 jurisdiction overlays, 1 playbook template.** Extends Anthropic's built-in Legal Plugin with multi-jurisdiction awareness and domain-specific legal operations workflows across UK, EU, US, Pakistan, UAE, and GCC jurisdictions.
+**1 agent, 6 skills (1 router + 5 products), 6 jurisdiction overlays, 1 playbook template.** Extends Anthropic's built-in Legal Plugin with multi-jurisdiction awareness and domain-specific legal operations workflows across UK, EU, US, Pakistan, UAE, and GCC jurisdictions.
 
 ---
 
@@ -10,9 +10,9 @@ Plugin for **Chapter 22: Legal Operations and Compliance** from [The AI Agent Fa
 
 **Layer 1 (Anthropic's Legal Plugin):** 9 built-in commands for contract review, NDA triage, vendor assessment, compliance checks, legal research, risk assessment, meeting prep, legal responses, and e-signatures.
 
-**Layer 2 (This Plugin):** Adds jurisdiction-aware routing, domain-specific product knowledge (loaded on demand), and an orchestration agent that enriches Layer 1 commands with jurisdiction overlays, negotiation playbook context, and pre-check logic.
+**Layer 2 (This Plugin):** Adds jurisdiction-aware routing, domain-specific product skills, and an orchestration agent that enriches Layer 1 commands with jurisdiction overlays, negotiation playbook context, and pre-check logic.
 
-The router skill sits between user queries and all legal operations -- it identifies the task type, loads the correct jurisdiction overlay, checks for a negotiation playbook, and routes to the appropriate Layer 1 command or loads the relevant product reference file with enriched context.
+The router skill sits between user queries and all legal operations -- it identifies the task type, loads the correct jurisdiction overlay, checks for a negotiation playbook, and routes to the appropriate Layer 1 command or activates the relevant product skill with enriched context.
 
 ---
 
@@ -58,25 +58,29 @@ Start a new Claude session and say: "I need to review a vendor agreement under E
 
 ```
 legal-ops/
-├── .claude-plugin/plugin.json                # v3.1.0 manifest
+├── .claude-plugin/plugin.json                # v3.0.0 manifest
 ├── agents/                                   # Orchestrator agent
 │   └── contract-intake.md                    # End-to-end contract intake orchestration
-├── skills/                                   # Domain knowledge
-│   └── legal-global-router/                  # Router + all domain knowledge
-│       ├── SKILL.md                          # Routing table, NDA pre-checks, playbook logic
-│       ├── products/                         # On-demand product reference files
-│       │   ├── ip-protection.md              # Patent/trademark/copyright/OSS
-│       │   ├── regulatory-monitoring.md      # Weekly regulatory briefing
-│       │   ├── dsar-privacy.md               # DSAR 30-day workflow
-│       │   ├── legal-spend.md                # Spend analytics + anomaly detection
-│       │   └── compliance-calendar.md        # Obligation tracking + escalation
-│       └── references/jurisdictions/         # 6 jurisdiction overlays
-│           ├── uk-law.md                     # England & Wales
-│           ├── eu-law.md                     # EU + member state notes
-│           ├── us-law.md                     # US federal + state
-│           ├── pakistan-law.md               # Pakistan
-│           ├── uae-law.md                    # UAE mainland/DIFC/ADGM
-│           └── gcc-law.md                    # KSA, Bahrain, Kuwait, Oman, Qatar
+├── skills/                                   # Router + product skills
+│   ├── legal-global-router/                  # Router skill
+│   │   ├── SKILL.md                          # Routing table, NDA pre-checks, playbook logic
+│   │   └── references/jurisdictions/         # 6 jurisdiction overlays
+│   │       ├── uk-law.md                     # England & Wales
+│   │       ├── eu-law.md                     # EU + member state notes
+│   │       ├── us-law.md                     # US federal + state
+│   │       ├── pakistan-law.md               # Pakistan
+│   │       ├── uae-law.md                    # UAE mainland/DIFC/ADGM
+│   │       └── gcc-law.md                    # KSA, Bahrain, Kuwait, Oman, Qatar
+│   ├── compliance-calendar/                  # Product skill
+│   │   └── SKILL.md                          # Obligation tracking + escalation
+│   ├── dsar-privacy/                         # Product skill
+│   │   └── SKILL.md                          # DSAR 30-day workflow
+│   ├── ip-protection/                        # Product skill
+│   │   └── SKILL.md                          # Patent/trademark/copyright/OSS
+│   ├── legal-spend/                          # Product skill
+│   │   └── SKILL.md                          # Spend analytics + anomaly detection
+│   └── regulatory-monitoring/                # Product skill
+│       └── SKILL.md                          # Weekly regulatory briefing
 ├── evals/                                    # Golden-file tests
 │   ├── routing-golden.json                   # 12 routing test cases
 │   ├── product-golden.json                   # 5 product accuracy cases
@@ -97,23 +101,16 @@ legal-ops/
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `contract-intake` | Manages end-to-end contract intake: receive, classify, extract metadata, triage via Anthropic commands, route by tier, track SLA, handle post-execution. |
 
-## Skill (1) -- Router + Domain Knowledge
+## Skills (6) -- 1 Router + 5 Products
 
-| Skill                 | Purpose                                                                                                                                       |
-| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| `legal-global-router` | Routing table, jurisdiction overlays, NDA pre-checks, playbook loading. Loads product reference files on demand for domain-specific analysis. |
-
-### Product Reference Files (5)
-
-Loaded on demand by the router when a query matches their domain:
-
-| File                       | Domain                                               |
-| -------------------------- | ---------------------------------------------------- |
-| `ip-protection.md`         | Patent landscape, trademark watch, FTO scaffolding   |
-| `regulatory-monitoring.md` | Weekly regulatory brief with impact assessment       |
-| `dsar-privacy.md`          | 30-day DSAR workflow with multi-jurisdiction support |
-| `legal-spend.md`           | Spend tracking, anomaly detection, benchmarking      |
-| `compliance-calendar.md`   | Filing deadlines, renewals, escalation sequences     |
+| Skill                   | Purpose                                                                                               |
+| ----------------------- | ----------------------------------------------------------------------------------------------------- |
+| `legal-global-router`   | Routing table, jurisdiction overlays, NDA pre-checks, playbook loading. Activates product skills.     |
+| `compliance-calendar`   | Obligation tracking, filing deadlines, renewal reminders, escalation sequences, compliance dashboard. |
+| `dsar-privacy`          | 30-day DSAR workflow with multi-jurisdiction support (UK GDPR, EU GDPR, CCPA, PIPEDA).                |
+| `ip-protection`         | Patent landscape analysis, trademark monitoring, FTO scaffolding, copyright and OSS compliance.       |
+| `legal-spend`           | Spend analytics, billing anomaly detection, rate benchmarking, quarterly reporting.                   |
+| `regulatory-monitoring` | Weekly regulatory brief with impact classification, monthly board summaries.                          |
 
 ## Jurisdiction Overlays (6)
 

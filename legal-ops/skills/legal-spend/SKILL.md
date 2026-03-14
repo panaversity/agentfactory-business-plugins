@@ -1,3 +1,13 @@
+---
+name: legal-spend
+description: >
+  Legal spend analytics, anomaly detection, and benchmarking. Analyses
+  outside counsel invoices by matter type, law firm, and business unit.
+  Flags billing anomalies and produces quarterly spend reports with
+  rate benchmarking against market data.
+user-invocable: false
+---
+
 # Legal Spend -- Analytics, Anomaly Detection, and Benchmarking
 
 ## DATA SOURCES (connect via MCP)

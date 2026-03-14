@@ -1,7 +1,7 @@
 {
   "name": "legal-ops",
-  "version": "3.1.0",
-  "description": "Legal Operations and Compliance: 1 agent (contract intake orchestrator), 1 skill (legal-global-router with 5 on-demand product reference files), 6 jurisdiction overlays (UK, EU, US, Pakistan, UAE, GCC). Extends Anthropic's Legal Plugin with multi-jurisdiction awareness and domain-specific workflows.",
+  "version": "3.0.0",
+  "description": "Legal Operations and Compliance: 1 agent, 6 skills (1 router + 5 products), 6 jurisdiction overlays (UK, EU, US, Pakistan, UAE, GCC). Extends Anthropic's built-in Legal Plugin with multi-jurisdiction awareness and domain-specific workflows.",
   "author": {
     "name": "Panaversity",
     "url": "https://github.com/panaversity"

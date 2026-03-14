@@ -1,3 +1,13 @@
+---
+name: dsar-privacy
+description: >
+  Data Subject Access Request (DSAR) workflow management. Covers the full
+  30-day DSAR lifecycle: receipt, identity verification, data discovery,
+  compilation and redaction, response drafting, and logging. Multi-jurisdiction
+  support for UK GDPR, EU GDPR, CCPA, and PIPEDA.
+user-invocable: false
+---
+
 # DSAR and Privacy -- Data Subject Access Request Workflow
 
 ## JURISDICTION RESPONSE WINDOWS
