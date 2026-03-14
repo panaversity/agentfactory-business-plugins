@@ -1,7 +1,7 @@
 {
   "name": "legal-ops",
-  "version": "1.0.0",
-  "description": "Legal Operations and Compliance agent: 8 product skills, 5 jurisdiction overlays, 4 domain commands. Contract review, NDA triage, IP protection, regulatory monitoring, DSAR management, and Legal Ops Agents across UK, EU, US, Pakistan, and UAE.",
+  "version": "2.0.0",
+  "description": "Legal Operations extension: 6 product skills, 1 router, 6 jurisdiction overlays, 3 domain commands. IP protection, regulatory monitoring, DSAR management, legal spend analytics, compliance calendar, and contract intake across UK, EU, US, Pakistan, UAE, and GCC jurisdictions. Extends Anthropic's Legal Plugin (Layer 1) with jurisdiction-aware orchestration.",
   "author": {
     "name": "Panaversity",
     "url": "https://github.com/panaversity"
@@ -11,8 +11,7 @@
   "license": "Apache-2.0",
   "keywords": [
     "legal-ops",
-    "contract-review",
-    "nda",
+    "contract-intake",
     "ip-protection",
     "regulatory",
     "compliance",

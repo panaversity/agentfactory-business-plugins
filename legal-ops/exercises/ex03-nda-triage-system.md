@@ -2,13 +2,13 @@
 
 ## Scenario Profile
 
-| Field               | Value                                         |
-| ------------------- | --------------------------------------------- |
-| **Type**            | Workflow Configuration                        |
-| **Time**            | 45 minutes                                    |
-| **Skills Required** | `nda-triage`, `legal-global-router`           |
-| **Plugin Command**  | `/triage-nda`                                 |
-| **Chapter**         | Chapter 22 -- Legal Operations and Compliance |
+| Field               | Value                                                     |
+| ------------------- | --------------------------------------------------------- |
+| **Type**            | Workflow Configuration                                    |
+| **Time**            | 45 minutes                                                |
+| **Skills Required** | Anthropic's `triage-nda` (Layer 1), `legal-global-router` |
+| **Plugin Command**  | Anthropic's `/triage-nda` (Layer 1)                       |
+| **Chapter**         | Chapter 22 -- Legal Operations and Compliance             |
 
 ---
 

@@ -1,15 +1,15 @@
 ---
 name: contract-intake-agent
-version: 1.0
 description: >
   Activate for: incoming contract, contract received, new contract, contract
   routing, contract intake, NDA received, vendor agreement received, contract
   submitted for review, legal intake, contract queue, contract management,
   contract tracking, new agreement, contract pipeline, contract submitted.
   NOT for: IP research, regulatory monitoring, DSAR processing, contract execution (authorised signatory required), legal advice.
-plugin-commands: /review-contract, /triage-nda, /vendor-check
-mcp-integrations: Google Drive, SharePoint, Gmail, Outlook, Google Sheets, Notion
-chapter: 22 -- Legal Operations and Compliance
+metadata:
+  version: "1.0"
+  mcp-integrations: Google Drive, SharePoint, Gmail, Outlook, Google Sheets, Notion
+  chapter: "22 -- Legal Operations and Compliance"
 ---
 
 ## INTAKE SEQUENCE -- EXECUTE IN ORDER

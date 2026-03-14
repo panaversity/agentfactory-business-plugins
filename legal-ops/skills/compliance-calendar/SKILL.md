@@ -1,6 +1,5 @@
 ---
 name: compliance-calendar
-version: 1.0
 description: >
   Activate for: contract renewal, renewal deadline, notice period,
   renewal reminder, compliance deadline, obligation due, filing deadline,
@@ -9,8 +8,9 @@ description: >
   obligation tracking, contract obligation, missed deadline, overdue,
   60-day calendar, compliance obligations.
   NOT for: contract review, NDA triage, IP research, DSAR processing, setting compliance policy (compliance officer required).
-plugin-commands: /vendor-check
-chapter: 22 -- Legal Operations and Compliance
+metadata:
+  version: "1.0"
+  chapter: "22 -- Legal Operations and Compliance"
 ---
 
 ## CALENDAR CATEGORIES

@@ -5,7 +5,7 @@
         "hooks": [
           {
             "type": "prompt",
-            "prompt": "The Legal Operations and Compliance plugin (v1.0.0) is active. Capabilities: 8 product skills (contract review, NDA triage, IP protection, regulatory monitoring, DSAR privacy, legal spend, compliance calendar, contract intake), 5 jurisdiction overlays (UK, EU, US, Pakistan, UAE), 4 domain commands. Commands available: /review-contract (full contract review), /triage-nda (NDA pre-screening), /vendor-check (obligation and compliance tracking), /legal-brief (research, regulatory monitoring, IP analysis). The router auto-activates on any legal operations query. ALL OUTPUTS REQUIRE REVIEW BY LICENSED ATTORNEY. $ARGUMENTS"
+            "prompt": "The Legal Operations and Compliance plugin (v2.0.0) is active. Capabilities: 6 product skills (IP protection, regulatory monitoring, DSAR privacy, legal spend, compliance calendar, contract intake) plus 1 router, 6 jurisdiction overlays (UK, EU, US, Pakistan, UAE, GCC), 3 domain commands. Commands available: /contract-intake (orchestrated contract intake with jurisdiction routing and tier-based SLA tracking), /compliance-calendar (obligation tracking, renewal calendar, deadline management), /legal-brief (research, regulatory monitoring, IP analysis). The router auto-activates on any legal operations query. ALL OUTPUTS REQUIRE REVIEW BY LICENSED ATTORNEY. $ARGUMENTS"
           }
         ]
       }

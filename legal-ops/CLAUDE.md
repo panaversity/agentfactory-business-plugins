@@ -48,12 +48,11 @@ for every query.
 
 ## Commands
 
-| Command            | What It Does                                                       |
-| ------------------ | ------------------------------------------------------------------ |
-| `/review-contract` | Full clause-by-clause contract review against playbook             |
-| `/triage-nda`      | Rapid NDA pre-screening with tier routing                          |
-| `/vendor-check`    | Obligation tracking, renewal calendar, compliance dashboard        |
-| `/legal-brief`     | Legal research, regulatory monitoring, IP analysis, spend analysis |
+| Command                | What It Does                                                                                               |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `/contract-intake`     | Orchestrated contract intake: classify, route via Anthropic Layer 1, apply jurisdiction overlay, track SLA |
+| `/compliance-calendar` | Obligation tracking, renewal calendar, deadline management, compliance dashboard                           |
+| `/legal-brief`         | Legal research, regulatory monitoring, IP analysis, spend analysis                                         |
 
 ## Mandatory Output Header
 

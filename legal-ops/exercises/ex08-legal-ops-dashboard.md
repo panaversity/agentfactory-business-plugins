@@ -7,7 +7,7 @@
 | **Type**            | Integration and Measurement                   |
 | **Time**            | 60 minutes                                    |
 | **Skills Required** | All product skills                            |
-| **Plugin Commands** | `/vendor-check`, `/legal-brief`               |
+| **Plugin Commands** | `/compliance-calendar`, `/legal-brief`        |
 | **Chapter**         | Chapter 22 -- Legal Operations and Compliance |
 
 ---

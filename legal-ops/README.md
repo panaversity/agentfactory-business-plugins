@@ -2,7 +2,7 @@
 
 Plugin for **Chapter 22: Legal Operations and Compliance** from [The AI Agent Factory](https://learn.panaversity.org) by Panaversity.
 
-Legal Operations and Compliance agent with 8 product skills, 6 jurisdiction overlays, and 4 domain commands covering contract review, NDA triage, IP protection, regulatory monitoring, DSAR management, legal spend analysis, compliance calendar tracking, and contract intake routing across UK, EU, US, Pakistan, UAE, and GCC jurisdictions.
+Legal Operations extension with 6 product skills, 1 router, 6 jurisdiction overlays, and 3 domain commands covering IP protection, regulatory monitoring, DSAR management, legal spend analysis, compliance calendar tracking, and contract intake routing across UK, EU, US, Pakistan, UAE, and GCC jurisdictions.
 
 ---
 
@@ -49,21 +49,18 @@ Start a new Claude session and say: "I need to review a vendor agreement under E
 ```
 legal-ops/
 ├── .claude-plugin/plugin.json         # Plugin manifest
-├── skills/                            # 9 skills (auto-loaded by agent)
+├── skills/                            # 7 skills (auto-loaded by agent)
 │   ├── legal-global-router/           # Routes to correct product + jurisdiction
 │   │   └── references/jurisdictions/  # 6 jurisdiction overlays (on-demand)
-│   ├── jurisdiction-contract-review/   # Full clause-by-clause contract review
-│   ├── jurisdiction-nda-triage/       # NDA pre-screening and routing
 │   ├── ip-protection/                 # Patent, trademark, copyright, OSS
 │   ├── regulatory-monitoring/         # Regulatory change tracking
 │   ├── dsar-privacy/                  # DSAR/privacy request management
 │   ├── legal-spend/                   # External legal spend analysis
 │   ├── compliance-calendar/           # Obligation and deadline tracking
 │   └── contract-intake-agent/         # End-to-end contract intake
-├── commands/                          # 4 slash commands
-│   ├── review-contract.md             # /review-contract
-│   ├── triage-nda.md                  # /triage-nda
-│   ├── vendor-check.md               # /vendor-check
+├── commands/                          # 3 slash commands
+│   ├── contract-intake.md             # /contract-intake
+│   ├── compliance-calendar.md         # /compliance-calendar
 │   └── legal-brief.md                # /legal-brief
 ├── hooks/hooks.json                   # SessionStart + PostToolUse validation
 ├── scripts/validate-routing.py        # Routing validation test harness
@@ -77,31 +74,28 @@ legal-ops/
 
 ## Commands
 
-| Command            | What It Does                                  | Example                                                             |
-| ------------------ | --------------------------------------------- | ------------------------------------------------------------------- |
-| `/review-contract` | Full clause-by-clause review against playbook | `/review-contract "SaaS MSA" "English law" "customer, GBP 48K"`     |
-| `/triage-nda`      | NDA pre-screening with tier routing           | `/triage-nda "mutual NDA" "tech partner, response by Friday"`       |
-| `/vendor-check`    | Obligation tracking and compliance calendar   | `/vendor-check scope:"all contracts" filter:"due in 60 days"`       |
-| `/legal-brief`     | Research, regulatory, IP, spend analysis      | `/legal-brief topic:"regulatory monitoring" jurisdictions:"UK, EU"` |
+| Command                | What It Does                                           | Example                                                                        |
+| ---------------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `/contract-intake`     | Orchestrated contract intake with jurisdiction routing | `/contract-intake "SaaS MSA from UK vendor" "English law" "customer, GBP 48K"` |
+| `/compliance-calendar` | Obligation tracking and compliance dashboard           | `/compliance-calendar scope:"all contracts" filter:"due in 60 days"`           |
+| `/legal-brief`         | Research, regulatory, IP, spend analysis               | `/legal-brief topic:"regulatory monitoring" jurisdictions:"UK, EU"`            |
 
 ---
 
 ## How Each Folder Maps to Chapter 22 Lessons
 
-| Folder                                 | Lessons       | What You Do                                              |
-| -------------------------------------- | ------------- | -------------------------------------------------------- |
-| `skills/jurisdiction-contract-review/` | Part One      | Jurisdiction-aware contract review against your playbook |
-| `skills/jurisdiction-nda-triage/`      | Part Two      | Jurisdiction-aware NDA triage with three-tier routing    |
-| `skills/ip-protection/`                | Part Three    | Patent landscape, trademark monitoring, FTO research     |
-| `skills/contract-intake-agent/`        | Part Five     | Build the Contract Intake Agent                          |
-| `skills/regulatory-monitoring/`        | Part Five     | Build the Regulatory Monitoring Agent                    |
-| `skills/compliance-calendar/`          | Part Five     | Build the Compliance Calendar Agent                      |
-| `skills/legal-spend/`                  | Part Five     | Build the Legal Spend Analytics Agent                    |
-| `skills/dsar-privacy/`                 | Part Five     | Build the DSAR Response Agent                            |
-| `skills/legal-global-router/`          | All           | Routing + 6 jurisdiction overlays                        |
-| `exercises/`                           | Exercises 1-8 | Hands-on exercise files                                  |
-| `workflow-recipes/`                    | Operational   | Production workflow playbooks                            |
-| `evals/`                               | Validation    | Golden-file routing and product tests                    |
+| Folder                          | Lessons       | What You Do                                          |
+| ------------------------------- | ------------- | ---------------------------------------------------- |
+| `skills/ip-protection/`         | Part Three    | Patent landscape, trademark monitoring, FTO research |
+| `skills/contract-intake-agent/` | Part Five     | Build the Contract Intake Agent                      |
+| `skills/regulatory-monitoring/` | Part Five     | Build the Regulatory Monitoring Agent                |
+| `skills/compliance-calendar/`   | Part Five     | Build the Compliance Calendar Agent                  |
+| `skills/legal-spend/`           | Part Five     | Build the Legal Spend Analytics Agent                |
+| `skills/dsar-privacy/`          | Part Five     | Build the DSAR Response Agent                        |
+| `skills/legal-global-router/`   | All           | Routing + 6 jurisdiction overlays                    |
+| `exercises/`                    | Exercises 1-8 | Hands-on exercise files                              |
+| `workflow-recipes/`             | Operational   | Production workflow playbooks                        |
+| `evals/`                        | Validation    | Golden-file routing and product tests                |
 
 ---
 
@@ -131,6 +125,22 @@ To customize: copy `legal.local.md.template`, rename to `legal.local.md`, and fi
 > **The licensed attorney advises, decides, and signs.**
 
 Every file in this plugin enforces this distinction. Every output ends with: **ALL OUTPUTS REQUIRE REVIEW BY LICENSED ATTORNEY.**
+
+## Relationship to Anthropic's Legal Plugin
+
+This plugin is a **Layer 2 extension** that builds on top of Anthropic's official Legal Plugin (Layer 1). It does NOT duplicate Layer 1 capabilities.
+
+| Capability                                           | Owner                 | Command/Skill          |
+| ---------------------------------------------------- | --------------------- | ---------------------- |
+| Contract review (clause-by-clause analysis)          | Anthropic (Layer 1)   | `/review-contract`     |
+| NDA triage (three-tier classification)               | Anthropic (Layer 1)   | `/triage-nda`          |
+| Vendor status lookup                                 | Anthropic (Layer 1)   | `/vendor-check`        |
+| Daily/topic/incident briefings                       | Anthropic (Layer 1)   | `/brief`               |
+| Contract intake orchestration + jurisdiction routing | Panaversity (Layer 2) | `/contract-intake`     |
+| Obligation tracking + compliance dashboard           | Panaversity (Layer 2) | `/compliance-calendar` |
+| IP, regulatory, spend, DSAR research                 | Panaversity (Layer 2) | `/legal-brief`         |
+
+**`/brief` vs `/legal-brief`:** These are different commands with different preferred entrypoints and owners. `/brief` (Anthropic) is the general briefing tool — daily briefings, topic briefings, incident briefs. `/legal-brief` (Panaversity) is a specialized legal-ops research wrapper that routes through the jurisdiction-aware router before invoking ip-protection, regulatory-monitoring, legal-spend, or dsar-privacy skills. Both can handle IP and regulatory topics; `/legal-brief` adds jurisdiction overlay loading and domain-specific output formats.
 
 ## License
 

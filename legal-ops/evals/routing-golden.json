@@ -1,21 +1,5 @@
 [
   {
-    "query": "Review this vendor MSA for our SaaS procurement under English law",
-    "expected_product_skill": "contract-review",
-    "expected_jurisdiction": "UK",
-    "expected_overlay": "uk-law.md",
-    "expected_contains": ["UCTA", "limitation of liability", "attorney review"],
-    "must_not_contain": ["legal advice", "approved for execution"]
-  },
-  {
-    "query": "We received an NDA from a prospective technology partner based in Delaware",
-    "expected_product_skill": "nda-triage",
-    "expected_jurisdiction": "US",
-    "expected_overlay": "us-law.md",
-    "expected_contains": ["Tier", "triage", "standard form"],
-    "must_not_contain": ["approved for signing"]
-  },
-  {
     "query": "Run a patent landscape analysis for AI document extraction technology in the EU",
     "expected_product_skill": "ip-protection",
     "expected_jurisdiction": "EU",
@@ -64,28 +48,12 @@
     "must_not_contain": ["approved for execution"]
   },
   {
-    "query": "Review this consulting agreement governed by UAE/DIFC law for our Dubai subsidiary",
-    "expected_product_skill": "contract-review",
-    "expected_jurisdiction": "UAE",
-    "expected_overlay": "uae-law.md",
-    "expected_contains": ["DIFC", "mainland", "legal zone"],
-    "must_not_contain": ["legal advice"]
-  },
-  {
     "query": "We need trademark monitoring for our brand across EU member states",
     "expected_product_skill": "ip-protection",
     "expected_jurisdiction": "EU",
     "expected_overlay": "eu-law.md",
     "expected_contains": ["EUTM", "EUIPO", "similarity", "monitoring"],
     "must_not_contain": ["FTO opinion"]
-  },
-  {
-    "query": "Triage this incoming NDA from a German company proposing German law as governing law",
-    "expected_product_skill": "nda-triage",
-    "expected_jurisdiction": "EU",
-    "expected_overlay": "eu-law.md",
-    "expected_contains": ["Tier", "governing law", "German"],
-    "must_not_contain": ["Tier 1"]
   },
   {
     "query": "A California resident has filed a CCPA data deletion request",

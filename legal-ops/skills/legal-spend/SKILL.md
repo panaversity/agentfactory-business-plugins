@@ -1,6 +1,5 @@
 ---
 name: legal-spend
-version: 1.0
 description: >
   Activate for: legal spend, legal invoice, law firm invoice, legal budget,
   matter budget, legal costs, external counsel, billing rates, hourly rates,
@@ -8,8 +7,9 @@ description: >
   legal ROI, panel firms, outside counsel, legal department budget,
   matter management, legal benchmarking.
   NOT for: contract review, NDA triage, IP research, regulatory monitoring, DSAR processing, budget approval (CFO required).
-plugin-commands: /legal-brief
-chapter: 22 -- Legal Operations and Compliance
+metadata:
+  version: "1.0"
+  chapter: "22 -- Legal Operations and Compliance"
 ---
 
 ## DATA SOURCES (connect via MCP)

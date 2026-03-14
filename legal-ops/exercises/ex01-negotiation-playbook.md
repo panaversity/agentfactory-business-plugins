@@ -6,7 +6,7 @@
 | ------------------- | ---------------------------------------------------------------------- |
 | **Type**            | SKILL.md Configuration                                                 |
 | **Time**            | 60-90 minutes                                                          |
-| **Skills Required** | `contract-review`, `legal-global-router`, `legal.local.md.template`    |
+| **Skills Required** | Anthropic's `review-contract` (Layer 1), `legal-global-router`, `legal.local.md.template` |
 | **Prerequisite**    | Legal Ops plugin installed; access to 3 recently negotiated agreements |
 | **Chapter**         | Chapter 22 -- Legal Operations and Compliance                          |
 

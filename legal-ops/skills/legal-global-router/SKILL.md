@@ -1,6 +1,5 @@
 ---
 name: legal-global-router
-version: 1.0
 description: >
   TOP-LEVEL ROUTER. Activate when ANY of these terms appear:
   contract review, NDA, non-disclosure, confidentiality agreement,
@@ -12,23 +11,27 @@ description: >
   vendor agreement, CLM, contract lifecycle, playbook, clause analysis,
   negotiation, legal ops, legal operations, contract triage.
   NOT for: direct legal advice, court filings, litigation strategy, attorney-client privileged communications, contract execution.
-author: Panaversity -- The AI Agent Factory
-chapter: 22 -- Legal Operations and Compliance
+metadata:
+  version: "1.0"
+  author: Panaversity -- The AI Agent Factory
+  chapter: "22 -- Legal Operations and Compliance"
 ---
 
 ## STEP 1 -- IDENTIFY TASK TYPE AND LOAD PRODUCT FILE
 
-| Query Pattern                                      | Load Product Skill                           |
-| -------------------------------------------------- | -------------------------------------------- |
-| Contract review, clause analysis, redlines         | skills/jurisdiction-contract-review/SKILL.md |
-| NDA, non-disclosure, confidentiality agreement     | skills/jurisdiction-nda-triage/SKILL.md      |
-| Patent, trademark, copyright, trade secret, IP     | skills/ip-protection/SKILL.md                |
-| Regulatory update, compliance monitoring           | skills/regulatory-monitoring/SKILL.md        |
-| DSAR, data subject, GDPR request, privacy request  | skills/dsar-privacy/SKILL.md                 |
-| Legal spend, invoice, firm performance             | skills/legal-spend/SKILL.md                  |
-| Renewal, obligation, deadline, compliance calendar | skills/compliance-calendar/SKILL.md          |
-| Contract intake, incoming contract, routing        | skills/contract-intake-agent/SKILL.md        |
-| Legal briefing, research, topic summary            | use /legal-brief command directly            |
+| Query Pattern                                      | Load Product Skill / Action                    |
+| -------------------------------------------------- | ---------------------------------------------- |
+| Contract review, clause analysis, redlines         | Anthropic Layer 1 handles via /review-contract |
+| NDA, non-disclosure, confidentiality agreement     | Anthropic Layer 1 handles via /triage-nda      |
+| Contract intake, incoming contract, routing        | skills/contract-intake-agent/SKILL.md          |
+| Patent, trademark, copyright, trade secret, IP     | skills/ip-protection/SKILL.md                  |
+| Regulatory update, compliance monitoring           | skills/regulatory-monitoring/SKILL.md          |
+| DSAR, data subject, GDPR request, privacy request  | skills/dsar-privacy/SKILL.md                   |
+| Legal spend, invoice, firm performance             | skills/legal-spend/SKILL.md                    |
+| Renewal, obligation, deadline, compliance calendar | skills/compliance-calendar/SKILL.md            |
+| Legal briefing, research, topic summary            | use /legal-brief command directly              |
+
+For contract review and NDA triage, this router provides the jurisdiction overlay. The core review/triage logic comes from Anthropic's Layer 1 plugin.
 
 ## STEP 2 -- IDENTIFY JURISDICTION AND LOAD OVERLAY
 
@@ -70,7 +73,7 @@ Do not produce any substantive legal output without this header.
 - NEVER skip the playbook check -- if no playbook found, state explicitly
 - NEVER apply a jurisdiction overlay without confirming the user's jurisdiction
 - NEVER provide legal advice directly -- route to the correct product skill which will produce analysis for attorney review
-- NEVER route employment disputes to jurisdiction-contract-review -- these require specialist employment law advice
+- NEVER route employment disputes to Anthropic's /review-contract -- these require specialist employment law advice
 
 ## UNIVERSAL RULES -- NON-NEGOTIABLE
 

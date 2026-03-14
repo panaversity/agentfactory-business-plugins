@@ -2,13 +2,13 @@
 
 ## Scenario Profile
 
-| Field               | Value                                              |
-| ------------------- | -------------------------------------------------- |
-| **Type**            | Agent Configuration and Testing                    |
-| **Time**            | 90 minutes                                         |
-| **Skills Required** | All product skills + `contract-intake-agent`       |
-| **Plugin Commands** | `/review-contract`, `/triage-nda`, `/vendor-check` |
-| **Chapter**         | Chapter 22 -- Legal Operations and Compliance      |
+| Field               | Value                                                   |
+| ------------------- | ------------------------------------------------------- |
+| **Type**            | Agent Configuration and Testing                         |
+| **Time**            | 90 minutes                                              |
+| **Skills Required** | All product skills + `contract-intake-agent`            |
+| **Plugin Commands** | `/contract-intake` (wraps Anthropic's Layer 1 commands) |
+| **Chapter**         | Chapter 22 -- Legal Operations and Compliance           |
 
 ---
 

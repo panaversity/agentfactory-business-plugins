@@ -52,8 +52,8 @@ Unknown                        -> Extract key terms; route to GC queue
 
 ```
 Execute the appropriate product skill:
-  - nda-triage: produces Tier 1/2/3 classification
-  - contract-review: produces GREEN/YELLOW/RED analysis
+  - Anthropic's triage-nda: produces Tier 1/2/3 classification
+  - Anthropic's review-contract: produces GREEN/YELLOW/RED analysis
 
 Output: Triage tier + deviation summary + routing recommendation
 ```
@@ -105,13 +105,13 @@ On confirmed signing:
 
 ## Required Skill Files
 
-| Skill File              | Purpose                                 |
-| ----------------------- | --------------------------------------- |
-| `contract-intake-agent` | Intake sequence, routing, and templates |
-| `contract-review`       | Full contract review (Tier 2/3)         |
-| `nda-triage`            | NDA triage (Tier 1/2/3)                 |
-| `compliance-calendar`   | Post-execution obligation tracking      |
-| `legal-global-router`   | Routing and jurisdiction identification |
+| Skill File                         | Purpose                                 |
+| ---------------------------------- | --------------------------------------- |
+| `contract-intake-agent`            | Intake sequence, routing, and templates |
+| Anthropic's `review-contract` (L1) | Full contract review (Tier 2/3)         |
+| Anthropic's `triage-nda` (L1)      | NDA triage (Tier 1/2/3)                 |
+| `compliance-calendar`              | Post-execution obligation tracking      |
+| `legal-global-router`              | Routing and jurisdiction identification |
 
 ---
 

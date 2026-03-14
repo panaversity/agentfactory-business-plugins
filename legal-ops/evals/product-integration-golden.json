@@ -1,0 +1,51 @@
+[
+  {
+    "owner": "anthropic",
+    "note": "Tests that Anthropic's review-contract skill produces expected output when invoked with Panaversity jurisdiction overlay.",
+    "product": "review-contract",
+    "jurisdiction": "UK",
+    "scenario": "SaaS vendor agreement with 3-month liability cap, no DPA, vendor-side termination only",
+    "expected_contains": [
+      "RED",
+      "limitation of liability",
+      "UCTA",
+      "DPA",
+      "termination",
+      "attorney review",
+      "redline"
+    ],
+    "must_not_contain": ["approved for execution", "legal advice", "GREEN"]
+  },
+  {
+    "owner": "anthropic",
+    "note": "Tests that Anthropic's triage-nda skill produces expected output when invoked with Panaversity jurisdiction overlay.",
+    "product": "triage-nda",
+    "jurisdiction": "UK",
+    "scenario": "Mutual NDA with residuals clause, no public info carve-out, perpetual obligations",
+    "expected_contains": [
+      "Tier 3",
+      "RED",
+      "residuals",
+      "perpetual",
+      "senior counsel",
+      "attorney review"
+    ],
+    "must_not_contain": ["Tier 1", "Standard Approval", "approved for signing"]
+  },
+  {
+    "owner": "anthropic",
+    "note": "Tests that Anthropic's review-contract skill produces expected output for US jurisdiction.",
+    "product": "review-contract",
+    "jurisdiction": "US",
+    "scenario": "California consulting agreement with broad non-compete and no CISG exclusion",
+    "expected_contains": [
+      "RED",
+      "non-compete",
+      "California",
+      "VOID",
+      "CISG",
+      "exclusion"
+    ],
+    "must_not_contain": ["enforceable non-compete", "approved"]
+  }
+]

@@ -6,8 +6,8 @@
 | ------------------- | --------------------------------------------- |
 | **Type**            | Applied Practice                              |
 | **Time**            | 60 minutes (20 minutes per contract)          |
-| **Skills Required** | `contract-review`, `legal-global-router`      |
-| **Plugin Command**  | `/review-contract`                            |
+| **Skills Required** | Anthropic's `review-contract` (Layer 1), `legal-global-router` |
+| **Plugin Command**  | Anthropic's `/review-contract` (Layer 1)      |
 | **Chapter**         | Chapter 22 -- Legal Operations and Compliance |
 
 ---

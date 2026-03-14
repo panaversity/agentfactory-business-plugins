@@ -113,10 +113,10 @@ Tier 3: Send to GC with full summary; SLA: 5 days
 
 ## Required Skill Files
 
-| Skill File            | Purpose                                 |
-| --------------------- | --------------------------------------- |
-| `nda-triage`          | Three-tier classification and RED flags |
-| `legal-global-router` | Jurisdiction identification             |
-| Jurisdiction overlays | Governing law considerations            |
+| Skill File                    | Purpose                                 |
+| ----------------------------- | --------------------------------------- |
+| Anthropic's `triage-nda` (L1) | Three-tier classification and RED flags |
+| `legal-global-router`         | Jurisdiction identification             |
+| Jurisdiction overlays         | Governing law considerations            |
 
 ALL OUTPUTS REQUIRE REVIEW BY LICENSED ATTORNEY

@@ -1,0 +1,42 @@
+[
+  {
+    "owner": "anthropic",
+    "note": "Router identifies this as contract review and hands off to Anthropic Layer 1. Panaversity provides the jurisdiction overlay only.",
+    "query": "Review this vendor MSA for our SaaS procurement under English law",
+    "expected_handoff": "review-contract",
+    "expected_jurisdiction": "UK",
+    "expected_overlay": "uk-law.md",
+    "expected_contains": ["UCTA", "limitation of liability", "attorney review"],
+    "must_not_contain": ["legal advice", "approved for execution"]
+  },
+  {
+    "owner": "anthropic",
+    "note": "Router identifies this as NDA triage and hands off to Anthropic Layer 1. Panaversity provides the jurisdiction overlay only.",
+    "query": "We received an NDA from a prospective technology partner based in Delaware",
+    "expected_handoff": "triage-nda",
+    "expected_jurisdiction": "US",
+    "expected_overlay": "us-law.md",
+    "expected_contains": ["Tier", "triage", "standard form"],
+    "must_not_contain": ["approved for signing"]
+  },
+  {
+    "owner": "anthropic",
+    "note": "Router identifies this as contract review and hands off to Anthropic Layer 1. Panaversity provides the jurisdiction overlay only.",
+    "query": "Review this consulting agreement governed by UAE/DIFC law for our Dubai subsidiary",
+    "expected_handoff": "review-contract",
+    "expected_jurisdiction": "UAE",
+    "expected_overlay": "uae-law.md",
+    "expected_contains": ["DIFC", "mainland", "legal zone"],
+    "must_not_contain": ["legal advice"]
+  },
+  {
+    "owner": "anthropic",
+    "note": "Router identifies this as NDA triage and hands off to Anthropic Layer 1. Panaversity provides the jurisdiction overlay only.",
+    "query": "Triage this incoming NDA from a German company proposing German law as governing law",
+    "expected_handoff": "triage-nda",
+    "expected_jurisdiction": "EU",
+    "expected_overlay": "eu-law.md",
+    "expected_contains": ["Tier", "governing law", "German"],
+    "must_not_contain": ["Tier 1"]
+  }
+]

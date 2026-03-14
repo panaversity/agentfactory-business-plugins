@@ -1,6 +1,5 @@
 ---
 name: dsar-privacy
-version: 1.0
 description: >
   Activate for: DSAR, data subject access request, subject access request,
   SAR, right of access, Article 15, GDPR request, CCPA request, privacy
@@ -9,8 +8,9 @@ description: >
   processing, Article 18, objection to processing, Article 21, data subject
   rights, privacy inquiry, ICO complaint, privacy response.
   NOT for: contract review, NDA triage, IP matters, regulatory monitoring, legal advice on data protection interpretation, erasure execution.
-plugin-commands: /legal-brief
-chapter: 22 -- Legal Operations and Compliance
+metadata:
+  version: "1.0"
+  chapter: "22 -- Legal Operations and Compliance"
 ---
 
 ## JURISDICTION RESPONSE WINDOWS

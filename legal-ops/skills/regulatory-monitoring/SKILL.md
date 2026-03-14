@@ -1,6 +1,5 @@
 ---
 name: regulatory-monitoring
-version: 1.0
 description: >
   Activate for: regulatory update, regulation change, new law, compliance
   monitoring, regulatory briefing, regulatory calendar, law change, legal
@@ -8,8 +7,9 @@ description: >
   EU AI Act, employment law change, company law update, sector regulation,
   regulatory horizon, compliance alert, policy review, board briefing.
   NOT for: contract review, NDA triage, IP research, DSAR processing, legal advice on regulatory interpretation.
-plugin-commands: /legal-brief
-chapter: 22 -- Legal Operations and Compliance
+metadata:
+  version: "1.0"
+  chapter: "22 -- Legal Operations and Compliance"
 ---
 
 ## CONFIGURATION PARAMETERS (load from settings or ask user)
