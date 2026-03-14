@@ -1,14 +1,15 @@
 ---
 name: liquidity-lcr
-version: 1.0
 description: >
   Activate for: LCR, liquidity coverage ratio, HQLA, high quality liquid assets,
   net cash outflow, run-off rate, Level 1 assets, Level 2A, Level 2B, 30-day
   stress scenario, liquidity buffer, liquidity coverage, cash outflow, inflow cap.
   NOT for: structural funding / NSFR calculations (use liquidity-nsfr), capital
   adequacy ratios (use basel-capital), interest rate risk in the banking book (IRRBB).
-standard: Basel III Liquidity Coverage Ratio (BCBS 2013, updated 2014)
-author: Panaversity — The AI Agent Factory
+metadata:
+  version: "1.0"
+  author: "Panaversity — The AI Agent Factory"
+  standard: "Basel III Liquidity Coverage Ratio (BCBS 2013, updated 2014)"
 ---
 
 ## LCR FORMULA

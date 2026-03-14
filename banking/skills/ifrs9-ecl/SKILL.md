@@ -1,16 +1,17 @@
 ---
 name: ifrs9-ecl
-version: 1.0
 description: >
   Activate for: IFRS 9, ECL, expected credit loss, PD, LGD, EAD,
   loan loss provision, impairment, 12-month ECL, lifetime ECL,
   post-model adjustment, PMA, IFRS 7, provision movement, forward-looking.
   NOT for: US GAAP CECL calculation (ASC 326), hedge accounting under
   IFRS 9, classification and measurement of financial instruments.
-standard: IFRS 9 Financial Instruments (IASB)
-disclosure: IFRS 7 Financial Instruments Disclosures
-not_applicable_in: USA (use CECL / FASB ASC 326 instead)
-author: Panaversity — The AI Agent Factory
+metadata:
+  version: "1.0"
+  author: "Panaversity — The AI Agent Factory"
+  standard: "IFRS 9 Financial Instruments (IASB)"
+  disclosure: "IFRS 7 Financial Instruments Disclosures"
+  not_applicable_in: "USA (use CECL / FASB ASC 326 instead)"
 ---
 
 ## CORE PRINCIPLE

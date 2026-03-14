@@ -1,6 +1,5 @@
 ---
 name: ifrs9-scenarios
-version: 1.0
 description: >
   Activate for: macro overlay, macroeconomic scenarios, PIT PD,
   point-in-time PD, credit cycle adjustment, scenario weighting,
@@ -8,8 +7,10 @@ description: >
   house price index, IFRS 9 scenarios, scenario probability.
   NOT for: ECL calculation mechanics (use ifrs9-ecl), staging assessment
   (use ifrs9-staging), stress testing for capital adequacy (use stress-testing).
-standard: IFRS 9.5.5.17 (Forward-looking information)
-author: Panaversity — The AI Agent Factory
+metadata:
+  version: "1.0"
+  author: "Panaversity — The AI Agent Factory"
+  standard: "IFRS 9.5.5.17 (Forward-looking information)"
 ---
 
 ## IFRS 9 SCENARIO FRAMEWORK REQUIREMENTS

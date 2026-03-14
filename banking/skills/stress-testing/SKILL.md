@@ -1,6 +1,5 @@
 ---
 name: stress-testing
-version: 1.0
 description: >
   Activate for: ICAAP, ILAAP, stress test, capital depletion, reverse stress test,
   ACS (Annual Cyclical Scenario), DFAST, CCAR, BoE stress test, EBA stress test,
@@ -9,8 +8,10 @@ description: >
   NOT for: IFRS 9 macroeconomic scenario weighting (use ifrs9-scenarios),
   market risk capital under FRTB (use basel-rwa-market), liquidity stress
   testing for LCR/NSFR purposes (use liquidity-lcr / liquidity-nsfr).
-standard: BCBS Pillar 2 / SREP framework — jurisdiction implementations vary
-author: Panaversity — The AI Agent Factory
+metadata:
+  version: "1.0"
+  author: "Panaversity — The AI Agent Factory"
+  standard: "BCBS Pillar 2 / SREP framework — jurisdiction implementations vary"
 ---
 
 ## ICAAP PURPOSE AND STRUCTURE

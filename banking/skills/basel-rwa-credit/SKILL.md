@@ -1,6 +1,5 @@
 ---
 name: basel-rwa-credit
-version: 1.0
 description: >
   Activate for: credit risk RWA, risk-weighted assets, standardised approach,
   SA risk weight, risk weight table, CCF, credit conversion factor, EAD,
@@ -9,8 +8,10 @@ description: >
   NOT for: market risk RWA or FRTB calculations (use basel-rwa-market),
   overall capital adequacy ratios or buffer stacking (use basel-capital),
   IFRS 9 ECL provisioning or impairment (use ifrs9-ecl).
-standard: Basel III Standardised Approach for Credit Risk (BCBS)
-author: Panaversity — The AI Agent Factory
+metadata:
+  version: "1.0"
+  author: "Panaversity — The AI Agent Factory"
+  standard: "Basel III Standardised Approach for Credit Risk (BCBS)"
 ---
 
 ## STANDARDISED APPROACH — RISK WEIGHT TABLE

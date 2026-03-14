@@ -1,6 +1,5 @@
 ---
 name: sanctions-screening
-version: 1.0
 description: >
   Activate for: sanctions, OFAC, HMT, SDN list, EU sanctions, UN sanctions,
   sanctioned entity, sanctions screening, false positive, name match,
@@ -8,8 +7,10 @@ description: >
   sanctions compliance, derisking.
   NOT for: AML transaction monitoring or typology assessment (use aml-typologies),
   KYC customer onboarding CDD/EDD (use aml-cdd-edd), SAR drafting (use aml-sar-drafting).
-standard: OFAC (USA), OFSI/HMT (UK), EU CFSP, UN Security Council Resolutions
-author: Panaversity — The AI Agent Factory
+metadata:
+  version: "1.0"
+  author: "Panaversity — The AI Agent Factory"
+  standard: "OFAC (USA), OFSI/HMT (UK), EU CFSP, UN Security Council Resolutions"
 ---
 
 ## MAJOR SANCTIONS REGIMES

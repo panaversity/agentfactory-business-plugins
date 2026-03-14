@@ -1,6 +1,5 @@
 ---
 name: kyc-risk-rating
-version: 1.0
 description: >
   Activate for: KYC risk rating, customer risk classification, AML risk score,
   customer risk assessment, high-risk customer, risk-based approach, risk rating,
@@ -8,8 +7,10 @@ description: >
   customer risk categories.
   NOT for: transaction monitoring alerts (use aml-typologies), SAR/STR drafting
   (use aml-sar-drafting), sanctions screening (use sanctions-screening).
-standard: FATF Recommendation 1 (Risk-Based Approach), Recommendation 10 (CDD)
-author: Panaversity — The AI Agent Factory
+metadata:
+  version: "1.0"
+  author: "Panaversity — The AI Agent Factory"
+  standard: "FATF Recommendation 1 (Risk-Based Approach), Recommendation 10 (CDD)"
 ---
 
 ## RISK-BASED APPROACH PRINCIPLE

@@ -1,6 +1,5 @@
 ---
 name: bank-reconciliation
-version: 1.0
 description: >
   Activate for: bank reconciliation, nostro reconciliation, suspense account,
   GL reconciliation, provision reconciliation, inter-company reconciliation,
@@ -10,7 +9,8 @@ description: >
   trade reconciliation, position break, GL-to-risk reconciliation.
   NOT for: IFRS 9 ECL model calculation (use ifrs9-ecl), capital adequacy
   reporting (use basel-capital), AML transaction monitoring (use aml-typologies).
-author: Panaversity — The AI Agent Factory
+metadata:
+  author: "Panaversity — The AI Agent Factory"
 ---
 
 ## RECONCILIATION TYPES — LOAD THE RIGHT CONTEXT

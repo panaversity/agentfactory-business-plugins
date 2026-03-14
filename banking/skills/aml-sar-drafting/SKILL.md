@@ -1,6 +1,5 @@
 ---
 name: aml-sar-drafting
-version: 1.0
 description: >
   Activate for: SAR, STR, suspicious activity report, suspicious transaction report,
   NCA, FinCEN, AUSTRAC, SAR narrative, SAR drafting, SAR format, MLRO,
@@ -8,8 +7,10 @@ description: >
   NOT for: transaction monitoring alert triage (use aml-typologies), customer
   due diligence or KYC onboarding (use aml-cdd-edd), sanctions screening (use
   sanctions-screening).
-standard: Jurisdiction-specific — load jurisdiction overlay for format requirements
-author: Panaversity — The AI Agent Factory
+metadata:
+  version: "1.0"
+  author: "Panaversity — The AI Agent Factory"
+  standard: "Jurisdiction-specific — load jurisdiction overlay for format requirements"
 ---
 
 ## SAR/STR OVERVIEW

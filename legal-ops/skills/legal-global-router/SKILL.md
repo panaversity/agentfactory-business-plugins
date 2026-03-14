@@ -1,6 +1,5 @@
 ---
 name: legal-global-router
-version: 3.0
 description: >
   TOP-LEVEL ROUTER. Activate when ANY of these terms appear:
   contract review, NDA, non-disclosure, confidentiality agreement,
@@ -15,8 +14,10 @@ description: >
   research, topic summary, legal spend, invoice, firm performance,
   patent landscape, trademark monitoring, regulatory update, compliance alert.
   NOT for: direct legal advice, court filings, litigation strategy, attorney-client privileged communications, contract execution.
-author: Panaversity -- The AI Agent Factory
-chapter: 22 -- Legal Operations and Compliance
+metadata:
+  version: "3.0"
+  author: "Panaversity -- The AI Agent Factory"
+  chapter: "22 -- Legal Operations and Compliance"
 ---
 
 ## STEP 1 -- IDENTIFY TASK TYPE AND ROUTE

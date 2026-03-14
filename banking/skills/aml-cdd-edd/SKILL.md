@@ -1,6 +1,5 @@
 ---
 name: aml-cdd-edd
-version: 1.0
 description: >
   Activate for: CDD, EDD, customer due diligence, enhanced due diligence,
   simplified due diligence, KYC, know your customer, customer onboarding,
@@ -8,8 +7,10 @@ description: >
   beneficial ownership, UBO, corporate structure, ongoing monitoring.
   NOT for: personal finance advice or retail banking product recommendations,
   tax compliance or tax residency determinations, credit underwriting decisions.
-standard: FATF Recommendation 10 (CDD), 12 (PEPs), 13 (Correspondent Banking)
-author: Panaversity — The AI Agent Factory
+metadata:
+  version: "1.0"
+  author: "Panaversity — The AI Agent Factory"
+  standard: "FATF Recommendation 10 (CDD), 12 (PEPs), 13 (Correspondent Banking)"
 ---
 
 ## CUSTOMER DUE DILIGENCE (CDD) — STANDARD MEASURES

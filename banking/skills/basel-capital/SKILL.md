@@ -1,6 +1,5 @@
 ---
 name: basel-capital
-version: 1.0
 description: >
   Activate for: CET1, Tier 1, Total Capital, capital ratio, RWA, risk-weighted
   assets, Basel III, Basel IV, capital adequacy, capital buffers, MDA, maximum
@@ -9,8 +8,10 @@ description: >
   NOT for: credit risk RWA calculation detail (use basel-rwa-credit), market risk
   FRTB capital (use basel-rwa-market), liquidity ratios LCR/NSFR (use liquidity-lcr
   / liquidity-nsfr).
-standard: Basel III (BCBS) — jurisdiction implementations vary (load overlay)
-author: Panaversity — The AI Agent Factory
+metadata:
+  version: "1.0"
+  author: "Panaversity — The AI Agent Factory"
+  standard: "Basel III (BCBS) — jurisdiction implementations vary (load overlay)"
 ---
 
 ## CAPITAL COMPONENTS

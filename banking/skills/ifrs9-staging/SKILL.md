@@ -1,14 +1,15 @@
 ---
 name: ifrs9-staging
-version: 1.0
 description: >
   Activate for: SICR, significant increase in credit risk, staging assessment,
   stage migration, Stage 1 to Stage 2, rebuttable presumption, 30 days past due,
   90 days past due, watchlist, covenant breach, stage cure, qualitative SICR.
   NOT for: initial recognition and measurement of financial instruments, hedge
   accounting, IFRS 9 classification questions, US GAAP CECL staging.
-standard: IFRS 9.5.5 Impairment
-author: Panaversity — The AI Agent Factory
+metadata:
+  version: "1.0"
+  author: "Panaversity — The AI Agent Factory"
+  standard: "IFRS 9.5.5 Impairment"
 ---
 
 ## STAGING DECISION TREE — APPLY IN THIS EXACT ORDER

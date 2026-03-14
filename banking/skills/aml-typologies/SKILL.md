@@ -1,6 +1,5 @@
 ---
 name: aml-typologies
-version: 1.0
 description: >
   Activate for: AML alert, transaction monitoring, suspicious activity,
   money laundering, structuring, smurfing, round-tripping, layering,
@@ -9,8 +8,10 @@ description: >
   NOT for: SAR/STR drafting or filing (use aml-sar-drafting), customer onboarding
   or KYC documentation (use aml-cdd-edd), sanctions list screening (use
   sanctions-screening).
-standard: FATF 40 Recommendations — jurisdiction AML legislation (load overlay)
-author: Panaversity — The AI Agent Factory
+metadata:
+  version: "1.0"
+  author: "Panaversity — The AI Agent Factory"
+  standard: "FATF 40 Recommendations — jurisdiction AML legislation (load overlay)"
 ---
 
 ## THE THREE STAGES OF MONEY LAUNDERING

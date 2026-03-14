@@ -1,14 +1,15 @@
 ---
 name: ifrs9-disclosure
-version: 1.0
 description: >
   Activate for: IFRS 7 disclosure, ECL disclosure note, credit risk
   disclosure, IFRS 9 annual report note, sensitivity analysis IFRS 9,
   stage distribution table, credit quality table, IFRS 7 note drafting.
   NOT for: ECL calculation methodology (use ifrs9-ecl), staging assessment
   (use ifrs9-staging), US GAAP disclosure requirements under ASC 326 / CECL.
-standard: IFRS 7 Financial Instruments Disclosures
-author: Panaversity — The AI Agent Factory
+metadata:
+  version: "1.0"
+  author: "Panaversity — The AI Agent Factory"
+  standard: "IFRS 7 Financial Instruments Disclosures"
 ---
 
 ## IFRS 7 ECL DISCLOSURE REQUIREMENTS — COMPLETE LIST

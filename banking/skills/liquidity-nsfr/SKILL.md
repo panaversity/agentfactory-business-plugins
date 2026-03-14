@@ -1,14 +1,15 @@
 ---
 name: liquidity-nsfr
-version: 1.0
 description: >
   Activate for: NSFR, net stable funding ratio, available stable funding,
   required stable funding, ASF, RSF, structural liquidity, funding mismatch,
   term funding, long-term funding, stable funding, 1-year funding.
   NOT for: short-term liquidity stress (use liquidity-lcr), intraday liquidity
   monitoring, interest rate risk in the banking book (IRRBB), market risk capital.
-standard: Basel III Net Stable Funding Ratio (BCBS 2014)
-author: Panaversity — The AI Agent Factory
+metadata:
+  version: "1.0"
+  author: "Panaversity — The AI Agent Factory"
+  standard: "Basel III Net Stable Funding Ratio (BCBS 2014)"
 ---
 
 ## NSFR FORMULA

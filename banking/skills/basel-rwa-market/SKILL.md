@@ -1,6 +1,5 @@
 ---
 name: basel-rwa-market
-version: 1.0
 description: >
   Activate for: FRTB, Fundamental Review of the Trading Book, market risk RWA,
   trading book capital, SA-TB, standardised approach trading book, sensitivities-
@@ -11,8 +10,10 @@ description: >
   NOT for: credit risk RWA under standardised or IRB approach (use basel-rwa-credit),
   capital adequacy ratios and buffer calculations (use basel-capital), IFRS 9 ECL
   provisioning (use ifrs9-ecl).
-standard: Basel III FRTB (BCBS d352/d457) -- jurisdiction implementations vary (load overlay)
-author: Panaversity -- The AI Agent Factory
+metadata:
+  version: "1.0"
+  author: "Panaversity — The AI Agent Factory"
+  standard: "Basel III FRTB (BCBS d352/d457) — jurisdiction implementations vary (load overlay)"
 ---
 
 ## CORE PRINCIPLE

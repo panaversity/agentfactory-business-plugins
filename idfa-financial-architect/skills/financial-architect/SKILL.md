@@ -1,5 +1,5 @@
 ---
-name: idfa-financial-architect
+name: financial-architect
 description: >-
   Use this skill for hands-on Excel financial model work: building models
   from scratch (SaaS, three-statement, revenue/COGS/EBITDA), auditing a
