@@ -2,7 +2,7 @@
 
 Plugin for **Chapter 21: Banking Domain Agents** from [The AI Agent Factory](https://learn.panaversity.org) by Panaversity.
 
-Jurisdiction-aware banking regulatory agent with 16 product skills, 7 jurisdiction overlays, and 4 domain commands covering IFRS 9 ECL, Basel III/IV capital and liquidity, AML/KYC/sanctions compliance, and bank reconciliation across UK, EU, US, Australia, Singapore, UAE, and Pakistan.
+Jurisdiction-aware banking regulatory agent (v2.0.0) with 17 skills (1 router + 16 products), 7 jurisdiction overlays, 4 commands, hooks, and eval harness covering IFRS 9 ECL, Basel III/IV capital and liquidity, AML/KYC/sanctions compliance, and bank reconciliation across UK, EU, US, Australia, Singapore, UAE, and Pakistan.
 
 ---
 
@@ -41,10 +41,13 @@ Start a new Claude session and say: "I have a UK IFRS 9 ECL query for a mortgage
 
 ```
 banking/
-├── .claude-plugin/plugin.json        # Plugin manifest
+├── .claude-plugin/plugin.json        # Plugin manifest (v2.0.0)
 ├── skills/                           # 17 skills (auto-loaded by agent)
 │   ├── banking-global-router/        # Routes to correct product + jurisdiction
-│   │   └── references/jurisdictions/ # 7 jurisdiction overlays (on-demand)
+│   │   └── references/              # Regulatory map, SA risk weights, jurisdictions
+│   │       ├── regulatory-map.md
+│   │       ├── sa-risk-weight-table.md
+│   │       └── jurisdictions/        # 7 jurisdiction overlays (on-demand)
 │   ├── ifrs9-ecl/                    # Expected credit loss calculation
 │   ├── ifrs9-staging/                # Stage 1/2/3 assessment
 │   ├── ifrs9-scenarios/              # Macroeconomic scenario framework
@@ -66,10 +69,11 @@ banking/
 │   ├── banking-capital.md            # /banking-capital -- capital ratio check
 │   ├── banking-aml.md                # /banking-aml -- AML alert analysis
 │   └── banking-recon.md              # /banking-recon -- reconciliation
-├── exercises/                        # 14 exercises with data
-├── workflow-recipes/                 # 8 operational playbooks
-├── references/                       # Regulatory map + SA risk weight table
-└── evals/                            # Eval harness (routing + content checks)
+├── hooks/hooks.json                  # SessionStart + PostToolUse hooks
+├── scripts/validate-routing.py       # CI routing validation
+├── evals/                            # Eval harness (routing + content checks)
+├── CLAUDE.md                         # Agent instructions
+└── README.md
 ```
 
 ---
@@ -95,27 +99,6 @@ banking/
 | **Stress Testing** | stress-testing                                                                      | ICAAP, capital depletion, reverse stress test                            |
 | **AML/KYC**        | aml-typologies, aml-sar-drafting, aml-cdd-edd, sanctions-screening, kyc-risk-rating | 20 typologies, SAR drafting, CDD/EDD, sanctions, risk rating             |
 | **Reconciliation** | bank-reconciliation                                                                 | Nostro, suspense, IFRS 9 four-way, GL-to-risk                            |
-
----
-
-## Exercises
-
-| #   | Exercise                     | Domain         | Time   |
-| --- | ---------------------------- | -------------- | ------ |
-| 1   | Retail Mortgage Staging      | IFRS 9         | 35 min |
-| 2   | GCC Corporate ECL            | IFRS 9         | 55 min |
-| 3   | Basel RWA Calculation        | Basel III      | 45 min |
-| 4   | LCR and NSFR                 | Liquidity      | 40 min |
-| 5   | ICAAP Stress Test            | Stress Testing | 50 min |
-| 6   | AML Alert + SAR              | AML            | 45 min |
-| 7   | KYC Corporate Onboarding     | KYC            | 35 min |
-| 8   | Sanctions Screening          | Sanctions      | 40 min |
-| 9   | IFRS 9 x Basel Interaction   | Cross-domain   | 50 min |
-| 10  | Board Risk Report (Capstone) | All domains    | 75 min |
-| 11  | Skill Library Build          | Plugin Dev     | 90 min |
-| 12  | Nostro Reconciliation        | Reconciliation | 35 min |
-| 13  | IFRS 9 Provision Recon       | Reconciliation | 40 min |
-| 14  | Suspense Clearance           | Reconciliation | 30 min |
 
 ---
 

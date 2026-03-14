@@ -1,0 +1,25 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "The Banking Domain Agent plugin (v2.0.0) is active. This plugin provides 17 skills across three regulatory pillars: IFRS 9 ECL (4 skills), Basel III/IV Capital (6 skills), AML/KYC Financial Crime (5 skills), and Bank Reconciliation (1 skill). The router auto-detects the pillar from your query. All outputs require professional review. Jurisdiction must be specified before any regulatory calculation."
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "Verify: does this banking output include (1) the governing standard (IFRS 9 / Basel III / AML), (2) the jurisdiction, and (3) the professional review disclaimer? If any is missing, add it. IFRS 9 outputs must use 'Expected Credit Loss' not 'Allowance for Loan Losses'. Basel outputs must specify SA or IRB approach."
+          }
+        ]
+      }
+    ]
+  }
+}
