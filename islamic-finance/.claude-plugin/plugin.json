@@ -1,7 +1,7 @@
 {
   "name": "islamic-finance",
-  "version": "2.0.0",
-  "description": "Jurisdiction-aware Islamic finance domain agent. 12 product skills (murabaha, ijarah, sukuk, takaful, musharaka, mudaraba, salam, istisna'a, zakat, shariah screening), 13 jurisdiction overlays, 4 domain commands. Covers AAOIFI, IFRS with Islamic guidance, and local standards across 20 jurisdictions.",
+  "version": "3.0.0",
+  "description": "Jurisdiction-aware Islamic finance domain agent. 1 router + 12 product skills (murabaha, ijarah, sukuk, takaful, musharaka, mudaraba, salam, istisna'a, zakat, shariah screening), 13 jurisdiction overlays, 4 domain commands. Covers AAOIFI, IFRS with Islamic guidance, and local standards across 20 jurisdictions.",
   "author": {
     "name": "Panaversity",
     "url": "https://github.com/panaversity"

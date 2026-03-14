@@ -44,7 +44,10 @@ islamic-finance/
 ├── .claude-plugin/plugin.json        # Plugin manifest
 ├── skills/                           # 13 skills (auto-loaded by agent)
 │   ├── islamic-finance-router/       # Routes to correct product + jurisdiction
-│   │   └── references/jurisdictions/ # 13 jurisdiction overlays (on-demand)
+│   │   └── references/
+│   │       ├── jurisdictions/        # 13 jurisdiction overlays (on-demand)
+│   │       ├── aaoifi-fas-reference.md
+│   │       └── global-standards-map.md
 │   ├── murabaha/                     # Cost-plus financing
 │   ├── ijarah-imb/                   # Lease-to-own
 │   ├── musharaka-dm/                 # Diminishing partnership
@@ -64,51 +67,46 @@ islamic-finance/
 │   └── if-zakat.md                   # /if-zakat — zakat computation
 ├── hooks/hooks.json                  # SessionStart + PostToolUse validation
 ├── scripts/validate-routing.py       # 13-jurisdiction routing test harness
-├── evals/                            # Golden-file tests
-├── exercises/                        # 14 exercise data files (download as zip)
-├── workflow-recipes/                 # 4 operational playbooks (download as zip)
-└── references/                       # AAOIFI FAS reference tables
+└── evals/                            # Golden-file tests
 ```
 
 ---
 
 ## Commands
 
-| Command | What It Does | Example |
-|---------|-------------|---------|
+| Command       | What It Does                         | Example                                              |
+| ------------- | ------------------------------------ | ---------------------------------------------------- |
 | `/if-journal` | Generate journal entries + schedules | `/if-journal murabaha bahrain "BHD 500K, 18mo, 18%"` |
-| `/if-compare` | Compare across jurisdictions | `/if-compare murabaha bahrain malaysia` |
-| `/if-screen` | Shariah compliance screening | `/if-screen sc-malaysia "company data..."` |
-| `/if-zakat` | Compute zakat | `/if-zakat saudi "equity SAR 40B, ..."` |
+| `/if-compare` | Compare across jurisdictions         | `/if-compare murabaha bahrain malaysia`              |
+| `/if-screen`  | Shariah compliance screening         | `/if-screen sc-malaysia "company data..."`           |
+| `/if-zakat`   | Compute zakat                        | `/if-zakat saudi "equity SAR 40B, ..."`              |
 
 ---
 
 ## How Each Folder Maps to Chapter 20 Lessons
 
-| Folder | Lessons | What You Do |
-|--------|---------|-------------|
-| `skills/murabaha/` | L04 | Process murabaha transactions, compare AAOIFI vs MFRS |
-| `skills/ijarah-imb/` | L05 | Ijarah-IMB across 4 jurisdictions |
-| `skills/sukuk-*/` | L06 | Sukuk from issuer and investor perspectives |
-| `skills/takaful-ifrs17/` | L07 | Takaful with IFRS 17 overlay |
-| `skills/islamic-finance-router/` | L08-L11 | Jurisdiction-specific deep dives |
-| `skills/zakat-global/` | L12 | Zakat computation across jurisdictions |
-| `skills/shariah-screening-global/` | L13 | Shariah screening methodologies |
-| `exercises/` | L04-L17 | Hands-on exercise data |
-| `workflow-recipes/` | L15-L16 | Operational workflow playbooks |
-| `evals/` | L17-L18 | Capstone validation |
+| Folder                             | Lessons | What You Do                                           |
+| ---------------------------------- | ------- | ----------------------------------------------------- |
+| `skills/murabaha/`                 | L04     | Process murabaha transactions, compare AAOIFI vs MFRS |
+| `skills/ijarah-imb/`               | L05     | Ijarah-IMB across 4 jurisdictions                     |
+| `skills/sukuk-*/`                  | L06     | Sukuk from issuer and investor perspectives           |
+| `skills/takaful-ifrs17/`           | L07     | Takaful with IFRS 17 overlay                          |
+| `skills/islamic-finance-router/`   | L08-L11 | Jurisdiction-specific deep dives                      |
+| `skills/zakat-global/`             | L12     | Zakat computation across jurisdictions                |
+| `skills/shariah-screening-global/` | L13     | Shariah screening methodologies                       |
+| `evals/`                           | L17-L18 | Capstone validation                                   |
 
 ---
 
 ## Customizing for Your Jurisdiction
 
-| Variable | Default | Your Value |
-|----------|---------|-----------|
-| Currency | Multi-currency (per jurisdiction) | _your currency_ |
-| Primary Framework | AAOIFI / IFRS (auto-detected) | _your framework_ |
-| Regulatory Body | Per jurisdiction | _your regulator_ |
-| Zakat Method | Jurisdiction-specific | _your method_ |
-| Screening Methodology | SC Malaysia | _your preferred methodology_ |
+| Variable              | Default                           | Your Value                   |
+| --------------------- | --------------------------------- | ---------------------------- |
+| Currency              | Multi-currency (per jurisdiction) | _your currency_              |
+| Primary Framework     | AAOIFI / IFRS (auto-detected)     | _your framework_             |
+| Regulatory Body       | Per jurisdiction                  | _your regulator_             |
+| Zakat Method          | Jurisdiction-specific             | _your method_                |
+| Screening Methodology | SC Malaysia                       | _your preferred methodology_ |
 
 To customize: edit the relevant jurisdiction overlay in `skills/islamic-finance-router/references/jurisdictions/` or create a new one following the same format.
 
