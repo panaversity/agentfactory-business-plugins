@@ -28,39 +28,7 @@ jobs:
             echo "OK: ${skill_name}"
           done
 
-      - name: Validate routing golden file
+      - name: Run eval harness (validates all golden files)
         run: |
           cd legal-ops
-          python3 -c "
-          import json
-          with open('evals/routing-golden.json') as f:
-              cases = json.load(f)
-          assert isinstance(cases, list), f'Expected list, got {type(cases)}'
-          assert len(cases) >= 5, f'Expected 5+ routing cases, got {len(cases)}'
-          for c in cases:
-              assert 'query' in c, f'Case missing query: {c}'
-              assert 'expected_product_skill' in c, f'Case missing expected_product_skill: {c}'
-              assert 'expected_jurisdiction' in c, f'Case missing expected_jurisdiction: {c}'
-          print(f'Routing golden: {len(cases)} cases valid.')
-          "
-
-      - name: Validate product golden file
-        run: |
-          cd legal-ops
-          python3 -c "
-          import json
-          with open('evals/product-golden.json') as f:
-              cases = json.load(f)
-          assert isinstance(cases, list), f'Expected list, got {type(cases)}'
-          assert len(cases) >= 5, f'Expected 5+ product cases, got {len(cases)}'
-          for c in cases:
-              assert 'product' in c, f'Case missing product: {c}'
-              assert 'scenario' in c, f'Case missing scenario: {c}'
-              assert 'expected_contains' in c, f'Case missing expected_contains: {c}'
-          print(f'Product golden: {len(cases)} cases valid.')
-          "
-
-      - name: Dry-run eval harness
-        run: |
-          cd legal-ops
-          uv run evals/run-evals.py --dry-run
+          uv run evals/run-evals.py
