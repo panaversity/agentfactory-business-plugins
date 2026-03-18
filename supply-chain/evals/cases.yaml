@@ -1,0 +1,190 @@
+# Supply Chain Eval Harness -- Test Cases
+# Each case defines: prompt, expected routing, expected content checks
+
+cases:
+  # --- Routing Tests ---
+  - id: route_vendor_assess_strategic
+    category: routing
+    prompt: "Assess our strategic vendor KIFTL -- they supply all our packaging and we have no alternative."
+    expected_skill: vendor-assessment
+    content_checks:
+      - "classification"
+      - "strategic"
+      - "sole-source"
+
+  - id: route_vendor_assess_bottleneck
+    category: routing
+    prompt: "We have a low-spend vendor who is our only source for a critical component. What's their risk profile?"
+    expected_skill: vendor-assessment
+    content_checks:
+      - "bottleneck"
+      - "sole-source"
+      - "dependency"
+
+  - id: route_invoice_reconcile
+    category: routing
+    prompt: "Reconcile invoice INV-2024-0847 from Acme Packaging against PO-4521 and goods receipt GR-9012."
+    expected_skill: invoice-reconciliation
+    content_checks:
+      - "three-way match"
+      - "PO"
+      - "goods receipt"
+
+  - id: route_supplier_risk
+    category: routing
+    prompt: "Our key steel supplier just had a credit rating downgrade. What's the risk assessment?"
+    expected_skill: supplier-risk
+    content_checks:
+      - "financial risk"
+      - "credit"
+      - "downgrade"
+
+  - id: route_logistics_carrier
+    category: routing
+    prompt: "Review carrier performance for our top 5 carriers over the last quarter."
+    expected_skill: logistics-brief
+    content_checks:
+      - "carrier"
+      - "OTD"
+      - "scorecard"
+
+  - id: route_spend_consolidation
+    category: routing
+    prompt: "Analyse our packaging spend across all sites -- are there consolidation opportunities?"
+    expected_skill: spend-analysis
+    content_checks:
+      - "consolidation"
+      - "category"
+      - "vendor"
+
+  - id: route_network_scenario
+    category: routing
+    prompt: "We're considering opening a new distribution centre in Poland. Run a network design comparison."
+    expected_skill: network-design
+    content_checks:
+      - "scenario"
+      - "network"
+      - "cost"
+
+  - id: route_weekly_brief
+    category: routing
+    prompt: "Generate the weekly supply chain brief for the CPO."
+    expected_skill: supply-chain-brief
+    content_checks:
+      - "traffic light"
+      - "vendor performance"
+      - "decision required"
+
+  # --- Domain Accuracy Tests ---
+  - id: vendor_assess_bottleneck_output
+    category: accuracy
+    prompt: >
+      Classify a vendor with annual spend of GBP 15,000 who is our sole source
+      for a custom-machined component with a 9-month qualification lead time
+      for alternatives. What Kraljic quadrant and tier?
+    expected_answer: "bottleneck"
+    content_checks:
+      - "bottleneck"
+      - "Tier 4"
+      - "sole-source"
+      - "high-risk"
+
+  - id: invoice_reconcile_price_variance
+    category: accuracy
+    prompt: >
+      Invoice line: 100 units at GBP 12.50 each. PO line: 100 units at GBP 11.80 each.
+      Configured price tolerance is +/-3%. Is this within tolerance or an exception?
+    expected_answer: "exception"
+    content_checks:
+      - "price variance"
+      - "outside tolerance"
+      - "5.9"
+
+  - id: invoice_reconcile_duplicate
+    category: accuracy
+    prompt: >
+      We received invoice INV-2024-0847 from Acme Corp for GBP 4,500.
+      Our system shows we already processed INV-2024-0847 from Acme Corp
+      for GBP 4,500 last week. What should we do?
+    expected_answer: "reject"
+    content_checks:
+      - "duplicate"
+      - "reject"
+      - "notify vendor"
+
+  - id: supplier_risk_tier2_cascade
+    category: accuracy
+    prompt: >
+      Our Tier 1 strategic supplier's main raw material supplier (Tier 2)
+      has filed for CVA. Our Tier 1 supplier says they have 45 days of
+      stock. What risk actions should we take?
+    expected_answer: null
+    content_checks:
+      - "Tier 2"
+      - "contingency"
+      - "alternative"
+      - "escalate"
+
+  - id: logistics_expedited_root_cause
+    category: accuracy
+    prompt: >
+      Expedited freight is 18% of our total freight spend this quarter,
+      up from 6% last quarter. 70% of expedited shipments originate from
+      our Manchester site. What's the likely root cause?
+    expected_answer: null
+    content_checks:
+      - "upstream"
+      - "root cause"
+      - "Manchester"
+
+  - id: spend_price_inconsistency
+    category: accuracy
+    prompt: >
+      Site A pays GBP 8.50/unit for office paper from Supplier X.
+      Site B pays GBP 11.20/unit for the same specification from Supplier X.
+      Annual volume is 50,000 units across both sites. What's the saving
+      opportunity if we align to the best rate?
+    expected_answer: "135000"
+    tolerance: 5000
+    content_checks:
+      - "price inconsistency"
+      - "best rate"
+      - "8.50"
+
+  - id: network_scenario_comparison
+    category: accuracy
+    prompt: >
+      Compare two scenarios: Scenario A is our current network (UK warehouse only).
+      Scenario B adds a Poland DC. Scenario A costs GBP 2.1M/yr with 4.2 day avg transit.
+      Scenario B costs GBP 1.85M/yr with 2.8 day avg transit but requires GBP 800K capex.
+      What's the payback period?
+    expected_answer: null
+    content_checks:
+      - "payback"
+      - "scenario"
+      - "capex"
+
+  - id: weekly_brief_escalation
+    category: accuracy
+    prompt: >
+      A Strategic vendor's OTD dropped to 68% this week (SLA is 95%).
+      They also have a credit rating downgrade from BB to B-.
+      Should this be in the weekly brief or escalated immediately?
+    expected_answer: "immediately"
+    content_checks:
+      - "escalat"
+      - "immediate"
+      - "CPO"
+
+  # --- Negative / Scope Control Tests ---
+  - id: negative_out_of_scope_hr
+    category: negative
+    prompt: "How should I handle an employee grievance procedure?"
+    content_checks:
+      - "outside"
+
+  - id: negative_out_of_scope_tax
+    category: negative
+    prompt: "Calculate the VAT owed on our Q3 sales revenue."
+    content_checks:
+      - "outside"

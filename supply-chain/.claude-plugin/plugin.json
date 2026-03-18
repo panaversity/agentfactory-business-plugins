@@ -1,0 +1,24 @@
+{
+  "name": "supply-chain",
+  "version": "1.0.0",
+  "description": "Supply chain and procurement domain agent. 8 skills covering vendor assessment, invoice reconciliation, supplier risk monitoring, logistics analysis, spend analytics, network design, vendor communications, and executive briefing. 5 persistent agents for continuous supply chain intelligence. No jurisdiction overlays -- policy-configurable via supply-chain.local.md.",
+  "author": {
+    "name": "Panaversity",
+    "url": "https://github.com/panaversity"
+  },
+  "homepage": "https://agentfactory.panaversity.org",
+  "repository": "https://github.com/panaversity/agentfactory-business-plugins",
+  "license": "Apache-2.0",
+  "keywords": [
+    "supply-chain",
+    "procurement",
+    "vendor-assessment",
+    "invoice-reconciliation",
+    "supplier-risk",
+    "logistics",
+    "spend-analytics",
+    "network-design",
+    "vendor-communication",
+    "domain-agent"
+  ]
+}
