@@ -1,0 +1,22 @@
+[
+  {"query": "I need to reconcile this invoice against the purchase order — the quantities don't match and we're showing 15 more units than what was delivered to our Leeds warehouse", "should_trigger": true},
+  {"query": "Can you do a three-way match on Invoice INV-2024-0500 from Brenntag against PO-3892 and goods receipt GR-7741? The invoice total is GBP 23,400 but I think the unit price is higher than what we agreed", "should_trigger": true},
+  {"query": "We received an invoice from a vendor with no PO reference at all — it's for $8,200 in maintenance services. How should we handle a non-PO invoice?", "should_trigger": true},
+  {"query": "This vendor Global Fasteners sent us a duplicate invoice — same number INV-2024-1205, same amount $12,800 as one we already paid last month. They claim it was a mistake but it looks suspicious", "should_trigger": true},
+  {"query": "The bank details on this invoice are different from what we have in the vendor master file. Vendor emailed saying they switched to Barclays. Is this a fraud risk?", "should_trigger": true},
+  {"query": "i have a price variance on a line item from our steel supplier — they charged $12.50/unit but the PO says $11.80. tolerance is 3%. whats the right action?", "should_trigger": true},
+  {"query": "We received goods at our Manchester site but the invoice shows 200 more units than what warehouse confirmed on the GR. The vendor insists they shipped 1200 but we only counted 1000", "should_trigger": true},
+  {"query": "Our AP team has a backlog of 47 invoices pending three-way matching. Can you help me work through the reconciliation process for the ones referencing POs in the 4500 series?", "should_trigger": true},
+  {"query": "The goods receipt hasn't been confirmed yet but vendor TechParts is pressing hard for payment on INV-2024-3300 for $54,000 — says they'll charge late fees", "should_trigger": true},
+  {"query": "Invoice INV-2024-0099 from Acme has a line for 'expedited shipping surcharge' of $1,200 that has no corresponding PO line item at all. What do I do with an unauthorised charge?", "should_trigger": true},
+  {"query": "Analyze our total procurement spend by category for the last fiscal year — I want to see where we can consolidate vendors", "should_trigger": false},
+  {"query": "I need a full risk assessment of our strategic steel supplier — their credit rating just dropped two notches and they're in a restructuring process", "should_trigger": false},
+  {"query": "Can you review our top 5 carrier performance and create a quarterly scorecard with OTD rates and cost per kg?", "should_trigger": false},
+  {"query": "We're thinking about opening a new distribution centre near Poznan in Poland — help me model the network design scenarios vs keeping everything in our Birmingham DC", "should_trigger": false},
+  {"query": "Draft a corrective action request letter to send to Brenntag — their OTD has dropped below 88% for the third consecutive month", "should_trigger": false},
+  {"query": "Generate the weekly supply chain brief for the CPO with traffic light summary and the contract calendar for next 90 days", "should_trigger": false},
+  {"query": "I need to reconcile our bank statement from HSBC against the general ledger for March — there are 12 unmatched items totalling GBP 34,500", "should_trigger": false},
+  {"query": "Help me create a vendor assessment scorecard for onboarding a new packaging supplier we met at the NEC trade show", "should_trigger": false},
+  {"query": "What's the best way to set up automated purchase order generation in our SAP system?", "should_trigger": false},
+  {"query": "Can you benchmark our packaging prices against market rates? I think we're paying above market for corrugated board", "should_trigger": false}
+]

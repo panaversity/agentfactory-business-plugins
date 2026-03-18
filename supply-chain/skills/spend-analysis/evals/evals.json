@@ -1,0 +1,71 @@
+{
+  "skill_name": "spend-analysis",
+  "evals": [
+    {
+      "id": 1,
+      "name": "category-spend-overview",
+      "prompt": "Produce a category spend overview for FY2024. Here's what I have from ERP: Packaging GBP 1.2M across 8 vendors, 3 BUs buying, PO compliance 85%. Raw Materials GBP 3.4M across 12 vendors, 5 BUs, PO compliance 92%. IT Services GBP 800K across 15 vendors, 4 BUs, PO compliance 62%. MRO GBP 450K across 28 vendors, 6 BUs, PO compliance 71%. Total spend analysed: GBP 5.85M.",
+      "expected_output": "A category spend overview in the skill's defined format showing top categories ranked by spend, tail spend alert, PO compliance issues, and specific consolidation opportunities with estimated savings.",
+      "files": [],
+      "expectations": [
+        "Produces the mandatory output header with TASK, CONFIGURATION, and DATA SOURCES fields — every spend analysis output must begin with this header for traceability",
+        "Ranks categories by spend (Raw Materials > Packaging > IT Services > MRO) with vendor count, BU count, and PO compliance per category — this format enables quick identification of where spend and risk concentrate",
+        "Flags the tail spend problem in MRO (28 vendors for GBP 450K) — this is a classic tail spend pattern where many small vendors create disproportionate administrative burden",
+        "Flags IT Services PO compliance at 62% as a serious issue requiring escalation to Finance and Procurement leadership — low PO compliance means the business is committed to spend before procurement controls are applied",
+        "Includes specific recommended actions with deadlines — the universal rule requires actions in every output; observations without actions are not acceptable"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "vendor-consolidation-analysis",
+      "prompt": "We have 5 vendors supplying office paper across our 3 UK sites. Vendor A charges GBP 8.50/unit (Site Leeds, 20K units), Vendor B charges GBP 9.20/unit (Site Leeds, 5K units), Vendor C charges GBP 11.00/unit (Site Manchester, 30K units), Vendor D charges GBP 8.80/unit (Site Birmingham, 15K units), Vendor E charges GBP 10.50/unit (Site Birmingham, 10K units). Total 80K units. Can you tell me if we should consolidate?",
+      "expected_output": "A vendor consolidation analysis showing the current fragmented state, price variance across vendors, a recommended consolidated state with 1-2 preferred suppliers, estimated annual savings, and supply continuity risk assessment.",
+      "files": [],
+      "expectations": [
+        "Identifies the price range from GBP 8.50 to GBP 11.00 per unit — a 29% variance across vendors supplying the same specification indicates significant consolidation opportunity",
+        "Recommends consolidating to 1-2 preferred vendors (likely Vendor A at GBP 8.50 as primary) — the skill's consolidation framework targets categories with >3 vendors supplying the same specification",
+        "Calculates the estimated annual saving if all volume aligned to best rate — at 80K units the saving from price alignment alone is significant before volume discount negotiation",
+        "Includes a supply continuity risk assessment for single-sourcing — the skill requires documenting the risk and mitigation plan when recommending consolidation",
+        "Does NOT recommend single-sourcing without documenting the risk — the skill explicitly states NEVER recommend single-sourcing a critical category without documenting supply continuity risk"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "price-inconsistency-detection",
+      "prompt": "Site A pays GBP 8.50/unit for office paper from Supplier X. Site B pays GBP 11.20/unit for the same specification from the same Supplier X. Annual volume is 25,000 units at Site A and 25,000 units at Site B (50,000 total). What's the saving opportunity if we align pricing?",
+      "expected_output": "A price inconsistency report identifying the GBP 2.70/unit variance (31.8%) between sites for the same vendor and specification, with the saving opportunity calculated and a pricing directive recommendation.",
+      "files": [],
+      "expectations": [
+        "Correctly calculates the price variance: GBP 11.20 - GBP 8.50 = GBP 2.70/unit or approximately 31.8% between highest and lowest — getting the variance wrong means under/over-estimating the saving opportunity",
+        "Calculates the annual saving correctly: 25,000 units at Site B x GBP 2.70 saving = GBP 67,500/year — this is the saving if Site B aligns to Site A's rate",
+        "Recommends issuing a group pricing directive to align all sites to the best rate — the skill's price consistency output format specifies this as the required action",
+        "Uses the skill's defined PRICE INCONSISTENCY REPORT format with site-by-site comparison table — standardised format enables consistent identification across categories",
+        "Identifies the best rate as GBP 8.50 (Site A) and recommends contract compliance from a specific date — vague 'negotiate better prices' is not actionable"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "negative-invoice-reconciliation-redirect",
+      "prompt": "I received an invoice from Acme Corp for GBP 12,500 referencing PO-2024-3300 but the unit price is higher than what's on the PO. Can you reconcile this and tell me if we should pay it?",
+      "expected_output": "The agent recognizes this is an invoice reconciliation task (matching a specific invoice against a PO), not a spend analysis question, and redirects to the invoice-reconciliation skill.",
+      "files": [],
+      "expectations": [
+        "Recognizes that reconciling a specific invoice against a PO is invoice-reconciliation skill territory — the skill description explicitly excludes invoice reconciliation",
+        "Redirects to the invoice-reconciliation skill or /invoice-reconcile command — invoice reconciliation has the three-way match workflow and exception routing framework needed for this task",
+        "Does NOT attempt to reconcile the invoice — spend analysis aggregates and analyses spend data across categories and vendors; it does not process individual invoices"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "negative-supplier-risk-redirect",
+      "prompt": "Our main steel supplier just issued a profit warning and their share price dropped 30% in a week. Should I be worried about supply continuity? What's their financial risk level?",
+      "expected_output": "The agent recognizes this is a supplier risk assessment request, not a spend analysis question, and redirects to the supplier-risk skill.",
+      "files": [],
+      "expectations": [
+        "Recognizes that supplier financial risk assessment is supplier-risk skill territory — the skill description explicitly states 'NOT for: vendor risk assessment (use supplier-risk)'",
+        "Redirects to the supplier-risk skill or /supplier-risk command — supplier risk has the five-dimension risk framework (financial, operational, compliance, geopolitical, Tier 2) needed for this assessment",
+        "Does NOT attempt to produce a financial risk assessment — spend analysis handles category spend, price benchmarking, and vendor consolidation, not individual vendor risk assessment"
+      ]
+    }
+  ]
+}

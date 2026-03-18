@@ -1,0 +1,59 @@
+{
+  "skill_name": "vendor-assessment",
+  "evals": [
+    {
+      "id": 1,
+      "name": "strategic-vendor-six-dimension",
+      "prompt": "Assess our vendor KIFTL (Khan Industrial Fasteners & Tools Ltd). They supply all our custom-machined steel fasteners — we have no alternative supplier and qualification of a new one would take 9 months. Annual spend is GBP 1.2M. They've been our supplier for 12 years. Their OTD is 94% (our threshold is 95%), quality rejection is 1.1%, they operate from a single site in Lahore, Pakistan. Their ISO 9001 expires in 60 days. Last filed accounts show revenue decline of 8% YoY. We have no visibility of their sub-suppliers.",
+      "expected_output": "A comprehensive six-dimension vendor assessment classifying KIFTL as Strategic (Tier 1) due to high spend and no alternatives, with RED and AMBER flags across multiple dimensions, and a ranked action list addressing the most critical risks first.",
+      "files": [],
+      "expectations": [
+        "Produces the mandatory output header with TASK, VENDOR TIER (Strategic), CONFIGURATION, and DATA SOURCES fields — every vendor assessment output must begin with this header",
+        "Classifies KIFTL as STRATEGIC (Tier 1) based on high spend (GBP 1.2M) and no alternatives — the Kraljic matrix places high-spend/no-alternative vendors in the Strategic quadrant with quarterly review frequency",
+        "Flags Operational dimension as AMBER for OTD at 94% vs 95% threshold — the skill marks OTD below configured threshold for Strategic vendors as RED, but 94% vs 95% is borderline and should at minimum be AMBER with declining trend concern",
+        "Flags the single production site in Lahore as AMBER for business continuity risk — single site operation with no documented BCP is an AMBER flag in the Operational dimension",
+        "Flags Compliance dimension as AMBER for ISO 9001 expiring in 60 days — the skill defines certification expiring within 90 days as AMBER requiring renewal evidence",
+        "Marks Tier 2 visibility (Strategic dimension) as a gap requiring immediate action — the skill states NEVER skip the Tier 2 visibility check for Strategic vendors; no mapping means UNASSESSED risk",
+        "Includes a ranked recommended actions list with owners and deadlines — the skill requires actions ranked by urgency, not just risk ratings"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "bottleneck-vendor-classification",
+      "prompt": "Classify a vendor with annual spend of only GBP 15,000 who is our sole source for a custom-machined component with a 9-month qualification lead time for alternatives. We've never reviewed them before. What tier should they be and what assessment do they need?",
+      "expected_output": "Classification as BOTTLENECK (Tier 4) — the most dangerous and most neglected category. Despite low spend, the sole-source dependency with no qualified alternative and long qualification time makes this vendor high-risk.",
+      "files": [],
+      "expectations": [
+        "Classifies the vendor as BOTTLENECK (Tier 4) — the skill's classification rule explicitly states: when assessing a vendor with low spend but sole-source dependency, ALWAYS classify as Bottleneck and flag as high-risk regardless of spend volume",
+        "Does NOT classify as Commodity based on low spend — the skill explicitly warns NEVER classify a sole-source supplier as low risk based on spend alone; operational dependency must be assessed separately",
+        "Identifies the 9-month qualification time as a critical risk factor — if this vendor fails, the business has no alternative for 9 months, making the impact of vendor failure disproportionate to spend",
+        "Recommends quarterly review frequency despite low spend — Bottleneck vendors get the same review frequency as Strategic vendors because their impact is equally critical",
+        "Recommends immediate actions: qualify an alternative supplier, request financial data, and map Tier 2 sub-suppliers — the vendor has never been reviewed, so all assessment dimensions start from zero"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "negative-invoice-reconciliation-redirect",
+      "prompt": "I received an invoice from TechParts for GBP 45,000 but the price per unit is 5% above the PO. The goods receipt confirms the right quantities. Should I pay the full amount or dispute the price variance?",
+      "expected_output": "The agent recognizes this is an invoice reconciliation question (three-way match with price variance), not a vendor assessment, and redirects to the invoice-reconciliation skill.",
+      "files": [],
+      "expectations": [
+        "Recognizes that invoice price variance reconciliation is invoice-reconciliation skill territory — the skill description explicitly states 'NOT for: invoice reconciliation (use invoice-reconciliation)'",
+        "Redirects to the invoice-reconciliation skill or /invoice-reconcile command — invoice reconciliation has the three-way match workflow and tolerance-based exception routing",
+        "Does NOT attempt to process the invoice or determine whether to pay — vendor assessment evaluates vendor quality and risk; it does not process individual transactions"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "negative-spend-analysis-redirect",
+      "prompt": "Can you analyze our vendor spend across all categories? I want to see which categories have too many vendors and where we can consolidate to save money.",
+      "expected_output": "The agent recognizes this is a spend analysis question (category spend and vendor consolidation), not a vendor assessment, and redirects to the spend-analysis skill.",
+      "files": [],
+      "expectations": [
+        "Recognizes that cross-category spend analysis and vendor consolidation are spend-analysis skill territory — the skill description explicitly states 'NOT for: spend category analysis (use spend-analysis)'",
+        "Redirects to the spend-analysis skill or /spend-analysis command — spend analysis has the category overview and consolidation analysis frameworks",
+        "Does NOT attempt to produce spend-by-category analysis — vendor assessment evaluates individual vendors across six dimensions; it does not aggregate spend data"
+      ]
+    }
+  ]
+}

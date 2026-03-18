@@ -1,0 +1,58 @@
+{
+  "skill_name": "supply-chain-brief",
+  "evals": [
+    {
+      "id": 1,
+      "name": "weekly-executive-brief",
+      "prompt": "Generate the weekly supply chain brief for the CPO and COO. Here's this week's data: Vendor OTD 93.2% (13-week avg 94.1%, declining trend). Invoice exception rate 8.5% (up from 6.2% last week), 12 open disputes worth GBP 145K. Carrier OTD 96.1%, cost/kg GBP 2.15 (contracted rate GBP 2.10). 2 new risk alerts (one Strategic vendor credit downgrade, one Bottleneck vendor late accounts). Contract renewals: 3 within 90 days, 1 urgent (notice deadline in 22 days for our main IT services contract). Savings pipeline: GBP 120K captured YTD vs GBP 200K target. This week's win: completed packaging vendor consolidation saving GBP 85K/yr. Decision required: approve or reject the retrospective PO for GBP 45K emergency maintenance spend.",
+      "expected_output": "A one-page executive brief in the skill's defined format with traffic light summary, this week's highlights (win, risk, decision required), leading indicator trends, at-risk situations, contract calendar, and savings pipeline update.",
+      "files": [],
+      "expectations": [
+        "Produces the mandatory output header with TASK, CONFIGURATION, and DATA SOURCES fields — every supply chain brief must begin with this header",
+        "Uses the TRAFFIC LIGHT SUMMARY format with GREEN/AMBER/RED for each category (Vendor Performance, Invoice Processing, Logistics, Vendor Risk, Contract Calendar) — the brief exists to give leadership a 10-second overview of supply chain health",
+        "Flags Vendor Performance as AMBER or RED based on the declining 13-week OTD trend — the skill defines declining trend as a concern even when the metric is above threshold",
+        "Includes the DECISION REQUIRED section about the GBP 45K retrospective PO — the skill explicitly states NEVER omit the DECISION REQUIRED section because the brief exists to drive decisions, not report history",
+        "Flags the IT services contract with 22-day notice deadline as URGENT — the skill defines contracts with notice deadline within 30 days as urgent requiring immediate attention",
+        "Presents metrics with comparison to target or prior period — the skill states NEVER present metrics without comparison because a number without context is meaningless"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "escalation-alert-immediate",
+      "prompt": "A Strategic vendor's OTD just dropped to 68% this week (their SLA is 95%). Separately, the same vendor had a credit rating downgrade from BB to B- yesterday. Their bank details were also flagged as changed on an invoice received this morning. Should this be in next Monday's weekly brief or handled differently?",
+      "expected_output": "Immediate escalation alert — NOT deferred to the weekly brief. Three separate escalation triggers have fired simultaneously (OTD below 75%, financial distress, and bank detail change), each independently requiring immediate notification.",
+      "files": [],
+      "expectations": [
+        "Issues an ESCALATION ALERT with timestamp, not a weekly brief entry — the skill explicitly states NEVER delay an escalation alert to include it in the next weekly brief",
+        "Identifies three independent escalation triggers: Strategic vendor OTD below 75% (68%), financial distress (credit downgrade to B-), and bank detail change (fraud alert) — each of these independently warrants immediate escalation per the skill's trigger list",
+        "Classifies severity as RED CRITICAL — multiple simultaneous escalation triggers on a Strategic vendor represents the highest severity level",
+        "Specifies immediate actions required within 24 hours — the escalation alert format requires 'What must happen in next 24 hours' for each alert type",
+        "Identifies specific escalation recipients by role (CPO, Finance Director) — escalation alerts must be directed to named individuals, not generic groups"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "negative-detailed-vendor-assessment-redirect",
+      "prompt": "I need a comprehensive vendor assessment for our main packaging supplier — full six-dimension review covering commercial terms, operational metrics, financial health, compliance certs, strategic fit, and geopolitical risk.",
+      "expected_output": "The agent recognizes this is a detailed vendor assessment request, not a supply chain brief, and redirects to the vendor-assessment skill.",
+      "files": [],
+      "expectations": [
+        "Recognizes that detailed six-dimension vendor assessment is vendor-assessment skill territory — the skill description states 'NOT for: detailed vendor assessment (use vendor-assessment)'",
+        "Redirects to the vendor-assessment skill or /vendor-assess command — the vendor assessment skill has the full Kraljic classification and six-dimension framework",
+        "Does NOT attempt to produce a detailed vendor assessment — the supply chain brief summarises vendor performance across the portfolio; it does not deep-dive into individual vendor assessments"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "negative-invoice-reconciliation-redirect",
+      "prompt": "I have a batch of 15 invoices that need three-way matching against their POs and goods receipts. Several have price variances and two might be duplicates. Can you reconcile them?",
+      "expected_output": "The agent recognizes this is a detailed invoice reconciliation request, not a supply chain brief, and redirects to the invoice-reconciliation skill.",
+      "files": [],
+      "expectations": [
+        "Recognizes that individual invoice reconciliation with three-way matching is invoice-reconciliation skill territory — the skill description states 'NOT for: detailed invoice reconciliation (use invoice-reconciliation)'",
+        "Redirects to the invoice-reconciliation skill or /invoice-reconcile command — invoice reconciliation has the document intelligence, three-way match, and exception routing workflows needed",
+        "Does NOT attempt to reconcile individual invoices — the supply chain brief reports aggregate AP metrics (exception rate, dispute count, ageing) but does not process individual invoices"
+      ]
+    }
+  ]
+}

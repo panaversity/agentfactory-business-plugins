@@ -1,15 +1,19 @@
 ---
 name: vendor-assessment
 description: >
-  Activate for: vendor assessment, vendor review, supplier assessment,
+  Classifies, scores, and evaluates vendors. Activate for: vendor assessment,
+  classify vendor, vendor classification, Kraljic matrix, vendor tier,
+  bottleneck vendor, strategic vendor, vendor review, supplier assessment,
   vendor onboarding, new vendor approval, vendor audit, annual vendor review,
   vendor scorecard, supplier evaluation, vendor qualification, approve vendor,
   vendor due diligence, vendor health check, vendor performance review,
-  vendor classification, strategic supplier, bottleneck supplier, vendor exit,
-  Kraljic matrix, vendor tier.
-  NOT for: invoice reconciliation (use invoice-reconciliation), carrier
-  performance review (use logistics-brief), spend category analysis
-  (use spend-analysis).
+  bottleneck supplier, vendor exit, risk profile of a vendor.
+  USE THIS when the task is to CLASSIFY a vendor into a category (Strategic /
+  Tactical / Commodity / Bottleneck), SCORE them across dimensions, or EVALUATE
+  a vendor for onboarding/approval/exit.
+  NOT for: ongoing risk signal monitoring or risk alerts (use supplier-risk),
+  invoice reconciliation (use invoice-reconciliation), carrier performance
+  review (use logistics-brief), spend category analysis (use spend-analysis).
 license: Apache-2.0
 metadata:
   author: Panaversity

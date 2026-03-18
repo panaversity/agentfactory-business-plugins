@@ -1,0 +1,82 @@
+[
+  {
+    "query": "Our strategic steel supplier MetalWorks just had a credit rating downgrade from BBB to BB. Revenue down 18% YoY and margin at 2.1%. What's the risk assessment?",
+    "should_trigger": true
+  },
+  {
+    "query": "NorthernTech's Tier 2 raw material supplier in Shenzhen filed for CVA. They say they have 45 days of stock. What should we do about this Tier 2 cascade risk?",
+    "should_trigger": true
+  },
+  {
+    "query": "I just saw in the news that our sole-source supplier for custom electronics has had a fire at their only production facility. What's our exposure and what actions do I take?",
+    "should_trigger": true
+  },
+  {
+    "query": "Can you produce the CPO weekly risk summary? I need to see all monitored vendors plotted by risk level with any new alerts from this week",
+    "should_trigger": true
+  },
+  {
+    "query": "our sole-source supplier has been late-filing their statutory accounts for 3 months now. Is that a financial distress signal we should worry about?",
+    "should_trigger": true
+  },
+  {
+    "query": "The UK government just added new export controls affecting rare earth materials. Three of our suppliers source from affected regions. What's the geopolitical risk impact?",
+    "should_trigger": true
+  },
+  {
+    "query": "We have a sole-source vendor for a critical component who only does GBP 15K/year with us but we have no alternative and qualification takes 9 months. What risk tier should they be?",
+    "should_trigger": true
+  },
+  {
+    "query": "I need to check whether our Tier 1 strategic vendors have Tier 2 supplier mapping in place. Which ones are we flying blind on?",
+    "should_trigger": true
+  },
+  {
+    "query": "Our supplier in eastern Turkey is reporting production disruptions due to regional instability. They supply 30% of our annual packaging volume. Assess the country risk",
+    "should_trigger": true
+  },
+  {
+    "query": "Can you monitor for financial distress signals on our top 10 strategic vendors? I want a risk dashboard covering credit ratings, revenue trends, and DSO for each",
+    "should_trigger": true
+  },
+  {
+    "query": "We want to onboard a new packaging supplier — do a full vendor assessment covering commercial, operational, financial, compliance, strategic, and geopolitical dimensions",
+    "should_trigger": false
+  },
+  {
+    "query": "Reconcile this invoice against the PO and goods receipt — there's a price variance on 3 line items",
+    "should_trigger": false
+  },
+  {
+    "query": "Review carrier performance for our UK-to-EU lanes — I need OTD rates and cost per kg by carrier",
+    "should_trigger": false
+  },
+  {
+    "query": "Analyze our procurement spend by category — where are the consolidation opportunities?",
+    "should_trigger": false
+  },
+  {
+    "query": "We're considering opening a DC in Poland. Model the network scenarios comparing single vs dual warehouse setup",
+    "should_trigger": false
+  },
+  {
+    "query": "Draft a corrective action request to Brenntag about their declining delivery performance",
+    "should_trigger": false
+  },
+  {
+    "query": "Generate the weekly supply chain brief for the CPO with all sections",
+    "should_trigger": false
+  },
+  {
+    "query": "Help me classify vendors using the Kraljic matrix and assign them to tiers for review frequency",
+    "should_trigger": false
+  },
+  {
+    "query": "What's the market benchmark price for corrugated board packaging in the UK?",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a supply assurance request letter to our critical vendor asking them to confirm production capacity for the next 90 days",
+    "should_trigger": false
+  }
+]

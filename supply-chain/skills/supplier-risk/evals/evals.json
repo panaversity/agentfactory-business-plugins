@@ -1,0 +1,58 @@
+{
+  "skill_name": "supplier-risk",
+  "evals": [
+    {
+      "id": 1,
+      "name": "five-dimension-risk-brief",
+      "prompt": "Produce a supplier risk brief for our strategic steel supplier MetalWorks Ltd. Here's what we know: Financial — credit rating downgraded from BBB to BB last quarter, revenue declined 18% YoY, EBIT margin at 2.1%. Operational — OTD 13-week average 91%, quality rejection 1.8%, lead time variance increasing (was +/-2 days, now +/-5 days). Compliance — ISO 9001 expires in 45 days, no renewal evidence yet. Geopolitical — they operate from a single site in Turkey, and their main raw material comes from Ukraine. Tier 2 — we have no mapping of their sub-suppliers. They are our sole source for grade-A structural steel with a 9-month qualification time for alternatives.",
+      "expected_output": "A five-dimension supplier risk brief with each dimension rated GREEN/AMBER/RED, an overall risk rating of RED CRITICAL given the accumulation of risks, ranked recommended actions with deadlines, and identification of the sole-source dependency as the highest-risk factor.",
+      "files": [],
+      "expectations": [
+        "Produces the mandatory output header with TASK, VENDOR TIER (Strategic), CONFIGURATION, and DATA SOURCES fields — every risk brief must begin with this header",
+        "Rates Financial Risk as RED or AMBER based on 18% revenue decline and 2.1% EBIT margin — the skill defines revenue decline >15% YoY and margin below 3% as AMBER at minimum, and the combination of both should escalate",
+        "Rates Compliance Risk as AMBER at minimum for the ISO certification expiring within 90 days without renewal evidence — the skill defines this as an AMBER flag requiring renewal evidence request",
+        "Marks Tier 2 Risk as NOT MAPPED rather than LOW — the skill explicitly states NEVER omit the Tier 2 section and NEVER equate absence of data with low risk",
+        "Does NOT classify this sole-source supplier as low risk based on any single dimension — the skill's universal rule states NEVER classify a sole-source supplier as low risk based on spend alone; operational dependency must be assessed separately",
+        "Ranks recommended actions by urgency (RED immediate, AMBER short-term, GREEN planned) with specific owners and deadlines — the skill requires a ranked action list in every output"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "tier2-cascade-risk",
+      "prompt": "Our Tier 1 strategic supplier NorthernTech Ltd's main raw material supplier (a Tier 2 supplier based in Shenzhen) has just filed for administration/CVA proceedings. NorthernTech says they have 45 days of raw material stock and are looking for alternatives. NorthernTech supplies us with custom electronics assemblies — we have no qualified alternative and qualification takes 6 months. What risk actions should we take?",
+      "expected_output": "A Tier 2 cascade risk assessment with immediate escalation, 45-day stock runway analysis, contingency planning for supply disruption, and specific actions to secure supply continuity during the qualification of alternatives.",
+      "files": [],
+      "expectations": [
+        "Escalates the overall risk rating given a Tier 2 supplier in administration — the skill states 'ALWAYS flag when a vendor's Tier 2 sub-supplier shows distress signals that could affect Tier 1 supply continuity'",
+        "Identifies the critical 45-day runway vs 6-month qualification gap — 45 days of stock with no qualified alternative and 6 months to qualify one creates a 4.5-month exposure period that must be addressed",
+        "Recommends immediate supply assurance request to NorthernTech (not waiting for scheduled review) — the skill states 'NEVER wait for the scheduled review to act on a HOT signal'",
+        "Recommends activating contingency plans including safety stock build, alternative supplier identification, and possible bridge arrangements — the skill requires specific actions, not just risk rating changes",
+        "Does NOT downgrade the risk based on NorthernTech's verbal assurance alone — the skill states 'NEVER downgrade a risk rating based on vendor assurance alone; require evidence'"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "negative-vendor-onboarding-redirect",
+      "prompt": "We want to onboard a new packaging supplier we met at a trade show. Can you do a full vendor assessment covering their commercial terms, operational capabilities, financial health, compliance certifications, and strategic fit? They'd be replacing our current sole-source supplier.",
+      "expected_output": "The agent recognizes this is a vendor onboarding/assessment task (six-dimension evaluation of a new vendor), not ongoing risk monitoring, and redirects to the vendor-assessment skill.",
+      "files": [],
+      "expectations": [
+        "Recognizes that new vendor onboarding and full six-dimension assessment are vendor-assessment skill territory — the skill description explicitly states 'NOT for: vendor onboarding or classification (use vendor-assessment)'",
+        "Redirects to the vendor-assessment skill or /vendor-assess command — vendor assessment has the Kraljic classification and six-dimension framework designed for this purpose",
+        "Does NOT attempt to produce a full vendor assessment — supplier-risk monitors ongoing risk for existing suppliers; it does not onboard or classify new vendors"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "negative-carrier-performance-redirect",
+      "prompt": "Our main carrier's on-time delivery has dropped to 85% and their damage rate is climbing. Can you do a full carrier performance review with a scorecard?",
+      "expected_output": "The agent recognizes this is a carrier performance question, not a supplier risk assessment, and redirects to the logistics-brief skill.",
+      "files": [],
+      "expectations": [
+        "Recognizes that carrier performance scorecards are logistics-brief skill territory — the skill description explicitly states 'NOT for: carrier performance (use logistics-brief)'",
+        "Redirects to the logistics-brief skill or /logistics-brief command — logistics-brief has the carrier scorecard framework with OTD/damage/cost/tracking metrics",
+        "Does NOT attempt to produce a carrier performance scorecard — supplier-risk assesses vendor risk across five dimensions, not carrier-specific logistics performance"
+      ]
+    }
+  ]
+}

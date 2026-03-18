@@ -1,0 +1,22 @@
+[
+  {"query": "Review carrier performance for our top 5 carriers over Q1 — I need a scorecard with OTD rates, damage, cost per kg, and tracking reliability", "should_trigger": true},
+  {"query": "Our expedited freight spend just hit 18% of total freight budget, triple what it was last quarter. 70% comes from Manchester. What's the root cause?", "should_trigger": true},
+  {"query": "We ship 200 pallets/month Birmingham to Munich via road at GBP 3.20/kg. Is there a better mode option for this lane? Maybe rail?", "should_trigger": true},
+  {"query": "I need a carbon emissions assessment for our logistics network — what are our Scope 3 emissions by carrier and by lane for the last 12 months?", "should_trigger": true},
+  {"query": "CarrierB's OTD dropped to 87% last quarter and their damage rate is climbing. Should we exit them or give them a corrective action period?", "should_trigger": true},
+  {"query": "can you audit our freight invoices against contracted rates? i think DHL is charging us above the agreed rate on the london-paris lane", "should_trigger": true},
+  {"query": "Compare road vs rail vs sea for our Shanghai to Rotterdam supply route — we're shipping 40ft containers twice a week and want to understand the cost and carbon trade-offs", "should_trigger": true},
+  {"query": "I need a logistics performance summary for the COO meeting — carrier OTD trends, cost per kg trend, and any lanes where we're bleeding money on premium freight", "should_trigger": true},
+  {"query": "What's the on-time delivery trend for our carriers over the last 13 weeks? I want to see if the declining pattern is getting worse", "should_trigger": true},
+  {"query": "We need to select a new carrier for our UK-to-Ireland lane — volume is about 50 shipments per month, mostly ambient palletised goods", "should_trigger": true},
+  {"query": "We're considering opening a new distribution centre in Poland — run a network design comparison of a single UK DC vs dual DC setup", "should_trigger": false},
+  {"query": "Assess our strategic packaging supplier — I need a full six-dimension review covering financial health, compliance certs, and operational performance", "should_trigger": false},
+  {"query": "Reconcile this invoice from Acme against PO-4521 — the quantities don't match the goods receipt", "should_trigger": false},
+  {"query": "Analyze our total procurement spend by category — where are the biggest consolidation opportunities across our vendor base?", "should_trigger": false},
+  {"query": "Draft a corrective action request letter to our underperforming steel supplier — their quality rejection rate is above 3%", "should_trigger": false},
+  {"query": "Our key steel supplier just had a credit downgrade to CCC — what's the risk assessment and what contingency plans should we activate?", "should_trigger": false},
+  {"query": "Generate the weekly supply chain brief for the CPO with traffic light summary, contract calendar, and savings pipeline update", "should_trigger": false},
+  {"query": "Help me classify a new vendor using the Kraljic matrix — they supply custom-machined components and we have no alternative source", "should_trigger": false},
+  {"query": "Write a Python script to parse our TMS export data and generate carrier KPI dashboards", "should_trigger": false},
+  {"query": "What's the current market rate for 40ft container shipping from Shenzhen to Felixstowe? I want to benchmark our rates", "should_trigger": false}
+]

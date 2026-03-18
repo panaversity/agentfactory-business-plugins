@@ -1,0 +1,82 @@
+[
+  {
+    "query": "Generate the weekly supply chain brief for the CPO and COO — traffic lights, highlights, contract calendar, and savings pipeline",
+    "should_trigger": true
+  },
+  {
+    "query": "A Strategic vendor's OTD dropped to 68% this week and they just had a credit downgrade. Should this be in the weekly brief or escalated immediately?",
+    "should_trigger": true
+  },
+  {
+    "query": "Produce the monthly operations report for the supply chain leadership meeting — I need trend data, category performance, and the forward-look section",
+    "should_trigger": true
+  },
+  {
+    "query": "What are the leading indicators telling us? Is vendor OTD trending up or down over the last 13 weeks? What about invoice exception rate?",
+    "should_trigger": true
+  },
+  {
+    "query": "i need a quick supply chain dashboard update for the COO — just the traffic lights and any urgent contract deadlines in the next 30 days",
+    "should_trigger": true
+  },
+  {
+    "query": "Our IT services contract notice deadline is in 22 days and we haven't decided whether to renew. Flag this as urgent in the brief",
+    "should_trigger": true
+  },
+  {
+    "query": "Give me a supply chain KPI summary: vendor OTD, invoice exception rate, carrier performance, active risk alerts, and savings YTD vs target",
+    "should_trigger": true
+  },
+  {
+    "query": "There's a bank detail change attempt on a Strategic vendor invoice and a suspected duplicate from another vendor. Generate an escalation alert — this can't wait for Monday's brief",
+    "should_trigger": true
+  },
+  {
+    "query": "Compile the weekly procurement dashboard — I need to see how many invoices we processed, the straight-through rate, and early payment discounts captured vs missed",
+    "should_trigger": true
+  },
+  {
+    "query": "What decisions do leadership need to make this week? Give me just the DECISION REQUIRED items from across vendor performance, contracts, and risk",
+    "should_trigger": true
+  },
+  {
+    "query": "Do a full six-dimension vendor assessment for our main packaging supplier — commercial, operational, financial, compliance, strategic, geopolitical",
+    "should_trigger": false
+  },
+  {
+    "query": "Reconcile this batch of 15 invoices against their POs — several have price variances and two might be duplicates",
+    "should_trigger": false
+  },
+  {
+    "query": "Review carrier performance for Q1 and create a detailed scorecard with OTD, damage, cost per kg, and tracking by carrier",
+    "should_trigger": false
+  },
+  {
+    "query": "Analyze our procurement spend by category — where can we consolidate vendors and what are the savings opportunities?",
+    "should_trigger": false
+  },
+  {
+    "query": "Our steel supplier's credit rating dropped to CCC — do a full five-dimension supplier risk assessment",
+    "should_trigger": false
+  },
+  {
+    "query": "Draft a corrective action request letter to send to our underperforming steel supplier",
+    "should_trigger": false
+  },
+  {
+    "query": "We're considering opening a new DC in Poland — run the network design scenario comparison",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a contract non-renewal notice for our cleaning services vendor — notice period is 90 days",
+    "should_trigger": false
+  },
+  {
+    "query": "Help me benchmark our packaging prices against market rates using published indices",
+    "should_trigger": false
+  },
+  {
+    "query": "Build a Python dashboard that visualises our supply chain KPIs from the ERP data export",
+    "should_trigger": false
+  }
+]

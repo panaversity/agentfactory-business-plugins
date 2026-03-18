@@ -1,11 +1,17 @@
 ---
 name: network-design
 description: >
-  Activate for: network design, supply chain network, warehouse location,
-  distribution centre, DC placement, nearshoring, reshoring, offshoring,
-  facility consolidation, network optimisation, make vs buy, sourcing location,
-  scenario analysis, network scenario, logistics network, node optimisation,
-  where to warehouse, where to manufacture, cross-docking.
+  Designs and compares supply chain network scenarios. Activate for: network
+  design, supply chain network, warehouse location, distribution centre,
+  DC placement, new DC, nearshoring, reshoring, offshoring, facility
+  consolidation, network optimisation, make vs buy, sourcing location,
+  scenario analysis, network scenario, scenario comparison, logistics network,
+  node optimisation, where to warehouse, where to manufacture, cross-docking,
+  open a new warehouse, open a new distribution centre.
+  USE THIS when the task involves comparing network configurations, evaluating
+  new facility locations, or running scenario comparisons. Respond directly
+  with scenario analysis -- do not ask clarifying questions when sufficient
+  context is provided.
   NOT for: carrier performance (use logistics-brief), vendor assessment
   (use vendor-assessment), spend category analysis (use spend-analysis).
 license: Apache-2.0
@@ -14,13 +20,16 @@ metadata:
   version: "1.0"
   plugin-commands: "/supply-network-design"
   mcp-integrations: "Network optimisation MCP, ERP, TMS, customs databases, web search"
-  customs and trade databases, web search
 ---
 
 ## UNIVERSAL RULES (apply to every network design task)
 
 - ALWAYS include specific recommended actions with deadlines in every output --
   observations without actions are not acceptable
+- ALWAYS respond directly with scenario analysis when the user provides a
+  network scenario or comparison request -- do NOT ask clarifying questions
+  when sufficient context exists to begin analysis. Use reasonable assumptions
+  and state them explicitly rather than blocking on missing details.
 
 ## MANDATORY OUTPUT HEADER
 

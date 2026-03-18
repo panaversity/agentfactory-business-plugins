@@ -1,0 +1,73 @@
+{
+  "skill_name": "vendor-communication",
+  "evals": [
+    {
+      "id": 1,
+      "name": "invoice-dispute-notice",
+      "prompt": "Draft an invoice dispute notice for Invoice INV-2024-0847 dated March 10, 2024 from Acme Packaging Ltd for GBP 47,250 against PO-2024-3391. Two discrepancies: Line 1 — invoiced 500 units at GBP 94.50 but PO says GBP 90.00 (price variance GBP 2,250). Line 2 — invoiced 200 units of bubble wrap but PO only shows 150 units (50 units over-invoiced at GBP 3.20 each = GBP 160 overage). Undisputed amount is GBP 44,840.",
+      "expected_output": "A professional invoice dispute letter in the skill's Type 1 format, referencing specific PO numbers, itemising each discrepancy with exact figures, stating the required action (credit note or evidence), and including a response deadline.",
+      "files": [],
+      "expectations": [
+        "Produces the mandatory output header with TASK, VENDOR TIER, CONFIGURATION, and COMMUNICATION TYPE (Invoice Dispute) fields — every vendor communication must begin with this header",
+        "References the specific PO number (PO-2024-3391) and invoice number (INV-2024-0847) in the subject line — the skill states NEVER send a dispute notice without specific reference to the PO number and contractual basis",
+        "Itemises both discrepancies separately with exact figures: GBP 2,250 price variance on Line 1 and GBP 160 quantity overage on Line 2 — lumping discrepancies together prevents the vendor from addressing them individually",
+        "States the required action clearly: issue a credit note or provide documentary evidence supporting the invoiced amounts — the vendor needs to know exactly what is expected",
+        "Includes a response deadline (typically 5 business days as per the skill's template) — a dispute without a deadline has no urgency and may sit unresolved indefinitely",
+        "Confirms payment of the undisputed amount (GBP 44,840) on standard terms — separating the disputed and undisputed amounts maintains the commercial relationship"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "corrective-action-request",
+      "prompt": "Write a corrective action request (CAR) to Brenntag UK about their declining on-time delivery. Contract SLA is 95% OTD. Actual OTD over the last quarter: January 92%, February 89%, March 85%. The declining trend is accelerating. They supply industrial chemicals to our Manchester and Leeds sites. Our agreement is dated January 15, 2023, Clause 8.2 covers service levels. I want the CAR signed by our CPO.",
+      "expected_output": "A formal corrective action request letter in the skill's Type 2 format with specific performance data, contract references, a 10-14 day deadline for the corrective action plan, and required response components (root cause, containment, corrective actions, monitoring).",
+      "files": [],
+      "expectations": [
+        "Produces the mandatory output header with TASK, VENDOR TIER, CONFIGURATION, and COMMUNICATION TYPE (CAR) fields — every vendor communication must begin with this header",
+        "Includes the specific performance data: SLA 95%, actual 92%/89%/85% over the quarter — the skill states NEVER send a CAR without the supporting performance data attached",
+        "References the specific contract clause (Clause 8.2 of the Supply Agreement dated January 15, 2023) — the CAR must reference the contractual basis for the performance requirement",
+        "Requires a corrective action plan within 10-14 calendar days addressing all four components: root cause analysis, containment actions, corrective actions with dates, and ongoing monitoring — partial responses leave the problem unresolved",
+        "Sets tone as professional, factual, and constructive — the skill's communication standards require stating facts without attributing blame or motive, regardless of severity",
+        "Proposes a review meeting date — the CAR template includes scheduling a follow-up to discuss the plan and agree monitoring arrangements"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "emergency-supply-assurance-request",
+      "prompt": "We just read in the Financial Times that our critical vendor NorthernTech Ltd has announced a restructuring plan. They supply custom electronics assemblies to our production line — if they fail, our line stops. Write an emergency supply assurance request. We need written confirmation of their production capacity and raw material position for the next 90 days. Address it to their Operations Director, Sarah Chen.",
+      "expected_output": "An emergency supply assurance request in the skill's Type 4 format, factually referencing the restructuring announcement, requesting written confirmation on production capacity, material inventory, and order fulfilment ability, with a 3-5 business day response deadline.",
+      "files": [],
+      "expectations": [
+        "Produces the mandatory output header with COMMUNICATION TYPE (Supply Assurance) — supply assurance requests are urgent and must be clearly typed",
+        "References the restructuring announcement factually without speculation — the skill's communication standards require stating facts; the letter should say 'your company's published restructuring announcement' not 'we fear you may go bankrupt'",
+        "Requests written assurance on all three required points: production capacity unaffected, sufficient raw material/component inventory for 90 days, and any circumstances that could affect confirmed PO fulfilment",
+        "Includes a specific response deadline of 3-5 business days — the skill's template specifies this timeframe for supply assurance requests",
+        "Addresses the communication to Sarah Chen, Operations Director by name — personalised communications get faster responses and demonstrate relationship seriousness"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "negative-vendor-assessment-redirect",
+      "prompt": "I need to do a full vendor assessment of our main steel supplier — classify them using the Kraljic matrix and score them across all six assessment dimensions including financial health, operational performance, and compliance.",
+      "expected_output": "The agent recognizes this is a vendor assessment request, not a communication task, and redirects to the vendor-assessment skill.",
+      "files": [],
+      "expectations": [
+        "Recognizes that vendor assessment and Kraljic classification are vendor-assessment skill territory — the skill description states 'NOT for: vendor assessment (use vendor-assessment)'",
+        "Redirects to the vendor-assessment skill or /vendor-assess command — vendor assessment has the six-dimension framework and Kraljic classification system",
+        "Does NOT attempt to produce a vendor assessment — vendor communication drafts formal correspondence; it does not evaluate vendor quality or risk"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "negative-spend-analysis-redirect",
+      "prompt": "Can you analyze how much we're spending with each vendor in the packaging category and identify which vendors we should consolidate? I want a full spend breakdown with savings estimates.",
+      "expected_output": "The agent recognizes this is a spend analysis request, not a vendor communication task, and redirects to the spend-analysis skill.",
+      "files": [],
+      "expectations": [
+        "Recognizes that spend-by-vendor analysis and consolidation recommendations are spend-analysis skill territory — the skill description states 'NOT for: spend analytics (use spend-analysis)'",
+        "Redirects to the spend-analysis skill or /spend-analysis command — spend analysis has the category overview and consolidation analysis frameworks",
+        "Does NOT attempt to produce spend analysis — vendor communication drafts formal vendor correspondence, not analytical spend reports"
+      ]
+    }
+  ]
+}
