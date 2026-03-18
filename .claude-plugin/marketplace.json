@@ -42,6 +42,48 @@
       "source": "./sales-revops-marketing",
       "version": "1.0.0",
       "category": "sales"
+    },
+    {
+      "name": "supply-chain",
+      "description": "Supply chain and procurement intelligence: 8 skills, 5 persistent agents. Vendor assessment (Kraljic 6-dimension), invoice reconciliation (3-way match), supplier risk monitoring, logistics optimization, spend analytics, network design, and vendor communications.",
+      "source": "./supply-chain",
+      "version": "1.0.0",
+      "category": "operations"
+    },
+    {
+      "name": "product-strategy",
+      "description": "Product management agent: 6 skills, 3 agents. Discovery briefs, user research interview guides, PRDs, RICE prioritization, sprint retrospectives, and user story generation.",
+      "source": "./product-strategy",
+      "version": "1.0.0",
+      "category": "product"
+    },
+    {
+      "name": "hr-operations",
+      "description": "People & HR operations agent: 5 skills, 4 agents. Job description generation, candidate matching, knowledge management, offboarding workflows, and reference letter generation.",
+      "source": "./hr-operations",
+      "version": "1.0.0",
+      "category": "hr"
+    },
+    {
+      "name": "operations-intelligence",
+      "description": "Operations management agent: 4 skills, 4 agents. Process audit, contract management, incident response, and operational metrics dashboards.",
+      "source": "./operations-intelligence",
+      "version": "1.0.0",
+      "category": "operations"
+    },
+    {
+      "name": "agentic-office",
+      "description": "Productivity & agentic office agent: 10 skills, 4 agents. Context loading, delegation, daily digest, executive briefs, meeting intelligence, progress tracking, task intelligence, and workplace search.",
+      "source": "./agentic-office",
+      "version": "1.0.0",
+      "category": "productivity"
+    },
+    {
+      "name": "innovation",
+      "description": "Intrapreneurship & innovation agent: 10 skills, 4 agents. Business model canvas, customer discovery, financial modeling, go-to-market strategy, hypothesis testing, ideation, market analysis, pitch deck, design sprints, and validation.",
+      "source": "./innovation",
+      "version": "1.0.0",
+      "category": "innovation"
     }
   ]
 }
