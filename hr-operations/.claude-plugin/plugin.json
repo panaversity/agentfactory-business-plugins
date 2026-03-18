@@ -1,0 +1,24 @@
+{
+  "name": "hr-operations",
+  "version": "1.0.0",
+  "description": "HR operations domain agents for job descriptions, talent matching, institutional knowledge capture, reference letters, and offboarding. 5 skills + 4 persistent agents. Complements the official human-resources plugin. No jurisdiction overlays -- policy-configurable via hr.local.md.",
+  "author": {
+    "name": "Panaversity",
+    "url": "https://github.com/panaversity"
+  },
+  "homepage": "https://agentfactory.panaversity.org",
+  "repository": "https://github.com/panaversity/agentfactory-business-plugins",
+  "license": "Apache-2.0",
+  "keywords": [
+    "hr-operations",
+    "human-resources",
+    "job-description",
+    "talent-matching",
+    "knowledge-capture",
+    "reference-letter",
+    "offboarding",
+    "onboarding-orchestration",
+    "policy-maintenance",
+    "domain-agent"
+  ]
+}

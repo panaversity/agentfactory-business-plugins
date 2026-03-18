@@ -1,0 +1,26 @@
+{
+  "name": "agentic-office",
+  "version": "1.0.0",
+  "description": "Professional intelligence layer for the Agentic Office — workplace memory, task prioritisation, delegation quality, daily digests, meeting intelligence, executive dashboards, cross-domain context, and four persistent agents. Extends the official productivity plugin with senior-professional workflows.",
+  "author": {
+    "name": "Panaversity — The AI Agent Factory",
+    "url": "https://github.com/panaversity"
+  },
+  "homepage": "https://agentfactory.panaversity.org",
+  "repository": "https://github.com/panaversity/agentfactory-business-plugins",
+  "license": "Apache-2.0",
+  "keywords": [
+    "productivity",
+    "agentic-office",
+    "workplace-memory",
+    "delegation",
+    "digest",
+    "meeting-intelligence",
+    "executive-dashboard",
+    "context-loader",
+    "chief-of-staff",
+    "task-intelligence",
+    "cross-domain",
+    "domain-agent"
+  ]
+}

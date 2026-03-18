@@ -1,0 +1,24 @@
+{
+  "name": "operations-intelligence",
+  "version": "1.0.0",
+  "description": "Audit preparation, contract analysis, incident management, operational metrics, and four persistent operations agents. Complements the official Operations plugin.",
+  "author": {
+    "name": "Panaversity",
+    "url": "https://github.com/panaversity"
+  },
+  "homepage": "https://agentfactory.panaversity.org",
+  "repository": "https://github.com/panaversity/agentfactory-business-plugins",
+  "license": "Apache-2.0",
+  "keywords": [
+    "operations",
+    "audit",
+    "contract-analysis",
+    "incident-management",
+    "operational-metrics",
+    "post-mortem",
+    "compliance",
+    "vendor-monitoring",
+    "change-tracking",
+    "domain-agent"
+  ]
+}

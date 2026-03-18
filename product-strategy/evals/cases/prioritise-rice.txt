@@ -1,0 +1,6 @@
+Prioritise these 5 backlog items using RICE:
+1. Bulk export (requested by 3 enterprise customers)
+2. SSO integration (blocking 2 enterprise deals worth $120K ARR)
+3. Dashboard performance (page load >5s, affecting all users)
+4. Mobile app notifications (nice to have, low effort)
+5. API rate limiting (technical debt, no customer requests)

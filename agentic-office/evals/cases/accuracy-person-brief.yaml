@@ -1,0 +1,12 @@
+name: accuracy-person-brief
+type: accuracy
+query: "Give me a person brief on Omar, Ayesha, and Dr. Sana Mirza"
+expected_skill: workplace-context
+quality_checks:
+  - "role, current focus, communication"
+  - "today's context"
+  - "sensitivity"
+rationale: >
+  Tests that person briefs include: role, current focus, communication
+  guidance, today's context, specific approach advice. Sensitivity entries
+  must NOT be exposed in group output.

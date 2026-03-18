@@ -1,0 +1,8 @@
+name: routing-delegation
+type: routing
+query: "Delegate the analytics brief to Omar with a clear handoff"
+expected_skill: delegation
+negative_check_skill: task-management
+rationale: >
+  "delegate" and "handoff" are custom plugin triggers. Must NOT route
+  to task-intelligence (which handles prioritisation, not delegation).

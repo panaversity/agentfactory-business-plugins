@@ -1,0 +1,1 @@
+Write a PRD for our Workflow Automation feature. This is a major new product area that will require work from the platform team, the integrations team, and the frontend team. Target delivery is Q3. The feature lets users create automated workflows triggered by data events.

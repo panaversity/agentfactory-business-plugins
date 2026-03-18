@@ -1,0 +1,8 @@
+name: routing-task-intelligence
+type: routing
+query: "I need to brain dump all my priorities and sort them into P1 P2 P3"
+expected_skill: task-intelligence
+negative_check_skill: task-management
+rationale: >
+  "brain dump" and "P1 P2 P3" are custom plugin triggers. Must NOT route
+  to the official task-management skill which owns "task" and "to-do".

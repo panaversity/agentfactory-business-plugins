@@ -1,0 +1,184 @@
+---
+name: market
+description: >
+  Activate for: market, market size, TAM SAM SOM, competitive analysis,
+  competitive landscape, competitors, competition, who else does this,
+  market research, industry research, market sizing, bottom-up model,
+  addressable market, serviceable market, competitive intelligence,
+  how big is the market, who are my competitors, market positioning,
+  differentiation, moat, unfair advantage, why us not them, SWOT.
+  NOT for: go-to-market strategy (use gtm), pitch deck (use pitch),
+  unit economics (use financials).
+license: Apache-2.0
+metadata:
+  author: Panaversity
+  version: "1.0"
+  plugin-commands: "/market"
+---
+
+## CONTEXT LOADING
+
+Before executing, check for `innov.local.md` in the working directory.
+If found, extract:
+
+- venture: name, stage, type, problem_statement, target_customer, unfair_advantage
+- competitive_landscape: direct_competitors, indirect_alternatives, differentiation, moat_building
+- financial_model: unit_economics (for value capture validation)
+- customer_profiles: personas, pains
+
+If `innov.local.md` is not found:
+Continue with conversation context. After first substantive output, prompt:
+"I'm working without your venture context. Run Exercise 8 from Chapter 40
+to build innov.local.md -- it will make every subsequent output specific
+to your venture rather than generic."
+
+## STAGE-AWARE CALIBRATION
+
+Check venture.stage and calibrate:
+
+- IDEA: Market research is useful at any stage -- understanding the landscape helps focus ideation.
+- DISCOVERY: Market research is valuable alongside customer discovery.
+- VALIDATION: Market research should inform your positioning and pricing assumptions.
+- MVP: Market intelligence helps you position against competitors your customers mention.
+- GROWTH: This is your focus stage for competitive intelligence and market expansion analysis.
+
+## DLA PROGRESSION CHECK
+
+No skip warning needed -- market intelligence is valuable at all stages.
+If venture has no competitive_landscape in innov.local.md:
+"You have no competitive landscape documented. Understanding your
+competitors and alternatives is critical for positioning. Even at
+the earliest stage, know what customers use today."
+
+## MARKET INTELLIGENCE WORKFLOW
+
+### Task Types
+
+TYPE 1: COMPETITIVE LANDSCAPE SCAN
+  Input: Product/problem area; known competitors; target segment
+  Output: Competitor profiles (positioning, pricing, strengths, weaknesses, threat level)
+          + strategic recommendation
+
+TYPE 2: MARKET SIZING (BOTTOM-UP)
+  Input: Target segment definition; pricing; usage data from pilots
+  Output: TAM / SAM / SOM with bottom-up methodology + value capture validation
+
+TYPE 3: DIFFERENTIATION MAP
+  Input: Competitor list; our value proposition
+  Output: Positioning map; where we win; where we lose; defensibility assessment
+
+TYPE 4: MARKET TIMING ANALYSIS
+  Input: Problem area
+  Output: "Why now?" -- forces making this the right time (tech, regulation, behaviour, cost)
+
+TYPE 5: MOAT ASSESSMENT
+  Input: Venture context
+  Output: Current moats; moats being built; how defensible each is; what to invest in
+
+### Competitive Intelligence Output Structure
+
+```
+COMPETITIVE LANDSCAPE -- [Product Area]
+Date: [Date] | Segment: [Target segment]
+================================================================
+DIRECT COMPETITORS (solving the same problem for the same customer):
+
+  [Competitor Name]
+  Positioning:      [How they describe themselves; who they target]
+  Pricing:          [If available; or "undisclosed -- estimated $X based on...]
+  Strengths vs. us: [Where they are genuinely stronger]
+  Weaknesses vs. us: [Where we have an advantage]
+  Threat level:     HIGH / MEDIUM / LOW
+  Threat reason:    [Specific -- funding, distribution, brand, feature parity]
+
+  [Repeat for each direct competitor -- typically 3-6]
+
+INDIRECT ALTERNATIVES (solving the problem differently):
+
+  [Alternative -- could be "Excel + manual process" or an adjacent tool]
+  Why customers use it: [Inertia / price / familiarity / integration]
+  Our advantage:        [Specific -- why we win against this alternative]
+
+STRATEGIC RECOMMENDATION:
+  Where to win:   [The specific customer/use case where we have clear advantage]
+  Where to avoid: [Segments where we are outgunned by incumbents]
+  Differentiation to defend: [The one claim we must never let a competitor match]
+================================================================
+```
+
+### Bottom-Up Market Sizing Method
+
+Step 1 -- COUNT the customers:
+  How many organisations in your target segment exist in your geography?
+  Source: business registries, census data, industry associations, LinkedIn counts
+
+Step 2 -- QUALIFY the reachable subset:
+  Of those, how many meet the ICP criteria?
+
+Step 3 -- PRICE the opportunity:
+  What does one customer pay per year? (from unit economics)
+
+Step 4 -- CALCULATE:
+  TAM = Total addressable count x annual price (everyone who has the problem, globally)
+  SAM = Reachable count in your geography x annual price (companies you could sell to)
+  SOM = Your 3-5 year capture target x annual price (1-5% of SAM is typical)
+
+Step 5 -- VALIDATE the value capture ratio:
+  SaaS rule of thumb: your price should be <10% of the value you deliver.
+  If value delivered = $10,000/year and you charge $1,000/year: healthy.
+  If you charge $8,000/year: customers will eventually find alternatives.
+
+### Moat Assessment Framework
+
+MOAT TYPE 1 -- DATA:
+  Do you accumulate data that gets more valuable with use?
+  Durability: HIGH -- hard to replicate without time and customers
+
+MOAT TYPE 2 -- SWITCHING COSTS:
+  How painful is it for a customer to switch to a competitor?
+  Durability: MEDIUM-HIGH -- increases with tenure
+
+MOAT TYPE 3 -- NETWORK EFFECTS:
+  Does the product get more valuable as more people use it?
+  Durability: HIGH -- but only true network effects count
+
+MOAT TYPE 4 -- BRAND:
+  Do customers trust you more than alternatives by reputation alone?
+  Durability: MEDIUM -- can be built over 5+ years; fragile early
+
+MOAT TYPE 5 -- REGULATORY / COMPLIANCE:
+  Are you certified or approved in ways that competitors are not?
+  Durability: MEDIUM -- regulatory moats can be matched; but slow
+
+MOAT TYPE 6 -- DISTRIBUTION:
+  Do you have access to customers that competitors cannot easily reach?
+  Durability: MEDIUM -- partnerships can change
+
+## FINANCIAL REASONING STANDARD
+
+For market sizing and value capture validation:
+- Always use bottom-up methodology, not top-down analyst TAM
+- Validate value capture ratio: price should be <10% of value delivered
+- Cross-reference market size with unit economics from /financials
+- If market size relies on pricing assumptions, flag the dependency
+
+## ASSUMPTION TRACKING
+
+After any market output:
+- Surface any market or competitive assumption that changed
+- Propose innov.local.md competitive_landscape updates
+- Identify the most critical untested market assumption
+- Always distinguish between ASSUMED, ANECDOTAL, and VALIDATED evidence
+
+## NEVER DO THESE
+
+- NEVER claim "no direct competition" -- if there is genuinely no competition,
+  there is likely no market; or you have not looked hard enough
+- NEVER use top-down analyst TAM figures without a bottom-up sanity check
+- NEVER describe a competitor only in terms of their weaknesses --
+  investors will have heard of them; describe their real strengths honestly,
+  then explain why you win anyway
+- NEVER claim a moat you do not yet have -- describe moats you are building,
+  not moats you aspire to
+
+ALL OUTPUTS REQUIRE REVIEW BY A QUALIFIED PROFESSIONAL BEFORE USE IN BUSINESS DECISIONS.

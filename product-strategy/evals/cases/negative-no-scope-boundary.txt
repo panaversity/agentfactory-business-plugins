@@ -1,0 +1,1 @@
+Write a PRD for adding AI-powered search to our product. It should cover everything related to search.

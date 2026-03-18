@@ -1,0 +1,24 @@
+{
+  "name": "innovation",
+  "version": "1.0.0",
+  "description": "Innovation & Intrapreneurship domain agent. 10 skills covering the full DLA Stack: Design Thinking (customer discovery, ideation), Lean Startup (hypothesis testing, MVP design, validated learning), Business Model Canvas, financial modelling, competitive intelligence, go-to-market strategy, investor pitch, and innovation sprints. 4 persistent agents for continuous innovation intelligence. Policy-configurable via innov.local.md.",
+  "author": {
+    "name": "Panaversity",
+    "url": "https://github.com/panaversity"
+  },
+  "homepage": "https://agentfactory.panaversity.org",
+  "repository": "https://github.com/panaversity/agentfactory-business-plugins",
+  "license": "Apache-2.0",
+  "keywords": [
+    "innovation",
+    "intrapreneurship",
+    "design-thinking",
+    "lean-startup",
+    "business-model-canvas",
+    "unit-economics",
+    "pitch-deck",
+    "go-to-market",
+    "competitive-intelligence",
+    "domain-agent"
+  ]
+}

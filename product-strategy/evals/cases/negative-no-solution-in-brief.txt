@@ -1,0 +1,1 @@
+Write a problem brief about our slow dashboard loading times. The solution is to add a CDN and implement lazy loading for widgets.

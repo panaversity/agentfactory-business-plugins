@@ -1,0 +1,1 @@
+Write user stories for a search feature. Include this AC: 'Given a user searches for a term and clicks a result and the result loads, then the search term should be highlighted in the content'

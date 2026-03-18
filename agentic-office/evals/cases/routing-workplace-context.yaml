@@ -1,0 +1,8 @@
+name: routing-workplace-context
+type: routing
+query: "Give me a person brief on Omar before my meeting"
+expected_skill: workplace-context
+negative_check_skill: memory-management
+rationale: >
+  "person brief" is a custom plugin trigger. Must NOT route to the
+  official memory-management skill which owns "who is" and "remember".

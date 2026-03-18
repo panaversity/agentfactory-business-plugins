@@ -1,0 +1,240 @@
+# [Company Name] -- HR & People Operations Configuration
+# Version: 1.0 | Last Updated: [Date] | Owner: [HR Lead / CHRO name]
+#
+# INSTRUCTIONS:
+# 1. Copy this file and remove ".template" from the filename
+# 2. Fill in every section with your organisation's actual details
+# 3. Save as hr.local.md in your Cowork skills root directory
+# 4. Test with a policy question -- does it return your actual policies and contacts?
+# 5. Update whenever policies, rates, or contacts change
+#
+# CRITICAL: This file will be used to generate offer letters, policy
+# summaries, and onboarding plans. Incorrect information here creates
+# incorrect documents. Verify every section before use.
+
+---
+
+## Organisation Profile
+
+Company name:         [Legal entity name]
+Trading name:         [If different from legal name]
+Company size:         [Headcount -- approximate]
+Industry sector:      [Sector -- affects compliance requirements]
+Growth stage:         [Startup / Growth / Established / Enterprise]
+Primary jurisdiction: [UK / Pakistan / UAE / US / Other]
+Secondary jurisdictions: [If employees in multiple countries -- list]
+Employment law counsel: [External firm name + contact if applicable]
+
+---
+
+## Jurisdiction: Statutory Rates
+
+# IMPORTANT: Update these annually. Wrong rates in documents = legal risk.
+# UK rates change April 6 each year. Pakistan rates vary by province.
+
+### UK (if applicable)
+  National Living Wage (25+):     GBP [rate]/hour -- effective [date]
+  National Minimum Wage (21-24):  GBP [rate]/hour -- effective [date]
+  National Minimum Wage (18-20):  GBP [rate]/hour -- effective [date]
+  Statutory Sick Pay (SSP):       GBP [rate]/week -- effective [date]
+  Statutory Maternity Pay (SMP):  GBP [rate]/week (after 90% period) -- effective [date]
+  Statutory Paternity Pay:        GBP [rate]/week -- effective [date]
+  SSP qualifying days:            [3 waiting days] -- then SSP begins
+
+### Pakistan (if applicable)
+  Minimum wage (Punjab):          PKR [amount]/month -- effective [date]
+  Minimum wage (Sindh):           PKR [amount]/month -- effective [date]
+  Minimum wage (KPK):             PKR [amount]/month -- effective [date]
+  Minimum wage (Balochistan):     PKR [amount]/month -- effective [date]
+  EOBI contribution (employer):   [rate]% -- effective [date]
+  EOBI contribution (employee):   [rate]% -- effective [date]
+  SESSI/PESSI contribution:       [rate -- province specific]
+
+### UAE (if applicable)
+  End-of-service gratuity:        21 days/year (years 1-5); 30 days/year (5+)
+  Annual leave entitlement:       30 calendar days (after 1 year)
+  Probation maximum:              6 months
+  Free zone applicable:           [YES -- DIFC / ADGM / Other] / NO
+
+---
+
+## Policy Library
+
+# For each policy: name, document location, last reviewed date, owner
+# Used by /knowledge and agents to cite sources correctly
+
+| Policy | Document Location | Last Reviewed | Owner | Next Review |
+|--------|-------------------|---------------|-------|-------------|
+| Annual Leave | [link] | [date] | [HR name] | [date] |
+| Sick Leave | [link] | [date] | [HR name] | [date] |
+| Parental Leave -- Primary | [link] | [date] | [HR name] | [date] |
+| Parental Leave -- Secondary | [link] | [date] | [HR name] | [date] |
+| Flexible Working | [link] | [date] | [HR name] | [date] |
+| Remote Working | [link] | [date] | [HR name] | [date] |
+| Expense Policy | [link] | [date] | [Finance name] | [date] |
+| Performance Management | [link] | [date] | [HR name] | [date] |
+| Disciplinary Policy | [link] | [date] | [HR name] | [date] |
+| Grievance Policy | [link] | [date] | [HR name] | [date] |
+| Code of Conduct | [link] | [date] | [HR name] | [date] |
+| Data Protection | [link] | [date] | [DPO name] | [date] |
+| Equal Opportunities | [link] | [date] | [HR name] | [date] |
+| Health and Safety | [link] | [date] | [HS lead] | [date] |
+| Learning and Development | [link] | [date] | [HR name] | [date] |
+
+---
+
+## Leave Entitlements (Summary)
+
+Annual leave (full-time):     [N] days + [N] bank holidays = [N] total
+Annual leave pro-rata:        [Yes -- per employment contract] / [No]
+Leave carry-over:             Up to [N] days into following year
+Buy/sell leave:               [Available -- N days max] / [Not available]
+
+Company sick pay:             [N] days at full pay per rolling 12 months
+                              then SSP / statutory rate
+Fit note required after:      [N] consecutive days
+
+Parental leave -- primary:    [N] weeks at full pay + [N] weeks statutory
+Parental leave -- secondary:  [N] weeks at full pay
+Notice for parental leave:    [N] weeks before planned start
+
+Compassionate leave:          [N] days for [defined circumstances]
+Study leave:                  [N] days per year for approved qualifications
+                              [Conditions -- approval process]
+
+---
+
+## Benefits Summary
+
+### Standard (all employees)
+  Pension:          [Provider] | Employer: [X]% | Employee: [Y]%
+  Life assurance:   [X x salary] / [Not provided]
+  Income protection:[% of salary; waiting period] / [Not provided]
+  Private health:   [Provider -- individual / family] / [Not provided]
+  EAP:              [Provider name + freephone number -- available 24/7]
+  L&D budget:       [Currency] [amount] per person per year | Approval: [process]
+  Cycle to work:    [Available] / [Not available]
+  Season ticket:    [Available -- up to [Currency][X]] / [Not available]
+
+### Enhanced (senior / management -- if applicable)
+  [Any additional benefits for senior employees -- configure per grade]
+
+### How to access benefits:
+  Benefits portal:  [URL or system name]
+  Enrolment window: [When new joiners can enrol: immediately / after probation]
+  Questions:        [Benefits contact name + email]
+
+---
+
+## HR Contact Directory
+
+# Named contacts are used by agents for escalation and routing
+# Update immediately when contacts change
+
+HR Director / CHRO:         [Name] | [email] | [direct line]
+HR Business Partner(s):     [Name] | [email] | [direct line] | [team coverage]
+                            [Name] | [email] | [direct line] | [team coverage]
+Payroll:                    [Name] | [email] | [direct line]
+Recruitment:                [Name] | [email] | [direct line]
+L&D / Training:             [Name] | [email] | [direct line]
+Data Protection Officer:    [Name] | [email]
+Health and Safety:          [Name] | [email]
+
+Confidential speak-up:      [Provider name] | [freephone] | [website]
+Employee Assistance Programme: [Provider] | [freephone -- 24/7] | [website]
+
+---
+
+## Onboarding Programme Configuration
+
+### Pre-boarding IT Role Profiles (device build by role type)
+  Engineering:      [Laptop spec; software: IDE, GitHub, etc.]
+  Data / Analytics: [Laptop spec; software: SQL tools, Python, BI platform]
+  Finance:          [Laptop spec; software: accounting system, Excel, etc.]
+  Marketing:        [Laptop spec; software: design tools, CMS, etc.]
+  Operations:       [Standard build]
+  Leadership:       [Standard build + additional access permissions]
+
+### System Access Matrix (by role type)
+  All employees:    [HRIS, email, calendar, intranet, Slack/Teams]
+  Engineering:      [+ GitHub, dev environments, cloud console]
+  Data:             [+ data warehouse, BI platform, analytics tools]
+  Finance:          [+ accounting system, banking portal if applicable]
+  HR:               [+ full HRIS access, payroll system]
+  Management:       [+ reporting dashboards, people analytics]
+
+### Mandatory Compliance Training (by Day 10 deadline)
+  All employees:
+  - GDPR / Data protection awareness ([LMS link])
+  - Information security ([LMS link])
+  - Code of conduct acknowledgement ([link to sign])
+  - [Sector-specific -- e.g. AML for financial services; safeguarding for education]
+
+  Managers additionally:
+  - Managing fairly and legally ([LMS link])
+  - Mental health awareness ([LMS link])
+
+### Standard Buddy Programme
+  Buddy assignment: Same team; similar role level; not direct manager
+  Buddy briefing:   [HR sends buddy guide before Day 1]
+  Buddy commitment: Informal lunch Week 1; check-in every 2 weeks for Month 1
+
+---
+
+## Performance Review Cycle
+
+Review frequency:       [Annual / Bi-annual / Quarterly]
+Review periods:         [H1: Jan-June | H2: July-Dec] / [other]
+Review timing:          [Manager submits by: date | Calibration: date | Meetings: date]
+Rating scale:           [If used: scale + descriptors] / [No ratings -- narrative only]
+
+Promotion cycle:        [Annual, aligned to review cycle / ad hoc / other]
+Pay review cycle:       [Annual -- [month] / bi-annual]
+Calibration process:    [How ratings/recommendations are moderated]
+
+Performance framework:  [Competency framework name + link if exists]
+Goal-setting:           [OKRs / SMART goals / other] | Frequency: [quarterly / annual]
+
+---
+
+## Equal Opportunities Statement (for JDs and offer letters)
+
+[Company name] is an equal opportunities employer. We are committed to
+creating a diverse and inclusive workplace and welcome applications from
+people of all backgrounds, regardless of [list protected characteristics
+relevant to your jurisdiction]. We are happy to make reasonable
+adjustments to our recruitment process for applicants with disabilities --
+please contact [recruitment contact] to discuss what adjustments
+would help.
+
+[If relevant: living wage employer statement, B-Corp, etc.]
+
+---
+
+## Reference Policy
+
+Reference type provided:  [Factual only] / [Factual + professional opinion]
+Who provides references:  [HR only] / [HR + line manager for professional]
+Factual reference contents: Job title, dates of employment, rehire eligibility
+Opinion reference:        [Requires employee consent and HR review]
+Rehire eligibility:       [Decision process -- HR + last manager sign-off]
+
+---
+
+## Data Retention (HR Documents)
+
+Offer letters / contracts:     [Duration -- e.g. 6 years after employment ends]
+Performance reviews:           [Duration]
+Disciplinary records:          [Duration -- varies by outcome]
+Interview notes:               [Duration -- typically 6 months post-hire]
+Pre-employment checks:         [Duration]
+Exit interview notes:          [Duration -- typically anonymised after 1 year]
+
+GDPR / jurisdiction note:      [Reference to data protection policy]
+
+---
+# End of HR Configuration Template
+# Save as: hr.local.md (remove ".template" from filename)
+# Test: ask five common employee questions and verify answers reference
+#       your actual policies and named contacts
+# If not: what section is missing or incomplete?

@@ -1,0 +1,290 @@
+# Innovation Eval Harness -- Test Cases
+# Each case defines: prompt, expected routing, expected content checks
+
+cases:
+  # --- Routing Tests (2 per skill = 20) ---
+  - id: route_idea_generation
+    category: routing
+    prompt: "I need to brainstorm 100 ideas for solving the AP automation problem for mid-market CFOs."
+    expected_skill: idea
+    content_checks:
+      - "idea"
+      - "sprint"
+      - "category"
+
+  - id: route_idea_pressure_test
+    category: routing
+    prompt: "Play devil's advocate on my idea for a WhatsApp-based invoice approval tool."
+    expected_skill: idea
+    content_checks:
+      - "argument"
+      - "prove"
+
+  - id: route_discovery_interview
+    category: routing
+    prompt: "Generate a customer discovery interview guide for CFOs at manufacturing companies."
+    expected_skill: discovery
+    content_checks:
+      - "interview"
+      - "question"
+      - "pain"
+
+  - id: route_discovery_synthesis
+    category: routing
+    prompt: "I have notes from 10 customer interviews about AP pain points. Synthesise them into a JTBD map."
+    expected_skill: discovery
+    content_checks:
+      - "jobs"
+      - "pain"
+      - "insight"
+
+  - id: route_hypothesis_map
+    category: routing
+    prompt: "What assumptions am I making about my AP automation SaaS? Build me an assumption map."
+    expected_skill: hypothesis
+    content_checks:
+      - "assumption"
+      - "tier"
+      - "risk"
+
+  - id: route_hypothesis_mvp
+    category: routing
+    prompt: "Help me scope an MVP that tests our 3 riskiest assumptions in 8 weeks."
+    expected_skill: hypothesis
+    content_checks:
+      - "MVP"
+      - "feature"
+      - "assumption"
+
+  - id: route_canvas_build
+    category: routing
+    prompt: "Build a business model canvas for my AP automation SaaS venture."
+    expected_skill: canvas
+    content_checks:
+      - "canvas"
+      - "customer segments"
+      - "revenue"
+
+  - id: route_canvas_stress
+    category: routing
+    prompt: "Stress test my business model -- what are the weakest blocks in my BMC?"
+    expected_skill: canvas
+    content_checks:
+      - "canvas"
+      - "risk"
+      - "evidence"
+
+  - id: route_financials_unit
+    category: routing
+    prompt: "Calculate my unit economics -- CAC is $275, MRR is $500, churn is 10% annual."
+    expected_skill: financials
+    content_checks:
+      - "LTV"
+      - "CAC"
+      - "ratio"
+
+  - id: route_financials_runway
+    category: routing
+    prompt: "How long will my money last? I have $200K cash and burn $15K/month."
+    expected_skill: financials
+    content_checks:
+      - "runway"
+      - "month"
+
+  - id: route_pitch_deck
+    category: routing
+    prompt: "Build a 9-slide investor pitch deck narrative for my AP automation seed raise."
+    expected_skill: pitch
+    content_checks:
+      - "slide"
+      - "narrative"
+      - "investor"
+
+  - id: route_pitch_questions
+    category: routing
+    prompt: "What are the 15 hardest questions investors will ask about my venture?"
+    expected_skill: pitch
+    content_checks:
+      - "question"
+      - "answer"
+
+  - id: route_sprint_plan
+    category: routing
+    prompt: "Plan a 2-week innovation sprint to validate our WhatsApp adoption assumption."
+    expected_skill: sprint
+    content_checks:
+      - "sprint"
+      - "goal"
+      - "assumption"
+
+  - id: route_sprint_retro
+    category: routing
+    prompt: "Run a sprint retrospective -- what assumptions changed this sprint?"
+    expected_skill: sprint
+    content_checks:
+      - "retrospective"
+      - "assumption"
+      - "learning"
+
+  - id: route_market_competitive
+    category: routing
+    prompt: "Who are my competitors in the AP automation space? Run a competitive landscape scan."
+    expected_skill: market
+    content_checks:
+      - "competitor"
+      - "positioning"
+      - "threat"
+
+  - id: route_market_sizing
+    category: routing
+    prompt: "How big is the market for AP automation SaaS targeting mid-market companies?"
+    expected_skill: market
+    content_checks:
+      - "TAM"
+      - "SAM"
+      - "bottom-up"
+
+  - id: route_gtm_icp
+    category: routing
+    prompt: "Define my ideal customer profile -- who should I sell to first?"
+    expected_skill: gtm
+    content_checks:
+      - "ICP"
+      - "trigger"
+      - "profile"
+
+  - id: route_gtm_calendar
+    category: routing
+    prompt: "Create a 90-day go-to-market plan to get my first 10 customers."
+    expected_skill: gtm
+    content_checks:
+      - "channel"
+      - "day"
+      - "customer"
+
+  - id: route_validate_bml
+    category: routing
+    prompt: "We ran a 6-week pilot with 3 customers. Analyse what we learned and whether to pivot."
+    expected_skill: validate
+    content_checks:
+      - "validated"
+      - "assumption"
+      - "pivot"
+
+  - id: route_validate_pivot
+    category: routing
+    prompt: "Our pricing assumption was invalidated -- customers won't pay $500/month. Should we pivot?"
+    expected_skill: validate
+    content_checks:
+      - "pivot"
+      - "invalidated"
+      - "direction"
+
+  # --- Domain Accuracy Tests ---
+  - id: accuracy_assumption_tiers
+    category: accuracy
+    prompt: >
+      Build an assumption map for an AP automation SaaS targeting mid-market
+      CFOs at $500/month. Include at least 10 assumptions across customer,
+      problem, solution, and business model categories.
+    expected_answer: null
+    content_checks:
+      - "TIER 1"
+      - "TIER 2"
+      - "TIER 3"
+      - "A-001"
+      - "UNTESTED"
+
+  - id: accuracy_mvp_exclusion
+    category: accuracy
+    prompt: >
+      Design an MVP for AP automation SaaS. The 3 critical assumptions to test are:
+      (1) CFOs will approve invoices via WhatsApp, (2) customers will pay $500/month,
+      (3) AI matching accuracy exceeds 90%. What features are IN and what is explicitly OUT?
+    expected_answer: null
+    content_checks:
+      - "feature"
+      - "excluded"
+      - "assumption"
+      - "success criteria"
+
+  - id: accuracy_canvas_evidence
+    category: accuracy
+    prompt: >
+      Build a business model canvas for AP automation SaaS with $500/month pricing,
+      targeting CFOs at $5M-$50M companies. Mark the evidence quality of each block.
+    expected_answer: null
+    content_checks:
+      - "ASSUMED"
+      - "evidence"
+      - "canvas"
+      - "health"
+
+  - id: accuracy_ltv_cac_ratio
+    category: accuracy
+    prompt: >
+      Calculate unit economics: MRR per customer is $500, annual churn is 10%,
+      gross margin is 85%, sustainable CAC is $275. What is the LTV:CAC ratio?
+    expected_answer: null
+    content_checks:
+      - "LTV"
+      - "CAC"
+      - "ratio"
+      - "payback"
+
+  - id: accuracy_pitch_9_slides
+    category: accuracy
+    prompt: >
+      Build a pitch deck narrative for AP automation SaaS raising $500K seed.
+      3 paying customers, $1,500 MRR, 91% AI matching accuracy from pilots.
+    expected_answer: null
+    content_checks:
+      - "slide"
+      - "hook"
+      - "problem"
+      - "traction"
+      - "ask"
+
+  # --- Negative / Scope Control Tests ---
+  - id: negative_build_before_validate
+    category: negative
+    prompt: >
+      I have an idea for AP automation but haven't talked to any customers yet.
+      Plan a sprint to build the full product over the next 8 weeks.
+    content_checks:
+      - "assumption"
+      - "discover"
+
+  - id: negative_churn_assumed
+    category: negative
+    prompt: >
+      Build me a financial model. Assume 5% annual churn. We have no customers yet.
+    content_checks:
+      - "assumed"
+      - "measured"
+
+  - id: negative_banned_pitch_phrases
+    category: negative
+    prompt: >
+      Write my pitch deck. Emphasise that we have a massive market opportunity,
+      disruptive technology, and first mover advantage.
+    content_checks:
+      - "never"
+
+  - id: negative_innov_local_missing
+    category: negative
+    prompt: "Generate 100 ideas for my venture."
+    content_checks:
+      - "innov.local.md"
+
+  - id: negative_out_of_scope_hr
+    category: negative
+    prompt: "How should I handle an employee grievance procedure?"
+    content_checks:
+      - "outside"
+
+  - id: negative_out_of_scope_accounting
+    category: negative
+    prompt: "Calculate the depreciation schedule for our office equipment."
+    content_checks:
+      - "outside"

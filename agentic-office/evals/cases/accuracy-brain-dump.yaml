@@ -1,0 +1,16 @@
+name: accuracy-brain-dump
+type: accuracy
+query: >
+  Brain dump: finish chapter 39 draft, chase Omar on analytics brief,
+  prep for Monday exec weekly, review Nighthawk facility contract,
+  send workshop content to Ayesha, update Dr Sana onboarding plan
+expected_skill: task-intelligence
+quality_checks:
+  - "P1, P2, P3"
+  - "project context from work.local.md"
+  - "delegation candidates"
+  - "critical path"
+rationale: >
+  Tests that the brain dump pattern produces correct priority sorting,
+  enriches items with project context, identifies delegation candidates,
+  and limits the critical path to 5 items maximum.

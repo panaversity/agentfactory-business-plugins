@@ -1,0 +1,202 @@
+# [Product Name] -- Product Management Configuration
+# Version: 1.0 | Last Updated: [Date] | Owner: [PM name]
+#
+# INSTRUCTIONS: Copy this file, remove ".template" from the filename,
+# fill in your product details, and save as product.local.md in your
+# Cowork skills root directory.
+#
+# Every spec, PRD, roadmap, research synthesis, and stakeholder update
+# will use this configuration. The more specific it is, the more every
+# output sounds like it was written by someone who has worked in your
+# product team for two years.
+#
+# Start with Lesson 2 in Chapter 36 to populate this correctly.
+# Test by running /brief with a problem -- does the output match your context?
+
+---
+
+## Product Identity
+
+Product name:         [What you call your product]
+Product description:  [What it actually does -- not marketing language.
+                       One sentence: "We are [type of product] that helps
+                       [persona] [do what] by [how]."]
+Stage:                [Series A SaaS / Growth-stage / Mature enterprise /
+                       Consumer app / Other]
+Business model:       [B2B SaaS / B2C / Marketplace / Freemium / Other]
+Pricing tiers:        [Free / Pro / Business / Enterprise -- describe briefly]
+Core value prop:      [One sentence your best customers would use to
+                       describe why they use you]
+
+---
+
+## Product Vision and Strategy
+
+Vision:               [Where the product is going in 3-5 years]
+Current strategy:     [The 1-2 year focus -- what you're building toward now]
+Current themes:       [The 2-4 themes on your roadmap this half]
+
+---
+
+## Personas
+
+### Primary Persona
+Name:                 [Give them a name -- e.g. "Admin Alex"]
+Role:                 [Job title and function]
+Company size:         [Typical company size this persona works at]
+Primary goal:         [The job they are trying to do with your product]
+Biggest frustration:  [Their biggest current pain with your product]
+"10/10 week":         [What a perfect week using your product looks like for them]
+Behavioral signals:   [What they look like in your analytics -- feature usage,
+                       login frequency, workflow patterns]
+
+### Secondary Persona
+Name:                 [e.g. "End User Emma"]
+Role:                 [Job title and function]
+Primary goal:         [Job to be done]
+Key difference from primary: [What is different about their needs]
+
+### Tertiary Persona (if applicable)
+[Same structure -- brief]
+
+---
+
+## Engineering Team
+
+Team size:            [N developers + N designers]
+Sprint length:        [1 week / 2 weeks]
+Sprint cadence:       [Start day; end day; planning on X; retro on Y]
+Velocity:             [Approximate story points per sprint -- or rough capacity]
+EM / Tech lead:       [Name]
+Backlog tool:         [Jira / Linear / Notion / GitHub Issues / other]
+Spec location:        [Confluence / Notion / GitHub / other + link format]
+
+Engineering working agreements:
+  - [e.g. "Specs must be REVIEW status before sprint planning"]
+  - [e.g. "Engineering estimates happen in sprint planning, not before"]
+  - [e.g. "No spec may enter a sprint in DRAFT status"]
+
+---
+
+## Stakeholder Map
+
+For each stakeholder, note: role, what they care about, communication
+preference, and what would concern them most in a product update.
+
+| Name | Role | Cares Most About | Communication Style | Alert Threshold |
+|---|---|---|---|---|
+| [Name] | CEO | Revenue + market position | Executive summary; 1 page | Any AT RISK status |
+| [Name] | CPO | Product strategy + quality | Detailed; technical OK | Watch item or above |
+| [Name] | CTO | Technical architecture | Technical precision | Platform dependencies |
+| [Name] | Head of CS | Customer commitments | Practical; customer impact | Any customer-committed change |
+| [Name] | Head of Sales | Deal-blocking features | Short; commercial framing | Any enterprise deal blocker |
+
+---
+
+## Terminology Glossary
+
+# IMPORTANT: Use these terms consistently in ALL specs, PRDs, and comms.
+# Inconsistent terminology is a leading cause of spec ambiguity.
+
+What you call your users:       [customers / users / members / accounts / teams]
+What you call a workspace:      [workspace / organisation / account / company]
+What you call a project:        [project / board / space / folder]
+What you call an admin:         [admin / owner / manager]
+What you call the main object:  [e.g. "document" / "record" / "report" / "task"]
+
+Deprecated terms (never use):   [Old names; internal codenames; legacy terms]
+
+Product-specific terms:
+  [Term]:  [Definition -- what it means in your product context]
+  [Term]:  [Definition]
+  [Term]:  [Definition]
+
+---
+
+## Quality Standards
+
+### Spec Quality Bar
+
+A spec is REVIEW-ready when:
+  [ ] Problem section has at least one quantified data point
+  [ ] Solution section has an explicit OUT OF SCOPE list (minimum 2 items)
+  [ ] All ACs are independently testable
+  [ ] No AC contains "and"
+  [ ] No AC describes UI rather than behaviour
+  [ ] Edge cases table has minimum 4 rows
+  [ ] All open questions have owners and due dates
+  [ ] Engineering lead has been notified for review
+
+A spec is sprint-ready (REFINED) when:
+  [ ] All open questions resolved
+  [ ] Engineering estimate confirmed
+  [ ] Designs approved (if applicable)
+  [ ] Acceptance criteria reviewed by QA (if applicable)
+
+### Accessibility Standard
+  Minimum:         [WCAG 2.1 AA / WCAG 2.2 / other]
+  Keyboard nav:    [Required on all interactive elements / exceptions: list]
+  Screen reader:   [Required / Best-effort / Not in scope]
+
+### Performance Bar
+  Page load:       [Unacceptable if >X seconds on [connection type]]
+  API response:    [Unacceptable if >X ms for [interaction type]]
+  Export/generate: [Unacceptable if >X seconds for [size]]
+
+---
+
+## Research Configuration
+
+### Research Sources
+Support system:       [Zendesk / Intercom / Help Scout + link]
+NPS platform:         [Delighted / Typeform + link]
+Feature requests:     [Canny / ProductBoard + link]
+Session recording:    [Hotjar / FullStory / Heap + link]
+Analytics:            [Mixpanel / Amplitude / GA4 + link]
+
+### Signal Thresholds (for Research Intelligence Agent)
+Support volume alert: >20% increase week-on-week for any theme
+NPS alert:            Any enterprise account NPS < [configured score]
+Feature request alert: Any request exceeds [N] votes in a single week
+Cross-channel alert:  Same theme in support + NPS + requests
+
+---
+
+## Roadmap Configuration
+
+### Current Quarter Themes
+Theme 1: [Name] -- [One sentence: user problem it addresses]
+Theme 2: [Name] -- [One sentence]
+Theme 3: [Name] -- [One sentence -- platform/quality theme recommended]
+
+### Roadmap Tool
+Platform:    [Notion / Confluence / Productboard / Linear / Sheets]
+Link:        [URL to live roadmap]
+
+### Communication Schedule
+Executive roadmap review:  [Quarterly -- QBR; or monthly if moving fast]
+Engineering planning:      [Sprint start -- every [N] weeks]
+Customer roadmap update:   [Quarterly email + in-app changelog]
+
+---
+
+## PM Process Standards
+# Populated from retrospective learnings -- add to this section as you learn
+
+Spec quality rules:
+  - [Rule from retro learning -- e.g. "ACs must be independently testable"]
+  - [Add more as you complete retrospectives]
+
+Success metrics rules:
+  - [Rule -- e.g. "Primary metric and failure threshold defined before sprint 1"]
+  - [Add more]
+
+Research standards:
+  - [Rule -- e.g. "Minimum 5 interviews before drawing directional conclusions"]
+  - [Add more]
+
+---
+# End of Configuration Template
+# Save as: product.local.md (remove ".template" from filename)
+# Test: run /brief with a problem description -- does the output
+# sound like your product? If not, what configuration is missing?

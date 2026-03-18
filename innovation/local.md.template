@@ -1,0 +1,363 @@
+# innov.local.md — Innovation Context Configuration
+# Chapter 29 — The Intrapreneurship Agent
+# Panaversity: The AI Agent Factory
+#
+# INSTRUCTIONS:
+# 1. Copy this file and remove ".template" → rename to innov.local.md
+# 2. Save in your Cowork skills directory alongside work.local.md
+# 3. Fill in every section with your ACTUAL venture context
+# 4. Update after every significant learning milestone
+#
+# VALIDATION TEST (run after completing this file):
+#   /idea   — should produce ideas specific to your problem, not generic ones
+#   /canvas — should build a canvas that references your actual customers and context
+#   /pitch  — should include your actual traction numbers, not placeholders
+#   /validate — should reference your actual assumption IDs
+#
+# FOR INTRAPRENEURS: Replace startup language throughout:
+#   "investors" → "innovation committee / sponsoring executive"
+#   "funding / raise" → "budget and headcount approval"
+#   "customers" → "internal users or existing external customers"
+#   "MRR / ARR" → "value metrics relevant to your organisation"
+
+---
+
+venture:
+  name: "[Your venture or innovation project name]"
+  stage: "[IDEA / DISCOVERY / VALIDATION / MVP / GROWTH]"
+  type: "[STARTUP / INTRAPRENEURSHIP / SIDE-PROJECT]"
+
+  problem_statement: >
+    [One precise sentence: the problem you are solving, for whom,
+     and why it is worth solving now.
+     Example: "Mid-market companies have no reliable way to maintain
+     audit-ready records because approval workflows run through
+     informal channels (email, messaging apps) with no audit trail."]
+
+  target_customer: >
+    [Be specific. Not 'SMEs' — name the exact person and context.
+     Example: "Finance directors at manufacturing and distribution
+     companies with $5M–$50M annual revenue who have a finance team
+     of 5–15 but have not deployed enterprise ERP."]
+
+  solution_hypothesis: >
+    [Your current best hypothesis. Update this as you learn.
+     Example: "A SaaS platform that digitises AP invoice receipt,
+     applies AI matching, routes approvals via the messaging tool
+     the team already uses, and maintains a real-time audit dashboard —
+     at $500/month."]
+
+  unfair_advantage: >
+    [Why you specifically. What do you know, have, or can do that
+     competitors cannot easily replicate?
+     Example: "Founder ran AP for a $20M company for 8 years and built
+     the first version for their own team. Has 5,000 real invoices as
+     training data and 3 former colleagues as pilot customers."]
+
+  stage_goal: >
+    [What you are trying to PROVE at this stage — not what you are building.
+     Example: "Validate that 3 companies will pay $500/month before we
+     build the full product. Prove willingness to pay exists at this price."]
+
+---
+
+key_assumptions:
+# Your venture is a stack of bets. Make them explicit.
+# Update test_status as you learn: UNTESTED → TESTING → VALIDATED / INVALIDATED
+# Aim for 15–20 assumptions. If you have fewer than 10, you are not thinking hard enough.
+# Tier 1 (HIGH): existential — if wrong, pivot required
+# Tier 2 (MEDIUM): serious — product changes significantly if wrong
+# Tier 3 (LOW): important — optimisation required if wrong
+
+  - id: "A-001"
+    assumption: "[Most critical assumption — if wrong, the company/project fails]"
+    risk: "HIGH"
+    evidence: "ASSUMED"
+    test_method: "[Cheapest way to validate — ideally: just ask, before building]"
+    test_cost: "[Time + money estimate]"
+    test_status: "UNTESTED"
+    result: ""
+
+  - id: "A-002"
+    assumption: "[Second most critical assumption]"
+    risk: "HIGH"
+    evidence: "ASSUMED"
+    test_method: ""
+    test_cost: ""
+    test_status: "UNTESTED"
+    result: ""
+
+  # Add A-003 through A-020
+  # Use this pattern for customer, problem, solution, business model, and technical assumptions
+
+---
+
+customer_profiles:
+# One entry per distinct persona from customer discovery.
+# Update after every discovery interview or pilot learning.
+
+  - name: "[Persona name — descriptive; e.g. 'Growth-Stage CFO']"
+    segment: "[Who they are — role, company type, size, geography]"
+
+    job_to_be_done:
+      functional: "[What they are literally trying to accomplish]"
+      emotional: "[How they want to feel; what anxiety they want to avoid]"
+      social: "[How they want to be perceived — optional]"
+
+    current_solution: >
+      [How they solve this today — be specific including workarounds.
+       Example: "Email for receipts + Excel for matching + Slack DMs for approval.
+       Manual entry into accounting software at month-end."]
+
+    pain_points:
+      - "[Pain 1 — most severe; use their words if possible]"
+      - "[Pain 2]"
+      - "[Pain 3]"
+
+    gain_drivers:
+      - "[What would genuinely delight them — beyond solving the pain]"
+      - "[Gain 2]"
+
+    willingness_to_pay: >
+      [What they currently spend on adjacent tools.
+       What discovery interviews revealed about price sensitivity.
+       Example: "Pays $200/month for accounting software. In discovery,
+       said 'I'd pay 3x that to solve this problem.' LOI signed at $500/month."]
+
+    buying_process: >
+      [How they make purchase decisions — solo or committee; budget cycle;
+       evaluation steps; typical timeline.
+       Example: "Finance director has authority up to $10,000/year.
+       Above that: CFO co-sign. 2–3 week evaluation. Annual commitment preferred."]
+
+    discovery_source: "[N interviews / N paying pilots / ASSUMED]"
+    last_updated: "[Date]"
+
+  # Add additional personas as discovered
+
+---
+
+business_model_canvas:
+  version: "1.0"
+  date: "[Date]"
+  # Update version (1.0 → 1.1 → 2.0) after each significant learning
+
+  customer_segments:
+    primary: "[Who exactly — use persona name from customer_profiles]"
+    secondary: "[If applicable]"
+    evidence: "ASSUMED"
+    open_question: "[What we still need to learn about this segment]"
+
+  value_propositions:
+    primary: "[The core promise — outcome-focused; specific; differentiated]"
+    secondary: "[Supporting value — optional]"
+    evidence: "ASSUMED"
+    open_question: "[What the customer might not believe without proof]"
+
+  channels:
+    current: "[How customers find and buy today]"
+    target: "[How you plan to scale — see gtm.md for detail]"
+    evidence: "ASSUMED"
+    open_question: "[Which channel needs validation first]"
+
+  customer_relationships:
+    current: "[How you manage the relationship today]"
+    target: "[How it scales at 10× customers]"
+    evidence: "ASSUMED"
+    open_question: "[Minimum viable onboarding for adoption]"
+
+  revenue_streams:
+    primary: "[Pricing model + price point + currency]"
+    secondary: "[If applicable]"
+    evidence: "ASSUMED"
+    open_question: "[What pricing assumption needs earliest validation]"
+
+  key_resources:
+    - "[Most critical resource — people, IP, data, platform]"
+    - "[Second most critical]"
+
+  key_activities:
+    - "[Most important activity for value creation]"
+    - "[Most important activity for customer acquisition]"
+
+  key_partnerships:
+    - "[Partner name/type + why they matter]"
+
+  cost_structure:
+    fixed_costs:
+      - "[Cost item]: [Monthly amount + currency]"
+    variable_costs:
+      - "[Cost item]: [Per-unit cost]"
+    total_monthly_burn: "[Amount + currency]"
+
+---
+
+financial_model:
+
+  unit_economics:
+    pricing_model: "[Monthly SaaS / Annual / Per-transaction / etc.]"
+    price_per_unit: "[Amount + currency]"
+    cac_founder_led: "[CAC when founder does the selling — understates sustainable CAC]"
+    cac_sustainable: "[CAC at market-rate team — use this for planning]"
+    cac_basis: "[How calculated]"
+    ltv_gross_revenue: "[Lifetime Value — gross revenue]"
+    ltv_gross_profit: "[LTV × gross margin]"
+    ltv_cac_ratio: "[LTV:CAC — flag if < 3]"
+    gross_margin_pct: "[%]"
+    payback_period_months: "[Months to recover CAC from contribution margin]"
+    churn_annual_pct: "[% — flag as ASSUMED until measured at Month 12]"
+    churn_basis: "[ASSUMED / MEASURED — if measured: N customers over N months]"
+
+  current_state:
+    mrr: "[Current MRR + currency]"
+    arr: "[Current ARR]"
+    paying_customers: "[Number]"
+    monthly_burn: "[Total monthly cash outflow]"
+    cash_on_hand: "[Current cash balance]"
+    runway_months: "[Cash / monthly burn]"
+    breakeven_n_customers: "[Calculated breakeven]"
+
+  milestones:
+    breakeven_target: "[Date or customer count]"
+    fundraise_trigger: "[MRR or date when fundraising must start]"
+    series_a_readiness: "[Metrics / milestone = Series A ready for your market]"
+
+---
+
+competitive_landscape:
+
+  direct_competitors:
+    - name: "[Competitor name]"
+      description: "[What they do; who they target]"
+      strengths_vs_us: "[Where they are genuinely stronger — be honest]"
+      weaknesses_vs_us: "[Where we have a real advantage]"
+      threat_level: "HIGH / MEDIUM / LOW"
+
+  indirect_alternatives:
+    - name: "[Alternative — include 'do nothing' / 'Excel' if relevant]"
+      why_customers_use_it: "[Inertia? Price? Familiarity? Integration?]"
+      our_advantage: "[Why we win against this alternative — specific]"
+
+  our_differentiation: >
+    [One paragraph: what specifically makes you different from every alternative.
+     Avoid generic claims ('easier', 'better', 'smarter').
+     Example: "The only AP tool built to work inside the messaging apps
+     (Teams, WhatsApp, Slack) that finance teams already use for approvals.
+     Competitors require behaviour change; we work with existing behaviour."]
+
+  moat_building: >
+    [What will make this harder to compete with over time?
+     Data moats / network effects / switching costs / brand / regulatory?
+     Example: "Data moat: each invoice processed improves AI matching accuracy.
+     At 100,000 invoices processed, matching accuracy will exceed any
+     new entrant's initial capability."]
+
+---
+
+fundraising:
+  # Remove or leave blank if not fundraising (e.g. intrapreneurship context)
+
+  current_round:
+    type: "[SAFE / Convertible Note / Equity / N/A]"
+    target_amount: "[Amount + currency]"
+    valuation_cap: "[Amount + currency — for SAFE/convertible]"
+    discount: "[% if convertible note]"
+    use_of_funds:
+      - "[Item]: [% of raise]"
+      - "[Item]: [% of raise]"
+    milestone_at_close: "[What 18-month milestone this capital buys]"
+
+  investor_pipeline:
+    - name: "[Investor name or firm]"
+      type: "[Angel / VC / Corporate / Family Office]"
+      status: "[IDENTIFIED / OUTREACH / INTRO MEETING / DILIGENCE / CLOSED / PASSED]"
+      fit: "[Why this investor for this deal]"
+      last_contact: "[Date]"
+      next_action: "[Specific action + date]"
+
+  data_room_status:
+    - item: "Pitch deck"
+      status: "NOT STARTED"
+    - item: "Financial model (3 scenarios)"
+      status: "NOT STARTED"
+    - item: "Cap table"
+      status: "NOT STARTED"
+    - item: "Customer LOIs or contracts"
+      status: "NOT STARTED"
+    - item: "Team bios"
+      status: "NOT STARTED"
+    - item: "Product demo or screenshots"
+      status: "NOT STARTED"
+    - item: "Reference customer list"
+      status: "NOT STARTED"
+
+---
+
+intrapreneurship:
+  # Complete INSTEAD of or alongside fundraising if you are an intrapreneur
+
+  parent_organisation: "[Company name + your division/team]"
+  sponsor: "[Executive sponsor name + role]"
+
+  approval_pathway:
+    current_stage: "[IDEA / EXPLORATION / BUSINESS CASE / PILOT / SCALE]"
+    next_gate: "[What decision or approval do you need next?]"
+    gate_owner: "[Who makes that decision?]"
+    gate_criteria: "[What do they need to see to approve?]"
+
+  internal_constraints:
+    budget_available: "[What you have to work with]"
+    headcount_available: "[People you can assign]"
+    technology_constraints: "[What systems you must work within]"
+    timeline_constraint: "[When this must show results]"
+
+  internal_stakeholders:
+    - name: "[Stakeholder name]"
+      role: "[Job title]"
+      position: "[CHAMPION / NEUTRAL / RESISTANT]"
+      what_they_need: "[What would convert them or keep them supportive?]"
+
+  success_definition: >
+    [What does success look like — specific and measurable.
+     Not 'add value' but 'reduce AP processing time by 50% for 3 business
+     units within 6 months of full deployment.']
+
+---
+
+sprint_log:
+# Running record of innovation sprints
+
+  - sprint: 1
+    dates: "[Start] – [End]"
+    learning_goal: "[Assumption tested — reference A-00X]"
+    delivery_goal: "[What was built]"
+    results:
+      learning_outcome: "VALIDATED / INVALIDATED / INCONCLUSIVE"
+      delivery_outcome: "COMPLETE / PARTIAL / BLOCKED"
+      key_learning: "[One sentence: what you know now that you didn't before]"
+    assumption_updates:
+      - id: "A-00X"
+        update: "[New status + evidence]"
+    next_sprint_priority: "[What the learning implies for next sprint]"
+
+---
+# End of innov.local.md template
+# Rename to innov.local.md (remove .template)
+#
+# VALIDATION PROMPTS — run these after completing this file:
+#
+# 1. "/idea — what 3 ideas should I explore this week?"
+#    Expected: Ideas specific to YOUR problem space, not generic innovation ideas
+#
+# 2. "/canvas — what is the health of my business model canvas?"
+#    Expected: Block-by-block assessment using YOUR actual canvas content
+#
+# 3. "/hypothesis — what is my most critical untested assumption?"
+#    Expected: A specific assumption ID with a cheap, concrete test recommendation
+#
+# 4. "/pitch — write my executive summary"
+#    Expected: A summary with YOUR actual traction numbers and problem statement
+#
+# If outputs are generic: add more specificity to the section producing generic output.
+# The most common gaps: customer_profiles (pains too vague), key_assumptions (too few),
+# competitive_landscape (differentiation too generic), financial_model (all ASSUMED).

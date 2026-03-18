@@ -1,0 +1,1 @@
+Run a product retrospective for our Quick Reports feature. It shipped 6 weeks ago. Data: adoption is 34% (target was 50%), support tickets about reports dropped 60%, NPS for reporting went from 6.2 to 7.1. It shipped 1 week late due to a scope change (added PDF export mid-sprint).

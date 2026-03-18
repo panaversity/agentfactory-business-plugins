@@ -1,0 +1,8 @@
+name: routing-meeting-intelligence
+type: routing
+query: "I have the Executive Weekly in 30 minutes, prep me with a meeting brief"
+expected_skill: meeting-intelligence
+rationale: >
+  "meeting brief" and "prep me" are custom plugin triggers for
+  meeting-intelligence. Must NOT route to executive-brief which handles
+  situation briefs, not meeting-specific prep.

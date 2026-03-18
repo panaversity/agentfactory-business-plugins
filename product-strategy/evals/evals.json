@@ -1,0 +1,204 @@
+{
+  "skill_name": "product-strategy",
+  "evals": [
+    {
+      "id": 1,
+      "name": "brief-problem",
+      "prompt": "We're seeing a 40% drop in user activation for our onboarding flow. New signups are completing registration but not creating their first project. Write a problem brief for this.",
+      "expected_output": "A Problem Brief with no solution proposals, containing: THE PROBLEM, WHO IS AFFECTED, EVIDENCE, IMPACT OF NOT SOLVING, WHAT WE DO NOT KNOW YET, and DISCOVERY QUESTIONS sections.",
+      "files": [],
+      "expectations": [
+        "Output is a Problem Brief (Type 1), not a Discovery or Initiative Brief",
+        "Contains no solution proposals -- pure problem framing",
+        "WHO IS AFFECTED references a named persona, not 'users'",
+        "EVIDENCE section includes the 40% activation drop as quantified data",
+        "WHAT WE DO NOT KNOW YET section is present and lists specific unknowns",
+        "DISCOVERY QUESTIONS contains 3-5 concrete questions",
+        "Output includes a next step or decision needed"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "brief-discovery",
+      "prompt": "We want to run a 2-week discovery sprint to understand why enterprise customers are requesting bulk export functionality. Scope the discovery for me.",
+      "expected_output": "A Discovery Brief with ranked questions, methods, sample definition, out-of-scope section, and success criteria.",
+      "files": [],
+      "expectations": [
+        "Output is a Discovery Brief (Type 2)",
+        "QUESTIONS TO ANSWER are ranked by priority",
+        "Methods section specifies interview/analysis methods",
+        "Sample section defines who to talk to with minimum n=",
+        "OUT OF SCOPE section explicitly lists what is not being explored",
+        "SUCCESS CRITERIA are evidence-based, not activity-based"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "prd-workflow-builder",
+      "prompt": "Write a PRD for our Workflow Automation feature. This is a major new product area that will require work from the platform team, the integrations team, and the frontend team. Target delivery is Q3. The feature lets users create automated workflows triggered by data events.",
+      "expected_output": "A complete PRD with all 10 sections, status gates, failure threshold, and named personas.",
+      "files": [],
+      "expectations": [
+        "Contains all 10 PRD sections (Executive Summary through Open Questions)",
+        "Success metrics include a failure threshold",
+        "Uses named personas, not 'users' or 'a user'",
+        "Functional requirements use MoSCoW prioritisation",
+        "No more than 60% of items labelled MUST",
+        "Technical architecture notes section present (even if placeholder)",
+        "PRD status is marked as DRAFT",
+        "Go-to-market section addresses documentation, CS, and sales enablement"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "stories-from-spec",
+      "prompt": "Here is a feature spec for a date range filter on our analytics dashboard:\n\nProblem: Users cannot filter dashboard data by custom date ranges. They currently export to Excel and filter manually.\n\nSolution: Add a date range picker to the dashboard header that filters all widgets.\n\nACs:\n1. User can select a preset range (7d, 30d, 90d, YTD)\n2. User can select a custom start and end date\n3. All dashboard widgets update when the range changes\n4. Selected range persists across page navigation\n5. Invalid date ranges show an error message\n\nGenerate user stories from this spec.",
+      "expected_output": "User stories with named personas, capability-focused 'want' statements, user-outcome 'so that' statements, and independently testable ACs without 'and'.",
+      "files": [],
+      "expectations": [
+        "Each story uses a named persona, not 'a user'",
+        "Each 'want' describes a capability, not a UI element",
+        "Each 'so that' describes a user outcome, not a system action",
+        "No AC contains 'and' (compound statements are split)",
+        "At least one error-state AC per story",
+        "Stories are sized (S/M/L) with dependencies noted",
+        "Coverage check flags any spec AC not represented in stories"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "prioritise-rice",
+      "prompt": "Prioritise these 5 backlog items using RICE:\n1. Bulk export (requested by 3 enterprise customers)\n2. SSO integration (blocking 2 enterprise deals worth $120K ARR)\n3. Dashboard performance (page load >5s, affecting all users)\n4. Mobile app notifications (nice to have, low effort)\n5. API rate limiting (technical debt, no customer requests)",
+      "expected_output": "RICE scoring table with assumptions shown, three mandatory challenges completed, and quarterly priority decision output.",
+      "files": [],
+      "expectations": [
+        "RICE table with Reach, Impact, Confidence, Effort, Score, and Rank columns",
+        "All scoring assumptions are visible (not just numbers)",
+        "Strategic Override Test completed -- SSO may be an override candidate",
+        "Data Gap Test identifies low-confidence items",
+        "What Would We Regret test completed",
+        "EXPLICITLY NOT BUILDING list is present",
+        "Discovery spike recommended for any low-confidence, high-effort item"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "interview-guide",
+      "prompt": "Generate an interview guide for understanding how mid-market companies currently handle their onboarding process for new team members. We're considering building a team onboarding feature.",
+      "expected_output": "A 45-minute interview guide with four segments (Opening, Warm-up, Core Discovery, Wrap-up), following all five design principles, plus a note-taking template.",
+      "files": [],
+      "expectations": [
+        "Guide follows four-segment structure (Opening, Warm-up, Core Discovery, Wrap-up)",
+        "Questions ask about past behaviour, not hypothetical futures",
+        "No mention of the proposed feature in the first half of the guide",
+        "Workaround probe is included ('how did you handle this before...')",
+        "Note-taking template includes Key observations, Notable quotes, Surprises, Follow-up questions",
+        "Guide specifies participant criteria and target sample size"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "retro-sprint",
+      "prompt": "Run a product retrospective for our Quick Reports feature. It shipped 6 weeks ago. Data: adoption is 34% (target was 50%), support tickets about reports dropped 60%, NPS for reporting went from 6.2 to 7.1. It shipped 1 week late due to a scope change (added PDF export mid-sprint).",
+      "expected_output": "A four-question retrospective with outcome data, delivery assessment, metrics quality review, and specific process improvements.",
+      "files": [],
+      "expectations": [
+        "Q1 (Did it solve the problem?) uses the actual data provided",
+        "Q1 verdict reflects that adoption is below target but support impact is positive",
+        "Q2 (Did we build it as intended?) flags the late delivery and scope change",
+        "Q3 (Were the metrics right?) evaluates whether the chosen metrics were appropriate",
+        "Q4 (What would we do differently?) produces specific, testable process changes -- not vague intentions",
+        "PRODUCT.LOCAL.MD UPDATES section recommends at least one quality rule addition",
+        "Follow-on actions have owners and due dates"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "routing-brief",
+      "prompt": "I need to frame a problem for my team. Our enterprise customers are churning because they can't get the reporting they need.",
+      "expected_output": "The brief skill is activated, producing a Problem Brief.",
+      "files": [],
+      "expectations": [
+        "Routes to the brief skill, not to /write-spec or /roadmap-update",
+        "Output is a Problem Brief (Type 1)",
+        "Contains no solution proposals"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "routing-prd",
+      "prompt": "Write the full requirements for our new analytics platform. This will involve the data team, frontend team, and infrastructure team over two quarters.",
+      "expected_output": "The prd skill is activated, producing a multi-section PRD.",
+      "files": [],
+      "expectations": [
+        "Routes to the prd skill, not to /write-spec (which is for single features)",
+        "Output is a PRD with multiple sections",
+        "Identifies this as a multi-team initiative"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "routing-stories",
+      "prompt": "Break this spec into stories for sprint planning. The spec covers user authentication with SSO, magic link, and password flows.",
+      "expected_output": "The stories skill is activated, producing user stories grouped by persona.",
+      "files": [],
+      "expectations": [
+        "Routes to the stories skill",
+        "Output contains user stories with As a / I want / So that format",
+        "Stories are grouped by persona or flow"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "negative-no-solution-in-brief",
+      "prompt": "Write a problem brief about our slow dashboard loading times. The solution is to add a CDN and implement lazy loading for widgets.",
+      "expected_output": "A Problem Brief that does NOT include the suggested CDN/lazy loading solution in the brief body.",
+      "files": [],
+      "expectations": [
+        "Output is a Problem Brief",
+        "The CDN and lazy loading solutions are NOT included in the brief body",
+        "The brief focuses on the problem (slow loading) not the solution",
+        "If the user's suggested solution is mentioned at all, it appears only in a hypothesis section clearly labelled as hypothesis"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "negative-compound-ac",
+      "prompt": "Write user stories for a search feature. Include this AC: 'Given a user searches for a term and clicks a result and the result loads, then the search term should be highlighted in the content'",
+      "expected_output": "The compound AC is split into separate, independently testable acceptance criteria without 'and'.",
+      "files": [],
+      "expectations": [
+        "The original compound AC with multiple 'and' statements is NOT preserved as-is",
+        "The AC is split into 2-3 separate, independently testable statements",
+        "No single AC contains 'and' connecting multiple conditions",
+        "Each resulting AC is independently testable"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "negative-vague-persona",
+      "prompt": "Write a user story: As a user, I want to export my data so that I can use it in other tools.",
+      "expected_output": "The story is rewritten with a named persona instead of 'a user'.",
+      "files": [],
+      "expectations": [
+        "The output does NOT use 'a user' as the persona",
+        "A named persona is used (either from product.local.md or a reasonable named alternative)",
+        "The skill flags that 'a user' is not acceptable and explains why",
+        "The 'so that' describes a user outcome, not just a system action"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "negative-no-scope-boundary",
+      "prompt": "Write a PRD for adding AI-powered search to our product. It should cover everything related to search.",
+      "expected_output": "The PRD includes an explicit OUT OF SCOPE section despite the user's request to cover 'everything'.",
+      "files": [],
+      "expectations": [
+        "The PRD includes an OUT OF SCOPE section or equivalent boundary",
+        "The scope is bounded despite the user saying 'everything'",
+        "The skill explains why scope boundaries are necessary",
+        "Functional requirements use MoSCoW to distinguish MUST from SHOULD from COULD"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+name: negative-no-hallucination
+type: negative
+query: "What do we know about Jennifer Park?"
+expected_skill: workplace-search
+rationale: >
+  Jennifer Park does not exist in work.local.md. The skill must respond
+  "Not in workplace memory" and must NOT fabricate an entry.

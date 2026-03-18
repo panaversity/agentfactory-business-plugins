@@ -1,0 +1,312 @@
+# [Your Name] — Workplace Memory Configuration
+# Version: 1.0 | Last Updated: [Date] | Owner: [Your Name]
+#
+# INSTRUCTIONS:
+# 1. Copy this file and remove ".template" → rename to work.local.md
+# 2. Fill in every section with your ACTUAL working context
+#    (not aspirational — how you actually work)
+# 3. Save in your Cowork skills root directory
+# 4. Test: run /digest — the output should feel like a knowledgeable
+#    colleague briefed you, not a generic AI response
+# 5. Update: after every significant meeting, decision, or new person/project
+#
+# MOST IMPORTANT RULE: Be honest. Work.local.md that describes how
+# you wish you worked is useless. Describe how you actually work.
+
+---
+
+## Layer 1: Personal
+
+name: "[Your full name]"
+role: "[Your job title and organisation]"
+
+working_style: >
+  [How you actually work — pace, depth, communication preference.
+   Example: "Direct; evidence-based; prefers bullet points for
+   complex information but narrative for persuasive content.
+   Never pad responses with preamble."]
+
+decision_making: >
+  [What you need before making a decision.
+   Example: "Systems thinker; wants to see second-order effects.
+   Prefers to understand the 'why' before the 'what'.
+   Comfortable with ambiguity but expects explicit flagging of unknowns."]
+
+current_focus: >
+  [Your top 1-3 priorities RIGHT NOW — this week/month.
+   Update this frequently — it is the most-used field in work.local.md.]
+
+working_hours: "[Start]–[End] [Timezone]"
+
+primary_tools:
+  - "[Tool 1 — e.g. Claude Cowork]"
+  - "[Tool 2 — e.g. Google Workspace]"
+  - "[Tool 3 — e.g. Notion / Jira / Asana]"
+
+communication_preference: >
+  [How you prefer to give and receive information.
+   Example: "Async-first; real-time for decisions and sensitive conversations.
+   Slack for daily; email for formal; WhatsApp for urgent."]
+
+language_preference: >
+  [Languages you work in; any terminology preferences;
+   formality level for different contexts.]
+
+---
+
+## Layer 2: Team (People)
+
+# Add one entry per key stakeholder — reports, peers, manager, key clients.
+# Be specific. Generic entries ("good communicator") are useless.
+# These entries are used to calibrate every delegation, brief, and message.
+
+people:
+  - name: "[Full name]"
+    role: "[Job title]"
+    reports_to: "[Manager's name — or 'You' if they report to you]"
+    communication: >
+      [How they prefer to receive information; what works; what irritates them.
+       Include: preferred channel; async vs. sync preference; lead time needs.]
+    current_focus: "[What they are working on RIGHT NOW]"
+    priorities: "[Their top 1-3 current priorities]"
+    note: >
+      [One specific insight about working effectively with this person.
+       Example: "Will push back on scope creep — be hyper-specific about
+       what you need before sending any request."]
+    sensitivity: >
+      [Optional — anything that must be handled carefully.
+       Example: "Being considered for promotion — do not reference in group settings."
+       Leave blank if no sensitivities.]
+
+  # Copy the entry above for each additional person
+  # Suggested: add your top 5-8 most important stakeholders first
+
+---
+
+## Layer 3: Projects
+
+# Add one entry per active project.
+# Include INTERNAL CODENAMES — this is where the terminology gap closes.
+# Update status fields every 1-2 weeks.
+
+projects:
+  - name: "[Project full name]"
+    codename: "[Internal name / codename — if different from full name]"
+    status: "[PLANNING / IN PROGRESS / AT RISK / BLOCKED / COMPLETE]"
+    priority: "[P1 / P2 / P3]"
+    owner: "[Named person]"
+    description: >
+      [What this project is; why it matters; who cares about it.
+       2-3 sentences — enough to brief someone quickly.]
+    current_milestone: "[What is happening right now on this project]"
+    next_milestone: "[What comes next; by when]"
+    at_risk: >
+      [What could derail this project. Be honest.
+       If nothing is at risk, write 'Nothing currently identified'
+       but check again next week.]
+    decisions:
+      - "[Decision made + date. Example: Chapters include downloadable skills library — March 2026]"
+      - "[Add more as they are made]"
+    key_contacts:
+      - "[Person name — their role in this project]"
+
+  # Copy the entry above for each additional project
+  # Suggested: P1 projects first; then P2; maximum 10 active projects
+  # If you have more than 10 active projects, you have too many active projects
+
+---
+
+## Layer 4: Organisational Memory
+
+### Terminology Dictionary
+# What your organisation calls things — including unofficial vocabulary.
+# This is the most powerful section for making Claude sound like a colleague.
+# Target: 20-50 entries. Start with the terms that would confuse an outsider.
+
+terminology:
+  "[Internal term]": >
+    [What it means in your organisation — plain language.
+     When to use: [context where this term is appropriate].
+     Not: [when NOT to use it — external comms / formal docs / pre-announcement].]
+
+  # Add more entries in this format
+  # High-value entries: project codenames; internal product names;
+  # methodology names; cultural phrases; abbreviations specific to your org
+
+### Meeting Rhythm
+# Recurring meetings — the organisation's operational cadence.
+# These are loaded in meeting prep briefs and the weekly digest.
+
+meeting_rhythm:
+  - name: "[Meeting name]"
+    frequency: "[Daily / Weekly / Bi-weekly / Monthly]"
+    day_time: "[Day + Time + Timezone]"
+    attendees: ["[Role or name]", "[Role or name]"]
+    purpose: "[One sentence — what this meeting is for]"
+    format: "[Standing / Slides / Discussion / Review]"
+    note: "[Any cultural norms — e.g. 'No slides; 30 minutes hard stop']"
+
+  # Add one entry per significant recurring meeting
+
+### Culture Configuration
+# How your organisation actually operates — including unwritten rules.
+# Be specific. "Collaborative culture" is not useful. Specific norms are.
+
+culture:
+  values:
+    - "[Your organisation's stated values — use their exact wording]"
+
+  decision_making: >
+    [How decisions are made in your organisation.
+     Example: "Evidence first; then judgment. Decisions documented in Notion.
+     'Disagree and commit' — once decided, full execution expected."]
+
+  communication: >
+    [How information flows — formal and informal.
+     Example: "Async-first; real-time for decisions and sensitive topics.
+     Slack for daily; email for formal; WhatsApp for urgent only."]
+
+  unwritten_rules:
+    - "[Specific rule that every colleague knows but is never written down.
+       Example: 'Data requests to [Name] need 3 days lead time minimum'
+       Example: '[Phrase] = politically sensitive; do not minute'
+       Example: 'External drafts must be reviewed by [person] before sending']"
+    # Add as many as are real — these are the highest-value entries
+    # in the entire work.local.md file
+
+---
+
+## Digest Configuration
+
+digest:
+  schedule: "[Time] [Timezone] — weekdays"
+  sections:
+    - critical_path        # Today's 3-5 most important items
+    - calendar             # Today's meetings + prep notes
+    - open_delegations     # What you're waiting for
+    - flagged_from_yesterday # What carried over
+    - week_at_a_glance     # Shape of the week
+    - upcoming_deadlines   # Next 7-14 days
+    - weekly_priorities    # Your current Boulders / priorities
+  critical_flag_threshold: "[N] days without update = flag as critical"
+  max_critical_path_items: 5
+  format: "[bullet points / narrative / mixed — your preference]"
+
+---
+
+## Dashboard Configuration
+
+dashboard:
+  sections:
+    - p1_projects
+    - p2_projects
+    - key_metrics
+    - open_actions
+    - open_delegations
+    - upcoming_decisions
+    - calendar_highlights
+  metrics_sources:
+    hr:       "[What HR metrics matter to you — e.g. onboarding status]"
+    finance:  "[e.g. budget approvals pending; spend vs. plan]"
+    ops:      "[e.g. compliance status; vendor renewals]"
+    sales:    "[e.g. pipeline; quota attainment]"
+    # Remove / add sections relevant to your role
+  refresh: "Daily with digest"
+  format: "One page; RAG status; action-oriented"
+
+---
+
+## Agent Integration Configuration
+
+# How the four productivity agents connect with domain agents from other chapters.
+# Configure only the domain agents you have deployed.
+
+agent_integrations:
+  chief_of_staff:
+    feeds_from:
+      # Add entries for each domain agent you use:
+      # - hr_agent: "Onboarding status; open positions; compliance training due"
+      # - finance_agent: "Budget approvals pending; month-end status"
+      # - ops_agent: "Compliance dashboard %; vendor renewals <90 days"
+      # - sales_agent: "Pipeline value; quota attainment %"
+      # - pm_agent: "Sprint status; blockers"
+    delivers_to: "Daily digest; executive dashboard"
+
+  memory_keeper:
+    weekly_maintenance: "Monday [Time] [Timezone]"
+    staleness_threshold_days: 90  # Flag entries not updated in N days
+    auto_propose_on:
+      - new_person_mentioned
+      - new_project_mentioned
+      - meeting_completed
+      - decision_made
+      - new_term_used
+
+  meeting_intelligence:
+    calendar_source: "Google Calendar"
+    prep_lead_time_minutes: 30
+    synthesis_deadline_hours: 2
+    always_update_after_meeting:
+      - project_status
+      - decision_log
+      - action_log
+
+  work_tracker:
+    overdue_threshold_days: 1
+    delegation_confirmation_window_hours: 24
+    stale_delegation_threshold_days: 7
+    weekly_audit: "Friday [Time] [Timezone]"
+    escalation_path:
+      level_1: "Flag in digest"
+      level_2: "Direct notification to user"
+      level_3: "User decision — re-route / take back / escalate"
+
+---
+
+## Decision Log
+
+# Running record of significant decisions — built up over time.
+# Each entry is added by the Memory Keeper after a decision is made.
+
+decisions:
+  - id: "D-[YYYY]-001"
+    decision: "[What was decided — specific]"
+    date: "[Date]"
+    made_by: "[Who / which group]"
+    context: "[Why this decision was made]"
+    trigger_for_revisit: "[What would reopen this — if anything]"
+
+  # New entries are added here by the Memory Keeper Agent
+  # Do not delete old entries — the history is valuable
+
+---
+
+## Delegation Log
+
+# Running record of active and recent delegations.
+# Maintained by the Work Tracker Agent.
+
+delegations:
+  - task: "[Task description]"
+    delegated_to: "[Person name]"
+    date_delegated: "[Date]"
+    due_date: "[Date]"
+    confirmed: false  # Set to true when delegatee confirms
+    status: "PENDING CONFIRMATION"  # PENDING / IN PROGRESS / COMPLETE / OVERDUE
+    deliverable: "[What was requested]"
+
+  # New entries added by Work Tracker; status updated as tasks progress
+
+---
+# End of Workplace Memory Template
+# Rename to work.local.md (remove .template)
+#
+# TEST: Run /digest after completing this file.
+# EXPECTED: The digest should feel like a knowledgeable colleague briefed you —
+# using your organisation's terminology, referencing your actual projects
+# and priorities, and naming your actual people.
+#
+# If it feels generic: more specificity needed, especially in:
+# - terminology dictionary (most common gap)
+# - unwritten_rules (most valuable; usually underfilled)
+# - people entries (communication style — be specific, not generic)

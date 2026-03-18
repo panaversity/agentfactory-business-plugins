@@ -1,0 +1,8 @@
+name: routing-digest
+type: routing
+query: "Give me my daily digest — what's happening today?"
+expected_skill: digest
+negative_check_skill: update
+rationale: >
+  "daily digest" and "what's happening today" are custom plugin triggers.
+  Must NOT route to the official update skill which owns "sync" and "refresh".

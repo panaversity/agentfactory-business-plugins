@@ -1,0 +1,1 @@
+We're seeing a 40% drop in user activation for our onboarding flow. New signups are completing registration but not creating their first project. Write a problem brief for this.

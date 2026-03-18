@@ -1,0 +1,14 @@
+Here is a feature spec for a date range filter on our analytics dashboard:
+
+Problem: Users cannot filter dashboard data by custom date ranges. They currently export to Excel and filter manually.
+
+Solution: Add a date range picker to the dashboard header that filters all widgets.
+
+ACs:
+1. User can select a preset range (7d, 30d, 90d, YTD)
+2. User can select a custom start and end date
+3. All dashboard widgets update when the range changes
+4. Selected range persists across page navigation
+5. Invalid date ranges show an error message
+
+Generate user stories from this spec.

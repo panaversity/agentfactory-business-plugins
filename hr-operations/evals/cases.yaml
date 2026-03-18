@@ -1,0 +1,117 @@
+# HR Operations Eval Harness -- Test Cases
+# Each case defines: prompt, expected routing, expected content checks
+
+cases:
+  # --- Routing Tests ---
+  - id: route_jd_basic
+    category: routing
+    prompt: "Write a job description for a Senior Data Analyst"
+    expected_skill: jd
+    content_checks:
+      - "THE WORK"
+      - "WHAT WE'RE LOOKING FOR"
+      - "Essential"
+
+  - id: route_jd_inclusive
+    category: routing
+    prompt: "Create a job posting for a Product Manager, make sure it's inclusive"
+    expected_skill: jd
+    content_checks:
+      - "INCLUSIVE LANGUAGE CHECK"
+
+  - id: route_match_succession
+    category: routing
+    prompt: "Who should we promote to Team Lead? Assess Zara and Ahmed"
+    expected_skill: match
+    content_checks:
+      - "CONFIDENTIAL"
+      - "Fit assessment"
+      - "Readiness"
+
+  - id: route_match_internal
+    category: routing
+    prompt: "We have a vacancy for Head of Finance. Any internal candidates?"
+    expected_skill: match
+    content_checks:
+      - "INTERNAL TALENT ASSESSMENT"
+
+  - id: route_knowledge_departing
+    category: routing
+    prompt: "Our senior PM is leaving in 6 weeks. Capture her knowledge"
+    expected_skill: knowledge
+    content_checks:
+      - "KNOWLEDGE CAPTURE PLAN"
+      - "Risk"
+
+  - id: route_knowledge_proactive
+    category: routing
+    prompt: "What institutional knowledge do we have at risk?"
+    expected_skill: knowledge
+    content_checks:
+      - "knowledge"
+      - "risk"
+
+  - id: route_reference_factual
+    category: routing
+    prompt: "Write a factual reference for Bilal Ahmed who worked here 3 years"
+    expected_skill: reference
+    content_checks:
+      - "REVIEW BEFORE SENDING"
+      - "employed"
+
+  - id: route_reference_verification
+    category: routing
+    prompt: "I need an employment verification letter for a mortgage application"
+    expected_skill: reference
+    content_checks:
+      - "employment"
+      - "confirm"
+
+  - id: route_offboard_resignation
+    category: routing
+    prompt: "Sarah has resigned. Create an offboarding plan. 4 weeks notice."
+    expected_skill: offboard
+    content_checks:
+      - "OFFBOARDING PLAN"
+      - "Phase 1"
+      - "Last day"
+
+  - id: route_offboard_handover
+    category: routing
+    prompt: "Create a handover plan for a departing team member"
+    expected_skill: offboard
+    content_checks:
+      - "handover"
+      - "status"
+
+  - id: route_jd_interview_combo
+    category: routing
+    prompt: "I need a JD and interview questions for a Finance Analyst"
+    expected_skill: jd
+    content_checks:
+      - "THE WORK"
+
+  - id: route_match_development
+    category: routing
+    prompt: "Create a development plan for Zara to become Team Lead in 12 months"
+    expected_skill: match
+    content_checks:
+      - "development"
+      - "timeline"
+
+  # --- Negative / Scope Control Tests ---
+  - id: negative_onboarding
+    category: negative
+    prompt: "Create an onboarding plan for a new hire starting next month"
+    expected_skill: null
+    content_checks:
+      - "onboarding"
+    note: "This should be handled by the official /onboarding skill, not custom"
+
+  - id: negative_policy
+    category: negative
+    prompt: "What is our parental leave policy?"
+    expected_skill: null
+    content_checks:
+      - "policy"
+    note: "This should be handled by the official /policy-lookup skill, not custom"

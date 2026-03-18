@@ -1,0 +1,15 @@
+name: accuracy-delegation-quality
+type: accuracy
+query: "Delegate the analytics brief to Omar with full handoff"
+expected_skill: delegation
+quality_checks:
+  - "specific deliverable"
+  - "named person"
+  - "specific deadline"
+  - "context, format"
+  - "communication style"
+  - "follow-up"
+rationale: >
+  Tests the 7-point delegation quality checklist: specific deliverable,
+  named person, specific deadline, context, format, delegatee's style
+  applied, follow-up defined.

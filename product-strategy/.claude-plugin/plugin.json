@@ -1,0 +1,23 @@
+{
+  "name": "product-strategy",
+  "version": "1.0.0",
+  "description": "Product strategy plugin for PMs. 6 skills covering PRDs, user stories, discovery briefs, interview guides, backlog prioritisation, and product retrospectives. 3 persistent agents for research intelligence, stakeholder updates, and roadmap coherence. Complements the official product-management plugin with workflow gaps.",
+  "author": {
+    "name": "Panaversity",
+    "url": "https://github.com/panaversity"
+  },
+  "homepage": "https://agentfactory.panaversity.org",
+  "repository": "https://github.com/panaversity/agentfactory-business-plugins",
+  "license": "Apache-2.0",
+  "keywords": [
+    "product-management",
+    "product-strategy",
+    "prd",
+    "user-stories",
+    "discovery-brief",
+    "interview-guide",
+    "prioritisation",
+    "retrospective",
+    "domain-agent"
+  ]
+}

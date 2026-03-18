@@ -1,0 +1,1 @@
+Generate an interview guide for understanding how mid-market companies currently handle their onboarding process for new team members. We're considering building a team onboarding feature.
