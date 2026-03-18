@@ -1,0 +1,22 @@
+{
+  "eval_id": 5,
+  "eval_name": "negative-competitive-analysis",
+  "expectations": [
+    {
+      "text": "Agent recognizes market research request and redirects to market skill",
+      "passed": true,
+      "evidence": "Agent stated 'This is a competitive analysis / market sizing request, which falls under market research rather than GTM strategy'"
+    },
+    {
+      "text": "Agent does NOT produce competitive landscape or market sizing within GTM skill",
+      "passed": false,
+      "evidence": "Despite the redirect mention, agent proceeded to produce a detailed competitive landscape with tier 1/2/3 competitors, pricing estimates, and analysis"
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 1,
+    "total": 2,
+    "pass_rate": 0.5
+  }
+}

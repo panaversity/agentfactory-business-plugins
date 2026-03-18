@@ -1,0 +1,57 @@
+{
+  "skill_name": "financials",
+  "evals": [
+    {
+      "id": 1,
+      "name": "unit-economics-saas-startup",
+      "prompt": "I'm running a B2B SaaS product. Here are my numbers: $200/month subscription, spending $3,000/month on marketing generating 15 new customers, gross margin is 75%. I think churn is about 5% monthly but I haven't measured it carefully — that's my gut feel from seeing some cancellations. Calculate my unit economics.",
+      "expected_output": "A complete unit economics model showing CAC, LTV, LTV:CAC ratio, payback period, contribution margin, and breakeven customer count — with explicit warnings about unmeasured churn being the highest-risk assumption.",
+      "files": [],
+      "expectations": [
+        "CAC is calculated correctly ($3,000 / 15 = $200) and distinguishes between founder-led CAC and sustainable CAC — using founder-led CAC for planning understates true cost at scale",
+        "LTV calculation uses the stated churn (5% monthly = ~46% annual) to derive average lifetime (~2.2 months at 5% monthly) and flags this as HIGH UNCERTAINTY because churn is unmeasured — a 5% monthly churn rate makes LTV extremely fragile",
+        "LTV:CAC ratio is computed and assessed against the <3 / 3-5 / >5 framework — at 5% monthly churn, LTV is likely close to CAC, which should trigger a serious viability warning",
+        "The churn assumption is explicitly flagged as the highest-risk input with a warning that a 2x error would dramatically change the conclusion — this is the most dangerous assumption in SaaS models",
+        "Breakeven customer count is calculated from fixed costs and contribution per customer — without breakeven analysis, the founder cannot plan their runway",
+        "All assumptions are listed alongside the outputs — revenue projections without stated assumptions are misleading"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "three-scenario-runway-model",
+      "prompt": "I have $150,000 in the bank. Monthly burn is $18,000 (3 founders at $4K + $6K other costs). We have 20 paying customers at $100/month (MRR = $2,000). Growth is about 5 new customers per month. Monthly churn is 3%. Build me a three-scenario revenue and runway model so I can figure out when I need to fundraise.",
+      "expected_output": "A month-by-month model for base, conservative, and optimistic scenarios showing customer count, MRR, burn, net cash flow, cumulative cash balance, runway remaining, and fundraising trigger point.",
+      "files": [],
+      "expectations": [
+        "Three scenarios are produced (base, conservative, optimistic) with clearly stated assumptions for each — conservative uses half growth and 1.5x churn; optimistic uses 1.5x growth and half churn",
+        "Each scenario shows month-by-month: new customers, churned customers, total customers, MRR, monthly burn, net cash flow, cumulative cash balance — this granularity is what makes the model actionable for founders",
+        "A fundraising trigger point is marked at runway < 6 months — the most common startup death is running out of money because fundraising started too late (fundraising takes 3-6 months)",
+        "Breakeven date is identified for each scenario (when MRR contribution >= burn) — this is the milestone that tells the founder whether they can reach profitability on current capital",
+        "The model correctly accounts for churn compounding against growth — at 3% monthly churn, the base scenario's net customer growth decelerates over time as the churning base grows",
+        "Runway is calculated for each scenario with the conservative scenario serving as the planning baseline — investors will ask 'what if growth is half your base case' and the model must have the answer"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "negative-canvas-request",
+      "prompt": "I need to design my business model. Can you help me figure out my value proposition, customer segments, channels, and revenue streams? I want the full 9-block canvas.",
+      "expected_output": "The agent should redirect this to the canvas skill, since business model canvas design is outside the financials skill's scope.",
+      "files": [],
+      "expectations": [
+        "The agent recognizes this is a business model canvas request and redirects to the canvas skill — financials is for unit economics and financial modeling, not business model design",
+        "The agent does NOT produce a business model canvas within the financials skill — doing so would bypass the canvas skill's 9-block structure, evidence quality tagging, and health summary format"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "negative-pitch-deck-request",
+      "prompt": "I'm meeting an investor next week. Can you help me build my pitch deck narrative? I need the hook, the problem slide, the solution, traction — the whole 9-slide structure.",
+      "expected_output": "The agent should redirect this to the pitch skill, since pitch deck narrative is outside the financials skill's scope.",
+      "files": [],
+      "expectations": [
+        "The agent recognizes this is a pitch deck request and redirects to the pitch skill — financials is for financial modeling, not investor presentation narrative",
+        "The agent does NOT produce a pitch narrative within the financials skill — doing so would bypass the pitch skill's 9-slide narrative arc, traction hierarchy, and investor-phrase red flags"
+      ]
+    }
+  ]
+}

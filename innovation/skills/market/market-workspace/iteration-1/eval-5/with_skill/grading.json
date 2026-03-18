@@ -1,0 +1,22 @@
+{
+  "eval_id": 5,
+  "eval_name": "negative-pitch-deck",
+  "expectations": [
+    {
+      "text": "Agent recognizes full pitch deck is outside scope, redirects to pitch skill",
+      "passed": false,
+      "evidence": "Agent did NOT redirect to /pitch. Instead, it asked clarifying questions and offered to build the full market analysis itself including TAM/SAM/SOM and competitive landscape."
+    },
+    {
+      "text": "Agent offers to provide market sizing data for the pitch's market slide",
+      "passed": false,
+      "evidence": "Agent offered its full suite of market analysis capabilities but did not specifically frame it as data feeding into the pitch skill's market slide -- it treated the request as a market skill request."
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "failed": 2,
+    "total": 2,
+    "pass_rate": 0.0
+  }
+}

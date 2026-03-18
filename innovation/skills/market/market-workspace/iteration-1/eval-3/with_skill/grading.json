@@ -1,0 +1,42 @@
+{
+  "eval_id": 3,
+  "eval_name": "moat-assessment",
+  "expectations": [
+    {
+      "text": "All 6 moat types assessed",
+      "passed": true,
+      "evidence": "Data, switching costs, network effects, brand, regulatory, distribution all assessed"
+    },
+    {
+      "text": "Data moat identified as strongest current moat",
+      "passed": true,
+      "evidence": "Learned matching rules identified as primary moat"
+    },
+    {
+      "text": "Switching costs assessed honestly (early-stage = low)",
+      "passed": true,
+      "evidence": "Honest assessment of early-stage switching costs"
+    },
+    {
+      "text": "Network effects assessed honestly (AP unlikely to have true network effects)",
+      "passed": true,
+      "evidence": "Network effects correctly identified as unlikely"
+    },
+    {
+      "text": "Each moat rated on durability with rationale",
+      "passed": true,
+      "evidence": "Durability ratings with reasoning provided"
+    },
+    {
+      "text": "Investment recommendation prioritizes deepening data moat",
+      "passed": true,
+      "evidence": "Recommendation to deepen data moat through customer accumulation"
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  }
+}

@@ -1,0 +1,22 @@
+[
+  {"query": "What assumptions am I making about my startup? Build me a complete assumption map", "should_trigger": true},
+  {"query": "Help me identify my riskiest assumptions and design cheap tests for each", "should_trigger": true},
+  {"query": "Design my MVP — what's the minimum I need to build to test my critical assumptions?", "should_trigger": true},
+  {"query": "What could go wrong with my business idea? Map out every assumption and score by risk", "should_trigger": true},
+  {"query": "I need a validation plan — what should I test first and how do I test it cheaply?", "should_trigger": true},
+  {"query": "What are my leap-of-faith assumptions? Help me build a hypothesis map with test designs", "should_trigger": true},
+  {"query": "Scope my MVP — I have 8 weeks and a 2-person team. What features test the critical assumptions?", "should_trigger": true},
+  {"query": "Kill my idea — stress test every assumption I'm making and tell me which ones are weakest", "should_trigger": true},
+  {"query": "What should I test first? Prioritise my assumptions by risk and design the cheapest possible test", "should_trigger": true},
+  {"query": "What's the minimum viable test for my pricing assumption? I think customers will pay $200/month but I haven't asked anyone", "should_trigger": true},
+  {"query": "Brainstorm 100 product ideas for solving invoice processing problems", "should_trigger": false},
+  {"query": "Create a customer discovery interview guide for AP managers", "should_trigger": false},
+  {"query": "Our pilot ran for 6 weeks — analyze the results and tell me if I should pivot", "should_trigger": false},
+  {"query": "Build me a pitch deck for my investor meeting next week", "should_trigger": false},
+  {"query": "Calculate my unit economics and build a runway model", "should_trigger": false},
+  {"query": "Plan a 2-week sprint with user stories and acceptance criteria", "should_trigger": false},
+  {"query": "Write a Python function to parse PDF invoices", "should_trigger": false},
+  {"query": "Build me a business model canvas with all 9 blocks", "should_trigger": false},
+  {"query": "What's the competitive landscape for AP automation tools?", "should_trigger": false},
+  {"query": "Design a go-to-market strategy with a 90-day calendar", "should_trigger": false}
+]

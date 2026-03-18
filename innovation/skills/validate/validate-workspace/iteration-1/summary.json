@@ -1,0 +1,42 @@
+[
+  {
+    "skill": "validate",
+    "eval_id": 1,
+    "eval_name": "bml-analysis-pilot-results",
+    "passed": 6,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  {
+    "skill": "validate",
+    "eval_id": 2,
+    "eval_name": "pivot-decision-framework",
+    "passed": 6,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  {
+    "skill": "validate",
+    "eval_id": 3,
+    "eval_name": "learning-synthesis-mixed-signals",
+    "passed": 6,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  {
+    "skill": "validate",
+    "eval_id": 4,
+    "eval_name": "negative-assumption-mapping",
+    "passed": 2,
+    "total": 2,
+    "pass_rate": 1.0
+  },
+  {
+    "skill": "validate",
+    "eval_id": 5,
+    "eval_name": "negative-sprint-planning",
+    "passed": 2,
+    "total": 2,
+    "pass_rate": 1.0
+  }
+]

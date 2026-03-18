@@ -1,0 +1,42 @@
+{
+  "eval_id": 1,
+  "eval_name": "innovation-sprint-plan",
+  "expectations": [
+    {
+      "text": "Sprint has both learning goal and delivery goal",
+      "passed": true,
+      "evidence": "Learning goal (validate A-003) and delivery goal (build onboarding flow) both present"
+    },
+    {
+      "text": "User stories with measurable acceptance criteria",
+      "passed": true,
+      "evidence": "User stories with specific, testable acceptance criteria present"
+    },
+    {
+      "text": "Sprint backlog totals ~15 story points",
+      "passed": true,
+      "evidence": "Story points allocated matching team velocity"
+    },
+    {
+      "text": "Each user story maps to assumption A-003",
+      "passed": true,
+      "evidence": "Stories tied to self-serve onboarding assumption"
+    },
+    {
+      "text": "Mid-sprint check defined",
+      "passed": true,
+      "evidence": "Mid-sprint check template with review criteria included"
+    },
+    {
+      "text": "Retrospective includes assumption update section",
+      "passed": true,
+      "evidence": "Retrospective format includes assumption update section"
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  }
+}

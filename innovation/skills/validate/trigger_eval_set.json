@@ -1,0 +1,82 @@
+[
+  {
+    "query": "We ran a 6-week pilot with 5 companies — analyze the results and tell me if we should pivot or persevere",
+    "should_trigger": true
+  },
+  {
+    "query": "Here are our experiment results. Did we validate or invalidate our core assumptions?",
+    "should_trigger": true
+  },
+  {
+    "query": "We have mixed pilot data — 2 customers renewed, 1 churned, 2 want discounts. What did we learn?",
+    "should_trigger": true
+  },
+  {
+    "query": "Our assumption that customers would pay $200/month was wrong — only 1 of 5 paid. What are my pivot options?",
+    "should_trigger": true
+  },
+  {
+    "query": "Do a Build-Measure-Learn analysis on our last sprint results",
+    "should_trigger": true
+  },
+  {
+    "query": "Update my assumption statuses based on these new data points from our pilot",
+    "should_trigger": true
+  },
+  {
+    "query": "Should I kill this idea? 3 sprints in and the metrics aren't improving",
+    "should_trigger": true
+  },
+  {
+    "query": "Synthesize our learning across the last 3 sprints — what patterns do you see?",
+    "should_trigger": true
+  },
+  {
+    "query": "Our early customer data shows 40% adoption. Is that validated learning or do we need more data?",
+    "should_trigger": true
+  },
+  {
+    "query": "What pivot directions should we consider? Our problem assumption was validated but the solution assumption was not",
+    "should_trigger": true
+  },
+  {
+    "query": "Build me a complete assumption map with tests — I haven't validated anything yet",
+    "should_trigger": false
+  },
+  {
+    "query": "Brainstorm 100 product ideas for solving this problem",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a customer discovery interview guide",
+    "should_trigger": false
+  },
+  {
+    "query": "Plan my next 2-week sprint with user stories",
+    "should_trigger": false
+  },
+  {
+    "query": "Build a pitch deck for my investor meeting",
+    "should_trigger": false
+  },
+  {
+    "query": "Calculate my CAC and LTV from my marketing data",
+    "should_trigger": false
+  },
+  {
+    "query": "Do a competitive landscape analysis with market sizing",
+    "should_trigger": false
+  },
+  {
+    "query": "Build a business model canvas for my venture",
+    "should_trigger": false
+  },
+  {
+    "query": "Write integration tests for my FastAPI application",
+    "should_trigger": false
+  },
+  {
+    "query": "Define my ICP and build a 90-day go-to-market plan",
+    "should_trigger": false
+  }
+]

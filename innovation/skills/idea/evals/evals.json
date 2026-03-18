@@ -1,0 +1,72 @@
+{
+  "skill_name": "idea",
+  "evals": [
+    {
+      "id": 1,
+      "name": "hundred-idea-sprint",
+      "prompt": "How might we help accounts payable teams at mid-market companies eliminate manual invoice matching without requiring them to replace their existing ERP? Run a full 100-idea sprint.",
+      "expected_output": "100 ideas across 10 categories (product, business model, distribution, analogy, technology, crazy/10x, boring, contrarian, partnership, incumbent) with 10 ideas per category.",
+      "files": [],
+      "expectations": [
+        "Exactly 100 ideas are produced across 10 categories with 10 per category — stopping at fewer than 100 defeats the purpose; the best ideas are usually in the second half after the obvious ones are exhausted",
+        "Each idea is specific enough to imagine building it (e.g., 'WhatsApp bot that AP managers photograph invoices to and get instant PO match results' not 'AI matching tool') — vague ideas cannot be evaluated",
+        "The 'Crazy / 10X' category contains genuinely ambitious ideas that suspend disbelief — if the crazy ideas are just slightly improved versions of the boring ideas, the sprint failed to expand the solution space",
+        "The 'Contrarian' category inverts conventional assumptions (e.g., 'what if we made matching slower but 100% accurate on first pass?') — contrarian ideas are where breakthrough insights hide",
+        "The 'Analogy' category references specific models from other domains (e.g., 'Uber model: on-demand AP clerks dispatched to your ERP for peak periods') — analogies must name the source model",
+        "Ideas respect the constraint in the HMW ('without requiring ERP replacement') — ideas that require ERP replacement violate the stated constraint and should only appear if explicitly flagged as constraint-breaking"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "dvf-shortlisting",
+      "prompt": "From our 100-idea sprint on AP automation, here are my top 15 candidates. Score them using the DVF framework and give me the top 5 to explore further:\n1. Browser extension that overlays PO data on invoice PDFs\n2. WhatsApp bot for AP managers to approve invoices on mobile\n3. ERP middleware that auto-resolves 80% of PO mismatches\n4. On-demand AP clerks marketplace (Uber model)\n5. AI that learns each company's matching rules from historical approvals\n6. Slack integration that routes exceptions to the right approver\n7. Blockchain-based invoice verification network\n8. Monthly AP audit-as-a-service subscription\n9. Invoice financing platform for suppliers waiting on AP teams\n10. Computer vision tool that reads handwritten POs from older manufacturers\n11. Predictive model that flags invoices likely to have matching issues\n12. AP training academy with AI-simulated scenarios\n13. White-label AP automation for ERP vendors to embed\n14. Community platform where AP managers share matching rule templates\n15. AI agent that calls vendors to resolve discrepancies automatically",
+      "expected_output": "Each idea scored on Desirability, Viability, and Feasibility with a one-sentence rationale, and the top 5 ranked with overall recommendation.",
+      "files": [],
+      "expectations": [
+        "All 15 ideas are scored on Desirability, Viability, and Feasibility (HIGH/MEDIUM/LOW) with a one-sentence rationale for each score — rationale-free scores are opinion, not analysis",
+        "Desirability scores reference willingness to pay, not just pain — a HIGH Desirability score requires evidence of payment behavior, not just acknowledged pain",
+        "Viability scores assess the path to $10M+ revenue — ideas with HIGH Viability must have a clear large market and scalable unit economics",
+        "Feasibility scores assess whether a small team can build an MVP in <3 months — ideas requiring proprietary hardware or multi-year R&D should score LOW",
+        "The top 5 are ranked with a clear recommendation on which to explore first — without ranking, shortlisting doesn't narrow the decision",
+        "The blockchain idea (#7) scores LOW on at least one dimension with a specific reason — blockchain for invoice verification is a technology-first idea without a clear customer pull, and the scoring should catch this"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "single-idea-pressure-test",
+      "prompt": "I want to build an ERP middleware that auto-resolves 80% of PO mismatches for mid-market manufacturers. This is the idea I'm most excited about. Pressure test it — give me the 5 strongest arguments against this idea.",
+      "expected_output": "5 specific, substantive arguments against the idea, each with what must be proven to overcome it — not softball objections but genuine threats to the idea's viability.",
+      "files": [],
+      "expectations": [
+        "Exactly 5 arguments against are presented, each substantive and specific to this idea — generic objections ('market might be small') are useless; the arguments must reference the specific mechanics of ERP middleware for AP matching",
+        "At least one argument addresses the ERP integration complexity (each ERP has different APIs, data models, and matching rules) — this is the technical feasibility risk most founders underestimate",
+        "At least one argument addresses the sales cycle risk (selling middleware to mid-market companies with existing ERPs involves IT procurement, security reviews, and long sales cycles) — this is the GTM risk",
+        "Each argument includes 'what must be proven to overcome it' — the purpose is not to kill the idea but to identify what validation the founder needs before committing",
+        "The arguments are ordered from most threatening to least threatening — the founder should address the biggest risk first",
+        "The pressure test does not dismiss the idea — it identifies what needs to be true for the idea to work, which is the setup for running /hypothesis"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "negative-interview-request",
+      "prompt": "I want to interview AP managers to understand their pain points. Can you create an interview guide with questions about their current invoice processing workflow?",
+      "expected_output": "The agent should redirect this to the discovery skill, since customer interview guides are outside the idea skill's scope.",
+      "files": [],
+      "expectations": [
+        "The agent recognizes this is a customer discovery request and redirects to the discovery skill — idea is for generation and evaluation, not customer research",
+        "The agent does NOT produce an interview guide within the idea skill — doing so would bypass the discovery skill's interview protocol, probing guides, and interview style rules"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "negative-assumption-mapping",
+      "prompt": "I've picked my idea. Now I want to map out all my assumptions, score them by risk, and design cheap tests for each one. Build me a full assumption map with test designs.",
+      "expected_output": "The agent should redirect this to the hypothesis skill, since assumption mapping and test design are outside the idea skill's scope.",
+      "files": [],
+      "expectations": [
+        "The agent recognizes this is an assumption mapping request and redirects to the hypothesis skill — idea is for generation and evaluation, not assumption analysis",
+        "The agent does NOT produce an assumption map within the idea skill — doing so would bypass the hypothesis skill's three-tier structure, MVT hierarchy, and test design framework"
+      ]
+    }
+  ]
+}

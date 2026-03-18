@@ -1,0 +1,42 @@
+{
+  "eval_id": 2,
+  "eval_name": "backlog-prioritisation",
+  "expectations": [
+    {
+      "text": "All 10 items scored on Assumption Risk and Delivery Value",
+      "passed": true,
+      "evidence": "All 10 items scored with Risk x Value framework"
+    },
+    {
+      "text": "Items testing TIER 1 assumptions score 3 on Assumption Risk",
+      "passed": true,
+      "evidence": "High-risk assumption items scored highest"
+    },
+    {
+      "text": "Items #3 and #5 score low (test no assumption)",
+      "passed": true,
+      "evidence": "Dashboard and email notifications scored low on assumption risk"
+    },
+    {
+      "text": "Item #8 flagged as contradicting A-003",
+      "passed": true,
+      "evidence": "API docs for IT teams flagged as contradicting self-serve assumption"
+    },
+    {
+      "text": "Items scoring <=2 recommended for deferral",
+      "passed": true,
+      "evidence": "Low-priority items recommended for backlog deferral"
+    },
+    {
+      "text": "Sprint composition recommended from top-priority items",
+      "passed": true,
+      "evidence": "Recommendation for next sprint composition included"
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  }
+}

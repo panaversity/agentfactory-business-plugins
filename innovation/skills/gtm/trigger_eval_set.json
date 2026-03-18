@@ -1,0 +1,22 @@
+[
+  {"query": "Define my ideal customer profile — who should I be selling to?", "should_trigger": true},
+  {"query": "Build me a 90-day go-to-market plan to get my first 10 customers", "should_trigger": true},
+  {"query": "Write a positioning statement for my AP automation product", "should_trigger": true},
+  {"query": "What channels should I use to acquire customers? I have a $0 marketing budget and a 2-person team", "should_trigger": true},
+  {"query": "Help me design my sales process from lead identification to signed contract", "should_trigger": true},
+  {"query": "What should my pricing tiers look like? I need a pricing strategy based on our discovery data", "should_trigger": true},
+  {"query": "How do I find early adopters for my B2B SaaS product? Build me an outreach strategy", "should_trigger": true},
+  {"query": "Design a customer success programme — what should onboarding look like for the first 90 days?", "should_trigger": true},
+  {"query": "Who are my ideal first customers? I need to narrow my ICP based on our 10 discovery interviews", "should_trigger": true},
+  {"query": "Help me build a LinkedIn cold outreach campaign targeting AP managers at manufacturers", "should_trigger": true},
+  {"query": "Create a customer discovery interview guide — I need to understand customer pain points", "should_trigger": false},
+  {"query": "Do a competitive landscape analysis with TAM/SAM/SOM market sizing", "should_trigger": false},
+  {"query": "Calculate my CAC, LTV, and payback period", "should_trigger": false},
+  {"query": "Build me a pitch deck for my seed round", "should_trigger": false},
+  {"query": "Brainstorm 100 product ideas for the fintech space", "should_trigger": false},
+  {"query": "Map out all my assumptions and design tests for each — full assumption map", "should_trigger": false},
+  {"query": "Plan a 2-week innovation sprint with user stories", "should_trigger": false},
+  {"query": "Write a Node.js endpoint for processing webhook events", "should_trigger": false},
+  {"query": "What's the best depreciation method for our equipment?", "should_trigger": false},
+  {"query": "Analyze our 6-week pilot results and tell me if we should pivot", "should_trigger": false}
+]

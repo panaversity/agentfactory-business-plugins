@@ -1,0 +1,42 @@
+{
+  "eval_id": 1,
+  "eval_name": "pitch-deck-narrative-seed",
+  "expectations": [
+    {
+      "text": "All 9 slides produced with headline, content, verbal script, emotional job",
+      "passed": true,
+      "evidence": "All 9 slides present with full structure (Hook through Vision)"
+    },
+    {
+      "text": "Slide 1 (Hook) uses specific claim, not generic 'massive market opportunity'",
+      "passed": true,
+      "evidence": "Hook uses specific data-driven claim, no red-flag phrases"
+    },
+    {
+      "text": "Slide 5 (Traction) leads with strongest metric ($16K MRR, 15% MoM)",
+      "passed": true,
+      "evidence": "Traction slide leads with revenue and growth rate metrics"
+    },
+    {
+      "text": "Slide 8 (Ask) specifies instrument ($500K SAFE, $5M cap)",
+      "passed": true,
+      "evidence": "Ask slide includes specific SAFE terms and use of funds"
+    },
+    {
+      "text": "No red-flag phrases used",
+      "passed": true,
+      "evidence": "No instances of banned phrases found in output"
+    },
+    {
+      "text": "3% monthly churn acknowledged honestly",
+      "passed": true,
+      "evidence": "Churn discussed transparently with plan to address"
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  }
+}

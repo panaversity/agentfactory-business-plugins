@@ -1,0 +1,71 @@
+{
+  "skill_name": "pitch",
+  "evals": [
+    {
+      "id": 1,
+      "name": "pitch-deck-narrative-seed",
+      "prompt": "I'm raising a $500K pre-seed round on a SAFE with a $5M cap. My startup automates AP invoice matching for mid-market manufacturers. We have 8 paying customers ($16K MRR), 15% month-over-month growth, and 3% monthly churn. My discovery showed AP managers spend 3 days/month on manual matching. Build the full 9-slide pitch narrative.",
+      "expected_output": "A complete 9-slide pitch narrative (Hook, Problem, Solution, Market, Traction, Business Model, Team, Ask, Vision) with headlines, content, verbal scripts, and emotional jobs for each slide.",
+      "files": [],
+      "expectations": [
+        "All 9 slides are produced with headline, content, verbal script, and emotional job — incomplete decks leave critical narrative gaps that investors will notice",
+        "Slide 1 (Hook) uses a specific, memorable claim grounded in the data rather than a generic 'massive market opportunity' — the hook must create curiosity and urgency, not cliche",
+        "Slide 5 (Traction) leads with the strongest metric ($16K MRR, 15% MoM growth, 8 paying customers) — traction is what de-risks the investment, and the hierarchy must be revenue > growth > customers",
+        "Slide 8 (Ask) specifies the instrument ($500K SAFE, $5M cap) and exactly what the capital buys — vague asks ('we need funding to grow') signal the founder hasn't thought through use of funds",
+        "No red-flag phrases are used ('massive market opportunity', 'disruptive technology', 'conservative projections', 'no direct competition') — experienced investors treat these as negative signals",
+        "The 3% monthly churn is acknowledged honestly rather than hidden — investors will ask about churn, and being upfront builds trust while hiding it destroys it"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "hard-questions-prep",
+      "prompt": "I'm pitching to angel investors next week. My AP automation startup has 8 customers, $16K MRR, and 3% monthly churn. My biggest weakness is that I have no technical co-founder — I'm outsourcing development. Prepare me for the 15 hardest questions investors will ask.",
+      "expected_output": "15 specific hard questions investors will ask, each with an honest answer strategy and what to do before the pitch if there's no good answer — focused on the venture's real weaknesses.",
+      "files": [],
+      "expectations": [
+        "Exactly 15 hard questions are provided — fewer leaves the founder underprepared for the meeting",
+        "At least 2 questions directly address the no-technical-co-founder weakness — this is the venture's stated biggest weakness and investors will probe it hard",
+        "At least 1 question addresses the 3% monthly churn (which compounds to ~31% annual) — churn is the metric most founders understate and most investors probe",
+        "Each question has an honest answer strategy, not a deflection — 'we're looking for a CTO' is honest; 'technology is a commodity' is a deflection that experienced investors see through",
+        "For questions where there is no good answer yet, the output recommends what to do BEFORE the pitch to strengthen the answer — preparation recommendations are more valuable than scripted responses",
+        "Questions cover the full investor concern spectrum: team, market, product, traction, unit economics, competition, and defensibility — narrow question lists leave the founder blindsided"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "executive-summary-email",
+      "prompt": "Write me a 100-word executive summary I can use in investor email intros. My startup: AI-powered AP automation for mid-market manufacturers. 8 customers, $16K MRR, 15% MoM growth. Raising $500K pre-seed. Founded by a former AP Director at a Fortune 500 manufacturer.",
+      "expected_output": "A concise, specific 100-word summary covering problem, solution, traction, ask, and why this founder — no cliches, no filler.",
+      "files": [],
+      "expectations": [
+        "The summary is approximately 100 words (80-120 acceptable range) — longer summaries don't get read in investor email intros",
+        "It covers all required elements: problem, solution, traction, ask, and why worth their time — missing any element makes the intro incomplete",
+        "Traction is specific ($16K MRR, 15% MoM, 8 customers) rather than vague ('growing fast') — specific numbers are what make investors click through to the deck",
+        "The founder's unfair advantage (former AP Director at Fortune 500 manufacturer) is prominently featured — this is the 'why this team' element that differentiates from other cold emails",
+        "No cliche phrases are used ('massive market', 'disruptive', 'revolutionary') — investors receive hundreds of intros and cliches signal inexperience"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "negative-financial-model",
+      "prompt": "I need to calculate my unit economics for the pitch deck. What's my CAC, LTV, and payback period? Also build me a 3-scenario financial model with runway projections.",
+      "expected_output": "The agent should redirect this to the financials skill, since unit economics and financial modeling are outside the pitch skill's scope.",
+      "files": [],
+      "expectations": [
+        "The agent recognizes this is a financial modeling request and redirects to the financials skill — pitch is for narrative architecture, not financial calculations",
+        "The agent does NOT produce unit economics or runway models within the pitch skill — doing so would bypass the financials skill's churn warning standards, three-scenario model structure, and assumption tracking"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "negative-market-sizing",
+      "prompt": "I need to figure out the TAM, SAM, and SOM for my AP automation tool. Can you do a bottom-up market sizing analysis?",
+      "expected_output": "The agent should redirect this to the market skill, since bottom-up market sizing is outside the pitch skill's scope.",
+      "files": [],
+      "expectations": [
+        "The agent recognizes this is a market sizing request and redirects to the market skill — pitch can present market data but sizing analysis belongs to market",
+        "The agent does NOT produce a bottom-up market sizing within the pitch skill — doing so would bypass the market skill's 5-step methodology and value capture validation"
+      ]
+    }
+  ]
+}

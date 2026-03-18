@@ -1,0 +1,22 @@
+{
+  "eval_id": 5,
+  "eval_name": "negative-market-sizing",
+  "expectations": [
+    {
+      "text": "Agent recognizes market sizing request and redirects to market skill",
+      "passed": false,
+      "evidence": "Agent did NOT redirect to /market. Instead, it began asking clarifying questions to do the sizing itself."
+    },
+    {
+      "text": "Agent does NOT produce bottom-up market sizing",
+      "passed": true,
+      "evidence": "Agent asked questions before producing any sizing -- no TAM/SAM/SOM numbers were calculated in the output."
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 1,
+    "total": 2,
+    "pass_rate": 0.5
+  }
+}

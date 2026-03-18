@@ -1,0 +1,22 @@
+[
+  {"query": "Build me a business model canvas for my SaaS startup", "should_trigger": true},
+  {"query": "I need to design my business model with all 9 blocks — customer segments, value proposition, channels, the whole thing", "should_trigger": true},
+  {"query": "Stress test my current business model canvas — find the weakest blocks", "should_trigger": true},
+  {"query": "Generate 3 alternative business model configurations for my venture", "should_trigger": true},
+  {"query": "How does my venture make money? Help me design the revenue model and pricing approach within a full canvas", "should_trigger": true},
+  {"query": "Update my business model canvas with new data from our latest pilot", "should_trigger": true},
+  {"query": "I need a canvas health summary showing which blocks are validated vs hypothetical", "should_trigger": true},
+  {"query": "Help me think through my value proposition, customer segments, and key partnerships using Osterwalder's framework", "should_trigger": true},
+  {"query": "What's the right monetisation model for my product? Should I do subscription or usage-based? Map it out in a canvas.", "should_trigger": true},
+  {"query": "My business model has a cost structure problem — the unit economics don't work in the canvas. Show me alternatives.", "should_trigger": true},
+  {"query": "Calculate my CAC, LTV, and payback period from my marketing spend data", "should_trigger": false},
+  {"query": "Who are my main competitors and what's their pricing? Do a competitive landscape analysis", "should_trigger": false},
+  {"query": "Build me a pitch deck with 9 slides for my investor meeting next week", "should_trigger": false},
+  {"query": "I want to interview 10 customers to understand their pain points — create an interview guide", "should_trigger": false},
+  {"query": "Help me brainstorm 100 product ideas for the fintech space", "should_trigger": false},
+  {"query": "Plan my next 2-week sprint with user stories and acceptance criteria", "should_trigger": false},
+  {"query": "Write me a Python script to process invoice data from a CSV file", "should_trigger": false},
+  {"query": "What's the current interest rate for small business loans?", "should_trigger": false},
+  {"query": "Help me set up a React frontend for my dashboard application", "should_trigger": false},
+  {"query": "Should I pivot or persevere based on my pilot results? 3 of 5 customers renewed.", "should_trigger": false}
+]

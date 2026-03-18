@@ -1,0 +1,72 @@
+{
+  "skill_name": "canvas",
+  "evals": [
+    {
+      "id": 1,
+      "name": "canvas-build-saas-venture",
+      "prompt": "I'm building a SaaS platform that helps mid-market CFOs automate month-end close processes. We've done 8 discovery interviews and found that month-end close takes 5-12 days at companies with 50-200 employees. Our pricing hypothesis is $2,000/month. Build me a full business model canvas.",
+      "expected_output": "A complete 9-block BMC with all blocks filled, evidence quality tagged per block, a health summary showing which blocks are validated vs hypothetical, and the most critical untested assumption identified.",
+      "files": [],
+      "expectations": [
+        "All 9 canvas blocks are populated — no block is left empty; gaps are marked ASSUMED with explicit assumptions stated, because an empty block is a hidden risk the founder cannot act on",
+        "Evidence quality is tagged per block (ASSUMED / ANECDOTAL / VALIDATED) — the founder needs to know which blocks are grounded in the 8 discovery interviews vs. which are guesses, to prioritize next validation steps",
+        "Customer Segments names a specific role (CFO or Controller at 50-200 employee companies) rather than a generic label like 'mid-market companies' — specificity determines whether the canvas is actionable for GTM",
+        "Revenue Streams includes the $2,000/month pricing hypothesis and flags it as untested — pricing is the assumption most founders avoid testing, and the canvas must surface it for explicit validation",
+        "Cost Structure includes at minimum a unit cost estimate and contribution margin calculation — without unit economics, the canvas cannot answer whether the business model is viable",
+        "A Canvas Health Summary is present showing validated vs. hypothetical blocks with critical gaps identified — this is the output that tells the founder where to focus next"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "canvas-stress-test",
+      "prompt": "Here's my current business model canvas for an AI-powered legal document review tool targeting solo practitioners and small law firms. Customer Segments: solo attorneys and 2-5 person firms. Value Proposition: 80% faster contract review. Channels: LinkedIn ads and legal conferences. Revenue: $99/month subscription. Key Resources: GPT-4 API. Please stress test this canvas — I want to know where it's weakest.",
+      "expected_output": "One adversarial question per block with the strongest counter-argument, highlighting the blocks most likely to fail under real-world conditions.",
+      "files": [],
+      "expectations": [
+        "Each of the 9 blocks receives at least one adversarial question — stress testing must be comprehensive, not cherry-picked, because the block you skip is often the one that kills the business",
+        "Revenue Streams flags that $99/month for solo attorneys faces a willingness-to-pay risk — solo practitioners are notoriously price-sensitive and $99/month recurring is a significant commitment for a 1-person firm",
+        "Key Resources flags the GPT-4 API dependency as a single-point-of-failure risk — API pricing changes, rate limits, or capability shifts could break the value proposition overnight with no fallback",
+        "Channels questions whether LinkedIn ads and legal conferences alone can reach solo practitioners cost-effectively — this customer segment is fragmented and expensive to reach through paid channels",
+        "The stress test surfaces the strongest counter-argument for each block, not just the question — the founder needs to see the argument against them, not just a prompt to think harder",
+        "The output identifies the 2-3 blocks that pose the highest combined risk and recommends which to validate first — prioritization is what makes a stress test actionable"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "canvas-alternative-models",
+      "prompt": "My current canvas is a B2C subscription model for a personal finance app aimed at Gen Z (18-25). We charge $4.99/month. Retention is poor — 60% annual churn. Generate 3 alternative business model configurations that might solve the retention and unit economics problem.",
+      "expected_output": "Three structurally different business model alternatives with trade-off analysis, each addressing the retention and unit economics weakness from a different angle.",
+      "files": [],
+      "expectations": [
+        "Exactly 3 alternative models are presented, each structurally different (e.g., freemium + premium, B2B2C through employers, or transaction-based) — alternatives that are just pricing tweaks of the same model are not useful",
+        "Each alternative explicitly addresses how it improves retention or unit economics relative to the 60% churn / $4.99 status quo — an alternative that doesn't solve the stated problem is irrelevant",
+        "Trade-off analysis for each alternative covers what is gained AND what is lost — the founder needs to understand the cost of switching models, not just the upside",
+        "At least one alternative explores a fundamentally different customer (e.g., B2B2C through employers or financial institutions) rather than just monetization changes — the retention problem may be a customer problem, not a pricing problem",
+        "LTV:CAC implications are at least discussed qualitatively for each alternative — business model changes that don't improve unit economics are cosmetic",
+        "The output recommends which alternative to explore first and why, based on the founder's current evidence and stage — without a recommendation, the founder faces analysis paralysis"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "negative-unit-economics-request",
+      "prompt": "Can you calculate my customer acquisition cost and lifetime value? I'm spending $5,000/month on Google Ads and getting about 50 sign-ups. Monthly subscription is $29. I think churn is around 8% monthly but I haven't really measured it.",
+      "expected_output": "The agent should redirect this to the financials skill, not handle it within the canvas skill, since this is a unit economics calculation — not a business model canvas task.",
+      "files": [],
+      "expectations": [
+        "The agent recognizes this is a unit economics request and redirects to the financials skill — canvas is for business model design, not financial calculations",
+        "The agent does NOT produce a full unit economics model within the canvas skill — doing so would duplicate the financials skill and produce output without the financial reasoning standards that skill enforces"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "negative-competitive-analysis",
+      "prompt": "Who are my main competitors in the AI-powered accounting space? I need a full competitive landscape analysis with their pricing, strengths, and weaknesses.",
+      "expected_output": "The agent should redirect this to the market skill, since competitive landscape analysis is market intelligence — not a business model canvas task.",
+      "files": [],
+      "expectations": [
+        "The agent recognizes this is a competitive analysis request and redirects to the market skill — canvas is for business model design, not competitive intelligence",
+        "The agent does NOT produce a competitive landscape within the canvas skill — doing so would bypass the market skill's structured competitive intelligence output format and moat assessment framework"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "eval_id": 3,
+  "eval_name": "positioning-statement",
+  "expectations": [
+    {
+      "text": "Positioning statement follows For/Who/Our product/That/Unlike/We format",
+      "passed": true,
+      "evidence": "Full format present"
+    },
+    {
+      "text": "For and Who use ICP's language",
+      "passed": true,
+      "evidence": "AP Managers language used"
+    },
+    {
+      "text": "Unlike references actual alternative (Excel + phone calls)",
+      "passed": true,
+      "evidence": "Excel + phone calls referenced as current alternative"
+    },
+    {
+      "text": "We states specific differentiating claim (80% auto-resolution)",
+      "passed": true,
+      "evidence": "80% auto-resolution claim included"
+    },
+    {
+      "text": "Positioning is outcome-focused, not feature-focused",
+      "passed": true,
+      "evidence": "Outcome-based framing used"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  }
+}

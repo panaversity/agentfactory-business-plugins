@@ -1,0 +1,42 @@
+{
+  "eval_id": 2,
+  "eval_name": "hard-questions-prep",
+  "expectations": [
+    {
+      "text": "Exactly 15 hard questions provided",
+      "passed": true,
+      "evidence": "All 15 questions present, numbered 1-15, each with Why/Honest answer/Before the pitch"
+    },
+    {
+      "text": "At least 2 questions address no-technical-co-founder weakness",
+      "passed": true,
+      "evidence": "Q1 (Why no tech cofounder?) and Q2 (What if dev team disappears?) and Q8 (Solo non-technical in technical space)"
+    },
+    {
+      "text": "At least 1 question addresses 3% monthly churn",
+      "passed": true,
+      "evidence": "Q3 directly addresses '3% monthly = ~31% annual churn'"
+    },
+    {
+      "text": "Each question has honest answer strategy, not deflection",
+      "passed": true,
+      "evidence": "All answers are honest and specific, not deflective"
+    },
+    {
+      "text": "For weak answers, recommends what to do BEFORE the pitch",
+      "passed": true,
+      "evidence": "Every question has 'Before the pitch' section with specific preparation steps"
+    },
+    {
+      "text": "Questions cover full investor concern spectrum",
+      "passed": true,
+      "evidence": "Covers team (Q1-2,8), market (Q5), product (Q8), traction (Q4,10), unit economics (Q6,9,12), competition (Q5,13), defensibility (Q13)"
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  }
+}
