@@ -1,0 +1,61 @@
+{
+  "skill_name": "jd",
+  "evals": [
+    {
+      "id": 1,
+      "name": "senior-engineer-jd-from-scratch",
+      "prompt": "I need a job description for a Senior Software Engineer in our Platform team. They'll be building internal developer tools and CI/CD infrastructure. We're based in London, hybrid 3 days a week. Salary range is £85,000 to £110,000. The team is 6 people and this person will mentor 2 mid-level engineers.",
+      "expected_output": "A complete, publish-ready JD that leads with the work, uses inclusive language, has a realistic essential requirements list (3-5 items max), includes equal opportunities and reasonable adjustments statements, and lists the salary range explicitly.",
+      "files": [],
+      "expectations": [
+        "Leads with THE WORK section before requirements — candidates decide based on what they will do, not what checkboxes they must tick; burying the work below a wall of requirements loses qualified candidates who skim",
+        "Essential requirements list contains 5 or fewer items, each genuinely essential — the skill enforces the calibration test: 'Could a highly capable candidate do this job well without this?' If yes, it moves to beneficial",
+        "Salary range £85,000-£110,000 is explicitly stated — never 'competitive'; research shows job ads with salary ranges get 30%+ more qualified applicants",
+        "Includes equal opportunities statement and reasonable adjustments offer — both are legal requirements in many jurisdictions and signal genuine inclusion, not just compliance",
+        "Zero instances of 'rockstar', 'ninja', 'guru', 'digital native', 'young and dynamic' or similar exclusionary language — the inclusive language check must run automatically",
+        "Requirements expressed as skill proficiency levels, not years of experience with specific tools — '5 years of Kubernetes experience' should become 'strong proficiency with container orchestration' because years predict tenure not ability",
+        "Output begins with the mandatory header block (TASK, DOCUMENT TYPE, JURISDICTION, CONFIGURATION, SENSITIVITY) — this is the standard format that enables downstream processing and audit"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "improve-existing-jd-inclusive-language",
+      "prompt": "Here's our current job ad — can you improve it? 'We're looking for a rockstar DevOps ninja to join our young and energetic team. Must have 10+ years Docker experience, 7+ years Kubernetes, Computer Science degree required. We offer competitive salary. Must thrive in fast-paced environment and crush it daily. Culture fit is essential.'",
+      "expected_output": "A rewritten JD that removes all exclusionary language, replaces years-of-experience requirements with skill-level descriptions, adds a salary range prompt, includes equal opportunities and reasonable adjustments, and restructures to lead with the work.",
+      "files": [],
+      "expectations": [
+        "Removes 'rockstar', 'ninja' and replaces with descriptive professional language — these terms are exclusionary (research by Textio shows they reduce female applicants by 20%+) and convey no useful information about the role",
+        "Removes 'young and energetic' — this is age-coded language that may constitute age discrimination under the Equality Act 2010 (UK) or ADEA (US)",
+        "Replaces '10+ years Docker' and '7+ years Kubernetes' with skill proficiency descriptions — years of experience with a specific tool measures tenure not competence; a 3-year expert outperforms a 10-year occasional user",
+        "Flags 'competitive salary' and either replaces with a range or explicitly states 'salary range not provided — recommend adding before publishing' — omitting salary is the single most effective way to deter good candidates",
+        "Replaces 'culture fit' with specific behaviours or ways of working — 'culture fit' is too vague and is frequently used as a proxy for bias (same background, same demographics)",
+        "Adds equal opportunities statement and reasonable adjustments offer — the original had neither, which is both legally risky and signals to candidates that inclusion is not a priority",
+        "Includes an INCLUSIVE LANGUAGE CHECK section in the output documenting what was changed and why — this creates a learning record so the hiring manager understands the rationale, not just the result"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "negative-interview-questions",
+      "prompt": "I need to prepare interview questions and a scoring rubric for our Head of Marketing candidates. What should I ask them in the panel interview?",
+      "expected_output": "The agent should recognise this is an interview-prep task (not a JD task) and redirect to the appropriate skill or decline, rather than generating interview questions under the JD skill.",
+      "files": [],
+      "expectations": [
+        "Does NOT generate interview questions — interview preparation is explicitly out of scope for /jd as stated in the skill description ('NOT for: interview questions or scorecards')",
+        "Redirects to the appropriate skill or resource for interview preparation — the skill description states 'use interview-prep' for this type of request",
+        "Does NOT produce a job description unless the user also asked for one — generating unrequested output wastes time and creates confusion about what was asked"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "negative-compensation-benchmarking",
+      "prompt": "What's the market rate for a product manager in San Francisco? I need salary benchmarking data to set our compensation bands.",
+      "expected_output": "The agent should recognise this is a compensation benchmarking task and redirect to the appropriate skill, not attempt to provide salary data under the JD skill.",
+      "files": [],
+      "expectations": [
+        "Does NOT provide salary benchmarking data — compensation analysis is explicitly out of scope for /jd as stated in the skill description ('NOT for: compensation benchmarking (use comp-analysis)')",
+        "Redirects to the appropriate skill or resource for compensation analysis — the skill description states 'use comp-analysis' for this type of request",
+        "Does NOT attempt to produce market rate data from general knowledge — salary data from AI models is unreliable and could lead to under- or over-compensation decisions"
+      ]
+    }
+  ]
+}

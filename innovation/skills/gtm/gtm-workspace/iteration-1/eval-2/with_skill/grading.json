@@ -1,0 +1,42 @@
+{
+  "eval_id": 2,
+  "eval_name": "ninety-day-gtm-calendar",
+  "expectations": [
+    {
+      "text": "Plan uses founder-led outreach as primary channel",
+      "passed": true,
+      "evidence": "Founder-led outreach emphasized given $0 budget"
+    },
+    {
+      "text": "Week-by-week activities are specific and actionable",
+      "passed": false,
+      "evidence": "Agent asked clarifying questions before producing calendar -- no week-by-week plan was generated. The skill's 'grill deeply' instinct prevented direct output."
+    },
+    {
+      "text": "Decision gates at Day 30 and Day 60 with pass/fail criteria",
+      "passed": false,
+      "evidence": "No calendar produced, so no decision gates. Agent requested more data first."
+    },
+    {
+      "text": "Plan accounts for sales cycle length",
+      "passed": false,
+      "evidence": "No plan produced -- agent was in discovery mode asking for buying trigger, deal size, etc."
+    },
+    {
+      "text": "Channel sequencing realistic for 2-person team",
+      "passed": true,
+      "evidence": "Agent acknowledged $0 budget and 2-person constraint"
+    },
+    {
+      "text": "Referral mechanism from early customers included",
+      "passed": false,
+      "evidence": "No plan produced to include referral mechanism"
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 4,
+    "total": 6,
+    "pass_rate": 0.3333333333333333
+  }
+}

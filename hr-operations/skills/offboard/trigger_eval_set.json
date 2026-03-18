@@ -1,0 +1,22 @@
+[
+  {"query": "Our Senior Product Manager has resigned — I need a full offboarding plan", "should_trigger": true},
+  {"query": "Create an exit checklist for an employee whose last day is next Friday", "should_trigger": true},
+  {"query": "I need to plan the offboarding process for a departing team lead", "should_trigger": true},
+  {"query": "What's the handover plan structure for someone leaving on 4 weeks notice?", "should_trigger": true},
+  {"query": "Schedule an exit interview and prepare the questions for a departing director", "should_trigger": true},
+  {"query": "Our Head of Engineering is leaving — what systems access needs to be removed?", "should_trigger": true},
+  {"query": "Create a departure checklist covering HR, IT, and manager responsibilities", "should_trigger": true},
+  {"query": "How should we handle the notice period for a resigning employee? What needs to happen?", "should_trigger": true},
+  {"query": "An employee is leaving — I need to sort out their final paycheck, P45, and equipment return", "should_trigger": true},
+  {"query": "Plan the offboarding for a redundancy — what process do we follow after the decision is made?", "should_trigger": true},
+  {"query": "Create an onboarding plan for a new developer starting next Monday", "should_trigger": false},
+  {"query": "Write a job description for a new Senior Designer role", "should_trigger": false},
+  {"query": "I need to capture the institutional knowledge of our retiring VP before she goes", "should_trigger": false},
+  {"query": "Draft a reference letter for a former employee applying for a new position", "should_trigger": false},
+  {"query": "Assess two internal candidates for promotion to the Head of Sales role", "should_trigger": false},
+  {"query": "What's our company policy on remote working?", "should_trigger": false},
+  {"query": "Help me write interview questions and a scorecard for our CFO search", "should_trigger": false},
+  {"query": "I need to set up a new compensation structure for the engineering team", "should_trigger": false},
+  {"query": "Draft a termination letter for an employee we're dismissing for misconduct", "should_trigger": false},
+  {"query": "Create a performance improvement plan for an underperforming team member", "should_trigger": false}
+]

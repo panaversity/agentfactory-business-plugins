@@ -1,0 +1,71 @@
+{
+  "skill_name": "discovery",
+  "evals": [
+    {
+      "id": 1,
+      "name": "interview-guide-b2b-saas",
+      "prompt": "I'm building an AI tool that automates invoice processing for accounts payable teams at mid-market companies (100-500 employees). I need an interview guide for problem discovery — I want to understand how AP teams process invoices today and where the biggest pain points are. Target interviewee is the AP Manager.",
+      "expected_output": "A structured interview guide with protocol notes, question banks organized by phase (opening, current process, pain points, workarounds, prioritization, closing), and interview style rules — ready to use in a 45-minute discovery interview.",
+      "files": [],
+      "expectations": [
+        "The interview guide includes protocol notes that remind the interviewer to listen 80% and talk 20% — this is the most violated rule in customer discovery and the guide must reinforce it",
+        "Questions are organized by phase (opening, current process, pain points, workarounds, prioritization, closing) with time allocations — unstructured interviews produce scattered data that cannot be synthesized across interviewees",
+        "No question mentions the AI tool or solution concept — problem discovery must be separated from solution validation; mentioning the product leads to agreement bias that produces false positives",
+        "Questions use open-ended formats ('walk me through...', 'tell me about...') rather than closed yes/no formats — closed questions produce agreement bias, not insight",
+        "The guide includes probing follow-ups ('tell me more about that', 'what do you do when that happens?') — probing is what turns surface-level answers into deep insight",
+        "The closing section includes a referral request — the most valuable output of an interview is access to the next interviewee, and failing to ask is the most common discovery mistake"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "interview-synthesis-5-interviews",
+      "prompt": "I've completed 5 discovery interviews with AP managers at mid-market companies. Here are my raw notes:\n\nInterview 1 (Sarah, AP Manager, 200-person manufacturing): Spends 3 days/month on invoice matching. Main pain is purchase order mismatches. Uses Excel to track. Said 'I basically live in Excel during close week.'\n\nInterview 2 (James, Controller, 150-person services): AP team of 2 handles 400 invoices/month. Duplicate invoices are biggest issue — caught $45K duplicate last quarter. No automated matching.\n\nInterview 3 (Maria, AP Lead, 300-person retail): Three-way matching takes 15 min per invoice. ERP doesn't handle exceptions. 'Every exception is a phone call to purchasing.'\n\nInterview 4 (David, AP Manager, 180-person tech): Vendor follow-up consumes 40% of team time. Late payments cause vendor relationship issues. 'We lose early payment discounts every month.'\n\nInterview 5 (Priya, Finance Director, 250-person healthcare): Compliance documentation for each invoice adds 10 min. Audit prep takes 2 weeks. 'I dread audit season — we're always scrambling for documentation.'\n\nSynthesize these interviews.",
+      "expected_output": "A structured synthesis with JTBD map, pain ranking matrix, at least 3 non-obvious insight statements, vivid customer quotes, and identification of what still needs to be learned.",
+      "files": [],
+      "expectations": [
+        "The JTBD map includes functional, related, emotional, and social jobs — limiting to functional jobs misses the emotional and social dimensions that often drive purchasing decisions",
+        "The pain ranking uses frequency x severity scoring across all 5 interviews — ranking by frequency alone misses high-severity pains mentioned by fewer interviewees",
+        "At least 3 insight statements are produced and each is non-obvious (not 'AP teams want faster processing') — weak insights lead to obvious solutions that don't differentiate",
+        "Vivid customer quotes are included with role and company type attribution — direct quotes make the pain real for stakeholders who weren't in the room",
+        "A 'What We Still Need to Learn' section identifies specific unknowns — 5 interviews is the minimum for pattern detection and the synthesis must flag where confidence is low",
+        "Pain ranking surfaces invoice matching/PO mismatches as a high-frequency pain (mentioned by 3+ interviewees in different forms) — this cross-interview pattern is the primary signal"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "hmw-problem-statement",
+      "prompt": "Based on our discovery with AP teams, the top pain is three-way invoice matching which takes 15+ minutes per invoice and requires manual exception handling via phone calls. 4 of 5 interviewees described some version of this pain. Generate HMW problem statements.",
+      "expected_output": "5 HMW variants approaching the problem through different lenses (solution, outcome, emotional, constraint, systemic), with a recommended primary and rationale grounded in the discovery data.",
+      "files": [],
+      "expectations": [
+        "Exactly 5 HMW variants are produced, each through a different lens (solution, outcome, emotional, constraint, systemic) — fewer than 5 narrows the solution space prematurely",
+        "Each HMW is specific enough to focus ideation but open enough not to prescribe the solution — 'How might we automate invoice matching?' is too prescriptive; 'How might we reduce exception resolution time?' is better",
+        "Each HMW references the discovery data (e.g., '15+ minutes per invoice', 'phone calls to purchasing') — HMW statements disconnected from evidence lead to solutions that don't address real pain",
+        "A recommended primary HMW is stated with rationale explaining why it is the best starting point for ideation — without a recommendation, the founder faces choice paralysis",
+        "The constraint lens HMW works with the existing workaround rather than replacing it — this lens often produces the most adoptable solutions because it respects current behavior"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "negative-idea-generation",
+      "prompt": "I have a problem statement about invoice processing pain. Can you brainstorm 50 product ideas that could solve this? I want a full idea sprint.",
+      "expected_output": "The agent should redirect this to the idea skill, since idea generation and brainstorming are outside the discovery skill's scope.",
+      "files": [],
+      "expectations": [
+        "The agent recognizes this is an idea generation request and redirects to the idea skill — discovery is for understanding customers and problems, not generating solution ideas",
+        "The agent does NOT produce a list of product ideas within the discovery skill — doing so would bypass the idea skill's DVF scoring framework and structured 100-idea sprint format"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "negative-pilot-analysis",
+      "prompt": "We ran a 4-week pilot with 3 AP teams. Here are the results: 71% adoption rate, 40% reduction in matching time, NPS of 68. Can you analyze whether we should continue or pivot?",
+      "expected_output": "The agent should redirect this to the validate skill, since pilot results analysis and pivot decisions are outside the discovery skill's scope.",
+      "files": [],
+      "expectations": [
+        "The agent recognizes this is a pilot results analysis request and redirects to the validate skill — discovery is for pre-product customer research, not post-pilot analysis",
+        "The agent does NOT produce a BML analysis or pivot recommendation within the discovery skill — doing so would bypass the validate skill's evidence quality standards and pivot decision framework"
+      ]
+    }
+  ]
+}

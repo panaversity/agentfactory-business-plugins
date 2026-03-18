@@ -1,0 +1,30 @@
+{
+  "expectations": [
+    {
+      "text": "Q1 verdict reflects that this exceeded targets — the retro captures success, not just problems",
+      "passed": true,
+      "evidence": "Q1 verdict is 'SOLVED' with summary: 'The new onboarding flow exceeded its adoption target by 12 percentage points and meaningfully reduced support burden.' Explicitly states 'This is a genuine success.'"
+    },
+    {
+      "text": "Q2 delivery assessment shows all-green metrics (on time, spec quality, scope maintained) — documenting what went right is what makes success repeatable",
+      "passed": true,
+      "evidence": "All five Q2 items marked [PASS]. Includes explicit documentation of WHY it went well: 'Spec was clear enough that engineering had no ambiguity questions', 'Scope was locked — no mid-sprint additions', 'team confidence is a leading indicator worth paying attention to.'"
+    },
+    {
+      "text": "Q4 still produces at least one process observation — even successful features have learnings; the retro must not skip this section just because things went well",
+      "passed": true,
+      "evidence": "Three process improvements documented: (1) formalize what made this spec work, (2) understand and document why scope held, (3) start tracking team confidence as a leading indicator. All are forward-looking improvements, not criticisms."
+    },
+    {
+      "text": "The retro does NOT only document what went wrong — per the NEVER rules, a retro that skips what went well fails to protect what works",
+      "passed": true,
+      "evidence": "The retro is overwhelmingly focused on what went well and how to replicate it. Q1 celebrates the success, Q2 documents the clean delivery, Q4 extracts replicable patterns. This is a success-documenting retro."
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1.0
+  }
+}

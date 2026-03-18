@@ -1,0 +1,20 @@
+{
+  "expectations": [
+    {
+      "text": "The skill does NOT produce a retro when asked for a stakeholder update — status updates and retrospectives serve different audiences and purposes",
+      "passed": true,
+      "evidence": "Title is 'Not a Retrospective — Redirecting'. Explicitly states: 'You're asking for a stakeholder update, not a product retrospective. These are different workflows with different audiences and outputs.' Provides clear explanation of the difference. Does not produce a retrospective."
+    },
+    {
+      "text": "Redirects to /stakeholder-update for executive communication",
+      "passed": true,
+      "evidence": "'For a stakeholder update, use /stakeholder-update — it's designed for executive communication with the right framing, level of detail, and format.'"
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 0,
+    "total": 2,
+    "pass_rate": 1.0
+  }
+}

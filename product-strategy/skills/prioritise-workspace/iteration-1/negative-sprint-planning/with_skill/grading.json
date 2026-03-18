@@ -1,0 +1,20 @@
+{
+  "expectations": [
+    {
+      "text": "The skill does NOT perform sprint planning",
+      "passed": true,
+      "evidence": "Response explicitly states 'This request is about sprint planning' and does not perform sprint planning. Clarifies the difference between prioritisation and sprint planning."
+    },
+    {
+      "text": "Redirects to /sprint-planning for sprint-level work allocation",
+      "passed": true,
+      "evidence": "Explicitly says 'use /sprint-planning instead' and offers to help with prioritisation if user wants that as a prerequisite step."
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 0,
+    "total": 2,
+    "pass_rate": 1.0
+  }
+}

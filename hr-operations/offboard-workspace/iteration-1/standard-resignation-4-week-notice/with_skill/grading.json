@@ -1,0 +1,45 @@
+{
+  "expectations": [
+    {
+      "text": "Covers all four phases: immediate actions (within 24 hours), handover planning (complete by Week 2), exit interview (Week 3), and last-day checklist",
+      "passed": true,
+      "evidence": "All four phases present: Phase 1 (lines 27-46, immediate actions within 24 hours of March 19), Phase 2 (lines 50-89, handover complete by 1 April/end of Week 2), Phase 3 (lines 93-128, exit interview on 3 April/Week 3), Phase 4 (lines 132-154, last day checklist for April 18)."
+    },
+    {
+      "text": "Exit interview is scheduled for Week 3 (not Week 1 and not the final week) and conducted by HR, not the line manager",
+      "passed": true,
+      "evidence": "Line 95: 'Scheduled: 3 April 2026 (Week 3 of notice)'. Line 96: 'Interviewer: HR Business Partner (NOT the line manager)'. Explicitly notes the correct interviewer."
+    },
+    {
+      "text": "Handover plan completion is targeted for Week 2, not the final week",
+      "passed": true,
+      "evidence": "Line 50: 'PHASE 2 -- HANDOVER (complete by end of Week 2: 1 April 2026)'. Handover table has all items due by 28 March or 1 April. Not deferred to final week."
+    },
+    {
+      "text": "Includes IT access removal as a specific checklist with systems enumerated",
+      "passed": true,
+      "evidence": "Phase 1 IT section (lines 42-46) enumerates: product management tools, roadmap software, client portals, analytics dashboards, Slack/Teams, email, SSO apps, VPN, code repos, internal wikis, cloud services. Phase 4 IT section (lines 143-147) has specific removal actions with dates."
+    },
+    {
+      "text": "Triggers knowledge capture (references /knowledge skill) for the enterprise client relationships and product roadmap",
+      "passed": true,
+      "evidence": "Line 33: 'Trigger knowledge capture plan (recommend /knowledge skill for structured capture of product roadmap, client relationship context, and decision history)'. Risk register line 164 also references: 'Structured knowledge capture sessions (recommend /knowledge skill)'."
+    },
+    {
+      "text": "Flags '[MANAGER INPUT REQUIRED]' for successor identification since none has been identified",
+      "passed": true,
+      "evidence": "Line 10: 'Successor: Not yet identified [MANAGER INPUT REQUIRED]'. Line 40: 'Begin successor identification process — escalate urgently given no successor is currently identified [MANAGER INPUT REQUIRED]'. Multiple handover table entries marked '[MANAGER INPUT REQUIRED -- interim: Line Manager]'."
+    },
+    {
+      "text": "Output begins with the mandatory header block including CONFIDENTIAL sensitivity",
+      "passed": true,
+      "evidence": "Lines 1-5: TASK ('Offboarding Plan -- Aisha Khan'), DOCUMENT TYPE ('Offboarding Plan'), JURISDICTION, CONFIGURATION, SENSITIVITY ('CONFIDENTIAL') all present."
+    }
+  ],
+  "summary": {
+    "passed": 7,
+    "failed": 0,
+    "total": 7,
+    "pass_rate": 1.0
+  }
+}

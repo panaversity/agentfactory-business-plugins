@@ -1,0 +1,22 @@
+{
+  "eval_id": 4,
+  "eval_name": "negative-idea-generation",
+  "expectations": [
+    {
+      "text": "Agent recognizes idea generation request and redirects to idea skill",
+      "passed": true,
+      "evidence": "Agent redirected to /idea skill"
+    },
+    {
+      "text": "Agent does NOT produce 100-idea list",
+      "passed": true,
+      "evidence": "No idea list produced"
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 0,
+    "total": 2,
+    "pass_rate": 1.0
+  }
+}

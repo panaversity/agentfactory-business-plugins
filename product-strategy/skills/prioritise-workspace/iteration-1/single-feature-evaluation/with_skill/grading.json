@@ -1,0 +1,35 @@
+{
+  "expectations": [
+    {
+      "text": "Uses the single feature evaluation format, not the full RICE framework",
+      "passed": true,
+      "evidence": "Uses the exact 'FEATURE EVALUATION: Slack Integration' structured format with Request source, Frequency, User problem, Alternative solutions, Effort, Opportunity cost, Confidence, Recommendation fields"
+    },
+    {
+      "text": "Includes opportunity cost — what does NOT get built if we build this?",
+      "passed": true,
+      "evidence": "Opportunity cost field states '3 sprints is substantial. This displaces roughly one medium-priority roadmap item. The PM needs to name the specific item that gets pushed to answer this honestly.'"
+    },
+    {
+      "text": "Frequency of request is assessed (one customer vs pattern)",
+      "passed": true,
+      "evidence": "Frequency field explicitly states 'Single customer request with churn ultimatum. No data on whether other customers have requested this. This is important — one customer threatening churn is different from a pattern across the customer base.'"
+    },
+    {
+      "text": "Confidence in value is rated with basis",
+      "passed": true,
+      "evidence": "Confidence rated LOW with 4 specific reasons: single customer request, churn threat != churn certainty, unknown usage intent, no comparable product data"
+    },
+    {
+      "text": "Recommendation is one of BUILD / DEFER / DECLINE / DISCOVERY SPIKE",
+      "passed": true,
+      "evidence": "Recommendation is DISCOVERY SPIKE with detailed rationale and 4-step action plan"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  }
+}

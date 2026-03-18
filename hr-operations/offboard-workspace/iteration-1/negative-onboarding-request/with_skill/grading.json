@@ -1,0 +1,25 @@
+{
+  "expectations": [
+    {
+      "text": "Does NOT create an onboarding plan",
+      "passed": true,
+      "evidence": "Output is titled 'Offboard Skill — Request Declined'. States: 'Your request is for onboarding a new developer...This falls outside the scope of the offboard skill.' No onboarding plan generated."
+    },
+    {
+      "text": "Redirects to the appropriate skill or resource for onboarding",
+      "passed": true,
+      "evidence": "States: 'Use the /onboard skill (or equivalent onboarding skill in your HR operations plugin)' and lists specific capabilities: first week schedules, equipment setup, introduction plans, orientation programme design, probation milestones."
+    },
+    {
+      "text": "Does NOT confuse onboarding with offboarding",
+      "passed": true,
+      "evidence": "Summary table explicitly distinguishes: 'Offboard is scoped to departing employees only'. Quotes the skill description: 'NOT for: onboarding plans (use onboarding)'."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1.0
+  }
+}

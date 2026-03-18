@@ -1,0 +1,19 @@
+{
+  "eval_id": 2,
+  "eval_name": "retro-successful-launch",
+  "prompt": "Run a retro on our new onboarding flow. Shipped on time, all ACs met, adoption is 72% (target 60%), support tickets about onboarding down 45%. No scope changes during development. The team felt really good about this one.",
+  "assertions": [
+    {
+      "text": "Q1 verdict reflects that this exceeded targets — the retro captures success, not just problems"
+    },
+    {
+      "text": "Q2 delivery assessment shows all-green metrics (on time, spec quality, scope maintained) — documenting what went right is what makes success repeatable"
+    },
+    {
+      "text": "Q4 still produces at least one process observation — even successful features have learnings; the retro must not skip this section just because things went well"
+    },
+    {
+      "text": "The retro does NOT only document what went wrong — per the NEVER rules, a retro that skips what went well fails to protect what works"
+    }
+  ]
+}

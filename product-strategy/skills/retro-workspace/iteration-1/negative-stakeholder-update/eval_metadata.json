@@ -1,0 +1,13 @@
+{
+  "eval_id": 4,
+  "eval_name": "negative-stakeholder-update",
+  "prompt": "Give me a stakeholder update on the search feature for this week's leadership meeting.",
+  "assertions": [
+    {
+      "text": "The skill does NOT produce a retro when asked for a stakeholder update — status updates and retrospectives serve different audiences and purposes"
+    },
+    {
+      "text": "Redirects to /stakeholder-update for executive communication"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+[
+  {"query": "I need to write a reference for a former employee who worked here for 3 years", "should_trigger": true},
+  {"query": "A recruitment agency has requested an employment reference for one of our ex-staff", "should_trigger": true},
+  {"query": "Draft a professional reference letter for our departing Head of Marketing", "should_trigger": true},
+  {"query": "Our employee needs an employment verification letter for a mortgage application", "should_trigger": true},
+  {"query": "Can you confirm employment dates and job title for a reference request we received?", "should_trigger": true},
+  {"query": "Write a character reference for a team member who's applying for a new role", "should_trigger": true},
+  {"query": "A bank is asking us to verify salary and employment status for one of our staff", "should_trigger": true},
+  {"query": "I need a factual reference template — what should it include?", "should_trigger": true},
+  {"query": "Provide an HR reference confirming dates of employment for a former team member", "should_trigger": true},
+  {"query": "Draft a letter of recommendation for our Senior Analyst who's leaving for a PhD programme", "should_trigger": true},
+  {"query": "I need to write a year-end performance review for my direct report", "should_trigger": false},
+  {"query": "Draft an offer letter for the candidate we've selected — include salary and benefits", "should_trigger": false},
+  {"query": "Write a job description for a Finance Manager role we're advertising", "should_trigger": false},
+  {"query": "Help me create an onboarding plan for a new starter joining our team", "should_trigger": false},
+  {"query": "Our lead architect just resigned — I need a knowledge capture plan", "should_trigger": false},
+  {"query": "Assess our internal candidates for promotion to the Director level", "should_trigger": false},
+  {"query": "Create a full offboarding plan with IT access removal for a departing employee", "should_trigger": false},
+  {"query": "What interview questions should I ask for a Senior Developer panel?", "should_trigger": false},
+  {"query": "What's the market rate for a data scientist in our region?", "should_trigger": false},
+  {"query": "Help me set up a 360-degree feedback process for our management team", "should_trigger": false}
+]

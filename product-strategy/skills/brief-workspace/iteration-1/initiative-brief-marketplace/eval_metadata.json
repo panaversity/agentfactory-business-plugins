@@ -1,0 +1,13 @@
+{
+  "eval_id": 3,
+  "eval_name": "initiative-brief-marketplace",
+  "prompt": "I want to pitch a marketplace feature to leadership. We'd need buy-in from the CEO and VP Product before investing in a full PRD. Help me frame this as a one-page brief.",
+  "assertions": [
+    "Output is an Initiative Brief (Type 3)",
+    "THE BET section is one sentence capturing what, who, and why now",
+    "SIZE OF PRIZE section quantifies commercial or user impact",
+    "ROUGH EFFORT is expressed as order of magnitude (days/weeks/months/quarters)",
+    "RISKS section lists top 2-3 risks",
+    "DECISION NEEDED clearly states what approval is requested"
+  ]
+}

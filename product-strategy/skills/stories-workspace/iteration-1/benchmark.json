@@ -1,0 +1,187 @@
+{
+  "metadata": {
+    "skill_name": "stories",
+    "skill_path": "/Users/mjs/Documents/code/panaversity-official/agentfactory-business-plugins/product-strategy/skills/stories/SKILL.md",
+    "timestamp": "2026-03-19T02:30:00Z",
+    "evals_run": [1, 2, 3, 4, 5],
+    "runs_per_configuration": 1
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "eval_name": "stories-from-spec-date-filter",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 7,
+        "failed": 0,
+        "total": 7,
+        "time_seconds": 0,
+        "tokens": 0,
+        "errors": 0
+      }
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "stories-from-spec-date-filter",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.29,
+        "passed": 2,
+        "failed": 5,
+        "total": 7,
+        "time_seconds": 0,
+        "tokens": 0,
+        "errors": 0
+      }
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "stories-from-prd-auth",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 0,
+        "tokens": 0,
+        "errors": 0
+      }
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "stories-from-prd-auth",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 0,
+        "tokens": 0,
+        "errors": 0
+      }
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "negative-vague-persona",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 0,
+        "tokens": 0,
+        "errors": 0
+      }
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "negative-vague-persona",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.0,
+        "passed": 0,
+        "failed": 4,
+        "total": 4,
+        "time_seconds": 0,
+        "tokens": 0,
+        "errors": 0
+      }
+    },
+    {
+      "eval_id": 4,
+      "eval_name": "negative-compound-ac",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 0,
+        "tokens": 0,
+        "errors": 0
+      }
+    },
+    {
+      "eval_id": 4,
+      "eval_name": "negative-compound-ac",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.75,
+        "passed": 3,
+        "failed": 1,
+        "total": 4,
+        "time_seconds": 0,
+        "tokens": 0,
+        "errors": 0
+      }
+    },
+    {
+      "eval_id": 5,
+      "eval_name": "negative-sprint-planning-request",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 2,
+        "failed": 0,
+        "total": 2,
+        "time_seconds": 0,
+        "tokens": 0,
+        "errors": 0
+      }
+    },
+    {
+      "eval_id": 5,
+      "eval_name": "negative-sprint-planning-request",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 2,
+        "failed": 0,
+        "total": 2,
+        "time_seconds": 0,
+        "tokens": 0,
+        "errors": 0
+      }
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {"mean": 1.0, "stddev": 0.0, "min": 1.0, "max": 1.0},
+      "time_seconds": {"mean": 0, "stddev": 0, "min": 0, "max": 0},
+      "tokens": {"mean": 0, "stddev": 0, "min": 0, "max": 0}
+    },
+    "without_skill": {
+      "pass_rate": {"mean": 0.61, "stddev": 0.42, "min": 0.0, "max": 1.0},
+      "time_seconds": {"mean": 0, "stddev": 0, "min": 0, "max": 0},
+      "tokens": {"mean": 0, "stddev": 0, "min": 0, "max": 0}
+    },
+    "delta": {
+      "pass_rate": "+0.39",
+      "time_seconds": "0",
+      "tokens": "0"
+    }
+  },
+  "notes": [
+    "With-skill achieves 100% pass rate across all 5 evals (22/22 assertions passed).",
+    "Without-skill achieves 61% average pass rate (12/22 assertions passed).",
+    "Biggest skill impact on eval 3 (negative-vague-persona): 100% vs 0% — without the skill, Claude accepts 'a user' as the persona without question. With the skill, it flags it as a blocker and explains why.",
+    "Eval 1 (stories-from-spec-date-filter) shows strong structural impact: with_skill adds sizing, dependencies, coverage analysis, and error-state ACs — all absent without the skill.",
+    "Eval 2 (stories-from-prd-auth) shows parity: without_skill also passes all assertions. Claude's base model produces good auth stories even without guidance. However, the without_skill output adds 2 extra stories (unified session management, audit logging) not requested in the spec — possible scope creep.",
+    "Eval 5 (negative-sprint-planning-request) is non-discriminating: both configurations correctly identify the request as out-of-scope and redirect to /sprint-planning. This eval validates boundary enforcement but doesn't differentiate skill value.",
+    "Token and timing data not captured (runs used claude -p without JSON output parsing). Future iterations should use --output-format json to capture these metrics."
+  ]
+}

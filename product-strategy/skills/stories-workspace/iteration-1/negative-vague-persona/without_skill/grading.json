@@ -1,0 +1,30 @@
+{
+  "expectations": [
+    {
+      "text": "The output does NOT use 'a user' as the persona",
+      "passed": false,
+      "evidence": "The output uses 'As a user' as the persona, exactly as given. No correction or replacement with a named persona."
+    },
+    {
+      "text": "A named persona is used (either from product.local.md or a reasonable named alternative)",
+      "passed": false,
+      "evidence": "The persona is 'a user' — generic, not a named persona. No alternative persona is suggested."
+    },
+    {
+      "text": "The skill flags that 'a user' is not acceptable and explains why",
+      "passed": false,
+      "evidence": "The output does not flag 'a user' as problematic. It accepts the input as-is and proceeds to write ACs without questioning the persona."
+    },
+    {
+      "text": "The 'so that' is improved to describe a user outcome, not just a system action",
+      "passed": false,
+      "evidence": "The 'so that' remains 'I can use it in other tools' — unchanged from the input. This is vague and not improved."
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "failed": 4,
+    "total": 4,
+    "pass_rate": 0.0
+  }
+}

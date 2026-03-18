@@ -1,0 +1,22 @@
+[
+  {"query": "Run a product retrospective on the Quick Reports feature we shipped 6 weeks ago", "should_trigger": true},
+  {"query": "I want to review how the notifications redesign went — did it actually work?", "should_trigger": true},
+  {"query": "Do a post-launch review of our new onboarding flow with the outcome data", "should_trigger": true},
+  {"query": "What went well and what didn't with the search feature we shipped last quarter?", "should_trigger": true},
+  {"query": "Run a post-mortem on the checkout optimization we launched in January", "should_trigger": true},
+  {"query": "Evaluate whether the dashboard performance improvements achieved their targets", "should_trigger": true},
+  {"query": "Do a feature retrospective on our SSO integration — it's been live for 8 weeks", "should_trigger": true},
+  {"query": "I need to review the lessons learned from our API v2 migration", "should_trigger": true},
+  {"query": "Did the bulk export feature we shipped actually reduce support tickets as planned?", "should_trigger": true},
+  {"query": "Run a sprint retrospective on what we shipped and whether it moved the metrics", "should_trigger": true},
+  {"query": "Give me a stakeholder update on the search feature for this week's meeting", "should_trigger": false},
+  {"query": "Review our product metrics dashboard and tell me the Q2 numbers", "should_trigger": false},
+  {"query": "Write a PRD for the new analytics platform", "should_trigger": false},
+  {"query": "Prioritise our backlog for Q3 using RICE scoring", "should_trigger": false},
+  {"query": "Create a problem brief about declining user retention", "should_trigger": false},
+  {"query": "Generate interview questions for our user research sessions", "should_trigger": false},
+  {"query": "Plan our Q3 sprint capacity and allocation", "should_trigger": false},
+  {"query": "Break this spec into user stories for the engineering team", "should_trigger": false},
+  {"query": "Write a competitive analysis comparing us to three competitors", "should_trigger": false},
+  {"query": "Help me draft a postmortem for the production outage last Tuesday", "should_trigger": false}
+]

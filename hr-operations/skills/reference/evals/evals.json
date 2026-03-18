@@ -1,0 +1,59 @@
+{
+  "skill_name": "reference",
+  "evals": [
+    {
+      "id": 1,
+      "name": "factual-reference-former-employee",
+      "prompt": "I need to write a reference for Maria Santos. She was a Marketing Manager here from January 2021 to November 2025. A recruitment agency has requested a standard reference. Our company policy is factual references only.",
+      "expected_output": "A factual reference letter confirming employment dates and job title, with no opinion or performance commentary, following the organisation's factual-only policy — the safest reference type that protects the organisation from defamation or misrepresentation liability.",
+      "files": [],
+      "expectations": [
+        "Produces a TYPE 1 (factual reference) containing only: job title, dates of employment, and optionally rehire eligibility — factual-only policy means zero performance commentary, even if the employee was outstanding",
+        "Does NOT include salary information — salary inclusion requires explicit employee consent per the skill's universal rules; absent that consent, including it creates data protection liability",
+        "Includes the 'REVIEW BEFORE SENDING' warning — every reference must be reviewed by HR before sending, especially for former employees; this is both risk management and quality control",
+        "Does NOT include any information about disciplinary matters, health conditions, or protected characteristics — including any of these in a reference is a serious legal violation in most jurisdictions",
+        "Output begins with the mandatory header block (TASK, DOCUMENT TYPE, JURISDICTION, CONFIGURATION, SENSITIVITY) with CONFIDENTIAL sensitivity — references contain personal data and employment information",
+        "Defaults correctly to factual reference when the company policy specifies factual-only — the skill should NOT offer to write a professional reference when policy prohibits it"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "employment-verification-mortgage",
+      "prompt": "One of our employees, Tom Richards, is applying for a mortgage and his lender needs an employment verification letter. He's a Senior Analyst, been with us since March 2022, full-time, earning £65,000 per year. He has given written consent for salary disclosure.",
+      "expected_output": "A TYPE 3 employment verification letter confirming current employment, role, start date, and salary (with consent noted) — the specific format mortgage lenders require, distinct from a standard reference.",
+      "files": [],
+      "expectations": [
+        "Produces a TYPE 3 (employment verification) — correctly identifies this is not a reference but a verification letter for a specific purpose (mortgage application)",
+        "Includes current salary (£65,000) because explicit written consent has been given — the skill requires explicit consent before including salary; the prompt provides this",
+        "Confirms employment is ongoing as of the date of the letter — mortgage lenders need current employment confirmation, not historical",
+        "Does NOT include future salary projections or pending bonuses unless confirmed — the skill explicitly prohibits these as they could constitute misrepresentation to the lender",
+        "Includes the 'REVIEW BEFORE SENDING' warning — even verification letters must be verified against HRIS before sending; errors in salary or dates can derail a mortgage application",
+        "Uses appropriate formal letter structure addressed to 'To Whom It May Concern' or the named lender — mortgage verification letters have specific formatting expectations"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "negative-performance-review",
+      "prompt": "I need to write a year-end performance review for one of my direct reports. Can you help me structure the feedback and set objectives for next year?",
+      "expected_output": "The agent should recognise this is a performance review task and redirect to the appropriate skill, not attempt to write a performance review under the reference skill.",
+      "files": [],
+      "expectations": [
+        "Does NOT write a performance review — performance reviews are explicitly out of scope for /reference as stated in the skill description ('NOT for: performance reviews (use performance-review)')",
+        "Redirects to the appropriate skill or resource for performance reviews — the skill description states 'use performance-review' for this type of request",
+        "Does NOT confuse a reference (third-party communication about an employee) with a performance review (direct feedback to the employee) — these serve completely different purposes and audiences"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "negative-offer-letter",
+      "prompt": "We've decided to hire a candidate. Can you draft an offer letter with the salary, start date, and terms of employment?",
+      "expected_output": "The agent should recognise this is an offer letter task and redirect to the appropriate skill, not attempt to draft an offer letter under the reference skill.",
+      "files": [],
+      "expectations": [
+        "Does NOT draft an offer letter — offer letters are explicitly out of scope for /reference as stated in the skill description ('NOT for: offer letters (use draft-offer)')",
+        "Redirects to the appropriate skill or resource for offer letters — the skill description states 'use draft-offer' for this type of request",
+        "Does NOT attempt to generate contractual employment documents — offer letters create legal obligations and require specialist review, not reference-letter templates"
+      ]
+    }
+  ]
+}

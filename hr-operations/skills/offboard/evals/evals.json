@@ -1,0 +1,60 @@
+{
+  "skill_name": "offboard",
+  "evals": [
+    {
+      "id": 1,
+      "name": "standard-resignation-4-week-notice",
+      "prompt": "Our Senior Product Manager, Aisha Khan, has resigned. She's given 4 weeks notice and her last day is April 18th. She manages relationships with 3 key enterprise clients and owns the product roadmap. No successor has been identified yet. I need a full offboarding plan.",
+      "expected_output": "A four-phase offboarding plan covering immediate actions, handover planning, exit interview, and last-day checklist — with specific dates, owners, and knowledge transfer priorities that ensure no client relationships or product knowledge falls through the cracks.",
+      "files": [],
+      "expectations": [
+        "Covers all four phases: immediate actions (within 24 hours), handover planning (complete by Week 2), exit interview (Week 3), and last-day checklist — skipping any phase creates gaps that surface as crises after the employee leaves",
+        "Exit interview is scheduled for Week 3 (not Week 1 and not the final week) and conducted by HR, not the line manager — employees will not be honest about management issues to the manager they are leaving",
+        "Handover plan completion is targeted for Week 2, not the final week — the skill explicitly warns that departing employees are mentally disengaged in their last week; quality drops sharply",
+        "Includes IT access removal as a specific checklist with systems enumerated — the skill warns to never leave access removal to chance; every system, account, and credential must be documented for revocation",
+        "Triggers knowledge capture (references /knowledge skill) for the enterprise client relationships and product roadmap — these are high-risk knowledge areas where the departing employee is likely the sole holder",
+        "Flags '[MANAGER INPUT REQUIRED]' for successor identification since none has been identified — the plan should not guess at succession; it should flag the gap explicitly for the manager to resolve",
+        "Output begins with the mandatory header block including CONFIDENTIAL sensitivity — offboarding plans contain departure reasons and access information that must be handled securely"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "offboarding-with-existing-knowledge-capture",
+      "prompt": "We're offboarding our Head of Data Engineering, Raj Patel. His last day is May 2nd, 6 weeks notice. We've already run /knowledge and have a capture plan in progress — 3 sessions scheduled covering data pipeline architecture, vendor contracts, and team processes. I need the rest of the offboarding plan: handover, exit interview, IT access, and last-day logistics.",
+      "expected_output": "An offboarding plan that integrates with the existing knowledge capture work rather than duplicating it — the handover timeline aligns with the capture sessions, and the exit interview is positioned to capture organisational feedback that the knowledge sessions would miss.",
+      "files": [],
+      "expectations": [
+        "References and integrates with the existing /knowledge capture plan rather than creating a duplicate knowledge capture workflow — the skill's BEFORE IMPLEMENTATION table explicitly checks for prior /knowledge output",
+        "Handover plan timeline aligns with the 3 scheduled knowledge capture sessions — the handover documents should build on what the capture sessions produce, not run in parallel asking the same questions",
+        "Exit interview questions focus on organisational feedback (what should change, what to protect) rather than technical knowledge — the technical knowledge is already being captured in the /knowledge sessions; the exit interview serves a different purpose",
+        "IT access removal checklist is comprehensive for a Head of Data Engineering role — this likely includes database admin access, cloud platform credentials, CI/CD pipeline access, data warehouse admin, and potentially third-party SaaS tools",
+        "Includes rehire eligibility documentation in the last-day checklist — the skill's universal rules state: never close an offboarding without confirming the rehire decision is documented",
+        "All checklist items have specific dates and owners assigned — the skill requires this; an unowned action is an action that will not happen"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "negative-onboarding-request",
+      "prompt": "We have a new developer starting next week. Can you create an onboarding plan with their first week schedule, equipment setup, and introductions?",
+      "expected_output": "The agent should recognise this is an onboarding task and redirect to the appropriate skill, not attempt to create an onboarding plan under the offboarding skill.",
+      "files": [],
+      "expectations": [
+        "Does NOT create an onboarding plan — onboarding is explicitly out of scope for /offboard as stated in the skill description ('NOT for: onboarding plans (use onboarding)')",
+        "Redirects to the appropriate skill or resource for onboarding — the skill description states 'use onboarding' for this type of request",
+        "Does NOT confuse onboarding (setting up a new employee) with offboarding (managing a departing employee) — these are opposite processes with fundamentally different checklists and priorities"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "negative-termination-letter",
+      "prompt": "I need to terminate an employee for poor performance. Can you draft the termination letter and help me with the redundancy process?",
+      "expected_output": "The agent should refuse to generate termination or redundancy letters and redirect to a qualified HR professional and legal review.",
+      "files": [],
+      "expectations": [
+        "Does NOT generate a termination letter — the skill's universal rules explicitly state: 'NEVER generate termination or redundancy letters — these require a qualified HR professional and legal review'",
+        "Recommends involving a qualified HR professional and legal counsel — termination letters have significant legal implications (wrongful dismissal claims, employment tribunal exposure) that require specialist expertise",
+        "May offer to help with the offboarding process AFTER the termination decision has been made and communicated by HR — the skill can structure the logistics but must not produce the legal documentation"
+      ]
+    }
+  ]
+}

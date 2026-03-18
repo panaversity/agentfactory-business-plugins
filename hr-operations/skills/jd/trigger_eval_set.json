@@ -1,0 +1,22 @@
+[
+  {"query": "I need to write a job description for a Senior Data Engineer in our analytics team", "should_trigger": true},
+  {"query": "Can you improve this job advert? It's getting very few applicants", "should_trigger": true},
+  {"query": "Write me a JD for a part-time Customer Support Specialist, remote, £25-30k", "should_trigger": true},
+  {"query": "I need a role description for a new Head of Product position we're creating", "should_trigger": true},
+  {"query": "Check this job posting for inclusive language issues and fix anything problematic", "should_trigger": true},
+  {"query": "We're hiring a Finance Manager — what should the job specification include?", "should_trigger": true},
+  {"query": "Help me draft a vacancy description for our careers page for a DevOps role", "should_trigger": true},
+  {"query": "I need a person specification and role profile for a junior marketing coordinator", "should_trigger": true},
+  {"query": "Can you write the requirements section for our software architect job posting?", "should_trigger": true},
+  {"query": "We're recruiting a new team lead for talent acquisition — draft the job description", "should_trigger": true},
+  {"query": "I need to prepare interview questions and a scoring rubric for our CFO candidates", "should_trigger": false},
+  {"query": "Draft an offer letter for the candidate we've selected — include salary and start date", "should_trigger": false},
+  {"query": "What's the market rate for a product manager in London? I need salary benchmarking", "should_trigger": false},
+  {"query": "Can you help me write a performance review for my direct report?", "should_trigger": false},
+  {"query": "We need to restructure the engineering department into product-aligned squads", "should_trigger": false},
+  {"query": "Create an onboarding plan for our new starter joining next Monday", "should_trigger": false},
+  {"query": "Our lead architect just resigned — I need a knowledge capture plan", "should_trigger": false},
+  {"query": "Help me write a reference letter for a former employee", "should_trigger": false},
+  {"query": "What's our company's parental leave policy?", "should_trigger": false},
+  {"query": "I need to set up a succession plan for our VP of Sales who's retiring", "should_trigger": false}
+]

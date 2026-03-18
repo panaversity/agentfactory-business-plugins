@@ -1,0 +1,42 @@
+{
+  "eval_id": 3,
+  "eval_name": "learning-synthesis-mixed-signals",
+  "expectations": [
+    {
+      "text": "All three sprints synthesized together",
+      "passed": true,
+      "evidence": "Cross-sprint patterns identified: tech works but pricing uncertain"
+    },
+    {
+      "text": "Assumption updates use specific evidence",
+      "passed": true,
+      "evidence": "Per-assumption updates with specific metrics from each sprint"
+    },
+    {
+      "text": "Pricing signal treated as highest-priority uncertainty",
+      "passed": true,
+      "evidence": "Pricing identified as bottleneck: 3 of 5 pushed back"
+    },
+    {
+      "text": "Accuracy gap on non-standard invoices flagged as threat",
+      "passed": true,
+      "evidence": "40% non-standard accuracy flagged as product risk"
+    },
+    {
+      "text": "Open questions identified for next sprint",
+      "passed": true,
+      "evidence": "Forward-looking priorities recommended"
+    },
+    {
+      "text": "Distinction between what customers said vs did maintained",
+      "passed": true,
+      "evidence": "Behavior vs opinion distinction maintained throughout"
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  }
+}

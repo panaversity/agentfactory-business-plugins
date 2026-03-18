@@ -1,0 +1,75 @@
+{
+  "skill_name": "brief",
+  "evals": [
+    {
+      "id": 1,
+      "name": "problem-brief-activation-drop",
+      "prompt": "We're seeing a 40% drop in user activation for our onboarding flow. New signups are completing registration but not creating their first project. Write a problem brief for this.",
+      "expected_output": "A Problem Brief with no solution proposals, containing: THE PROBLEM, WHO IS AFFECTED, EVIDENCE, IMPACT OF NOT SOLVING, WHAT WE DO NOT KNOW YET, and DISCOVERY QUESTIONS sections.",
+      "files": [],
+      "expectations": [
+        "Output is a Problem Brief (Type 1), not a Discovery or Initiative Brief — the user is framing a problem, not scoping research or pitching an initiative",
+        "Contains no solution proposals in the brief body — solutions anchor thinking prematurely and undermine the discovery process",
+        "WHO IS AFFECTED references a named persona, not 'users' — anonymous personas produce vague problem statements that fail to drive prioritisation",
+        "EVIDENCE section includes the 40% activation drop as quantified data — unquantified problems get deprioritised regardless of severity",
+        "WHAT WE DO NOT KNOW YET section is present and lists specific unknowns — acknowledging gaps is what distinguishes a useful brief from a complaint",
+        "DISCOVERY QUESTIONS contains 3-5 concrete questions — these become the scope of any follow-on research sprint",
+        "Output includes a next step or decision needed — a brief without a call to action sits in a doc folder indefinitely"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "discovery-brief-enterprise-export",
+      "prompt": "We want to run a 2-week discovery sprint to understand why enterprise customers are requesting bulk export functionality. Scope the discovery for me.",
+      "expected_output": "A Discovery Brief with ranked questions, methods, sample definition, out-of-scope section, and success criteria.",
+      "files": [],
+      "expectations": [
+        "Output is a Discovery Brief (Type 2) — the user is scoping research, not framing a problem or pitching an initiative",
+        "QUESTIONS TO ANSWER are ranked by priority — unranked questions produce unfocused research where time is spent on secondary questions before primary ones are answered",
+        "Methods section specifies interview or analysis methods appropriate for enterprise research — wrong method selection wastes the entire sprint",
+        "Sample section defines who to talk to with minimum n= target — discovery without a target sample size has no stopping criterion",
+        "OUT OF SCOPE section explicitly lists what is not being explored — unbounded discovery scope is the #1 cause of sprint overruns",
+        "SUCCESS CRITERIA are evidence-based ('we can answer question 1 with evidence from 5+ participants'), not activity-based ('we talked to users')"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "initiative-brief-marketplace",
+      "prompt": "I want to pitch a marketplace feature to leadership. We'd need buy-in from the CEO and VP Product before investing in a full PRD. Help me frame this as a one-page brief.",
+      "expected_output": "An Initiative Brief with THE BET, PROBLEM, PROPOSED DIRECTION, SIZE OF PRIZE, ROUGH EFFORT, RISKS, and DECISION NEEDED sections.",
+      "files": [],
+      "expectations": [
+        "Output is an Initiative Brief (Type 3) — the user needs stakeholder alignment, not problem framing or research scoping",
+        "THE BET section is one sentence capturing what, who, and why now — this is the hook that determines whether leadership reads the rest",
+        "SIZE OF PRIZE section quantifies commercial or user impact — leadership decisions require numbers, not adjectives",
+        "ROUGH EFFORT is expressed as order of magnitude (days/weeks/months/quarters) — false precision at this stage erodes trust",
+        "RISKS section lists top 2-3 risks — omitting risks makes the brief feel like advocacy rather than analysis",
+        "DECISION NEEDED clearly states what approval is requested — a brief without a specific ask produces no decision"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "negative-solution-in-problem-brief",
+      "prompt": "Write a problem brief about our slow dashboard loading times. The solution is to add a CDN and implement lazy loading for widgets.",
+      "expected_output": "A Problem Brief that does NOT include the suggested CDN/lazy loading solution in the brief body.",
+      "files": [],
+      "expectations": [
+        "Output is a Problem Brief — the user asked to frame a problem, even though they also proposed a solution",
+        "The CDN and lazy loading solutions are NOT included in the brief body — a problem brief with solutions defeats its purpose by anchoring the team on one approach before discovery",
+        "If the user's suggested solution is mentioned at all, it appears only in a hypothesis section clearly labelled as hypothesis — keeping it transparent rather than buried in the problem statement",
+        "The brief focuses on the problem (slow loading) with evidence and impact — the value of the brief is in the problem framing, not the solution proposal"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "negative-off-domain-code-request",
+      "prompt": "Write me a Python script that loads a CSV and generates a bar chart of monthly revenue.",
+      "expected_output": "This is a code generation request, not a product brief. The skill should not activate.",
+      "files": [],
+      "expectations": [
+        "The skill does NOT produce a brief — this is a technical implementation request with no brief-related intent",
+        "If the skill somehow activates, it should redirect the user to appropriate tools rather than producing a brief around a code request"
+      ]
+    }
+  ]
+}

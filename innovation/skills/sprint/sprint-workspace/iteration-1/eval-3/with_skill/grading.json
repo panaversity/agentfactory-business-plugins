@@ -1,0 +1,42 @@
+{
+  "eval_id": 3,
+  "eval_name": "sprint-retrospective",
+  "expectations": [
+    {
+      "text": "A-003 updated to PARTIALLY VALIDATED with evidence (4/5)",
+      "passed": true,
+      "evidence": "Output shows 'ANECDOTAL - PARTIALLY VALIDATED' with evidence '4/5 succeeded unassisted. 1 blocked by enterprise domain whitelisting'"
+    },
+    {
+      "text": "22-minute vs 15-minute target flagged as concern",
+      "passed": true,
+      "evidence": "'22 minutes is too long' explicitly flagged with analysis of excess 7 minutes"
+    },
+    {
+      "text": "Drop-off from stated intent (5/5) to actual use (3/5) surfaced",
+      "passed": true,
+      "evidence": "'Stated intent != actual usage. 5/5 said they'd use the tool; only 3/5 actually logged in during Week 2' -- explicitly surfaced as most important signal"
+    },
+    {
+      "text": "New assumption identified from domain whitelisting issue",
+      "passed": true,
+      "evidence": "New assumption created: 'Enterprise IT policies (domain whitelisting) won't block self-serve onboarding' marked PARTIALLY INVALIDATED"
+    },
+    {
+      "text": "Next sprint priority recommended based on learnings",
+      "passed": true,
+      "evidence": "Next sprint experiment: instrument first-use + return trigger mechanism"
+    },
+    {
+      "text": "What worked/didn't contains specific items",
+      "passed": true,
+      "evidence": "Specific items: core flow works (4/5), 22min too long, intent vs behavior gap, hidden blocker surfaced"
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  }
+}

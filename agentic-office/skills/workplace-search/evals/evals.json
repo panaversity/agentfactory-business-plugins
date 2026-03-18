@@ -1,0 +1,53 @@
+{
+  "skill_name": "workplace-search",
+  "evals": [
+    {
+      "id": 1,
+      "name": "cross-context-search-project",
+      "prompt": "Search everything we know about Project Nighthawk. Pull up all decisions, meeting notes, delegation records, and people involved across all memory layers.",
+      "expected_output": "A structured search result showing findings from all four memory layers: project memory (Nighthawk status, milestones), meeting notes/decision log (all decisions related to Nighthawk), people memory (everyone involved), delegation log (any active delegations), and a recommended next step.",
+      "files": [],
+      "expectations": [
+        "Search covers all four memory layers simultaneously — project, meeting notes, people, terminology, delegation log",
+        "Results are grouped by layer so the user can see where each piece of information comes from",
+        "RECOMMENDED NEXT STEP section provides a specific actionable recommendation based on the search results — search without action is information without utility",
+        "If any layer has no results, it says so explicitly rather than omitting the section"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "search-decision-history",
+      "prompt": "When did we decide to approve the analytics budget? Find the decision record with the date, who was involved, and any conditions that were attached.",
+      "expected_output": "A targeted search of the decision log first, cross-referenced with meeting notes, surfacing the specific decision, date, context, who was involved, and any conditions — with recommended next step.",
+      "files": [],
+      "expectations": [
+        "Search prioritises the decision log for this type of query ('when did we decide')",
+        "Cross-references with meeting notes to provide full context around the decision",
+        "Surfaces the complete decision including date, participants, and any conditions or caveats",
+        "If the decision is not found in workplace memory, says so explicitly — does not fabricate"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "negative-should-use-workplace-context",
+      "prompt": "Add a new project to my workplace memory. The project is called Phoenix, it is P1 priority, and Omar is the owner. Current milestone is requirements gathering.",
+      "expected_output": "This query should be handled by workplace-context, not workplace-search. Adding a new project entry to work.local.md is a workplace-context function.",
+      "files": [],
+      "expectations": [
+        "This query is about adding a new entry to workplace memory — it matches workplace-context triggers (add project, workplace memory)",
+        "Workplace-search is for searching and retrieving existing entries, not creating new ones"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "negative-should-use-executive-brief",
+      "prompt": "Prep me for the Nighthawk discussion with the board. I need the situation summary, key risks, stakeholder positions, and my recommended approach.",
+      "expected_output": "This query should be handled by executive-brief, not workplace-search. A situation brief with recommended approach is an executive-brief function.",
+      "files": [],
+      "expectations": [
+        "This query is about a situation brief with recommended approach and stakeholder analysis — it matches executive-brief triggers (prep me for, what do I need to know before, situation brief)",
+        "Workplace-search retrieves raw information from memory layers, it does not produce situation briefs with recommended approaches"
+      ]
+    }
+  ]
+}

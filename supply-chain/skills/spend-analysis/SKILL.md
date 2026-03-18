@@ -1,12 +1,17 @@
 ---
 name: spend-analysis
 description: >
-  Activate for: spend analysis, spend analytics, procurement spend, category
-  spend, vendor consolidation, supplier consolidation, price consistency,
-  price benchmark, market benchmark, RFQ strategy, spend report, category
-  management, tail spend, maverick spend, buying compliance, savings pipeline,
-  identified savings, cost reduction, procurement ROI, spend by category,
-  spend by vendor, spend by site.
+  Analyses procurement spend data to find savings. Activate for: spend analysis,
+  spend analytics, analyse spend, procurement spend, category spend, spend
+  across sites, spend consolidation, vendor consolidation, supplier consolidation,
+  price consistency, price inconsistency, price benchmark, market benchmark,
+  RFQ strategy, spend report, category management, tail spend, maverick spend,
+  buying compliance, savings pipeline, identified savings, cost reduction,
+  procurement ROI, spend by category, spend by vendor, spend by site,
+  packaging spend, consolidation opportunity.
+  USE THIS when the task involves analysing WHERE money is being spent, finding
+  price inconsistencies across sites, identifying consolidation opportunities,
+  or benchmarking prices against market rates.
   NOT for: invoice reconciliation (use invoice-reconciliation), vendor risk
   assessment (use supplier-risk), carrier performance (use logistics-brief).
 license: Apache-2.0

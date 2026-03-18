@@ -1,0 +1,45 @@
+{
+  "expectations": [
+    {
+      "text": "Leads with THE WORK section before requirements",
+      "passed": true,
+      "evidence": "Output has 'The Work' section (line 19) appearing before 'What We're Looking For' section (line 28). Structure: About the Role > The Work > Requirements > What We Offer."
+    },
+    {
+      "text": "Essential requirements list contains 5 or fewer items, each genuinely essential",
+      "passed": true,
+      "evidence": "4 essential requirements listed: software engineering fundamentals, CI/CD proficiency, experience building tools for engineers, mentoring ability. Output explicitly states '4 essential requirements — within the 3-5 guideline. All pass the calibration test.'"
+    },
+    {
+      "text": "Salary range £85,000-£110,000 is explicitly stated",
+      "passed": true,
+      "evidence": "Salary range appears in header ('£85,000 – £110,000'), in the body under 'What We Offer' ('Salary: £85,000 – £110,000 depending on experience'), confirming explicit inclusion."
+    },
+    {
+      "text": "Includes equal opportunities statement and reasonable adjustments offer",
+      "passed": true,
+      "evidence": "Equal Opportunities section present with full statement. Reasonable Adjustments section present with accommodation offer: 'If you need any reasonable adjustments to participate in the application or interview process, please let us know when you apply.'"
+    },
+    {
+      "text": "Zero instances of exclusionary language (rockstar, ninja, guru, digital native, young and dynamic)",
+      "passed": true,
+      "evidence": "Inclusive Language Check table in output confirms: Gender-coded language 'None found', Age-coded language 'None found'. No instances of rockstar, ninja, guru, digital native, or young and dynamic anywhere in the JD."
+    },
+    {
+      "text": "Requirements expressed as skill proficiency levels, not years of experience with specific tools",
+      "passed": true,
+      "evidence": "Requirements use proficiency language: 'Strong proficiency in container technologies', 'Solid experience with container orchestration', 'Working knowledge of CI/CD tooling'. Inclusive Language Check confirms: 'Years-of-experience thresholds: None — all requirements expressed as proficiency/skill levels'."
+    },
+    {
+      "text": "Output begins with the mandatory header block (TASK, DOCUMENT TYPE, JURISDICTION, CONFIGURATION, SENSITIVITY)",
+      "passed": true,
+      "evidence": "First 5 lines of output: 'TASK: Job Description -- Senior Software Engineer (Platform)', 'DOCUMENT TYPE: Job Description', 'JURISDICTION: United Kingdom', 'CONFIGURATION: best practices (hr.local.md not found)', 'SENSITIVITY: ROUTINE'."
+    }
+  ],
+  "summary": {
+    "passed": 7,
+    "failed": 0,
+    "total": 7,
+    "pass_rate": 1.0
+  }
+}

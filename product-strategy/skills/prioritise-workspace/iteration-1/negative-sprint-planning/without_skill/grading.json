@@ -1,0 +1,20 @@
+{
+  "expectations": [
+    {
+      "text": "The skill does NOT perform sprint planning",
+      "passed": false,
+      "evidence": "Performs sprint planning directly — gives sprint capacity advice (38-40 points), step-by-step sprint planning approach, and sprint tips. Does not redirect."
+    },
+    {
+      "text": "Redirects to /sprint-planning for sprint-level work allocation",
+      "passed": false,
+      "evidence": "No redirect to /sprint-planning or any other tool. Proceeds to answer the sprint planning question directly."
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "failed": 2,
+    "total": 2,
+    "pass_rate": 0.0
+  }
+}

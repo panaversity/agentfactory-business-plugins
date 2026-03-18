@@ -1,0 +1,58 @@
+{
+  "skill_name": "prd",
+  "evals": [
+    {
+      "id": 1,
+      "name": "prd-workflow-automation",
+      "prompt": "Write a PRD for our Workflow Automation feature. This is a major new product area that will require work from the platform team, the integrations team, and the frontend team. Target delivery is Q3. The feature lets users create automated workflows triggered by data events.",
+      "expected_output": "A complete PRD with all 10 sections, status gates, failure threshold, and named personas.",
+      "files": [],
+      "expectations": [
+        "Contains all 10 PRD sections (Executive Summary through Open Questions) — missing sections represent gaps in product thinking that surface as scope creep during build",
+        "Success metrics include a failure threshold — knowing when to change direction is as important as knowing when to celebrate; omitting it means the team has no kill switch",
+        "Uses named personas from product.local.md, not 'users' or 'a user' — anonymous personas produce requirements that satisfy nobody because they target everybody",
+        "Functional requirements use MoSCoW prioritisation with no more than 60% MUST — if everything is a MUST, the PRD is a wish list, not a plan; it guarantees scope pressure and delayed delivery",
+        "Technical architecture notes section is present (even if placeholder awaiting engineering review) — shipping a PRD without eng input on architecture is how you get 'this will take 6 months, not 6 weeks' in sprint planning",
+        "PRD status is marked as DRAFT — skipping to REVIEW without completing sections creates false confidence in readiness",
+        "Go-to-market section addresses documentation, CS enablement, and sales enablement — features that ship without GTM readiness produce support ticket spikes and missed upsell opportunities",
+        "Non-functional requirements include performance targets with specific numbers — 'fast' is not a requirement; '< 200ms p95 response time' is"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "prd-ai-search-platform",
+      "prompt": "Write the full requirements for our new AI-powered search platform. This will involve the data team, frontend team, and infrastructure team over two quarters. We want semantic search, faceted filtering, and search analytics.",
+      "expected_output": "A comprehensive PRD scoping a multi-team, multi-quarter initiative with explicit scope boundaries despite the broad request.",
+      "files": [],
+      "expectations": [
+        "The PRD includes explicit scope boundaries despite the user saying 'full requirements' — unbounded PRDs expand indefinitely and never reach REFINED status",
+        "Functional requirements distinguish MUST/SHOULD/COULD for semantic search, faceting, and analytics — these are three separable capabilities that should ship independently",
+        "Dependencies table maps cross-team dependencies (data, frontend, infra) — a multi-team PRD without a dependency map produces parallel work that doesn't integrate",
+        "Risk table identifies technical risks specific to AI/ML features (model quality, latency, data pipeline) — AI features have unique failure modes that generic risk templates miss",
+        "Phased rollout plan (beta to GA) is present — large platform features shipped without phased rollout create blast radius problems"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "negative-single-feature-spec",
+      "prompt": "Write a spec for adding a dark mode toggle to our settings page. It's one feature for the frontend team, should take about a sprint.",
+      "expected_output": "The skill should redirect to /write-spec — this is a single-feature, single-team, one-sprint scope that does not warrant a full PRD.",
+      "files": [],
+      "expectations": [
+        "The skill recognises this as a single-feature scope and recommends /write-spec instead of /prd — producing a 10-section PRD for a settings toggle is over-engineering the documentation",
+        "If a PRD is produced anyway, it should explicitly note that a feature spec would be more appropriate for this scope"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "negative-roadmap-planning",
+      "prompt": "Help me plan our product roadmap for Q3 and Q4. I need to decide which initiatives to pursue and in what order.",
+      "expected_output": "The skill should redirect to /roadmap-update — this is roadmap planning, not requirements documentation.",
+      "files": [],
+      "expectations": [
+        "The skill does NOT produce a PRD for a roadmap planning request — roadmap planning involves sequencing multiple initiatives, not documenting one",
+        "Redirects to /roadmap-update or /prioritise depending on whether the user needs sequencing or scoring"
+      ]
+    }
+  ]
+}

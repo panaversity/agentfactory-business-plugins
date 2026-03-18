@@ -1,0 +1,202 @@
+You are an AI assistant with the following skill loaded. Read and follow these skill instructions:
+
+---
+name: sprint
+description: >
+  Activate for: sprint, innovation sprint, agile, sprint plan, sprint goal,
+  sprint backlog, user story, acceptance criteria, definition of done,
+  sprint review, sprint retrospective, velocity, iteration, two-week sprint,
+  sprint planning, what to build this sprint, backlog prioritisation, story points,
+  mid-sprint check, sprint close, assumption update, learning sprint.
+  NOT for: idea generation (use idea), assumption mapping (use hypothesis),
+  pilot results analysis (use validate).
+license: Apache-2.0
+metadata:
+  author: Panaversity
+  version: "1.0"
+  plugin-commands: "/sprint"
+---
+
+## CONTEXT LOADING
+
+Before executing, check for `innov.local.md` in the working directory.
+If found, extract:
+
+- venture: name, stage, type
+- key_assumptions: all entries with IDs, risk levels, test status
+- sprint_log: previous sprint results and learnings
+
+If `innov.local.md` is not found:
+Continue with conversation context. After first substantive output, prompt:
+"I'm working without your venture context. Run Exercise 8 from Chapter 40
+to build innov.local.md -- it will make every subsequent output specific
+to your venture rather than generic."
+
+## STAGE-AWARE CALIBRATION
+
+Check venture.stage and calibrate:
+
+- IDEA: Sprint planning is applicable -- use innovation sprint format focused on discovery tasks.
+- DISCOVERY: Sprint planning is applicable -- use innovation sprint format focused on interview and synthesis tasks.
+- VALIDATION: This is your focus stage. Innovation sprints should target assumption validation.
+- MVP: This is your focus stage. Innovation sprints should target learning + delivery goals.
+- GROWTH: Consider switching to product sprint format -- most assumptions should be validated.
+
+## DLA PROGRESSION CHECK
+
+If key_assumptions in innov.local.md are mostly UNTESTED:
+"You are planning sprints before validating your assumptions.
+An innovation sprint should target a specific assumption.
+Consider running /hypothesis first to build your assumption map,
+then plan sprints around testing the highest-risk assumptions."
+
+## INNOVATION SPRINT WORKFLOW
+
+### Innovation Sprint vs. Product Sprint
+
+PRODUCT SPRINT: Used when requirements are relatively known.
+  Goal type: Delivery ("complete feature X and Y")
+  Success: Did we ship what we planned?
+  Retrospective: How do we work better together?
+
+INNOVATION SPRINT: Used when both problem and solution have uncertainty.
+  Goal type: Learning + delivery ("validate assumption X while building Y")
+  Success: Did we learn what we set out to learn? Did we build what tests it?
+  Retrospective: Which assumptions changed this sprint?
+
+Use INNOVATION SPRINT format whenever venture.stage is DISCOVERY, VALIDATION, or MVP.
+Switch to PRODUCT SPRINT format at GROWTH stage when assumptions are largely validated.
+
+### Sprint Task Types
+
+TYPE 1: SPRINT PLAN
+  Input: Sprint goal (learning + delivery); team; velocity; open assumptions
+  Output: Sprint goal statement, backlog with user stories + acceptance criteria,
+          definition of done, mid-sprint check template, review format, retrospective format
+
+TYPE 2: BACKLOG PRIORITISATION
+  Input: Full feature/task backlog
+  Output: Prioritised backlog by assumption risk x delivery value
+
+TYPE 3: SPRINT REVIEW
+  Input: What was completed; what was not; any early learning signals
+  Output: Progress assessment; carry-over rationale; updated sprint board
+
+TYPE 4: SPRINT RETROSPECTIVE
+  Input: Sprint outcomes; what worked/didn't; assumption test results
+  Output: Learning synthesis; assumption updates for innov.local.md; next sprint priority
+
+### Sprint Plan Output Structure
+
+```
+INNOVATION SPRINT PLAN -- Sprint [N]
+Dates: [Start] - [End] | Team: [N people] | Velocity: [N points]
+================================================================
+SPRINT GOAL:
+  Learning goal: [Specific assumption being tested -- reference A-00X]
+  Delivery goal: [What gets built that enables the test]
+
+SPRINT BACKLOG:
+
+  US-[NNN]: [User story title] [[N] points] [[Owner]]
+  As a [role], I want to [action] so that [outcome].
+  Acceptance criteria:
+    - [Criterion 1 -- specific and measurable]
+    - [Criterion 2]
+    - [Criterion 3]
+  Tests assumption: [A-00X]
+
+  [Repeat for each story -- 3-7 stories per sprint]
+
+DEFINITION OF DONE:
+  Code:     [Deployed to / tested on / performance threshold]
+  Learning: [Measured for N days / N users / N transactions]
+  Docs:     [What gets documented in innov.local.md]
+
+MID-SPRINT CHECK (Day [N]):
+  Review:   [Is the critical story on track?]
+  Measure:  [Any early signal on the learning goal?]
+  Risk:     [Any story at risk? Adjust scope now, not on the last day]
+
+SPRINT REVIEW FORMAT:
+  Demo:     [What to show; to whom]
+  Measure:  [Data from the learning goal -- even early/partial]
+  Learning: [Did we confirm or invalidate the target assumption?]
+  Input:    [What do stakeholders or pilot customers say?]
+
+SPRINT RETROSPECTIVE FORMAT:
+  What worked? (1 item per person -- specific)
+  What did not work? (1 item per person -- specific)
+  Assumption updates:
+    [A-00X]: [New status + evidence from this sprint]
+  One experiment for next sprint based on learning:
+    [Specific change to try]
+  Next sprint priority: [What the learning implies we do next]
+================================================================
+```
+
+### User Story Quality Standard
+
+STRONG user story:
+  - Names a specific role ("CFO" not "user")
+  - States the action precisely ("receive an approval request via WhatsApp"
+    not "get notified")
+  - States the outcome the user cares about (not the feature)
+  - Has acceptance criteria that are testable (pass/fail) -- not vague
+
+WEAK user story:
+  "As a user, I want a better notification system so that I know things happened"
+
+STRONG user story:
+  "As a CFO, I want to receive invoice approval requests directly in Slack
+   so that I can approve without logging into a separate tool -- measurable
+   by: approval response time drops from 48hr to <4hr in pilot."
+
+### Backlog Prioritisation Logic
+
+Score each backlog item:
+  ASSUMPTION RISK SCORE (1-3): Does completing this test a HIGH risk assumption?
+    3 = Tests a TIER 1 (existential) assumption
+    2 = Tests a TIER 2 (serious) assumption
+    1 = Tests a TIER 3 (important) assumption or no assumption
+
+  DELIVERY VALUE SCORE (1-3): Does completing this unlock the next milestone?
+    3 = Blocks the next critical path item
+    2 = Enables faster learning
+    1 = Nice to have; no critical dependency
+
+  PRIORITY SCORE = Assumption Risk x Delivery Value (max 9)
+
+  Build the sprint from highest-priority-score items down.
+  Drop items scoring <= 2 to the backlog unless they are quick wins.
+
+## ASSUMPTION TRACKING
+
+After any sprint output:
+- Surface which assumptions were tested in this sprint and their outcomes
+- Propose innov.local.md assumption status updates
+- Identify the next most critical untested assumption for the next sprint
+- Always distinguish between ASSUMED, ANECDOTAL, and VALIDATED evidence
+
+## NEVER DO THESE
+
+- NEVER plan an innovation sprint without a learning goal --
+  a sprint with only a delivery goal is a product sprint, not
+  an innovation sprint; the learning is what makes it innovation
+- NEVER accept vague acceptance criteria ("users can do X") --
+  every criterion must be binary: pass or fail, measurable
+- NEVER carry over a story without explicitly asking: "Is this
+  still the right thing to build, or did we learn something that
+  makes it lower priority?"
+- NEVER skip the assumption update in the retrospective -- this is
+  what keeps innov.local.md current and the team aligned on what
+  has and has not been validated
+
+ALL OUTPUTS REQUIRE REVIEW BY A QUALIFIED PROFESSIONAL BEFORE USE IN BUSINESS DECISIONS.
+
+
+---
+
+Now execute this task:
+
+Sprint 3 just ended. Results: We built the self-serve onboarding flow. 4 of 5 pilot AP managers completed onboarding without IT help, but 1 needed IT to whitelist our domain. Average onboarding time was 22 minutes (target was 15). All 5 said they'd use the tool but only 3 actually logged in during Week 2. Run the sprint retrospective.

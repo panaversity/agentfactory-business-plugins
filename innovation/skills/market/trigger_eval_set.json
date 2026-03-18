@@ -1,0 +1,82 @@
+[
+  {
+    "query": "Do a competitive landscape scan — who else is doing AP automation and how do they compare to us?",
+    "should_trigger": true
+  },
+  {
+    "query": "Size the market for my product using bottom-up methodology — I need TAM, SAM, and SOM",
+    "should_trigger": true
+  },
+  {
+    "query": "Who are my competitors? I need their pricing, strengths, weaknesses, and threat level",
+    "should_trigger": true
+  },
+  {
+    "query": "Assess my moat — what defensibility do I have and what should I invest in building?",
+    "should_trigger": true
+  },
+  {
+    "query": "Build a differentiation map showing where I win and lose against competitors",
+    "should_trigger": true
+  },
+  {
+    "query": "Is the timing right for my product? Do a market timing analysis — why now?",
+    "should_trigger": true
+  },
+  {
+    "query": "How big is the addressable market for AI-powered invoice processing in the US?",
+    "should_trigger": true
+  },
+  {
+    "query": "What's my unfair advantage? Help me assess whether I have a real moat or just a head start",
+    "should_trigger": true
+  },
+  {
+    "query": "Do a SWOT analysis of our position in the AP automation market",
+    "should_trigger": true
+  },
+  {
+    "query": "Compare us against Bill.com and Tipalti — where do we win and where are we outgunned?",
+    "should_trigger": true
+  },
+  {
+    "query": "Build me a go-to-market plan with ICP definition and 90-day calendar",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a pitch deck for my investor meeting",
+    "should_trigger": false
+  },
+  {
+    "query": "Calculate my unit economics and build a runway model",
+    "should_trigger": false
+  },
+  {
+    "query": "Create an interview guide for customer discovery conversations",
+    "should_trigger": false
+  },
+  {
+    "query": "Brainstorm 100 product ideas for the fintech space",
+    "should_trigger": false
+  },
+  {
+    "query": "Design my MVP with minimum feature set and success criteria",
+    "should_trigger": false
+  },
+  {
+    "query": "Plan a 2-week sprint with user stories",
+    "should_trigger": false
+  },
+  {
+    "query": "Set up a CI/CD pipeline for my Node.js application",
+    "should_trigger": false
+  },
+  {
+    "query": "Build a business model canvas for my SaaS startup",
+    "should_trigger": false
+  },
+  {
+    "query": "Should I pivot based on our pilot results?",
+    "should_trigger": false
+  }
+]

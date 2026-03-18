@@ -1,0 +1,40 @@
+{
+  "expectations": [
+    {
+      "text": "Identifies this as PROACTIVE capture (no departure planned)",
+      "passed": true,
+      "evidence": "Line 13: 'This is a proactive knowledge audit — no departures are planned or anticipated. The objective is to identify where critical institutional knowledge is concentrated.' Line 15: 'Approach: Systematic (APQC Level 2-3 progression); build knowledge articles over time, not all at once.'"
+    },
+    {
+      "text": "Scores each team member using the five-factor risk assessment",
+      "passed": true,
+      "evidence": "Lines 33-42: Full risk scoring table with all five factors (Tenure, Role criticality, Documentation level, Successor readiness, Client/revenue impact) for all four team members. CFO: 15, Financial Controller: 12, AP/AR Manager: 10, Junior Accountant: 5."
+    },
+    {
+      "text": "Does NOT classify the CFO as LOW RISK without verifying knowledge distribution",
+      "passed": true,
+      "evidence": "CFO classified as HIGH RISK (15/15 — maximum). Line 66: 'Two of four team members score HIGH RISK. The CFO scores the maximum possible (15/15), meaning a sudden departure would cause severe, immediate knowledge loss.' Not classified as LOW."
+    },
+    {
+      "text": "Recommends different capture methods based on knowledge type",
+      "passed": true,
+      "evidence": "CFO: 'Interview-based (primary — for strategic, relational, and institutional knowledge); Document review (secondary — for financial models, board packs, strategic plans)'. Different methods specified per knowledge area and per team member based on the type of knowledge held."
+    },
+    {
+      "text": "Identifies specific knowledge areas for each team member",
+      "passed": true,
+      "evidence": "CFO: 6 specific areas (board/investor relationships, banking/lending, strategic financial planning methodology, organisational history, regulatory/audit strategy, vendor/insurance broker relationships). Financial Controller and AP/AR Manager also have domain-specific areas listed, not generic 'finance knowledge'."
+    },
+    {
+      "text": "Provides a prioritised capture schedule that does NOT require capturing everything immediately",
+      "passed": true,
+      "evidence": "CFO sessions spread over 8-12 weeks (6 sessions x 90 minutes). The approach explicitly states 'build knowledge articles over time, not all at once.' This is proportionate to the proactive (non-urgent) context."
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  }
+}

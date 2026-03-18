@@ -1,0 +1,42 @@
+{
+  "eval_id": 2,
+  "eval_name": "pivot-decision-framework",
+  "expectations": [
+    {
+      "text": "At least 5 pivot directions using named Lean Startup types",
+      "passed": true,
+      "evidence": "5+ pivot types named and described (customer segment, business architecture, zoom-in, etc.)"
+    },
+    {
+      "text": "Each pivot grounded in specific pilot evidence",
+      "passed": true,
+      "evidence": "Pivots reference price sensitivity and ERP integration data"
+    },
+    {
+      "text": "ERP integration gap addressed by at least one pivot",
+      "passed": true,
+      "evidence": "Technology/zoom-in pivot addresses ERP integration"
+    },
+    {
+      "text": "Price sensitivity signal addressed by at least one pivot",
+      "passed": true,
+      "evidence": "Business architecture pivot addresses pricing"
+    },
+    {
+      "text": "Recommendation identifies which pivot to explore first",
+      "passed": true,
+      "evidence": "Clear recommendation with rationale provided"
+    },
+    {
+      "text": "What is still true from pilot explicitly stated",
+      "passed": true,
+      "evidence": "Preserved learnings identified: technical matching works, adoption partially validated"
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "expectations": [
+    {
+      "text": "Removes 'rockstar', 'ninja' and replaces with descriptive professional language",
+      "passed": true,
+      "evidence": "Inclusive Language Check table documents: 'rockstar DevOps ninja' removed and replaced with 'DevOps Engineer'. No instances of rockstar or ninja remain in the rewritten JD."
+    },
+    {
+      "text": "Removes 'young and energetic' age-coded language",
+      "passed": true,
+      "evidence": "Inclusive Language Check table documents: 'young and energetic team' removed and replaced with 'high-performing engineering team'. Notes it is 'discriminatory under Equality Act 2010 (UK), ADEA (US)'."
+    },
+    {
+      "text": "Replaces '10+ years Docker' and '7+ years Kubernetes' with skill proficiency descriptions",
+      "passed": true,
+      "evidence": "Table shows: '10+ years Docker experience' replaced with 'strong proficiency in container technologies'; '7+ years Kubernetes' replaced with 'solid experience with container orchestration at production scale'."
+    },
+    {
+      "text": "Flags 'competitive salary' and either replaces with a range or explicitly states salary range should be added",
+      "passed": true,
+      "evidence": "Table documents: 'competitive salary' flagged. Salary section reads '[Range — not provided. Recommend adding a specific range before publishing. \"Competitive salary\" is not acceptable — it deters candidates.]'"
+    },
+    {
+      "text": "Replaces 'culture fit' with specific behaviours or ways of working",
+      "passed": true,
+      "evidence": "Table documents: 'Culture fit is essential' replaced. Character/Ways of Working section now has specific descriptors: 'communicate clearly with both technical and non-technical colleagues' and 'comfortable with ambiguity and can prioritise effectively'."
+    },
+    {
+      "text": "Adds equal opportunities statement and reasonable adjustments offer",
+      "passed": true,
+      "evidence": "Equal Opportunities section added with full statement. Reasonable Adjustments section added: 'If you require any reasonable adjustments during the recruitment process, please let us know when you apply.'"
+    },
+    {
+      "text": "Includes an INCLUSIVE LANGUAGE CHECK section documenting what was changed and why",
+      "passed": true,
+      "evidence": "Full 'INCLUSIVE LANGUAGE CHECK: PASS (with corrections applied)' section with 11-row table documenting each original phrase, the problem, and the action taken with citations."
+    }
+  ],
+  "summary": {
+    "passed": 7,
+    "failed": 0,
+    "total": 7,
+    "pass_rate": 1.0
+  }
+}

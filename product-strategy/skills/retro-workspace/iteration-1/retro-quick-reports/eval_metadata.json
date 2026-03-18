@@ -1,0 +1,28 @@
+{
+  "eval_id": 1,
+  "eval_name": "retro-quick-reports",
+  "prompt": "Run a product retrospective for our Quick Reports feature. It shipped 6 weeks ago. Data: adoption is 34% (target was 50%), support tickets about reports dropped 60%, NPS for reporting went from 6.2 to 7.1. It shipped 1 week late due to a scope change (added PDF export mid-sprint).",
+  "assertions": [
+    {
+      "text": "Q1 (Did it solve the problem?) uses the actual data provided — adoption at 34% vs 50% target, support tickets down 60%, NPS up from 6.2 to 7.1 — cherry-picking positive metrics while ignoring the adoption miss would produce a misleading retro"
+    },
+    {
+      "text": "Q1 verdict reflects mixed results: adoption below target but support impact and NPS strongly positive — binary PASS/FAIL on a nuanced outcome misses the learning"
+    },
+    {
+      "text": "Q2 (Did we build it as intended?) flags the 1-week delay and PDF export scope change — the scope change is the process issue that needs a corrective action, not just a footnote"
+    },
+    {
+      "text": "Q3 (Were the metrics right?) evaluates whether adoption %, support tickets, and NPS were the right things to measure — metrics quality is often the most valuable retro finding"
+    },
+    {
+      "text": "Q4 (What would we do differently?) produces specific, testable process changes — 'communicate better' is not a process change; 'scope changes after sprint start require PM + eng lead sign-off' is"
+    },
+    {
+      "text": "PRODUCT.LOCAL.MD UPDATES section recommends at least one quality rule — a retro that produces zero configuration changes was a waste of everyone's time"
+    },
+    {
+      "text": "Follow-on actions have owners and due dates — actionless retros are therapy sessions, not improvement tools"
+    }
+  ]
+}

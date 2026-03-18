@@ -1,0 +1,53 @@
+{
+  "skill_name": "progress-tracker",
+  "evals": [
+    {
+      "id": 1,
+      "name": "weekly-status-all-projects",
+      "prompt": "Give me the weekly project status across all active projects. I need RAG status, current milestones, blockers, and what the critical path is for this week.",
+      "expected_output": "A weekly project status covering all active projects from work.local.md with RAG status per project (GREEN/AMBER/RED), current milestone, next milestone, risks, this week's action, open delegations, a cross-project critical path (3-5 items), and a blockers section with ownership and days blocked.",
+      "files": [],
+      "expectations": [
+        "Each project shows RAG status that follows the rules: GREEN only if all milestones on schedule, AMBER if one milestone at risk, RED if milestone missed or hard blocker present",
+        "Critical path section lists 3-5 items with owners and due dates — the items that make the week a success",
+        "Blockers section classifies each as SOFT, HARD, or STALE (>7 days) with named owner for resolution",
+        "Never shows GREEN for a project where a milestone has slipped without explicit acknowledgement"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "executive-dashboard-view",
+      "prompt": "Generate the executive dashboard. I need the headline status, P1 and P2 project summaries, key metrics from domain agents, open actions due this week, and upcoming decisions.",
+      "expected_output": "A one-page executive dashboard with headline status (GREEN/AMBER/RED), P1 projects with RAG and current milestone, P2 projects in briefer format, key metrics from domain agents, open actions due this week, open delegations, upcoming decisions, and calendar highlights.",
+      "files": [],
+      "expectations": [
+        "Dashboard is no longer than one page — brevity is required for executive consumption",
+        "Headline status is the first element — a busy executive needs to know immediately whether anything requires attention",
+        "Key metrics section only includes metrics configured in work.local.md dashboard.metrics_sources — not invented metrics",
+        "Open actions show only items due this week or overdue, not the full backlog"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "negative-should-use-digest",
+      "prompt": "What do I need to know today? Give me my morning briefing with today's calendar, open delegations, and priorities for the day.",
+      "expected_output": "This query should be handled by digest, not progress-tracker. A daily morning briefing is a digest function.",
+      "files": [],
+      "expectations": [
+        "This query is about a daily briefing for today — it matches digest triggers (what do I need to know today, morning briefing)",
+        "Progress-tracker produces project status reports and executive dashboards, not daily personal briefings"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "negative-should-use-task-intelligence",
+      "prompt": "Brain dump all the things in my head and sort them by priority. I have about 15 items I need to capture and organise into P1, P2, P3.",
+      "expected_output": "This query should be handled by task-intelligence, not progress-tracker. Brain dump capture and prioritisation is a task-intelligence function.",
+      "files": [],
+      "expectations": [
+        "This query is about capturing unstructured items and prioritising them — it matches task-intelligence triggers (brain dump, prioritise, P1 P2 P3)",
+        "Progress-tracker handles project-level status tracking and milestone management, not personal item capture and sorting"
+      ]
+    }
+  ]
+}

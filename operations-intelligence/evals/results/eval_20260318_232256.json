@@ -1,0 +1,20 @@
+{
+  "timestamp": "20260318_232256",
+  "results": [
+    {
+      "id": "route_incident_postmortem",
+      "category": "routing",
+      "checks": {
+        "content": {
+          "post-mortem": true,
+          "timeline": true,
+          "root cause": true
+        },
+        "routing": true
+      },
+      "content_pass": true,
+      "status": "pass",
+      "output_preview": "I need to ask some questions before I can write a quality post-mortem. The skill requires specific timestamps, named owners, and factual details \u2014 not fabricated ones.\n\nLet me draft the report with placeholder brackets for the details only you can provide, so you can fill them in before the review meeting.\n\n```\nTASK:          Post-Mortem \u2014 Payment Gateway Outage\nINCIDENT TYPE: Post-Mortem\nCONFIGURATION: Not configured (ops.local.md not present)\nDATE:          2026-03-19\nOWNER:         [Named pos"
+    }
+  ]
+}

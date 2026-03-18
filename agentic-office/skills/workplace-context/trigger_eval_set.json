@@ -1,0 +1,82 @@
+[
+  {
+    "query": "Add a new person to my workplace memory — Fatima Khan, Head of Legal, prefers written communication",
+    "should_trigger": true
+  },
+  {
+    "query": "Add a new project to workplace memory — Project Phoenix, P1, Omar is the owner",
+    "should_trigger": true
+  },
+  {
+    "query": "Give me a person brief on Omar — his role, communication style, and what he is working on",
+    "should_trigger": true
+  },
+  {
+    "query": "Add a new term to our terminology dictionary: Nighthawk means the facility expansion project",
+    "should_trigger": true
+  },
+  {
+    "query": "Update workplace memory after the exec weekly — Nighthawk moved to AT RISK, Omar shifted focus",
+    "should_trigger": true
+  },
+  {
+    "query": "Show me the team directory — who are all the people in my workplace memory?",
+    "should_trigger": true
+  },
+  {
+    "query": "Revise workplace memory to reflect that Bilal has been promoted to CTO",
+    "should_trigger": true
+  },
+  {
+    "query": "What is Omar's communication style? How should I approach him about the budget?",
+    "should_trigger": true
+  },
+  {
+    "query": "Post-meeting memory revision — update projects, decisions, and people entries from today",
+    "should_trigger": true
+  },
+  {
+    "query": "Who works on Project Nighthawk? Pull up all people connected to that project",
+    "should_trigger": true
+  },
+  {
+    "query": "Search all layers for everything we know about the vendor dispute",
+    "should_trigger": false
+  },
+  {
+    "query": "Remember that the quarterly review is on the 15th",
+    "should_trigger": false
+  },
+  {
+    "query": "Give me my daily digest with today's priorities",
+    "should_trigger": false
+  },
+  {
+    "query": "Brain dump my priorities and sort into P1 P2 P3",
+    "should_trigger": false
+  },
+  {
+    "query": "Delegate the contract review to Bilal by Thursday",
+    "should_trigger": false
+  },
+  {
+    "query": "Give me the executive dashboard with RAG status",
+    "should_trigger": false
+  },
+  {
+    "query": "Prep me for the board meeting — agenda items and stakeholder notes",
+    "should_trigger": false
+  },
+  {
+    "query": "Load cross-domain context for the restructuring project",
+    "should_trigger": false
+  },
+  {
+    "query": "Give me a situation brief on the Karachi expansion",
+    "should_trigger": false
+  },
+  {
+    "query": "Configure the agentic office and set up my workplace memory from scratch",
+    "should_trigger": false
+  }
+]

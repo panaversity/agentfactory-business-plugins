@@ -1,0 +1,13 @@
+{
+  "eval_id": 2,
+  "eval_name": "development-mapping-high-potential",
+  "prompt": "We want to map our internal talent pipeline for senior leadership roles. I have three high-potential employees: Priya (Senior Manager, Finance, 3 years), Marcus (Senior Manager, Operations, 5 years), and Li Wei (Manager, Strategy, 2 years). No specific vacancy — this is proactive development mapping. What does each person need to be ready for a Director-level role?",
+  "assertions": [
+    "Context is correctly identified as development mapping (not vacancy-driven succession)",
+    "Does NOT base readiness on tenure alone",
+    "Includes motivation and career intent dimension for each candidate",
+    "Provides specific, actionable development recommendations (not generic advice)",
+    "Output begins with the mandatory header block including CONFIDENTIAL sensitivity",
+    "Distinguishes between experience gaps and skill gaps for each candidate"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "expectations": [
+    {
+      "text": "The skill does NOT attempt to review metrics",
+      "passed": false,
+      "evidence": "Provides a full metrics review framework — breaks down MRR, Churn Rate, and NPS into sub-metrics and analysis approaches. Attempts to answer the question directly rather than redirecting."
+    },
+    {
+      "text": "Redirects to /metrics-review for product analytics review",
+      "passed": false,
+      "evidence": "No redirect to /metrics-review. Offers to help review the data directly."
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "failed": 2,
+    "total": 2,
+    "pass_rate": 0.0
+  }
+}

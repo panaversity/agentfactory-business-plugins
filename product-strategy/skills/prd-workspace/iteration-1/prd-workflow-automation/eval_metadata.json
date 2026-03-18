@@ -1,0 +1,15 @@
+{
+  "eval_id": 1,
+  "eval_name": "prd-workflow-automation",
+  "prompt": "Write a PRD for our Workflow Automation feature. This is a major new product area that will require work from the platform team, the integrations team, and the frontend team. Target delivery is Q3. The feature lets users create automated workflows triggered by data events.",
+  "assertions": [
+    "Contains all 10 PRD sections (Executive Summary through Open Questions) — missing sections represent gaps in product thinking that surface as scope creep during build",
+    "Success metrics include a failure threshold — knowing when to change direction is as important as knowing when to celebrate; omitting it means the team has no kill switch",
+    "Uses named personas from product.local.md, not 'users' or 'a user' — anonymous personas produce requirements that satisfy nobody because they target everybody",
+    "Functional requirements use MoSCoW prioritisation with no more than 60% MUST — if everything is a MUST, the PRD is a wish list, not a plan; it guarantees scope pressure and delayed delivery",
+    "Technical architecture notes section is present (even if placeholder awaiting engineering review) — shipping a PRD without eng input on architecture is how you get 'this will take 6 months, not 6 weeks' in sprint planning",
+    "PRD status is marked as DRAFT — skipping to REVIEW without completing sections creates false confidence in readiness",
+    "Go-to-market section addresses documentation, CS enablement, and sales enablement — features that ship without GTM readiness produce support ticket spikes and missed upsell opportunities",
+    "Non-functional requirements include performance targets with specific numbers — 'fast' is not a requirement; '< 200ms p95 response time' is"
+  ]
+}

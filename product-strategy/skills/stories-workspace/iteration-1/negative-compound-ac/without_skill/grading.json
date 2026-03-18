@@ -1,0 +1,30 @@
+{
+  "expectations": [
+    {
+      "text": "The original compound AC with multiple 'and' statements is NOT preserved as-is",
+      "passed": true,
+      "evidence": "The original compound AC is not preserved verbatim. Instead it has been distributed across Story 2 (navigation) and Story 3 (highlighting). However, the split happened organically, not because the model recognized the compound issue."
+    },
+    {
+      "text": "The AC is split into 2-3 separate, independently testable statements",
+      "passed": true,
+      "evidence": "The original AC is effectively covered by: Story 2 AC2 ('Given a user clicks a search result, then the corresponding content page loads'), Story 2 AC4 ('then the search term is highlighted in the content'), and Story 3 ACs cover highlighting further. The concepts are separated."
+    },
+    {
+      "text": "No single AC contains 'and' connecting multiple conditions",
+      "passed": false,
+      "evidence": "Story 2 AC2 has no 'and'. However, Story 5 AC1: 'Given a user types a search term, then results appear within 500ms of the user stopping typing' — this is borderline. More critically, the output doesn't explicitly call out that the original AC was compound or explain why splitting was necessary."
+    },
+    {
+      "text": "Each resulting AC is independently testable",
+      "passed": true,
+      "evidence": "Most ACs are independently testable with single conditions. They can be verified in isolation by QA."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 1,
+    "total": 4,
+    "pass_rate": 0.75
+  }
+}

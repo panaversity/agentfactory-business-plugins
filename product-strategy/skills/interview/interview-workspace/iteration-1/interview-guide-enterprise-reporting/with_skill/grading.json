@@ -1,0 +1,35 @@
+{
+  "expectations": [
+    {
+      "text": "Questions are appropriate for C-level stakeholders",
+      "passed": true,
+      "evidence": "Questions are framed at the strategic level: 'what does a typical month-end or quarter-end look like for you?', 'What was the cost of that delay — to you, your team, the decision?', probes for budget allocation and decision-making authority. No low-level tactical questions like 'how do you click to export a CSV'."
+    },
+    {
+      "text": "Duration is appropriate for executive availability (30-45 minutes)",
+      "passed": true,
+      "evidence": "Duration is explicitly set to '30 minutes (executive-appropriate)'. Segments total 28-32 minutes: Opening (3 min) + Warm-up (3-5 min) + Core Discovery (18-20 min) + Wrap-up (4 min)."
+    },
+    {
+      "text": "Core discovery focuses on reporting workflow pain, not feature wish lists",
+      "passed": true,
+      "evidence": "Core discovery opening: 'walk me through the last time you needed a report that our product couldn't give you out of the box — what were you trying to understand, and what did you end up doing?' Follow-ups probe the business impact: 'What was the cost of that delay', 'How often does this kind of situation come up'. No feature wish-list questions appear in core discovery."
+    },
+    {
+      "text": "Includes probes for budget and decision-making authority",
+      "passed": true,
+      "evidence": "Explicit 'Budget and decision-making probe' section: 'When you evaluate reporting tools, who else is involved in that decision?', 'Have you allocated budget specifically for reporting or analytics tooling in the past year?', 'What would it take for a reporting solution to replace the spreadsheets and workarounds your team uses today?'. Note-taking template includes 'Budget signals' field."
+    },
+    {
+      "text": "The five design principles are followed (behaviour over opinion, past over hypothetical, problem before solution, silence is data, why five times)",
+      "passed": true,
+      "evidence": "All five principles explicitly listed in INTERVIEWER REMINDERS section: (1) 'Ask about what they DID, not what they THINK or WANT (Behaviour over opinion)', (2) 'Ask about the PAST, not the future (Past over hypothetical)', (3) 'Do NOT mention specific feature ideas... until after Core Discovery is complete (Problem before solution)', (4) 'When the executive pauses, wait at least 5 seconds (Silence is data)', (5) 'ask \"why is that a problem?\" — then \"why?\" again (\"Why\" five times)'. Questions in the guide adhere to these principles."
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  }
+}

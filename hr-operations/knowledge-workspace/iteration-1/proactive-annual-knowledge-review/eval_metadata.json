@@ -1,0 +1,13 @@
+{
+  "eval_id": 2,
+  "eval_name": "proactive-annual-knowledge-review",
+  "prompt": "We want to do a proactive knowledge audit across our finance team. Nobody is leaving — we just want to identify where our critical knowledge is concentrated and create a risk map. The team has 4 people: CFO (12 years), Financial Controller (6 years), AP/AR Manager (3 years), and a Junior Accountant (1 year).",
+  "assertions": [
+    "Identifies this as PROACTIVE capture (no departure planned)",
+    "Scores each team member using the five-factor risk assessment",
+    "Does NOT classify the CFO as LOW RISK without verifying knowledge distribution",
+    "Recommends different capture methods based on knowledge type",
+    "Identifies specific knowledge areas for each team member",
+    "Provides a prioritised capture schedule that does NOT require capturing everything immediately"
+  ]
+}

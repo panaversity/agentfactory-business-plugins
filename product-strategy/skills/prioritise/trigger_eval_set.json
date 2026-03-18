@@ -1,0 +1,22 @@
+[
+  {"query": "Prioritise these 5 backlog items using RICE scoring", "should_trigger": true},
+  {"query": "Help me rank our feature backlog by impact vs effort", "should_trigger": true},
+  {"query": "What should we build first: SSO, webhooks, or bulk import?", "should_trigger": true},
+  {"query": "I need to decide our quarterly priorities for the product team", "should_trigger": true},
+  {"query": "Should we build the Slack integration or the Salesforce connector next?", "should_trigger": true},
+  {"query": "Do a MoSCoW analysis on our requirements list for the enterprise tier", "should_trigger": true},
+  {"query": "Help me evaluate whether we should build this feature — a key customer is threatening to churn", "should_trigger": true},
+  {"query": "Rank these items by value: search improvements, performance, mobile app, API v2", "should_trigger": true},
+  {"query": "We have too many features and need to figure out build order for Q3", "should_trigger": true},
+  {"query": "Compare the value of these three product initiatives and tell me which is most important", "should_trigger": true},
+  {"query": "Plan our Q3 sprint with story point allocation based on velocity", "should_trigger": false},
+  {"query": "Write a PRD for the workflow automation feature", "should_trigger": false},
+  {"query": "Break this spec into user stories for the engineering team", "should_trigger": false},
+  {"query": "Review our product metrics dashboard — what's our churn rate trend?", "should_trigger": false},
+  {"query": "Create a problem brief about declining user activation", "should_trigger": false},
+  {"query": "Generate an interview guide for understanding enterprise reporting needs", "should_trigger": false},
+  {"query": "Update our product roadmap with the new timeline for Q4 initiatives", "should_trigger": false},
+  {"query": "Run a retrospective on the notifications feature we shipped last month", "should_trigger": false},
+  {"query": "Write a technical design doc for the caching layer", "should_trigger": false},
+  {"query": "Help me write a budget proposal for hiring two more engineers", "should_trigger": false}
+]

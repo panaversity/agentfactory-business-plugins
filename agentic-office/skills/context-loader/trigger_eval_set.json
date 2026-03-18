@@ -1,0 +1,82 @@
+[
+  {
+    "query": "Load context for the restructuring project — I need HR, Finance, and Ops background before I start",
+    "should_trigger": true
+  },
+  {
+    "query": "Inject cross-domain context for onboarding Dr. Sana Mirza across all relevant domains",
+    "should_trigger": true
+  },
+  {
+    "query": "What context do I need before working on the Islamabad expansion proposal?",
+    "should_trigger": true
+  },
+  {
+    "query": "Load finance context before I review the analytics budget proposal",
+    "should_trigger": true
+  },
+  {
+    "query": "I need relevant background from HR and Operations before the restructuring meeting",
+    "should_trigger": true
+  },
+  {
+    "query": "Load full context on Omar before our budget conversation",
+    "should_trigger": true
+  },
+  {
+    "query": "Pull multi-domain context for Project Nighthawk — HR implications, budget, ops dependencies",
+    "should_trigger": true
+  },
+  {
+    "query": "What should I know before starting the vendor evaluation? Load context from supply chain and finance",
+    "should_trigger": true
+  },
+  {
+    "query": "Combine context from ops and HR for the office relocation decision",
+    "should_trigger": true
+  },
+  {
+    "query": "Load context from finance for the Q4 planning session",
+    "should_trigger": true
+  },
+  {
+    "query": "Give me a situation brief on Project Nighthawk before my board call",
+    "should_trigger": false
+  },
+  {
+    "query": "Search all layers for everything we know about the Karachi vendor dispute",
+    "should_trigger": false
+  },
+  {
+    "query": "Give me my daily digest — what do I need to know today?",
+    "should_trigger": false
+  },
+  {
+    "query": "Prep me for the exec weekly meeting at 10am with Omar and Ayesha",
+    "should_trigger": false
+  },
+  {
+    "query": "Brain dump: finish the draft, chase Omar, prep for Monday, review the contract",
+    "should_trigger": false
+  },
+  {
+    "query": "Add a new person to my workplace memory — Fatima Khan, Head of Legal",
+    "should_trigger": false
+  },
+  {
+    "query": "What is the weekly project status? Show me RAG across all projects",
+    "should_trigger": false
+  },
+  {
+    "query": "Delegate the analytics brief to Omar with a clear handoff message",
+    "should_trigger": false
+  },
+  {
+    "query": "Configure the agentic office and set up my work.local.md from scratch",
+    "should_trigger": false
+  },
+  {
+    "query": "When did we decide to approve the analytics budget? Find the decision record",
+    "should_trigger": false
+  }
+]

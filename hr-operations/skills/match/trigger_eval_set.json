@@ -1,0 +1,22 @@
+[
+  {"query": "I need to assess two internal candidates for the Director of Engineering role", "should_trigger": true},
+  {"query": "Who in the team is ready for promotion to Senior Manager?", "should_trigger": true},
+  {"query": "We need a succession plan for the CFO — who should be in the pipeline?", "should_trigger": true},
+  {"query": "Compare these three internal candidates for the Head of Product vacancy", "should_trigger": true},
+  {"query": "Do a readiness assessment for our high-potential employees for next-level roles", "should_trigger": true},
+  {"query": "Which of our senior analysts has the best fit for the team lead opening?", "should_trigger": true},
+  {"query": "I want to map career pathways for our top talent and identify development needs", "should_trigger": true},
+  {"query": "Our VP is leaving in 6 months — assess the internal bench for succession", "should_trigger": true},
+  {"query": "Create a talent review for the three candidates being considered for promotion", "should_trigger": true},
+  {"query": "We need an internal mobility assessment — is anyone ready to move into the strategy role?", "should_trigger": true},
+  {"query": "We're hiring a Head of Data Science externally — help me screen these CVs", "should_trigger": false},
+  {"query": "Write a job description for a Senior Software Engineer position", "should_trigger": false},
+  {"query": "What's the market rate for a VP of Engineering in San Francisco?", "should_trigger": false},
+  {"query": "We're restructuring the department into three new teams — help me plan it", "should_trigger": false},
+  {"query": "Draft an offer letter for the candidate we've selected for the role", "should_trigger": false},
+  {"query": "Help me write interview questions for the product manager panel", "should_trigger": false},
+  {"query": "Our lead engineer is leaving — create a knowledge capture plan before she goes", "should_trigger": false},
+  {"query": "I need a reference letter for a former employee who worked here for 5 years", "should_trigger": false},
+  {"query": "Create a 30-60-90 day onboarding plan for our new marketing hire", "should_trigger": false},
+  {"query": "What's our company's policy on internal transfers between departments?", "should_trigger": false}
+]

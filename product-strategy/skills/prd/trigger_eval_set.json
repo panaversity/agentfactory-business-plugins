@@ -1,0 +1,22 @@
+[
+  {"query": "Write a PRD for our new analytics platform that spans three engineering teams", "should_trigger": true},
+  {"query": "Create a product requirements document for the marketplace feature launching in Q4", "should_trigger": true},
+  {"query": "I need full requirements for our enterprise SSO initiative — it touches auth, frontend, and billing teams", "should_trigger": true},
+  {"query": "Write a comprehensive requirements document for our mobile app rewrite", "should_trigger": true},
+  {"query": "We're building a new product area for workflow automation. I need a PRD to align all teams", "should_trigger": true},
+  {"query": "Create an initiative requirements document for our API v2 platform migration", "should_trigger": true},
+  {"query": "Draft product requirements for the data pipeline overhaul — platform and data teams involved", "should_trigger": true},
+  {"query": "I need a multi-team initiative doc for our new billing system spanning two quarters", "should_trigger": true},
+  {"query": "Write a product launch document covering requirements, GTM, and rollout plan", "should_trigger": true},
+  {"query": "Create a comprehensive requirements document for our AI copilot feature", "should_trigger": true},
+  {"query": "Write a spec for adding a date range filter to the analytics dashboard", "should_trigger": false},
+  {"query": "Plan our product roadmap for the next two quarters", "should_trigger": false},
+  {"query": "Break this spec into user stories for sprint planning", "should_trigger": false},
+  {"query": "Prioritise these 5 backlog items using RICE scoring", "should_trigger": false},
+  {"query": "Write a problem brief about our declining activation rates", "should_trigger": false},
+  {"query": "Generate interview questions for our user research on onboarding", "should_trigger": false},
+  {"query": "Run a retrospective on the Quick Reports feature we shipped", "should_trigger": false},
+  {"query": "Help me plan our Q3 sprint capacity and team allocation", "should_trigger": false},
+  {"query": "Write a technical design document for the new caching layer", "should_trigger": false},
+  {"query": "Create a competitive analysis comparing us to three competitors", "should_trigger": false}
+]

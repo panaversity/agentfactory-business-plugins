@@ -1,0 +1,72 @@
+{
+  "skill_name": "validate",
+  "evals": [
+    {
+      "id": 1,
+      "name": "bml-analysis-pilot-results",
+      "prompt": "We just finished a 6-week pilot of our AP automation tool with 5 mid-market manufacturers. Results:\n- Company A: 89% adoption, 62% reduction in matching time, renewed at $2,000/month\n- Company B: 71% adoption, 45% reduction, renewed at $2,000/month\n- Company C: 34% adoption, asked for 3-month extension at 50% discount\n- Company D: 12% adoption, churned — said 'not enough ERP integration'\n- Company E: 56% adoption, renewed at $1,500/month (negotiated down)\n\nOur critical assumptions were: A-001 (AP managers will pay $2,000/month), A-002 (tool achieves 50%+ time reduction), A-003 (self-serve adoption without IT). Analyze these results.",
+      "expected_output": "A structured BML analysis with assumption outcomes (validated/invalidated/inconclusive for each), unexpected learnings, pivot-or-persevere recommendation, and specific innov.local.md updates.",
+      "files": [],
+      "expectations": [
+        "Each of the 3 assumptions gets a specific outcome (VALIDATED / INVALIDATED / INCONCLUSIVE) with evidence — 'it went okay' is not an outcome; the evidence must reference specific companies and metrics",
+        "A-001 (willingness to pay $2,000) is assessed as PARTIALLY VALIDATED — 2 renewed at full price, 1 negotiated down, 1 asked for discount, 1 churned; this is not clean validation",
+        "A-002 (50%+ time reduction) is assessed based on the actual measurements — Company A (62%) and B (45%) show mixed results; the tool may work but the 50% threshold is not reliably met",
+        "Unexpected learnings are surfaced — the ERP integration complaint from Company D and the price sensitivity from Company E are new signals that weren't in the original assumption map",
+        "The pivot-or-persevere recommendation is specific (e.g., 'PERSEVERE with pricing adjustment and ERP integration priority' or 'PIVOT on pricing model') — a generic 'keep going' recommendation is useless",
+        "Evidence quality is assessed honestly — 5 pilots is a small sample and the output should flag confidence levels rather than overstating certainty"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "pivot-decision-framework",
+      "prompt": "Our AP automation pilot results show: 2 of 5 companies renewed at full price, 1 churned citing inadequate ERP integration, 2 pushed back on price. Our assumption that AP managers would pay $2,000/month without IT involvement appears to be partially invalidated. What are our pivot options?",
+      "expected_output": "5+ pivot directions using Lean Startup pivot types, each with rationale grounded in what the pilot revealed, and a recommendation on which to explore first.",
+      "files": [],
+      "expectations": [
+        "At least 5 pivot directions are proposed using named Lean Startup pivot types (zoom-in, zoom-out, customer segment, customer need, platform, business architecture, technology, channel) — unnamed pivot ideas lack the analytical framework",
+        "Each pivot direction is grounded in specific pilot evidence, not generic strategy — e.g., 'Customer Segment Pivot: target companies with 300+ employees where $2,000/month is less than 1% of AP budget' references the price sensitivity data",
+        "The ERP integration gap (Company D's churn reason) is addressed by at least one pivot direction — ignoring the most explicit churn signal would be a critical oversight",
+        "The price sensitivity signal (Companies C and E) is addressed by at least one pivot direction — 2 of 5 pushing back on price is a strong signal",
+        "A recommendation identifies which pivot to explore first with rationale — analysis without recommendation is paralysis",
+        "What is still true from the pilot is explicitly stated — pivot decisions must preserve validated learnings (e.g., 'AP matching time reduction works technically; the question is pricing and integration depth')"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "learning-synthesis-mixed-signals",
+      "prompt": "We have mixed signals across 3 sprints of our AP automation tool:\n- Sprint 1: Built matching engine. 80% accuracy on standard invoices, 40% on non-standard.\n- Sprint 2: Built self-serve onboarding. 4 of 5 AP managers could onboard without IT. Average time 22 min (target 15).\n- Sprint 3: Ran pricing tests. 2 of 5 paid $2,000, 2 wanted $1,000-1,500, 1 said 'not worth paying for yet.'\nSynthesize these learnings and update my assumptions.",
+      "expected_output": "A learning synthesis that identifies patterns across sprints, updates assumption statuses with specific evidence, and prioritizes the next action based on the biggest remaining uncertainty.",
+      "files": [],
+      "expectations": [
+        "All three sprints' data is synthesized together, not analyzed in isolation — the cross-sprint pattern (tech works but pricing is uncertain) is the primary insight",
+        "Assumption status updates use specific evidence (e.g., 'A-002 matching accuracy: PARTIALLY VALIDATED — 80% on standard, 40% on non-standard; the non-standard gap is a product risk') — vague updates like 'looking good' are useless",
+        "The pricing signal is treated as the highest-priority uncertainty — when 3 of 5 customers push back on price, pricing is the bottleneck regardless of how well the technology works",
+        "The accuracy gap on non-standard invoices (40%) is flagged as a threat to the value proposition — if the tool only works on standard invoices, the time savings may not justify the price",
+        "Open questions are identified for the next sprint — synthesis must produce forward-looking priorities, not just backward-looking summaries",
+        "The distinction between what customers said and what they did is maintained — 'not worth paying for yet' is opinion; '2 of 5 paid' is behavior; both matter but behavior is more reliable"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "negative-assumption-mapping",
+      "prompt": "I haven't tested anything yet. Can you help me identify all my assumptions and design cheap tests for each one? I need a full assumption map with three tiers.",
+      "expected_output": "The agent should redirect this to the hypothesis skill, since pre-test assumption mapping is outside the validate skill's scope.",
+      "files": [],
+      "expectations": [
+        "The agent recognizes this is an assumption mapping request and redirects to the hypothesis skill — validate is for analyzing results after testing, not for pre-test assumption design",
+        "The agent does NOT produce an assumption map within the validate skill — doing so would bypass the hypothesis skill's three-tier structure, MVT hierarchy, and test sequencing framework"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "negative-sprint-planning",
+      "prompt": "Based on our validation results, I want to plan the next 2-week sprint. Can you create a sprint plan with user stories, acceptance criteria, and story point estimates?",
+      "expected_output": "The agent should redirect this to the sprint skill, since sprint planning is outside the validate skill's scope.",
+      "files": [],
+      "expectations": [
+        "The agent recognizes this is a sprint planning request and redirects to the sprint skill — validate handles analysis of results, not planning of future work",
+        "The agent does NOT produce a sprint plan within the validate skill — doing so would bypass the sprint skill's innovation sprint format, user story quality standards, and backlog prioritization logic"
+      ]
+    }
+  ]
+}

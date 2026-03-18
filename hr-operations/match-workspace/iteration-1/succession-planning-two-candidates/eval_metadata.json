@@ -1,0 +1,14 @@
+{
+  "eval_id": 1,
+  "eval_name": "succession-planning-two-candidates",
+  "prompt": "Our VP of Engineering is retiring in 6 months. I need to assess two internal candidates for the role. Candidate 1: Sarah Chen, currently Director of Engineering, 4 years in role, strong technical leader, led the platform migration, but has limited board-level presentation experience. Candidate 2: James Okafor, currently Director of Product Engineering, 2 years in role, excellent stakeholder management and strategic thinking, but hasn't managed teams larger than 15 people. The VP role requires board reporting, managing 60+ engineers, technical strategy, and cross-functional leadership.",
+  "assertions": [
+    "Output includes CONFIDENTIAL sensitivity label",
+    "Assesses both candidates across all six dimensions",
+    "Classifies Sarah's board presentation gap as an EXPERIENCE GAP with a bridging plan",
+    "Classifies James's team-scale gap as a meaningful risk factor with a bridging plan",
+    "Provides a specific readiness classification for each candidate",
+    "Does NOT make a specific promotion commitment",
+    "Includes retention risk assessment for each candidate"
+  ]
+}

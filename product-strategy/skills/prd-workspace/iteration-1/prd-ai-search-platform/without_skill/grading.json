@@ -1,0 +1,35 @@
+{
+  "expectations": [
+    {
+      "text": "The PRD includes explicit scope boundaries despite the user saying 'full requirements'",
+      "passed": true,
+      "evidence": "Section 4 'Scope' has explicit 'In Scope' and 'Out of Scope' lists. Out of scope includes: personalized search, multi-language, image/video search, public API, search ads, real-time collaborative search. Clear boundaries."
+    },
+    {
+      "text": "Functional requirements distinguish MUST/SHOULD/COULD for semantic search, faceting, and analytics",
+      "passed": false,
+      "evidence": "Uses P0/P1/P2 prioritization scheme, not MoSCoW (MUST/SHOULD/COULD). While semantic search, faceting, and analytics are all P0 with distinct sub-requirements at P0/P1/P2, the assertion specifically asks for MoSCoW and these three as separable capabilities. The P0/P1/P2 scheme does not distinguish the three capabilities at the feature level."
+    },
+    {
+      "text": "Dependencies table maps cross-team dependencies (data, frontend, infra)",
+      "passed": true,
+      "evidence": "Section 11 'Cross-Team Dependencies' has both a table (6 dependencies with Team, Description, Deadline) and an ASCII timeline showing Infrastructure→Data→Frontend dependency chains. Critical path identified."
+    },
+    {
+      "text": "Risk table identifies technical risks specific to AI/ML features",
+      "passed": true,
+      "evidence": "Section 12 includes AI-specific risks: 'Embedding model quality insufficient for our content domain' (M/H), 'Vector DB latency exceeds budget under load' (L/H), 'Embedding API cost exceeds budget at scale' (M/M). Mitigations are specific."
+    },
+    {
+      "text": "Phased rollout plan (beta to GA) is present",
+      "passed": true,
+      "evidence": "Section 10 has 4 phases: Phase 1 Foundation (Weeks 1-6), Phase 2 Filtering & Relevance (Weeks 7-13), Phase 3 Analytics & Polish (Weeks 14-20), Phase 4 Hardening & Launch (Weeks 21-26). Exit criteria for each phase. Phase 4 includes gradual rollout (10%→50%→100%)."
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 1,
+    "total": 5,
+    "pass_rate": 0.8
+  }
+}

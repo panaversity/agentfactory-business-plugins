@@ -1,0 +1,19 @@
+{
+  "timestamp": "20260318_215403",
+  "results": [
+    {
+      "id": "route_network_scenario",
+      "category": "routing",
+      "checks": {
+        "content": {
+          "scenario": true,
+          "network": true
+        },
+        "routing": true
+      },
+      "content_pass": true,
+      "status": "pass",
+      "output_preview": "```\nTASK:          Network Design \u2014 EMEA Distribution: UK-Only vs. UK + Poland DC\nCONFIGURATION: Not configured (no supply-chain.local.md detected)\nDATA SOURCES:  Manual input / Reasonable assumptions stated below\n```\n\n---\n\n# NETWORK DESIGN ANALYSIS: Poland DC Expansion\n\n## Stated Assumptions\n\nSince no ERP/TMS data was provided, I'm using reasonable industry assumptions. **Challenge any of these and I'll re-run the affected scenarios.**\n\n| Parameter | Assumption |\n|---|---|\n| Current DC | Single"
+    }
+  ]
+}

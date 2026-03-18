@@ -1,0 +1,30 @@
+{
+  "expectations": [
+    {
+      "text": "Uses Value vs Effort matrix as requested, not RICE",
+      "passed": true,
+      "evidence": "Uses a Value vs Effort table/matrix format, not RICE. Items placed into quadrants."
+    },
+    {
+      "text": "Items are placed in four quadrants (high-value/low-effort, high-value/high-effort, low-value/low-effort, low-value/high-effort)",
+      "passed": true,
+      "evidence": "Four quadrants described: Quick Wins, Major Projects, Nice to Have, Money Pit. All 6 items placed. However, SSO is placed as 'Quick Wins (Low Effort)' which is questionable — SSO is typically high-effort."
+    },
+    {
+      "text": "Assumptions behind value and effort estimates are visible",
+      "passed": false,
+      "evidence": "No assumptions section. Items are placed in quadrants with brief one-line descriptions but no explanation of why each value/effort estimate was chosen."
+    },
+    {
+      "text": "The three mandatory challenges are still run after the framework",
+      "passed": false,
+      "evidence": "No mandatory challenges (Strategic Override Test, Data Gap Test, What Would We Regret Test). The output goes straight from the matrix to a recommendation."
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 2,
+    "total": 4,
+    "pass_rate": 0.5
+  }
+}

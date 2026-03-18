@@ -1,0 +1,20 @@
+{
+  "timestamp": "20260318_215254",
+  "results": [
+    {
+      "id": "invoice_reconcile_duplicate",
+      "category": "accuracy",
+      "checks": {
+        "content": {
+          "duplicate": true,
+          "reject": true,
+          "notify vendor|contact vendor|inform vendor|vendor notification|notify acme|contact acme": true
+        },
+        "formula": true
+      },
+      "content_pass": true,
+      "status": "pass",
+      "output_preview": "```\nTASK:          Invoice Reconciliation -- INV-2024-0847\nVENDOR TIER:   Unclassified\nCONFIGURATION: Not configured\nDATA SOURCES:  Manual input\n```\n\n---\n\n## INVOICE RECONCILIATION: INV-2024-0847 | Acme Corp\n\n```\nInvoice date:  Not provided   PO matched:    N/A \u2014 processing stopped\nProcessing:    2026-03-19      GR matched:    N/A \u2014 processing stopped\n```\n\n---\n\n### Stage 1: Document Intelligence \u2014 DUPLICATE DETECTED\n\n| Field | Value |\n|---|---|\n| Vendor name | Acme Corp |\n| Invoice number | INV-"
+    }
+  ]
+}

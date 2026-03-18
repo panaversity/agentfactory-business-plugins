@@ -1,0 +1,82 @@
+[
+  {
+    "query": "Produce a category spend overview for FY2024 — I want to see our top categories by spend, number of vendors per category, and PO compliance rates",
+    "should_trigger": true
+  },
+  {
+    "query": "We have 5 vendors supplying the same specification of office paper across 3 sites. Prices range from GBP 8.50 to GBP 11.00 per unit. Is there a consolidation opportunity?",
+    "should_trigger": true
+  },
+  {
+    "query": "Site A and Site B are paying different prices to the same supplier for the same item. What's the saving if we align to the best rate?",
+    "should_trigger": true
+  },
+  {
+    "query": "i need a market benchmark for our corrugated board pricing — are we paying above or below market for packaging materials?",
+    "should_trigger": true
+  },
+  {
+    "query": "Can you build a procurement savings pipeline? We identified consolidation in packaging, price alignment in MRO, and a renegotiation opportunity in IT services",
+    "should_trigger": true
+  },
+  {
+    "query": "What percentage of our total spend is tail spend — vendors who each account for less than 0.5% of total? How many vendors is that?",
+    "should_trigger": true
+  },
+  {
+    "query": "Our PO compliance is only 62% in IT services — 38% of invoices arrive without a prior PO. What's the risk and what should I do about it?",
+    "should_trigger": true
+  },
+  {
+    "query": "Analyze our vendor base — how many suppliers do we have per category and where are we over-fragmented vs appropriately diversified?",
+    "should_trigger": true
+  },
+  {
+    "query": "We're buying the same chemical solvent from 4 different suppliers at prices ranging from EUR 14 to EUR 22 per litre. What's the total overspend from price inconsistency?",
+    "should_trigger": true
+  },
+  {
+    "query": "Help me prepare a procurement ROI report — what savings have we captured year-to-date against our target and what's still in the pipeline?",
+    "should_trigger": true
+  },
+  {
+    "query": "Reconcile this invoice against the PO — the vendor charged GBP 12.50/unit but the PO says GBP 11.80",
+    "should_trigger": false
+  },
+  {
+    "query": "Our main steel supplier's credit rating just dropped to B-. What's the financial risk and should we activate a contingency plan?",
+    "should_trigger": false
+  },
+  {
+    "query": "Review carrier performance for Q1 — I need OTD rates, damage claims, and cost per kg for our top carriers",
+    "should_trigger": false
+  },
+  {
+    "query": "We're thinking about opening a distribution centre in Poland. Model the network design scenarios for single vs dual DC",
+    "should_trigger": false
+  },
+  {
+    "query": "Draft an invoice dispute letter to Acme Corp — they overcharged us on 3 line items totalling GBP 4,200",
+    "should_trigger": false
+  },
+  {
+    "query": "Generate the weekly supply chain brief for the CPO with traffic lights and contract calendar",
+    "should_trigger": false
+  },
+  {
+    "query": "Classify our new packaging supplier using the Kraljic matrix — they supply custom printed cartons with a 12-week lead time",
+    "should_trigger": false
+  },
+  {
+    "query": "Our Tier 1 supplier's raw material supplier just filed for administration — what's the Tier 2 risk impact?",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a contract non-renewal notice for our cleaning services agreement — notice period is 90 days",
+    "should_trigger": false
+  },
+  {
+    "query": "Build a procurement analytics dashboard in Python that connects to our SAP spend data extract",
+    "should_trigger": false
+  }
+]

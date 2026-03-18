@@ -1,0 +1,298 @@
+{
+  "timestamp": "20260318_232057",
+  "results": [
+    {
+      "id": "route_audit_iso",
+      "category": "routing",
+      "checks": {
+        "content": {
+          "evidence": true,
+          "preparation": true,
+          "ISO 27001": true
+        },
+        "routing": true
+      },
+      "content_pass": true,
+      "status": "pass",
+      "output_preview": "No `ops.local.md` found \u2014 I'll generate the preparation plan using standard ISO 27001 surveillance audit scope. You should fill in organisation-specific details (evidence locations, owners, auditor focus areas) once generated.\n\n---\n\n```\nTASK:          Audit Preparation \u2014 ISO 27001 Surveillance\nAUDIT TYPE:    Certification (Surveillance)\nCONFIGURATION: Not configured (no ops.local.md \u2014 locations and owners marked as GAP where unknown)\nDATE:          2026-03-19\nOWNER:         [ASSIGN \u2014 ISMS Manage"
+    },
+    {
+      "id": "route_audit_finding_response",
+      "category": "routing",
+      "checks": {
+        "content": {
+          "finding": true,
+          "corrective action": true,
+          "root cause": true
+        },
+        "routing": true
+      },
+      "content_pass": true,
+      "status": "pass",
+      "output_preview": "I need the details of the 3 audit findings to draft the responses. Please share:\n\n1. **The finding text** (exact wording from the auditor, or as close as you have)\n2. **Finding references** (if numbered, e.g., F-01, F-02)\n3. **The audit type** (e.g., ISO certification, regulatory visit, financial audit)\n4. **The auditor / body name**\n\nI'll structure each response with classification, root cause, corrective action, owner, timeline, and evidence of completion \u2014 ready for you to fill in the names a"
+    },
+    {
+      "id": "route_contract_obligation",
+      "category": "routing",
+      "checks": {
+        "content": {
+          "obligation": true,
+          "SLA": true,
+          "key date": true
+        },
+        "routing": true
+      },
+      "content_pass": true,
+      "status": "pass",
+      "output_preview": "I don't have a TechCloud Inc. MSA document to analyze. The contract skill requires the actual contract text to extract obligations, SLAs, and key dates.\n\nTo proceed, I need you to either:\n\n1. **Paste the contract text** directly into the chat\n2. **Provide the file path** to the MSA document on your machine (e.g., `~/Documents/contracts/techcloud-msa.pdf`)\n\nOnce I have the contract content, I'll produce:\n\n- **Our obligations table** \u2014 what we must do, by when, consequences\n- **Vendor obligations "
+    },
+    {
+      "id": "route_contract_risk",
+      "category": "routing",
+      "checks": {
+        "content": {
+          "risk": true,
+          "auto-renewal": true,
+          "liability": true
+        },
+        "routing": true
+      },
+      "content_pass": true,
+      "status": "pass",
+      "output_preview": "I need your SaaS vendor agreement text to review. I can work with:\n\n- **Pasted contract text** directly in the chat\n- **A file path** to the agreement (PDF, DOCX, or plain text)\n\nWhich would you prefer? Once I have the document, I'll run a full risk flagging analysis across all six categories (auto-renewal traps, liability caps, price escalation, unilateral change rights, termination provisions, and data ownership/return)."
+    },
+    {
+      "id": "route_incident_postmortem",
+      "category": "routing",
+      "checks": {
+        "content": {
+          "post-mortem": false,
+          "timeline": false,
+          "root cause": false
+        },
+        "routing": false
+      },
+      "content_pass": false,
+      "status": "fail",
+      "output_preview": ""
+    },
+    {
+      "id": "route_incident_five_whys",
+      "category": "routing",
+      "checks": {
+        "content": {
+          "five whys": true,
+          "root cause": true,
+          "systemic": true
+        },
+        "routing": true
+      },
+      "content_pass": true,
+      "status": "pass",
+      "output_preview": "```\nTASK:          Five Whys Root Cause Analysis \u2014 PII Email Data Breach\nINCIDENT TYPE: Five Whys\nCONFIGURATION: Not configured\nDATE:          2026-03-19\nOWNER:         [To be assigned \u2014 Information Security Lead]\n```\n\n---\n\n## FIVE WHYS ANALYSIS: Customer service agent emailed PII to the wrong recipient\n\n---\n\n**WHY 1: Why was PII sent to the wrong recipient?**\n\u2192 The customer service agent manually typed or selected the wrong email address when sending a response that contained personally identif"
+    },
+    {
+      "id": "route_metrics_framework",
+      "category": "routing",
+      "checks": {
+        "content": {
+          "leading": true,
+          "lagging": true,
+          "RAG": true,
+          "threshold": true
+        },
+        "routing": true
+      },
+      "content_pass": true,
+      "status": "pass",
+      "output_preview": "Good \u2014 I've read the full plugin. Now, before I jump to a framework, let me follow your Brooks Principle and grill the design concept properly.\n\n---\n\n## Key design questions before we build this:\n\n**1. What operations does this COO actually run?**\n\nThe plugin covers 6 domains: vendor management, process operations, change management, compliance, risk, incident. Is this COO responsible for **all six**, or a subset? A COO at a 50-person fintech has a very different dashboard than a COO at a 2,000-"
+    },
+    {
+      "id": "route_metrics_monthly_report",
+      "category": "routing",
+      "checks": {
+        "content": {
+          "monthly": true,
+          "RAG": true,
+          "KPI": false
+        },
+        "routing": true
+      },
+      "content_pass": false,
+      "status": "fail",
+      "output_preview": "No `ops.local.md` found, so I'll apply standard industry thresholds to your provided values. Here's your monthly report:\n\n---\n\n```\nTASK:          Monthly Operational Performance Report\nDOCUMENT TYPE: Monthly Report\nCONFIGURATION: Not configured (ops.local.md not found \u2014 using standard thresholds)\nDATE:          19 March 2026\nOWNER:         [To be assigned \u2014 one named person required]\nREVIEW DATE:   19 April 2026\n```\n\n```\nMONTHLY OPERATIONS REPORT: March 2026\nPrepared by: Operations Intelligence "
+    },
+    {
+      "id": "audit_evidence_gap_detection",
+      "category": "accuracy",
+      "checks": {
+        "content": {
+          "GAP": true,
+          "evidence": true,
+          "6 month": true
+        }
+      },
+      "content_pass": true,
+      "status": "pass",
+      "output_preview": "**Status: Partial \u2014 with remediation narrative required.**\n\nAssign it **\"Partial / Gap Identified\"** (or your equivalent RAG status: **Amber**).\n\nHere's why and what to do:\n\n### For the auditor\n\nSOC 2 Type II covers an observation period (typically 12 months). A 6-month gap means you cannot demonstrate the control was operating effectively for the full period. Auditors will likely:\n\n1. **Issue a qualified opinion or exception** for the gap period (Jul and earlier)\n2. **Accept the 6 months you ha"
+    },
+    {
+      "id": "audit_finding_classification",
+      "category": "accuracy",
+      "checks": {
+        "content": {
+          "segregation": true
+        },
+        "any_of": {
+          "CRITICAL | material weakness": true,
+          "30 day | immediate": true
+        }
+      },
+      "content_pass": true,
+      "status": "pass",
+      "output_preview": "This is a classic segregation of duties (SoD) finding. Here's the classification:\n\n## Severity: High\n\n**Rationale:** A single individual being able to both initiate and approve payments up to 50,000 creates a direct path to fraud or misappropriation without detection. This violates a fundamental internal control principle (COSO framework, ISA 315).\n\nIt's **High** rather than **Critical** because:\n- There's a monetary threshold (50,000) \u2014 it's bounded, not unlimited\n- Critical would apply if ther"
+    },
+    {
+      "id": "contract_auto_renewal_risk",
+      "category": "accuracy",
+      "checks": {
+        "content": {
+          "HIGH": true,
+          "auto-renewal": true,
+          "notice": true
+        }
+      },
+      "content_pass": true,
+      "status": "pass",
+      "output_preview": "```\nTASK:          Contract Analysis \u2014 Auto-Renewal Notice Period Assessment\nDOCUMENT TYPE: Risk Analysis\nCONFIGURATION: Not configured\nDATE:          2026-03-19\nOWNER:         [To be assigned]\n```\n\n---\n\n## RISK FLAG: AUTO-RENEWAL TRAP \u2014 SEVERITY: HIGH\n\n**Clause reference:** Auto-renewal provision (specific section not provided)\n\n**Clause text:** Contract auto-renews annually with 14 days' notice required to cancel.\n\n**Risk:** A 14-day notice window on a \u00a3/$/200k annual commitment is materially "
+    },
+    {
+      "id": "contract_liability_cap_assessment",
+      "category": "accuracy",
+      "checks": {
+        "content": {
+          "liability": true,
+          "cap": true,
+          "inadequate": true
+        }
+      },
+      "content_pass": true,
+      "status": "pass",
+      "output_preview": "```\nTASK:          Contract Analysis \u2014 Cloud Hosting Vendor Liability Cap\nDOCUMENT TYPE: Risk Analysis\nCONFIGURATION: Not configured\nDATE:          2026-03-19\nOWNER:         [To be assigned]\n```\n\n---\n\n## RISK FLAG: LIABILITY CAP \u2014 **SEVERITY: HIGH**\n\n**Clause reference:** Liability limitation clause (vendor MSA)\n\n**Clause text:** Vendor's aggregate liability capped at 3 months of fees paid.\n\n**The numbers:**\n\n| Metric | Value |\n|---|---|\n| Annual contract value | \u00a3240,000 |\n| Liability cap (3 mo"
+    },
+    {
+      "id": "incident_severity_classification",
+      "category": "accuracy",
+      "checks": {
+        "content": {
+          "P2": true,
+          "MAJOR": true,
+          "30%": true
+        },
+        "formula": true
+      },
+      "content_pass": true,
+      "status": "pass",
+      "output_preview": "```\nTASK:          Incident Severity Classification \u2014 API Gateway 503 Errors\nINCIDENT TYPE: Log Entry / Classification Advisory\nCONFIGURATION: Not configured (using defaults)\nDATE:          2026-03-19\nOWNER:         [To be assigned]\n```\n\n## Severity Classification: **P2 \u2014 MAJOR**\n\nHere's how the incident maps against the severity criteria:\n\n| Criterion | P1 Threshold | P2 Threshold | This Incident | Match |\n|-----------|-------------|-------------|---------------|-------|\n| Users/transactions af"
+    },
+    {
+      "id": "incident_ca_quality_test",
+      "category": "accuracy",
+      "checks": {
+        "content": {
+          "FAIL": true,
+          "specific": true,
+          "owner": true,
+          "date": true
+        }
+      },
+      "content_pass": true,
+      "status": "pass",
+      "output_preview": "```\nTASK:          Corrective Action Quality Evaluation\nINCIDENT TYPE: CA Tracker\nCONFIGURATION: Not configured\nDATE:          2026-03-19\nOWNER:         [Not specified \u2014 requires assignment]\n```\n\n---\n\n## Corrective Action Under Review\n\n> *\"The team will be more careful about config changes going forward.\"*\n\n---\n\n## Quality Test Results\n\n| Criterion | Verdict | Analysis |\n|-----------|---------|----------|\n| **SPECIFIC** | **FAIL** | What does \"more careful\" mean? There is no description of what "
+    },
+    {
+      "id": "metrics_leading_vs_lagging",
+      "category": "accuracy",
+      "checks": {
+        "content": {
+          "lagging": true,
+          "leading": true,
+          "SLA warning": true
+        }
+      },
+      "content_pass": true,
+      "status": "pass",
+      "output_preview": "Here's the classification:\n\n| # | Metric | Type | Rationale |\n|---|--------|------|-----------|\n| 1 | Vendor SLA compliance rate last month | **Lagging** | Measures past performance against agreed thresholds \u2014 the outcome has already occurred |\n| 2 | Number of open SLA warnings this week | **Leading** | Warnings signal vendors approaching breach *before* they actually miss SLAs \u2014 gives you time to intervene |\n| 3 | MTTR for P1 incidents last quarter | **Lagging** | Historical average of how long"
+    },
+    {
+      "id": "metrics_threshold_design",
+      "category": "accuracy",
+      "checks": {
+        "content": {
+          "amber": true,
+          "below target": true,
+          "escalat": true
+        }
+      },
+      "content_pass": true,
+      "status": "pass",
+      "output_preview": "Based on the data you've provided:\n\n**RAG Status: Amber**\n\n**Reasoning:**\n- Target: 95%\n- Current month (February): 94% \u2014 below target\n- Prior month (January): 97% \u2014 above target\n- The metric missed target by 1 percentage point, which is a minor breach, not a sustained failure\n\n**Why Amber, not Red:**\n- A single month 1% below target with the prior month above target indicates a dip, not a trend\n- Red should be reserved for sustained or significant breaches (e.g., 2+ consecutive months below tar"
+    },
+    {
+      "id": "negative_vendor_review",
+      "category": "negative",
+      "checks": {
+        "absent": {
+          "!audit-preparation": true,
+          "!contract-analysis": true,
+          "!incident-postmortem": true,
+          "!metrics-framework": true
+        }
+      },
+      "status": "pass",
+      "output_preview": "No `ops.local.md` or vendor data files exist. I don't have your actual vendor names, scores, or performance data to work from. Rather than fabricate numbers, here's a ready-to-use weighted vendor scorecard framework you can populate with your real data:\n\n---\n\n```\nTASK:          Vendor Performance Weighted Scorecard\nDOCUMENT TYPE: Framework\nCONFIGURATION: Not configured (no ops.local.md found)\nDATE:          2026-03-19\nOWNER:         [Procurement / Vendor Manager \u2014 name required]\nREVIEW DATE:   2"
+    },
+    {
+      "id": "negative_compliance_tracking",
+      "category": "negative",
+      "checks": {
+        "absent": {
+          "!audit-preparation": true,
+          "!contract-analysis": true,
+          "!incident-postmortem": true,
+          "!metrics-framework": true
+        }
+      },
+      "status": "pass",
+      "output_preview": "I notice something important: your own eval cases (`cases.yaml:205-209`) classify \"Map all our GDPR compliance obligations into a tracking register\" as a **negative test** \u2014 meaning this plugin's skills are explicitly scoped to NOT handle compliance obligation mapping. The audit skill's description says: *\"NOT for: compliance obligation mapping (use official compliance-tracking auto-skill)\"*.\n\nThis is by design \u2014 compliance obligation tracking is a Layer 1 concern routed to a different skill.\n\nT"
+    },
+    {
+      "id": "negative_risk_assessment",
+      "category": "negative",
+      "checks": {
+        "absent": {
+          "!audit-preparation": true,
+          "!contract-analysis": true,
+          "!incident-postmortem": true,
+          "!metrics-framework": true
+        }
+      },
+      "status": "pass",
+      "output_preview": "I'll build a comprehensive IT risk register using the metrics framework's risk methodology, with proper likelihood/impact ratings and leading indicators.\n\n```\nTASK:          IT Department Risk Register\nDOCUMENT TYPE: Framework\nCONFIGURATION: Not configured\nDATE:          2026-03-19\nOWNER:         [IT Director / Head of IT \u2014 to be named]\nREVIEW DATE:   2026-06-19 (quarterly review cycle)\n```\n\n---\n\n# IT DEPARTMENT RISK REGISTER\n\n## Rating Scales\n\n### Likelihood\n\n| Score | Label | Definition |\n|---"
+    },
+    {
+      "id": "negative_change_request",
+      "category": "negative",
+      "checks": {
+        "absent": {
+          "!audit-preparation": true,
+          "!contract-analysis": true,
+          "!incident-postmortem": true,
+          "!metrics-framework": true
+        }
+      },
+      "status": "pass",
+      "output_preview": ""
+    }
+  ]
+}

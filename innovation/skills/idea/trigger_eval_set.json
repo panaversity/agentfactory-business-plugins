@@ -1,0 +1,82 @@
+[
+  {
+    "query": "Run a 100-idea sprint on how to solve invoice processing for AP teams",
+    "should_trigger": true
+  },
+  {
+    "query": "Help me brainstorm product ideas — I want quantity over quality, at least 100 ideas",
+    "should_trigger": true
+  },
+  {
+    "query": "Shortlist my top ideas using desirability, viability, and feasibility scoring",
+    "should_trigger": true
+  },
+  {
+    "query": "Pressure test this idea — give me the 5 strongest arguments against building it",
+    "should_trigger": true
+  },
+  {
+    "query": "I need to pivot. What are 10 alternative directions I could explore given what I've learned?",
+    "should_trigger": true
+  },
+  {
+    "query": "What should I build? I have expertise in fintech and want to find a SaaS product idea",
+    "should_trigger": true
+  },
+  {
+    "query": "Apply the 'What would Uber do with this problem?' analogy to our AP matching challenge — give me 10 analogies",
+    "should_trigger": true
+  },
+  {
+    "query": "Score these 15 ideas using DVF framework and give me the top 5 to pursue",
+    "should_trigger": true
+  },
+  {
+    "query": "Play devil's advocate on my startup idea — what's the contrarian view?",
+    "should_trigger": true
+  },
+  {
+    "query": "Generate crazy, 10x ideas for disrupting the accounting software market",
+    "should_trigger": true
+  },
+  {
+    "query": "Create a customer discovery interview guide for talking to AP managers",
+    "should_trigger": false
+  },
+  {
+    "query": "Map out all my assumptions and design cheap tests for each one",
+    "should_trigger": false
+  },
+  {
+    "query": "Analyze our pilot results — should we pivot or persevere?",
+    "should_trigger": false
+  },
+  {
+    "query": "Build me a pitch deck narrative for my seed round",
+    "should_trigger": false
+  },
+  {
+    "query": "Calculate my CAC, LTV, and build a 3-scenario runway model",
+    "should_trigger": false
+  },
+  {
+    "query": "Plan a 2-week innovation sprint with a learning goal",
+    "should_trigger": false
+  },
+  {
+    "query": "Do a competitive landscape scan for AP automation tools",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a GraphQL schema for my invoicing API",
+    "should_trigger": false
+  },
+  {
+    "query": "Help me define my ideal customer profile and positioning statement",
+    "should_trigger": false
+  },
+  {
+    "query": "Build a business model canvas with revenue streams and cost structure",
+    "should_trigger": false
+  }
+]

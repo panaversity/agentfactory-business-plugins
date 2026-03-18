@@ -1,0 +1,13 @@
+{
+  "eval_id": 1,
+  "eval_name": "interview-guide-onboarding",
+  "prompt": "Generate an interview guide for understanding how mid-market companies currently handle their onboarding process for new team members. We're considering building a team onboarding feature.",
+  "assertions": [
+    "Guide follows four-segment structure (Opening, Warm-up, Core Discovery, Wrap-up)",
+    "Questions ask about past behaviour, not hypothetical futures",
+    "No mention of the proposed onboarding feature in the first half of the guide",
+    "Workaround probe is included",
+    "Note-taking template includes Key observations, Notable quotes, Surprises, Follow-up questions",
+    "Guide specifies participant criteria and target sample size"
+  ]
+}

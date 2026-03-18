@@ -1,0 +1,30 @@
+{
+  "expectations": [
+    {
+      "text": "The original compound AC with multiple 'and' statements is NOT preserved as-is",
+      "passed": true,
+      "evidence": "The original compound AC is explicitly noted as split: 'The user-provided AC was a compound statement -- it has been split into AC1 (navigation) and AC2 (highlighting) per story quality standards.' Full explanation in NOTES section at the bottom."
+    },
+    {
+      "text": "The AC is split into 2-3 separate, independently testable statements",
+      "passed": true,
+      "evidence": "Split into 3 parts across stories: Story 1 AC2 (results displayed), Story 2 AC1 (clicking navigates to page), Story 2 AC2 (search term highlighted). Each is independently testable."
+    },
+    {
+      "text": "No single AC contains 'and' connecting multiple conditions",
+      "passed": true,
+      "evidence": "Reviewed all 20 ACs across 5 stories. No AC contains compound 'and' statements. Each tests a single condition-action-result."
+    },
+    {
+      "text": "Each resulting AC is independently testable",
+      "passed": true,
+      "evidence": "All ACs follow Given/When/Then format with single conditions. A QA engineer can verify each AC in isolation."
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1.0
+  }
+}

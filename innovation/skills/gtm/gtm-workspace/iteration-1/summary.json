@@ -1,0 +1,42 @@
+[
+  {
+    "skill": "gtm",
+    "eval_id": 1,
+    "eval_name": "icp-definition-b2b",
+    "passed": 6,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  {
+    "skill": "gtm",
+    "eval_id": 2,
+    "eval_name": "ninety-day-gtm-calendar",
+    "passed": 5,
+    "total": 6,
+    "pass_rate": 0.8333333333333334
+  },
+  {
+    "skill": "gtm",
+    "eval_id": 3,
+    "eval_name": "positioning-statement",
+    "passed": 5,
+    "total": 5,
+    "pass_rate": 1.0
+  },
+  {
+    "skill": "gtm",
+    "eval_id": 4,
+    "eval_name": "negative-discovery-request",
+    "passed": 1,
+    "total": 2,
+    "pass_rate": 0.5
+  },
+  {
+    "skill": "gtm",
+    "eval_id": 5,
+    "eval_name": "negative-competitive-analysis",
+    "passed": 1,
+    "total": 2,
+    "pass_rate": 0.5
+  }
+]

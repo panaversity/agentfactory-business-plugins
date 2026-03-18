@@ -1,0 +1,259 @@
+{
+  "metadata": {
+    "skill_name": "prioritise",
+    "skill_path": "/Users/mjs/Documents/code/panaversity-official/agentfactory-business-plugins/product-strategy/skills/prioritise",
+    "executor_model": "claude-opus-4-6",
+    "analyzer_model": "claude-opus-4-6",
+    "timestamp": "2026-03-19T12:00:00Z",
+    "evals_run": [1, 2, 3, 4, 5],
+    "runs_per_configuration": 1
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "eval_name": "rice-scoring-backlog",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 7,
+        "failed": 0,
+        "total": 7,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "RICE table with Reach, Impact, Confidence, Effort, Score, and Rank columns", "passed": true, "evidence": "Table present with all required columns"},
+        {"text": "All scoring assumptions are visible (not just numbers)", "passed": true, "evidence": "Detailed assumptions section before table"},
+        {"text": "Strategic Override Test completed — SSO override candidate", "passed": true, "evidence": "SSO identified as override with $120K ARR rationale"},
+        {"text": "Data Gap Test identifies low-confidence items and recommends discovery spikes", "passed": true, "evidence": "API rate limiting (40%) and Mobile notifications (50%) identified"},
+        {"text": "What Would We Regret test completed", "passed": true, "evidence": "Dashboard performance identified, confirms RICE #1"},
+        {"text": "EXPLICITLY NOT BUILDING list is present", "passed": true, "evidence": "Lists Bulk export and API rate limiting with rationales"},
+        {"text": "Discovery spike recommended for low-confidence, high-effort item", "passed": true, "evidence": "API rate limiting spike with specific question"}
+      ]
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "rice-scoring-backlog",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.14,
+        "passed": 1,
+        "failed": 6,
+        "total": 7,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "RICE table with Reach, Impact, Confidence, Effort, Score, and Rank columns", "passed": true, "evidence": "Table present but missing explicit Rank column"},
+        {"text": "All scoring assumptions are visible (not just numbers)", "passed": false, "evidence": "No assumptions section — raw scores only"},
+        {"text": "Strategic Override Test completed", "passed": false, "evidence": "Informal mention of SSO but no structured challenge"},
+        {"text": "Data Gap Test identifies low-confidence items", "passed": false, "evidence": "No Data Gap Test performed"},
+        {"text": "What Would We Regret test completed", "passed": false, "evidence": "No regret test"},
+        {"text": "EXPLICITLY NOT BUILDING list is present", "passed": false, "evidence": "No not-building list"},
+        {"text": "Discovery spike recommended", "passed": false, "evidence": "No discovery spikes mentioned"}
+      ]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "single-feature-evaluation",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Uses single feature evaluation format", "passed": true, "evidence": "Exact structured template used"},
+        {"text": "Includes opportunity cost", "passed": true, "evidence": "Explicit opportunity cost field with analysis"},
+        {"text": "Frequency of request assessed (one vs pattern)", "passed": true, "evidence": "Single customer vs pattern explicitly called out"},
+        {"text": "Confidence in value rated with basis", "passed": true, "evidence": "LOW rating with 4 specific reasons"},
+        {"text": "Recommendation is BUILD/DEFER/DECLINE/DISCOVERY SPIKE", "passed": true, "evidence": "DISCOVERY SPIKE with action plan"}
+      ]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "single-feature-evaluation",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.2,
+        "passed": 1,
+        "failed": 4,
+        "total": 5,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Uses single feature evaluation format", "passed": false, "evidence": "Ad-hoc pros/cons format instead"},
+        {"text": "Includes opportunity cost", "passed": false, "evidence": "Mentions dev time cost but no explicit opportunity cost"},
+        {"text": "Frequency of request assessed", "passed": true, "evidence": "Recognizes single-customer concern"},
+        {"text": "Confidence in value rated with basis", "passed": false, "evidence": "No confidence rating"},
+        {"text": "Recommendation is BUILD/DEFER/DECLINE/DISCOVERY SPIKE", "passed": false, "evidence": "'Build an MVP' — not one of the four structured options"}
+      ]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "value-vs-effort-quick-sort",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Uses Value vs Effort matrix, not RICE", "passed": true, "evidence": "Framework selection chooses Value vs Effort"},
+        {"text": "Items in four quadrants", "passed": true, "evidence": "ASCII 2x2 with Quick Wins, Strategic Bets, Fill-ins, Avoid"},
+        {"text": "Assumptions behind estimates visible", "passed": true, "evidence": "Dedicated assumptions table with rationale per item"},
+        {"text": "Three mandatory challenges run after framework", "passed": true, "evidence": "All three challenges present with analysis"}
+      ]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "value-vs-effort-quick-sort",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.5,
+        "passed": 2,
+        "failed": 2,
+        "total": 4,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Uses Value vs Effort matrix, not RICE", "passed": true, "evidence": "Uses Value vs Effort table"},
+        {"text": "Items in four quadrants", "passed": true, "evidence": "Four quadrants with items placed"},
+        {"text": "Assumptions behind estimates visible", "passed": false, "evidence": "No assumptions section"},
+        {"text": "Three mandatory challenges run after framework", "passed": false, "evidence": "No challenges — goes straight to recommendation"}
+      ]
+    },
+    {
+      "eval_id": 4,
+      "eval_name": "negative-sprint-planning",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 2,
+        "failed": 0,
+        "total": 2,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Does NOT perform sprint planning", "passed": true, "evidence": "Identifies request as sprint planning and redirects"},
+        {"text": "Redirects to /sprint-planning", "passed": true, "evidence": "Explicitly recommends /sprint-planning"}
+      ]
+    },
+    {
+      "eval_id": 4,
+      "eval_name": "negative-sprint-planning",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.0,
+        "passed": 0,
+        "failed": 2,
+        "total": 2,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Does NOT perform sprint planning", "passed": false, "evidence": "Performs sprint planning directly"},
+        {"text": "Redirects to /sprint-planning", "passed": false, "evidence": "No redirect"}
+      ]
+    },
+    {
+      "eval_id": 5,
+      "eval_name": "negative-metrics-review",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 2,
+        "failed": 0,
+        "total": 2,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Does NOT attempt to review metrics", "passed": true, "evidence": "Identifies as metrics review and redirects"},
+        {"text": "Redirects to /metrics-review", "passed": true, "evidence": "Explicitly recommends /metrics-review"}
+      ]
+    },
+    {
+      "eval_id": 5,
+      "eval_name": "negative-metrics-review",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.0,
+        "passed": 0,
+        "failed": 2,
+        "total": 2,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Does NOT attempt to review metrics", "passed": false, "evidence": "Provides full metrics review framework"},
+        {"text": "Redirects to /metrics-review", "passed": false, "evidence": "No redirect"}
+      ]
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {"mean": 1.0, "stddev": 0.0, "min": 1.0, "max": 1.0},
+      "time_seconds": {"mean": 0, "stddev": 0, "min": 0, "max": 0},
+      "tokens": {"mean": 0, "stddev": 0, "min": 0, "max": 0}
+    },
+    "without_skill": {
+      "pass_rate": {"mean": 0.17, "stddev": 0.19, "min": 0.0, "max": 0.5},
+      "time_seconds": {"mean": 0, "stddev": 0, "min": 0, "max": 0},
+      "tokens": {"mean": 0, "stddev": 0, "min": 0, "max": 0}
+    },
+    "delta": {
+      "pass_rate": "+0.83",
+      "time_seconds": "+0",
+      "tokens": "+0"
+    }
+  },
+  "notes": [
+    "With-skill achieves 100% pass rate across all 5 evals (20/20 assertions). Without-skill passes only 4/20 assertions (20%).",
+    "The three mandatory challenges (Strategic Override, Data Gap, What Would We Regret) are the strongest differentiators — they NEVER appear without the skill and ALWAYS appear with it.",
+    "Negative evals (sprint-planning, metrics-review) show perfect boundary enforcement with skill (redirects correctly) vs 0% without skill (answers directly).",
+    "Without-skill baseline correctly identifies RICE table structure (eval 1) and Value vs Effort quadrants (eval 3), showing Claude has general PM knowledge — but lacks the structured challenge framework.",
+    "The 'frequency of request assessed' assertion (eval 2) passes in both configurations — Claude naturally flags single-customer churn threats. This assertion may not strongly differentiate skill value.",
+    "Scoring assumptions visibility is a consistent differentiator: with-skill always shows detailed rationale; without-skill provides raw numbers only.",
+    "No timing/token data available (inline execution). Future runs should use subagent execution for resource measurement."
+  ]
+}

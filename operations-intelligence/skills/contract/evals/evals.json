@@ -1,0 +1,61 @@
+{
+  "skill_name": "contract",
+  "evals": [
+    {
+      "id": 1,
+      "name": "msa-obligation-extraction",
+      "prompt": "I've got our main cloud hosting MSA with TechCloud Inc. Key details: 3-year term starting Jan 2025, auto-renews with 90-day notice, annual value 240k. They promise 99.9% uptime SLA with 5% monthly fee credit per 0.1% below target. We must provide 30 days notice of usage spikes over 200% baseline. There's a CPI+2% annual price escalation clause, liability capped at 12 months fees, and either party can terminate with 180 days notice. Data must be returned within 30 days of termination in standard format. Can you extract all obligations and key terms?",
+      "expected_output": "Structured obligation extraction with our obligations table, vendor obligations table, key dates table with auto-renewal notice deadline, SLA table with credit mechanism, and auto-renewal flags.",
+      "files": [],
+      "expectations": [
+        "Output begins with the mandatory header containing TASK, DOCUMENT TYPE, CONFIGURATION, DATE, OWNER fields",
+        "Document type is identified as Obligation Extract",
+        "Our obligations table is present with specific obligations (e.g. 30-day notice for usage spikes)",
+        "Vendor obligations table is present with SLA targets and consequences (99.9% uptime, 5% credit)",
+        "Key dates table includes the auto-renewal date and 90-day notice period",
+        "Key dates table includes price review dates reflecting the CPI+2% escalation",
+        "SLA table includes metric, target, measurement period, reporting, and credit if breached",
+        "Auto-renewal flags section is present with clause details and notice method",
+        "The data return obligation (30 days, standard format) is captured in the extraction"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "contract-risk-flagging",
+      "prompt": "Review this vendor agreement for risk: 2-year SaaS contract, auto-renews annually with only 30-day cancellation notice. Vendor liability capped at 3 months of fees (we pay 180k/year). Annual price increase is CPI or 5%, whichever is higher. Vendor can change service features with 14 days email notice. Only vendor can terminate for convenience with 90 days notice; we cannot. No explicit data ownership or portability clause. Indemnity is mutual but limited to the liability cap.",
+      "expected_output": "Risk analysis covering all six risk flag categories with severity ratings, exact clause references, specific risks, and recommended negotiation actions.",
+      "files": [],
+      "expectations": [
+        "Output begins with the mandatory header containing TASK, DOCUMENT TYPE, CONFIGURATION, DATE, OWNER fields",
+        "Document type is identified as Risk Analysis",
+        "All six risk flag categories are evaluated: auto-renewal, liability caps, price escalation, unilateral change rights, termination for convenience, and data ownership",
+        "Auto-renewal trap is flagged as HIGH risk (30-day notice window is very short)",
+        "Liability cap is flagged with risk assessment relative to 180k annual spend (3 months = 45k cap vs operational dependency)",
+        "Price escalation is flagged (CPI or 5% whichever higher is aggressive)",
+        "Unilateral change rights flagged (14-day email notice for feature changes)",
+        "One-sided termination for convenience is flagged (vendor only)",
+        "Missing data ownership/portability clause is flagged as a risk",
+        "Each risk flag includes severity rating, clause reference, risk description, and recommended action"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "contract-summary-for-leadership",
+      "prompt": "Summarise this contract for our leadership team: MSA with DataVault Ltd for document management. 5 years, 350k/year, auto-renews for 2-year periods with 120-day notice. 99.5% availability SLA, 10% monthly credit per hour of downtime over 4 hours/month. We must complete onboarding within 90 days. Their liability is capped at 2x annual fees. We get data back within 60 days of termination. Price fixed for years 1-3, then CPI adjustment. Either party can terminate for cause with 60 days notice.",
+      "expected_output": "A one-page contract summary in plain language covering parties, type, term, value, what we get, what we owe, key protections, key risks (top 3), critical dates, and the legal counsel disclaimer.",
+      "files": [],
+      "expectations": [
+        "Output begins with the mandatory header containing TASK, DOCUMENT TYPE, CONFIGURATION, DATE, OWNER fields",
+        "Document type is identified as Summary",
+        "Summary includes parties, contract type, term (5 years + auto-renewal details), and value (350k/year)",
+        "WHAT WE GET section describes document management services in plain language",
+        "WHAT WE OWE section includes payment terms and 90-day onboarding obligation",
+        "KEY PROTECTIONS section covers SLA with credit mechanism and data return clause",
+        "KEY RISKS section identifies top 3 risks with severity",
+        "CRITICAL DATES section includes auto-renewal notice deadline and price change at year 3",
+        "The legal counsel disclaimer is present stating this is for operational reference only",
+        "Language is accessible to non-legal readers"
+      ]
+    }
+  ]
+}

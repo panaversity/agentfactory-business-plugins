@@ -1,0 +1,40 @@
+{
+  "expectations": [
+    {
+      "text": "Output is an Initiative Brief (Type 3)",
+      "passed": true,
+      "evidence": "Title is 'Initiative Brief: Marketplace Feature'. Contains similar structural elements to an initiative brief though with different section names (The Problem, Proposed Initiative, Why Now, Strategic Fit, Sizing Estimate, Key Risks, What We Need to Decide)."
+    },
+    {
+      "text": "THE BET section is one sentence capturing what, who, and why now",
+      "passed": false,
+      "evidence": "No 'THE BET' section exists. The brief opens with 'The Problem' which describes three problems but doesn't distill into a single-sentence bet. The 'Why Now' section exists but is a bullet list, not a single-sentence framing."
+    },
+    {
+      "text": "SIZE OF PRIZE section quantifies commercial or user impact",
+      "passed": true,
+      "evidence": "'Sizing Estimate' table provides quantified estimates: Year 1 GMV ($200K-$1.5M), take-rate revenue ($30K-$450K), retention impact (+2-10pp NRR) across conservative and moderate scenarios. Directional but quantified."
+    },
+    {
+      "text": "ROUGH EFFORT is expressed as order of magnitude (days/weeks/months/quarters)",
+      "passed": true,
+      "evidence": "'Investment Required (Phase 1: MVP)' section states '2-3 engineers, ~1 quarter for MVP' and provides a cost estimate of '$300K-500K fully loaded for MVP phase'. Order of magnitude is quarters."
+    },
+    {
+      "text": "RISKS section lists top 2-3 risks",
+      "passed": true,
+      "evidence": "'Key Risks' table lists 4 risks with severity and mitigation: empty marketplace (High), quality/security (High), cannibalization (Medium), low adoption (Medium)."
+    },
+    {
+      "text": "DECISION NEEDED clearly states what approval is requested",
+      "passed": true,
+      "evidence": "'What We Need to Decide' section lists 3 decisions: go/no-go on discovery phase (4-week sprint), strategic positioning, and revenue model preference. 'Recommended Next Steps' table includes 'Approve 4-week discovery sprint' with owner and timeline."
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  }
+}

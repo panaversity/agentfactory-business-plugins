@@ -1,14 +1,19 @@
 ---
 name: supplier-risk
 description: >
-  Activate for: supplier risk, vendor risk, supply risk, risk brief,
-  supplier financial risk, supplier operational risk, supplier compliance risk,
-  geopolitical risk, Tier 2 risk, sub-supplier, supply disruption, risk monitor,
-  risk assessment, risk rating, risk alert, distress signal, supplier news,
-  country risk, single source risk, supply chain resilience.
-  NOT for: vendor onboarding or classification (use vendor-assessment),
-  invoice processing (use invoice-reconciliation), carrier performance
-  (use logistics-brief).
+  Monitors ongoing risk signals and produces risk briefs for known vendors.
+  Activate for: supplier risk monitoring, vendor risk alert, supply risk,
+  risk brief, supplier financial risk, credit rating downgrade, supplier
+  operational risk, supplier compliance risk, geopolitical risk, Tier 2 risk,
+  sub-supplier disruption, supply disruption, risk monitor, risk rating change,
+  risk alert, distress signal, supplier news, country risk, supply chain
+  resilience, CVA, administration, insolvency.
+  USE THIS when a KNOWN risk event has occurred (credit downgrade, financial
+  distress, disruption, regulatory action) and you need to assess its impact.
+  NOT for: classifying or scoring a vendor (use vendor-assessment), vendor
+  onboarding or approval (use vendor-assessment), vendor Kraljic classification
+  (use vendor-assessment), invoice processing (use invoice-reconciliation),
+  carrier performance (use logistics-brief).
 license: Apache-2.0
 metadata:
   author: Panaversity

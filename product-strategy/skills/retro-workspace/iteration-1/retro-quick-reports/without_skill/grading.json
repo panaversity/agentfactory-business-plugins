@@ -1,0 +1,45 @@
+{
+  "expectations": [
+    {
+      "text": "Q1 (Did it solve the problem?) uses the actual data provided — adoption at 34% vs 50% target, support tickets down 60%, NPS up from 6.2 to 7.1 — cherry-picking positive metrics while ignoring the adoption miss would produce a misleading retro",
+      "passed": true,
+      "evidence": "The 'Key Metrics' table includes all three data points. The 'What Didn't Go Well' section flags '34% adoption vs. 50% target'. Data is present, though not structured as Q1."
+    },
+    {
+      "text": "Q1 verdict reflects mixed results: adoption below target but support impact and NPS strongly positive — binary PASS/FAIL on a nuanced outcome misses the learning",
+      "passed": false,
+      "evidence": "No explicit verdict. The retro lists metrics in a table with 'Below target' and 'Exceeded' but does not synthesize a verdict about whether the feature solved the problem. The overall assessment is implicit, not stated."
+    },
+    {
+      "text": "Q2 (Did we build it as intended?) flags the 1-week delay and PDF export scope change — the scope change is the process issue that needs a corrective action, not just a footnote",
+      "passed": false,
+      "evidence": "The scope change is mentioned in 'What Didn't Go Well' as a bullet point ('PDF export was added mid-sprint, causing a 1-week delay') but it is treated as a footnote alongside other items. No structured delivery assessment, no corrective action tied specifically to the scope change process failure."
+    },
+    {
+      "text": "Q3 (Were the metrics right?) evaluates whether adoption %, support tickets, and NPS were the right things to measure — metrics quality is often the most valuable retro finding",
+      "passed": false,
+      "evidence": "No metrics quality evaluation. The retro lists what the metrics showed but never asks 'were these the right metrics?' — the most important question is entirely absent."
+    },
+    {
+      "text": "Q4 (What would we do differently?) produces specific, testable process changes — 'communicate better' is not a process change; 'scope changes after sprint start require PM + eng lead sign-off' is",
+      "passed": false,
+      "evidence": "Action items are vague: 'Investigate why adoption is below target', 'Implement a scope change process', 'Consider a feature promotion campaign'. None are specific, testable process rules. 'Implement a scope change process' is directional but not a specific rule."
+    },
+    {
+      "text": "PRODUCT.LOCAL.MD UPDATES section recommends at least one quality rule — a retro that produces zero configuration changes was a waste of everyone's time",
+      "passed": false,
+      "evidence": "No PRODUCT.LOCAL.MD updates section exists. No quality rules recommended."
+    },
+    {
+      "text": "Follow-on actions have owners and due dates — actionless retros are therapy sessions, not improvement tools",
+      "passed": false,
+      "evidence": "Action items list ('Investigate why adoption is below target', 'Implement a scope change process', 'Consider a feature promotion campaign') has no owners and no due dates."
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 6,
+    "total": 7,
+    "pass_rate": 0.14
+  }
+}

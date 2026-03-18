@@ -1,0 +1,20 @@
+{
+  "expectations": [
+    {
+      "text": "The skill does NOT produce a brief — this is a technical implementation request with no brief-related intent",
+      "passed": true,
+      "evidence": "Output is a Python script (monthly_revenue_chart.py) that loads CSV and generates bar charts. No brief was produced — the agent correctly handled this as a code generation task without a brief skill."
+    },
+    {
+      "text": "If the skill somehow activates, it should redirect the user to appropriate tools rather than producing a brief around a code request",
+      "passed": true,
+      "evidence": "No skill was involved in this run (without_skill baseline). The agent directly produced the requested Python script, which is the appropriate response for a code generation request."
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 0,
+    "total": 2,
+    "pass_rate": 1.0
+  }
+}

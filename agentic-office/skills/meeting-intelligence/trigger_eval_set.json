@@ -1,0 +1,82 @@
+[
+  {
+    "query": "Prep me for the Monday exec weekly at 10am — attendees are Omar, Ayesha, and Bilal",
+    "should_trigger": true
+  },
+  {
+    "query": "Synthesise these meeting notes — D: approved budget, A: Omar to produce ROI brief by Thursday",
+    "should_trigger": true
+  },
+  {
+    "query": "Give me the meeting brief for the vendor review at 2pm",
+    "should_trigger": true
+  },
+  {
+    "query": "After the meeting, convert my raw notes into D/A/F/Q/R format with owners and deadlines",
+    "should_trigger": true
+  },
+  {
+    "query": "What was decided in the exec weekly last Thursday? Pull up the meeting record",
+    "should_trigger": true
+  },
+  {
+    "query": "Meeting follow-up — what actions came out of the board meeting and who owns them?",
+    "should_trigger": true
+  },
+  {
+    "query": "Before the meeting with the CFO, give me context on each agenda item and stakeholder positions",
+    "should_trigger": true
+  },
+  {
+    "query": "Post-meeting notes synthesis — organise my raw notes into decisions, actions, and deferred items",
+    "should_trigger": true
+  },
+  {
+    "query": "Prepare stakeholder notes for all attendees at the quarterly review meeting",
+    "should_trigger": true
+  },
+  {
+    "query": "Meeting actions from yesterday — list all open items with owners and due dates",
+    "should_trigger": true
+  },
+  {
+    "query": "Give me a situation brief on Project Nighthawk — current status and key risks",
+    "should_trigger": false
+  },
+  {
+    "query": "Give me my daily digest with today's calendar and priorities",
+    "should_trigger": false
+  },
+  {
+    "query": "Brain dump my priorities and sort into P1 P2 P3",
+    "should_trigger": false
+  },
+  {
+    "query": "Delegate the contract review to Bilal with a handoff message",
+    "should_trigger": false
+  },
+  {
+    "query": "Search workplace memory for everything about the vendor dispute",
+    "should_trigger": false
+  },
+  {
+    "query": "Load cross-domain context from HR and Finance for onboarding",
+    "should_trigger": false
+  },
+  {
+    "query": "What is the weekly project status? Show me RAG across all projects",
+    "should_trigger": false
+  },
+  {
+    "query": "Add a new person to workplace memory — Fatima Khan, Head of Legal",
+    "should_trigger": false
+  },
+  {
+    "query": "Configure the agentic office plugin and create work.local.md",
+    "should_trigger": false
+  },
+  {
+    "query": "What is the executive dashboard headline status?",
+    "should_trigger": false
+  }
+]

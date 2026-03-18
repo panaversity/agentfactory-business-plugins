@@ -1,0 +1,25 @@
+{
+  "expectations": [
+    {
+      "text": "Does NOT write a performance review",
+      "passed": true,
+      "evidence": "Output states: 'This task is outside the scope of the /reference skill.' No performance review content, feedback structure, or objectives generated."
+    },
+    {
+      "text": "Redirects to the appropriate skill or resource for performance reviews",
+      "passed": true,
+      "evidence": "States: 'Your request...should be handled by the /performance-review skill instead.' Lists specific capabilities of /performance-review: structuring feedback, writing narratives, setting SMART objectives, handling sensitive conversations."
+    },
+    {
+      "text": "Does NOT confuse a reference with a performance review",
+      "passed": true,
+      "evidence": "Explicitly distinguishes: 'A performance review is an internal document between a manager and employee...A reference letter is an external document provided to a third party.' Includes comparison table showing the difference."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1.0
+  }
+}

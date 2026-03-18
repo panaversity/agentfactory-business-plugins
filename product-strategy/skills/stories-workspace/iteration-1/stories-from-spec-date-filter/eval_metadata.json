@@ -1,0 +1,14 @@
+{
+  "eval_id": 1,
+  "eval_name": "stories-from-spec-date-filter",
+  "prompt": "Here is a feature spec for a date range filter on our analytics dashboard:\n\nProblem: Users cannot filter dashboard data by custom date ranges. They currently export to Excel and filter manually.\n\nSolution: Add a date range picker to the dashboard header that filters all widgets.\n\nACs:\n1. User can select a preset range (7d, 30d, 90d, YTD)\n2. User can select a custom start and end date\n3. All dashboard widgets update when the range changes\n4. Selected range persists across page navigation\n5. Invalid date ranges show an error message\n\nGenerate user stories from this spec.",
+  "assertions": [
+    "Each story uses a named persona, not 'a user'",
+    "Each 'want' describes a capability (what the user can do), not a UI element (what they click)",
+    "Each 'so that' describes a user outcome (benefit to them), not a system action",
+    "No AC contains 'and' connecting multiple conditions",
+    "At least one error-state AC per story",
+    "Stories are sized (S/M/L) with dependencies noted",
+    "Coverage check flags any spec AC not represented in stories"
+  ]
+}

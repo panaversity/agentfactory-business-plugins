@@ -1,0 +1,20 @@
+{
+  "expectations": [
+    {
+      "text": "The skill does NOT produce a PRD for a roadmap planning request",
+      "passed": true,
+      "evidence": "Response title: 'Roadmap Planning — Skill Mismatch Detected'. Body: 'The /prd skill is designed for writing Product Requirements Documents for individual multi-team initiatives.' No PRD produced."
+    },
+    {
+      "text": "Redirects to /roadmap-update or /prioritise depending on whether the user needs sequencing or scoring",
+      "passed": true,
+      "evidence": "Redirects to '/roadmap-update — the official roadmap planning skill referenced by the PRD skill.' Also explains the workflow sequence: '/roadmap-update → /prd → /sprint-planning'. Final recommendation: 'Use /roadmap-update to plan your Q3/Q4 roadmap. Once you've selected and sequenced initiatives, return to /prd to write detailed requirements for each one.'"
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 0,
+    "total": 2,
+    "pass_rate": 1.0
+  }
+}

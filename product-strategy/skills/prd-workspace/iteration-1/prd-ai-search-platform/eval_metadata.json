@@ -1,0 +1,12 @@
+{
+  "eval_id": 2,
+  "eval_name": "prd-ai-search-platform",
+  "prompt": "Write the full requirements for our new AI-powered search platform. This will involve the data team, frontend team, and infrastructure team over two quarters. We want semantic search, faceted filtering, and search analytics.",
+  "assertions": [
+    "The PRD includes explicit scope boundaries despite the user saying 'full requirements' — unbounded PRDs expand indefinitely and never reach REFINED status",
+    "Functional requirements distinguish MUST/SHOULD/COULD for semantic search, faceting, and analytics — these are three separable capabilities that should ship independently",
+    "Dependencies table maps cross-team dependencies (data, frontend, infra) — a multi-team PRD without a dependency map produces parallel work that doesn't integrate",
+    "Risk table identifies technical risks specific to AI/ML features (model quality, latency, data pipeline) — AI features have unique failure modes that generic risk templates miss",
+    "Phased rollout plan (beta to GA) is present — large platform features shipped without phased rollout create blast radius problems"
+  ]
+}

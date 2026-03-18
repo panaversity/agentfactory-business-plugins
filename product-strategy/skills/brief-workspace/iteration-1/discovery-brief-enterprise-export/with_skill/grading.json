@@ -1,0 +1,40 @@
+{
+  "expectations": [
+    {
+      "text": "Output is a Discovery Brief (Type 2)",
+      "passed": true,
+      "evidence": "Title is 'Discovery Brief: Enterprise Bulk Export Functionality' and follows the exact Discovery Brief format with Duration, Methods, Sample header table, ranked questions, out of scope, success criteria, and outputs expected."
+    },
+    {
+      "text": "QUESTIONS TO ANSWER are ranked by priority",
+      "passed": true,
+      "evidence": "QUESTIONS TO ANSWER section contains 5 numbered questions explicitly labeled '(ranked)'. Question 1 is the primary strategic question (job-to-be-done), followed by commercial impact, data specifics, regulatory drivers, and workarounds."
+    },
+    {
+      "text": "Methods section specifies interview or analysis methods appropriate for enterprise research",
+      "passed": true,
+      "evidence": "Methods field in header lists: 'Customer interviews, support ticket analysis, CRM deal analysis, competitive audit, internal data audit' — all appropriate for enterprise research. Detailed week-by-week research plan provides specific activities."
+    },
+    {
+      "text": "Sample section defines who to talk to with minimum n= target",
+      "passed": true,
+      "evidence": "Sample field specifies: 'Enterprise customers (n>=8 interviews); churned/at-risk accounts with export mentions (n>=3); internal stakeholders (Sales, CS, Engineering — n>=4)'. Recruitment criteria section further details must-have criteria, segment mix, and role mix."
+    },
+    {
+      "text": "OUT OF SCOPE section explicitly lists what is not being explored",
+      "passed": true,
+      "evidence": "OUT OF SCOPE section lists 4 explicit exclusions: solution design, self-serve/SMB needs, pricing/packaging decisions, and API integration patterns."
+    },
+    {
+      "text": "SUCCESS CRITERIA are evidence-based, not activity-based",
+      "passed": true,
+      "evidence": "SUCCESS CRITERIA section contains 5 evidence-based criteria: e.g., 'We can answer Question 1 with evidence from at least 5 distinct enterprise customers, with clear clustering into no more than 3 primary use cases' and 'We can quantify the commercial impact with actual revenue figures — deals lost, accounts at risk, pipeline blocked — not estimates.'"
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  }
+}

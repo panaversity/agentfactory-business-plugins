@@ -1,0 +1,14 @@
+{
+  "eval_id": 2,
+  "eval_name": "improve-existing-jd-inclusive-language",
+  "prompt": "Here's our current job ad — can you improve it? 'We're looking for a rockstar DevOps ninja to join our young and energetic team. Must have 10+ years Docker experience, 7+ years Kubernetes, Computer Science degree required. We offer competitive salary. Must thrive in fast-paced environment and crush it daily. Culture fit is essential.'",
+  "assertions": [
+    "Removes 'rockstar', 'ninja' and replaces with descriptive professional language",
+    "Removes 'young and energetic' age-coded language",
+    "Replaces '10+ years Docker' and '7+ years Kubernetes' with skill proficiency descriptions",
+    "Flags 'competitive salary' and either replaces with a range or explicitly states salary range should be added",
+    "Replaces 'culture fit' with specific behaviours or ways of working",
+    "Adds equal opportunities statement and reasonable adjustments offer",
+    "Includes an INCLUSIVE LANGUAGE CHECK section documenting what was changed and why"
+  ]
+}

@@ -1,0 +1,22 @@
+[
+  {"query": "Our lead engineer is leaving next month — I need to capture everything she knows before she goes", "should_trigger": true},
+  {"query": "Create a knowledge transfer plan for a departing employee who's been here 10 years", "should_trigger": true},
+  {"query": "What tacit knowledge does our senior architect hold that nobody else has?", "should_trigger": true},
+  {"query": "We need a knowledge capture interview guide for an employee who resigned", "should_trigger": true},
+  {"query": "Build a knowledge risk map for our operations team — who holds critical undocumented knowledge?", "should_trigger": true},
+  {"query": "Our VP of Sales is retiring — document all the institutional knowledge before it's lost", "should_trigger": true},
+  {"query": "I need to preserve the knowledge of a departing project manager before their last day", "should_trigger": true},
+  {"query": "What questions should I ask in a knowledge extraction interview with our leaving CFO?", "should_trigger": true},
+  {"query": "Run a knowledge audit — identify where our critical knowledge is concentrated in too few people", "should_trigger": true},
+  {"query": "Help me create knowledge base articles from what our departing team lead knows", "should_trigger": true},
+  {"query": "What's our company's maternity leave policy? How many weeks are covered?", "should_trigger": false},
+  {"query": "Create a 30-60-90 day onboarding plan for a new developer starting next week", "should_trigger": false},
+  {"query": "Write a job description for a Senior Product Manager role in our team", "should_trigger": false},
+  {"query": "I need to write a reference letter for a former employee", "should_trigger": false},
+  {"query": "Help me prepare interview questions for our Head of Marketing candidates", "should_trigger": false},
+  {"query": "Assess our internal candidates for the VP of Engineering succession", "should_trigger": false},
+  {"query": "Draft an offer letter with salary details for a new hire", "should_trigger": false},
+  {"query": "We're restructuring the department — help me plan the new org chart", "should_trigger": false},
+  {"query": "What's the best approach to set up a performance review cycle?", "should_trigger": false},
+  {"query": "Create an exit checklist and offboarding plan for a departing employee", "should_trigger": false}
+]

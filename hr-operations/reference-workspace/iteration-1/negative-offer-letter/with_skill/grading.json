@@ -1,0 +1,25 @@
+{
+  "expectations": [
+    {
+      "text": "Does NOT draft an offer letter",
+      "passed": true,
+      "evidence": "Output states: 'This request is outside the scope of the /reference skill.' No offer letter content generated."
+    },
+    {
+      "text": "Redirects to the appropriate skill or resource for offer letters",
+      "passed": true,
+      "evidence": "States: 'Use /draft-offer — that is the correct skill for drafting offer letters with salary, start date, benefits, and terms of employment.' Provides list of information to give /draft-offer."
+    },
+    {
+      "text": "Does NOT attempt to generate contractual employment documents",
+      "passed": true,
+      "evidence": "No contractual language generated. Output explains why routing matters: 'Generating an offer letter under the /reference skill would bypass the specific legal and compliance checks that offer letters require (e.g., compensation band validation, benefits eligibility, at-will or fixed-term language, non-compete clauses).'"
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1.0
+  }
+}

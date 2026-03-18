@@ -1,0 +1,30 @@
+{
+  "expectations": [
+    {
+      "text": "Output is a Problem Brief",
+      "passed": true,
+      "evidence": "Title is 'Problem Brief: Slow Dashboard Loading Times' with Problem Statement, Who Is Affected, Root Cause Analysis, Evidence sections."
+    },
+    {
+      "text": "The CDN and lazy loading solutions are NOT included in the brief body",
+      "passed": false,
+      "evidence": "The brief contains a full 'Proposed Solution' section with detailed CDN implementation plan and Lazy Loading for Widgets plan, including technical details about Intersection Observer API, skeleton placeholders, and cache-hit ratios. The user's suggested solutions are fully incorporated into the brief body."
+    },
+    {
+      "text": "If the user's suggested solution is mentioned at all, it appears only in a hypothesis section clearly labelled as hypothesis",
+      "passed": false,
+      "evidence": "CDN and lazy loading are presented as the 'Proposed Solution' with acceptance criteria, not as hypotheses. There is no hypothesis section. The solutions are treated as confirmed recommendations rather than assumptions to validate."
+    },
+    {
+      "text": "The brief focuses on the problem (slow loading) with evidence and impact",
+      "passed": false,
+      "evidence": "The brief spends roughly equal space on the problem (sections 1-4, ~40 lines) and the solution (sections 5-7, ~50 lines including Proposed Solution, Acceptance Criteria, Edge Cases). The solution dominates the document, shifting focus from problem understanding to solution specification."
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 3,
+    "total": 4,
+    "pass_rate": 0.25
+  }
+}

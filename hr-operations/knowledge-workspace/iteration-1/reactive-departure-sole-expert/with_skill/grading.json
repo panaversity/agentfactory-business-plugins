@@ -1,0 +1,45 @@
+{
+  "expectations": [
+    {
+      "text": "Risk assessment scores HIGH (11-15 range)",
+      "passed": true,
+      "evidence": "Line 19: 'TOTAL SCORE: 15 / 15 — MAXIMUM HIGH RISK'. All five factors scored 3/3: Tenure (8 years), Role criticality (sole expert), Documentation level (undocumented), Successor readiness (none identified), Client/revenue impact (direct and significant)."
+    },
+    {
+      "text": "Identifies this as REACTIVE capture (departure confirmed)",
+      "passed": true,
+      "evidence": "Line 21: 'CAPTURE TYPE: REACTIVE (departure confirmed, 4-week notice, last day March 28)'. Urgency assessment follows with working days remaining calculation."
+    },
+    {
+      "text": "Generates specific interview questions for each knowledge area",
+      "passed": true,
+      "evidence": "Four sets of domain-specific questions: Deployment Pipeline (8 questions, lines 189-205), AWS Architecture (11 questions, lines 207-228), Vendor Relationship (7 questions, lines 231-243), Institutional Context (8 questions, lines 247-261). All questions are specific and domain-targeted, not generic."
+    },
+    {
+      "text": "Includes the 'what we should NOT try again' question",
+      "passed": true,
+      "evidence": "Line 250-251: 'What has this organisation tried that didn't work, and why? What should we not try again?' Also referenced in knowledge area 5: 'Institutional Context and What Not To Do' (lines 74-80)."
+    },
+    {
+      "text": "Schedules capture sessions to complete by Week 3 of notice",
+      "passed": true,
+      "evidence": "Sessions scheduled: March 20, 21, 24, 25 (Sessions 1-4), with Session 5 (validation) on March 27. Last day is March 28. All capture sessions complete by Thursday March 27 — within the penultimate week, not the final day."
+    },
+    {
+      "text": "Output includes CONFIDENTIAL sensitivity label and mandatory header block",
+      "passed": true,
+      "evidence": "Lines 1-5: TASK, DOCUMENT TYPE, JURISDICTION, CONFIGURATION present. Line 5: 'SENSITIVITY: CONFIDENTIAL'."
+    },
+    {
+      "text": "Specifies knowledge article output format with DRAFT status",
+      "passed": true,
+      "evidence": "Lines 270-298: Full knowledge article template shown with 'Status: DRAFT' explicitly marked. Line 271-272: 'All articles use this structure and are marked DRAFT until a successor validates them in Session 5'."
+    }
+  ],
+  "summary": {
+    "passed": 7,
+    "failed": 0,
+    "total": 7,
+    "pass_rate": 1.0
+  }
+}

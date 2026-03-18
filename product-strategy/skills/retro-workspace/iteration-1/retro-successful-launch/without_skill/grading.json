@@ -1,0 +1,30 @@
+{
+  "expectations": [
+    {
+      "text": "Q1 verdict reflects that this exceeded targets — the retro captures success, not just problems",
+      "passed": true,
+      "evidence": "'Exceeded adoption target' is noted in What Went Well, and the metrics table shows 'Exceeded' for both metrics. Success is captured, though without a formal verdict."
+    },
+    {
+      "text": "Q2 delivery assessment shows all-green metrics (on time, spec quality, scope maintained) — documenting what went right is what makes success repeatable",
+      "passed": false,
+      "evidence": "Clean delivery is mentioned ('On time, no scope changes, all acceptance criteria met') but only as a bullet in 'What Went Well'. No structured delivery assessment. The WHY behind the clean delivery is not explored — just noted as a fact."
+    },
+    {
+      "text": "Q4 still produces at least one process observation — even successful features have learnings; the retro must not skip this section just because things went well",
+      "passed": false,
+      "evidence": "Lessons Learned section says 'When the spec is clear and scope is locked, delivery goes smoothly.' This is an observation but not a process improvement. Action items are: 'Share this retro' and 'Consider applying the same spec and scoping process.' These are vague intentions, not specific process changes."
+    },
+    {
+      "text": "The retro does NOT only document what went wrong — per the NEVER rules, a retro that skips what went well fails to protect what works",
+      "passed": true,
+      "evidence": "'What Went Well' section is present and populated. However, 'What Didn't Go Well' says 'Nothing major to flag' which, while not documenting only negatives, is a missed opportunity to extract deeper learnings."
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 2,
+    "total": 4,
+    "pass_rate": 0.5
+  }
+}

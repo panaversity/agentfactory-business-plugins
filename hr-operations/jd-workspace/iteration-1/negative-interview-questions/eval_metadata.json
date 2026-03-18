@@ -1,0 +1,10 @@
+{
+  "eval_id": 3,
+  "eval_name": "negative-interview-questions",
+  "prompt": "I need to prepare interview questions and a scoring rubric for our Head of Marketing candidates. What should I ask them in the panel interview?",
+  "assertions": [
+    "Does NOT generate interview questions",
+    "Redirects to the appropriate skill or resource for interview preparation",
+    "Does NOT produce a job description unless the user also asked for one"
+  ]
+}

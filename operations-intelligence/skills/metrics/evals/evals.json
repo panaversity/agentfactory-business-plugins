@@ -1,0 +1,65 @@
+{
+  "skill_name": "metrics",
+  "evals": [
+    {
+      "id": 1,
+      "name": "ops-metrics-framework-design",
+      "prompt": "Design an operational metrics framework for our mid-size fintech company. We have 15 vendors, process about 50,000 transactions daily, and are FCA regulated. The COO wants a dashboard with no more than 10 metrics that tells the operational story. We need coverage across vendor management, process operations, compliance, and incidents. Make sure there's a good mix of leading and lagging indicators.",
+      "expected_output": "A complete operational metrics framework with metric definitions covering vendor management, process operations, compliance, and incidents. Each metric has type (leading/lagging), owner, RAG thresholds, and measurement frequency. A recommended top 10 dashboard selection with rationale.",
+      "files": [],
+      "expectations": [
+        "Output begins with the mandatory header containing TASK, DOCUMENT TYPE, CONFIGURATION, DATE, OWNER, REVIEW DATE fields",
+        "Document type is identified as Framework",
+        "Metrics are organized by domain: vendor management, process operations, compliance, and incidents",
+        "Each metric includes: what it measures, why it matters, type (leading/lagging), formula, data source, measurement frequency, owner, and RAG thresholds",
+        "At least one leading indicator is included for each major domain area",
+        "RAG thresholds define specific values for green, amber, and red with escalation actions for red",
+        "The recommended top 10 (or fewer) dashboard selection is provided",
+        "No more than 10 metrics are recommended for the executive dashboard",
+        "Metric owners are named roles (not 'the team')",
+        "Every metric has a defined formula (no ambiguous calculations)"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "metric-definition-sla-compliance",
+      "prompt": "Define a metric for 'Vendor SLA Compliance Rate'. We have 15 vendors each with different SLA targets (uptime, response time, resolution time). I need the full metric definition including formula, thresholds, and what actions to take when it goes red. We measure monthly and report to the COO.",
+      "expected_output": "A complete metric definition card for Vendor SLA Compliance Rate with formula, data source, RAG thresholds specific to the context (15 vendors, monthly measurement), and escalation actions.",
+      "files": [],
+      "expectations": [
+        "Output begins with the mandatory header containing TASK, DOCUMENT TYPE, CONFIGURATION, DATE, OWNER, REVIEW DATE fields",
+        "Document type is identified as Metric Definition",
+        "Metric name is clear and descriptive",
+        "What it measures and why it matters are explained in plain language",
+        "Type is classified (lagging indicator)",
+        "Formula is explicit and unambiguous (e.g. SLA targets met / total SLA targets across all vendors)",
+        "Data source is specified",
+        "Measurement frequency is monthly as requested",
+        "GREEN threshold is defined with a specific value or range",
+        "AMBER threshold is defined with investigation guidance",
+        "RED threshold is defined with specific escalation action and timeframe",
+        "Trend direction is specified (higher is better)"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "monthly-ops-report",
+      "prompt": "Generate a monthly operations report for January 2025. Here's the data:\n- Vendor SLA compliance: 94% (was 97% in Dec, target 95%) -- 2 vendors breached\n- Process error rate: 0.3% (was 0.2% in Dec, target <0.5%)\n- Open audit findings: 4 (was 6 in Dec) -- closed 2, no new ones\n- MTTR P1 incidents: 2.1 hours (was 1.8 hours in Dec, target <2 hours)\n- Change failure rate: 8% (was 5% in Dec, target <10%)\n- Obligation currency rate: 91% (was 89% in Dec, target 95%)\n- Corrective action completion: 75% (was 80% in Dec, target 90%)\n- Key person dependency: 3 roles (was 3 in Dec, target <2)",
+      "expected_output": "A structured monthly operations report with headline status, metrics table with RAG status and trend arrows, key issues section for red metrics, watch items for amber metrics, and upcoming actions.",
+      "files": [],
+      "expectations": [
+        "Output begins with the mandatory header",
+        "A headline status is provided (e.g. WATCH ITEMS or ACTION REQUIRED based on the data)",
+        "A metrics table is present with columns: Metric, Status (G/A/R), This Month, Last Month, Trend, Action",
+        "Vendor SLA compliance (94%) is correctly assessed against 95% target -- should be amber or red since below target",
+        "MTTR (2.1 hours) is correctly flagged as red/amber since it exceeds the 2-hour target",
+        "Obligation currency rate (91%) is flagged since below 95% target",
+        "Corrective action completion (75%) is flagged since well below 90% target",
+        "KEY ISSUES section addresses the red metrics with specific actions",
+        "WATCH ITEMS section addresses amber metrics with monitoring rationale",
+        "UPCOMING section identifies actions needed in the next 30 days",
+        "Trends are correctly identified (vendor SLA declining, audit findings improving, etc.)"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "eval_id": 3,
+  "eval_name": "negative-policy-lookup",
+  "prompt": "What's our company's maternity leave policy? I need to know how many weeks are covered and whether it's full pay or statutory.",
+  "assertions": [
+    "Does NOT create a knowledge capture plan",
+    "Redirects to the appropriate skill or resource for policy queries",
+    "Does NOT attempt to answer the policy question from general knowledge"
+  ]
+}

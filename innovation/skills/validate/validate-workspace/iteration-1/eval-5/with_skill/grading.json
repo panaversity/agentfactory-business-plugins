@@ -1,0 +1,22 @@
+{
+  "eval_id": 5,
+  "eval_name": "negative-sprint-planning",
+  "expectations": [
+    {
+      "text": "Agent recognizes sprint planning and redirects to sprint skill",
+      "passed": true,
+      "evidence": "Redirected to /sprint skill"
+    },
+    {
+      "text": "Agent does NOT produce sprint plan within validate skill",
+      "passed": true,
+      "evidence": "No sprint plan produced"
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 0,
+    "total": 2,
+    "pass_rate": 1.0
+  }
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "query": "Write a problem brief about our declining user retention",
+    "should_trigger": true
+  },
+  {
+    "query": "I need to frame the problem of enterprise customers churning due to missing reporting features",
+    "should_trigger": true
+  },
+  {
+    "query": "Help me scope a 2-week discovery sprint on why users aren't completing onboarding",
+    "should_trigger": true
+  },
+  {
+    "query": "Create a discovery brief for researching payment friction in our checkout flow",
+    "should_trigger": true
+  },
+  {
+    "query": "I need an initiative brief to pitch our new AI search feature to the CEO",
+    "should_trigger": true
+  },
+  {
+    "query": "Frame the opportunity around self-serve analytics for mid-market customers",
+    "should_trigger": true
+  },
+  {
+    "query": "Write a how might we statement for improving team collaboration in our product",
+    "should_trigger": true
+  },
+  {
+    "query": "I need a kickoff brief for the notifications redesign project",
+    "should_trigger": true
+  },
+  {
+    "query": "Help me write a problem statement for the data export gap our customers keep flagging",
+    "should_trigger": true
+  },
+  {
+    "query": "Scope a research brief for understanding why free-to-paid conversion is dropping",
+    "should_trigger": true
+  },
+  {
+    "query": "Write a feature spec for the new search functionality with API endpoints and data model",
+    "should_trigger": false
+  },
+  {
+    "query": "Build a competitive analysis comparing us to Notion, Coda, and Airtable",
+    "should_trigger": false
+  },
+  {
+    "query": "Synthesize the findings from last week's 8 user interviews into a research report",
+    "should_trigger": false
+  },
+  {
+    "query": "Write user stories for the dashboard filtering feature",
+    "should_trigger": false
+  },
+  {
+    "query": "Prioritise our Q3 backlog using RICE scoring",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a PRD for the workflow automation platform",
+    "should_trigger": false
+  },
+  {
+    "query": "Run a retrospective on the Quick Reports feature we shipped last month",
+    "should_trigger": false
+  },
+  {
+    "query": "Help me set up a PostgreSQL database for my application",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a Python script to analyze our churn data",
+    "should_trigger": false
+  },
+  {
+    "query": "Generate interview questions for our user research on onboarding",
+    "should_trigger": false
+  }
+]

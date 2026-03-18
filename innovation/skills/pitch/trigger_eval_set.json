@@ -1,0 +1,22 @@
+[
+  {"query": "Build me a pitch deck narrative — I'm raising a seed round and need all 9 slides", "should_trigger": true},
+  {"query": "Prepare me for the hardest questions investors will ask in my pitch meeting", "should_trigger": true},
+  {"query": "Write a 100-word executive summary for investor email intros", "should_trigger": true},
+  {"query": "I'm pitching to Sequoia next week — do an investor research brief so I know what they care about", "should_trigger": true},
+  {"query": "I received a term sheet — help me analyze which terms are standard and which to push back on", "should_trigger": true},
+  {"query": "Help me build my traction slide — what's the best way to present $50K MRR and 15% growth?", "should_trigger": true},
+  {"query": "Practice my pitch with me — ask me the hardest investor questions and critique my answers", "should_trigger": true},
+  {"query": "I need a compelling hook for my pitch — something that makes investors lean in during the first 30 seconds", "should_trigger": true},
+  {"query": "What should I raise? Help me figure out the right round size and instrument for my stage", "should_trigger": true},
+  {"query": "Build a one-page investor brief I can hand out at a demo day", "should_trigger": true},
+  {"query": "Calculate my CAC, LTV, and build a financial model with 3 scenarios", "should_trigger": false},
+  {"query": "Size the market — what's my TAM, SAM, and SOM?", "should_trigger": false},
+  {"query": "Build me a business model canvas with all 9 blocks", "should_trigger": false},
+  {"query": "Create an interview guide for customer discovery", "should_trigger": false},
+  {"query": "Brainstorm 100 product ideas for fintech", "should_trigger": false},
+  {"query": "Map out my assumptions and design tests — build an assumption map", "should_trigger": false},
+  {"query": "Plan a 2-week innovation sprint", "should_trigger": false},
+  {"query": "Build me a go-to-market plan with ICP and 90-day calendar", "should_trigger": false},
+  {"query": "Deploy my Express.js app to AWS", "should_trigger": false},
+  {"query": "Analyze our pilot results and tell me if we should pivot", "should_trigger": false}
+]

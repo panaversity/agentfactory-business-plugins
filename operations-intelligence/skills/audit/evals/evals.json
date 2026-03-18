@@ -1,0 +1,58 @@
+{
+  "skill_name": "audit",
+  "evals": [
+    {
+      "id": 1,
+      "name": "iso27001-surveillance-prep",
+      "prompt": "We have an ISO 27001 surveillance audit in 6 weeks by BSI. They've indicated they'll focus on access control (A.9) and incident management (A.16). We had a minor finding on access reviews last time. Can you build me a preparation plan?",
+      "expected_output": "A week-by-week preparation plan with evidence inventory covering A.9 and A.16, gap closure priorities addressing the prior access review finding, and briefing requirements for staff who may be interviewed.",
+      "files": [],
+      "expectations": [
+        "Output begins with the mandatory header containing TASK, AUDIT TYPE, CONFIGURATION, DATE, OWNER, and REVIEW DATE fields",
+        "Audit type is identified as Certification (ISO surveillance audit by BSI)",
+        "A week-by-week preparation timeline is provided covering the 6-week window",
+        "An evidence inventory table is present with columns for Obligation/Control, Evidence Required, Location, Age, and Status",
+        "Evidence inventory covers both A.9 (access control) and A.16 (incident management) focus areas",
+        "The prior minor finding on access reviews is explicitly addressed in the gap closure priorities",
+        "Gap closure items have named owners and specific deadlines",
+        "A briefing section identifies who needs to be briefed and by when",
+        "No evidence location is listed as TBD or unknown -- any unknown location is flagged as a GAP"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "mock-audit-data-protection",
+      "prompt": "Run a mock audit for our data protection controls. We process customer PII and are subject to UK GDPR. Focus on data subject access requests, retention, and breach notification. Simulate the questions an ICO auditor would ask.",
+      "expected_output": "A mock audit with 5-10 simulated auditor questions per focus area (DSARs, retention, breach notification), each with an ideal answer, required evidence, and gap identification.",
+      "files": [],
+      "expectations": [
+        "Output begins with the mandatory header containing TASK, AUDIT TYPE, CONFIGURATION, DATE, OWNER fields",
+        "Audit type is identified as Regulatory (ICO audit)",
+        "Mock audit questions are provided for all three focus areas: DSARs, retention, and breach notification",
+        "At least 5 questions are generated per focus area",
+        "Each question includes: the question as an auditor would phrase it, an ideal answer, required evidence, and gap identification",
+        "Questions reference UK GDPR-specific requirements (not generic GDPR)",
+        "Breach notification questions cover the 72-hour reporting obligation",
+        "DSAR questions cover the one-month response deadline"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "audit-finding-response",
+      "prompt": "We just received 3 findings from our external financial auditor:\n1. CRITICAL: No segregation of duties in payment approvals -- same person can create and approve payments up to 50k\n2. MAJOR: Backup restoration has not been tested in 18 months\n3. MINOR: IT change management policy document is 2 years out of date\n\nGenerate structured responses for each finding.",
+      "expected_output": "Three structured audit finding responses, each with the finding text, classification, factual response, root cause, specific corrective action with named owner, target date, and evidence of completion.",
+      "files": [],
+      "expectations": [
+        "Output begins with the mandatory header containing TASK, AUDIT TYPE, CONFIGURATION, DATE, OWNER fields",
+        "All three findings are addressed with individual structured responses",
+        "Each response includes: finding text, classification, factual response, root cause, action planned, owner, target date, and evidence of completion",
+        "The CRITICAL finding (segregation of duties) has a target completion within 30 days",
+        "The MAJOR finding (backup restoration) has a target completion within 60-90 days",
+        "The MINOR finding (change management policy) has a target completion within 6 months",
+        "Responses are factual and acknowledge findings rather than being defensive or argumentative",
+        "Each corrective action has a named owner (not 'the team')",
+        "Each corrective action has a specific date (not 'ASAP')"
+      ]
+    }
+  ]
+}

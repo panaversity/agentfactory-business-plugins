@@ -1,0 +1,37 @@
+{
+  "eval_id": 3,
+  "eval_name": "executive-summary-email",
+  "expectations": [
+    {
+      "text": "Summary approximately 100 words (80-120 range)",
+      "passed": true,
+      "evidence": "Summary section is approximately 100 words"
+    },
+    {
+      "text": "Covers all required elements: problem, solution, traction, ask, why worth their time",
+      "passed": true,
+      "evidence": "All elements present in the summary"
+    },
+    {
+      "text": "Traction is specific ($16K MRR, 15% MoM, 8 customers)",
+      "passed": true,
+      "evidence": "Specific metrics included"
+    },
+    {
+      "text": "Founder's unfair advantage (former AP Director) prominently featured",
+      "passed": true,
+      "evidence": "Founder background referenced"
+    },
+    {
+      "text": "No cliche phrases used",
+      "passed": true,
+      "evidence": "No banned phrases found"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  }
+}

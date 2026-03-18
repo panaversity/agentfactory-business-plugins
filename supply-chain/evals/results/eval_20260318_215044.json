@@ -1,0 +1,20 @@
+{
+  "timestamp": "20260318_215044",
+  "results": [
+    {
+      "id": "route_logistics_carrier",
+      "category": "routing",
+      "checks": {
+        "content": {
+          "carrier": true,
+          "OTD|on-time delivery|on time delivery": true,
+          "scorecard|performance": true
+        },
+        "routing": false
+      },
+      "content_pass": true,
+      "status": "fail",
+      "output_preview": "No local configuration (`supply-chain.local.md`) or TMS/ERP data files are present in the workspace. I'll produce the carrier performance brief using the skill's scorecard format. Since no real shipment data is connected, I'll generate the structure with illustrative data so you can see exactly what the output looks like \u2014 and you can plug in your actual TMS/ERP export to populate it.\n\n---\n\n```\nTASK:          Carrier Performance Review \u2014 Q4 2025 (Oct\u2013Dec)\nCONFIGURATION: Not configured (no supply"
+    }
+  ]
+}

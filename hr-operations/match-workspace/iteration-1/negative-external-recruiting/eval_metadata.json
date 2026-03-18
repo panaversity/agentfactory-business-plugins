@@ -1,0 +1,10 @@
+{
+  "eval_id": 3,
+  "eval_name": "negative-external-recruiting",
+  "prompt": "We're hiring a Head of Data Science externally. Can you help me screen the CVs we've received and rank the top 5 candidates?",
+  "assertions": [
+    "Does NOT screen external CVs",
+    "Redirects to the appropriate skill or resource for external recruiting",
+    "Does NOT produce candidate rankings for external applicants"
+  ]
+}

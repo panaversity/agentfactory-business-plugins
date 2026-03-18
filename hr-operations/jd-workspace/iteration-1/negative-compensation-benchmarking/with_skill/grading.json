@@ -1,0 +1,25 @@
+{
+  "expectations": [
+    {
+      "text": "Does NOT provide salary benchmarking data",
+      "passed": true,
+      "evidence": "Output explicitly states: 'This request falls outside the scope of the /jd skill.' Lists what the JD skill does NOT do: 'Perform market rate analysis or salary surveys', 'Provide compensation benchmarking data', 'Set or recommend compensation bands'. No salary data provided."
+    },
+    {
+      "text": "Redirects to the appropriate skill or resource for compensation analysis",
+      "passed": true,
+      "evidence": "Output recommends: 'Use the comp-analysis skill (referenced in the JD skill's own scope statement)' and lists what comp-analysis covers: market rate data, compensation band design, salary benchmarking."
+    },
+    {
+      "text": "Does NOT attempt to produce market rate data from general knowledge",
+      "passed": true,
+      "evidence": "No salary figures, market rates, or benchmarking data appear anywhere in the output. Output cleanly declines and redirects."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1.0
+  }
+}

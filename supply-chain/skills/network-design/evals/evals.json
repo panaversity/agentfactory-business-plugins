@@ -1,0 +1,58 @@
+{
+  "skill_name": "network-design",
+  "evals": [
+    {
+      "id": 1,
+      "name": "dual-dc-scenario-comparison",
+      "prompt": "We currently operate a single warehouse in Birmingham serving all of the UK and EU. We're considering adding a DC in Wroclaw, Poland. Current state: total logistics cost GBP 2.1M/yr, average transit 4.2 days, service level 91%. The Poland DC option is estimated at GBP 1.85M/yr logistics cost, 2.8 day avg transit, 96% service level, but requires GBP 800K capex. Our primary objective is service level, secondary is cost. Please compare these scenarios.",
+      "expected_output": "A network design analysis in the skill's defined format comparing the status quo against the Poland DC option, with scenario comparison table, payback calculation, trade-off analysis, sensitivity assessment, and specific next steps.",
+      "files": [],
+      "expectations": [
+        "Produces the mandatory output header with TASK, CONFIGURATION, and DATA SOURCES fields — every network design output must begin with this header",
+        "Includes Scenario A (status quo baseline) alongside Scenario B (Poland DC) — the skill requires NEVER presenting a single scenario as a recommendation; always compare against the status quo",
+        "Shows all three dimensions (cost, service level, and carbon) in the scenario comparison — the skill requires NEVER optimising for cost alone without showing service and carbon implications",
+        "Calculates the payback period for the GBP 800K capex based on the GBP 250K/yr saving — the skill requires payback calculations with stated assumptions (discount rate, demand growth, cost escalation)",
+        "Includes a risks and sensitivities section addressing what assumptions could change the recommendation — network designs based on static assumptions fail when demand shifts or costs change",
+        "Provides specific next steps including site survey, regulatory checks, carrier RFQ, and approval requirements — the skill requires actionable implementation steps, not just analysis"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "network-stress-test-disruption",
+      "prompt": "What happens if our sole supplier route through the Suez Canal is disrupted for 3 months? We currently ship 60% of our inbound materials via this route from our suppliers in South-East Asia. Our UK warehouse has about 6 weeks of safety stock for these materials. Model the contingency cost and tell me if our network has enough resilience.",
+      "expected_output": "A disruption scenario analysis modelling the contingency cost of Suez Canal closure, evaluating whether 6 weeks of safety stock covers the disruption period, identifying alternative routing options with cost and transit time impacts, and recommending resilience improvements.",
+      "files": [],
+      "expectations": [
+        "Models the disruption as a specific scenario rather than giving generic advice — the skill supports conversational 'what if' scenarios and should quantify the impact",
+        "Evaluates the 6-week safety stock against the 3-month disruption period to identify the gap — 6 weeks covers less than half the disruption, so a material shortfall is expected",
+        "Identifies alternative supply routes (e.g., Cape of Good Hope) with estimated additional transit time and cost — contingency plans need quantified alternatives, not just 'consider alternatives'",
+        "Does NOT present only one scenario — the skill requires comparing the disruption scenario against the status quo baseline to quantify the cost of the disruption",
+        "Includes specific recommended resilience improvements with deadlines — observations without actions are not acceptable per the universal rules"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "negative-carrier-performance-redirect",
+      "prompt": "Can you review our top 5 carriers' on-time delivery performance and create a quarterly scorecard? I want to see OTD rates, damage claims, cost per kg, and tracking reliability for each carrier.",
+      "expected_output": "The agent recognizes this is a carrier performance review, not a network design question, and redirects to the logistics-brief skill.",
+      "files": [],
+      "expectations": [
+        "Recognizes that carrier performance scorecards are logistics-brief skill territory — the skill description explicitly states 'NOT for: carrier performance (use logistics-brief)'",
+        "Redirects to the logistics-brief skill or /logistics-brief command — carrier scorecards use a different framework (OTD/damage/cost/tracking) than network design (facility placement and scenario modelling)",
+        "Does NOT attempt to produce a carrier performance scorecard — network design analyses supply chain topology, not individual carrier performance metrics"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "negative-spend-analysis-redirect",
+      "prompt": "I want to analyze our total procurement spend across all categories and identify which vendors we should consolidate. Can you produce a spend-by-category breakdown with consolidation recommendations?",
+      "expected_output": "The agent recognizes this is a spend analysis request, not a network design question, and redirects to the spend-analysis skill.",
+      "files": [],
+      "expectations": [
+        "Recognizes that spend-by-category analysis and vendor consolidation are spend-analysis skill territory — the skill description explicitly excludes spend category analysis",
+        "Redirects to the spend-analysis skill or /spend-analysis command — spend analysis has dedicated frameworks for category spend overview, vendor consolidation, and price benchmarking",
+        "Does NOT attempt to produce a spend analysis — network design handles facility placement and supply chain topology, not procurement spend aggregation"
+      ]
+    }
+  ]
+}

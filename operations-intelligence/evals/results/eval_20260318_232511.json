@@ -1,0 +1,22 @@
+{
+  "timestamp": "20260318_232511",
+  "results": [
+    {
+      "id": "route_metrics_monthly_report",
+      "category": "routing",
+      "checks": {
+        "content": {
+          "monthly": true
+        },
+        "any_of": {
+          "RAG | red | amber | green": true,
+          "KPI | metric | performance": true
+        },
+        "routing": true
+      },
+      "content_pass": true,
+      "status": "pass",
+      "output_preview": "No `ops.local.md` found \u2014 I'll generate the report using the values you provided and standard thresholds.\n\n---\n\n```\nTASK:          Monthly Operational Performance Report\nDOCUMENT TYPE: Monthly Report\nCONFIGURATION: Not configured (no ops.local.md \u2014 using standard thresholds)\nDATE:          19 March 2026\nOWNER:         [Operations Lead \u2014 to be named]\nREVIEW DATE:   19 April 2026\n```\n\n```\nMONTHLY OPERATIONS REPORT: March 2026\nPrepared by: Operations Intelligence | For: COO / Ops Leadership\n======="
+    }
+  ]
+}

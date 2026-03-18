@@ -1,0 +1,57 @@
+{
+  "skill_name": "retro",
+  "evals": [
+    {
+      "id": 1,
+      "name": "retro-quick-reports",
+      "prompt": "Run a product retrospective for our Quick Reports feature. It shipped 6 weeks ago. Data: adoption is 34% (target was 50%), support tickets about reports dropped 60%, NPS for reporting went from 6.2 to 7.1. It shipped 1 week late due to a scope change (added PDF export mid-sprint).",
+      "expected_output": "A four-question retrospective with outcome data, delivery assessment, metrics quality review, and specific process improvements.",
+      "files": [],
+      "expectations": [
+        "Q1 (Did it solve the problem?) uses the actual data provided — adoption at 34% vs 50% target, support tickets down 60%, NPS up from 6.2 to 7.1 — cherry-picking positive metrics while ignoring the adoption miss would produce a misleading retro",
+        "Q1 verdict reflects mixed results: adoption below target but support impact and NPS strongly positive — binary PASS/FAIL on a nuanced outcome misses the learning",
+        "Q2 (Did we build it as intended?) flags the 1-week delay and PDF export scope change — the scope change is the process issue that needs a corrective action, not just a footnote",
+        "Q3 (Were the metrics right?) evaluates whether adoption %, support tickets, and NPS were the right things to measure — metrics quality is often the most valuable retro finding",
+        "Q4 (What would we do differently?) produces specific, testable process changes — 'communicate better' is not a process change; 'scope changes after sprint start require PM + eng lead sign-off' is",
+        "PRODUCT.LOCAL.MD UPDATES section recommends at least one quality rule — a retro that produces zero configuration changes was a waste of everyone's time",
+        "Follow-on actions have owners and due dates — actionless retros are therapy sessions, not improvement tools"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "retro-successful-launch",
+      "prompt": "Run a retro on our new onboarding flow. Shipped on time, all ACs met, adoption is 72% (target 60%), support tickets about onboarding down 45%. No scope changes during development. The team felt really good about this one.",
+      "expected_output": "A retrospective that documents success as rigorously as failure — capturing what went right so the process can be replicated.",
+      "files": [],
+      "expectations": [
+        "Q1 verdict reflects that this exceeded targets — the retro captures success, not just problems",
+        "Q2 delivery assessment shows all-green metrics (on time, spec quality, scope maintained) — documenting what went right is what makes success repeatable",
+        "Q4 still produces at least one process observation — even successful features have learnings; the retro must not skip this section just because things went well",
+        "The retro does NOT only document what went wrong — per the NEVER rules, a retro that skips what went well fails to protect what works"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "negative-no-outcome-data",
+      "prompt": "Run a retro on the search feature. We shipped it last week but I don't have any metrics yet.",
+      "expected_output": "The skill should push back — a retro without outcome data produces blame, not learning. Recommend waiting 4-12 weeks.",
+      "files": [],
+      "expectations": [
+        "The skill flags that one week is too early for a meaningful retro — the NEVER rules prohibit running a retro without outcome data",
+        "Recommends waiting 4-12 weeks for outcome data to accumulate — rushing a retro without data produces opinion-based blame, not evidence-based improvement",
+        "May offer to run a delivery-focused Q2 review (on time? spec quality?) while deferring outcome questions"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "negative-stakeholder-update",
+      "prompt": "Give me a stakeholder update on the search feature for this week's leadership meeting.",
+      "expected_output": "The skill should redirect to /stakeholder-update — this is a status update, not a retrospective.",
+      "files": [],
+      "expectations": [
+        "The skill does NOT produce a retro when asked for a stakeholder update — status updates and retrospectives serve different audiences and purposes",
+        "Redirects to /stakeholder-update for executive communication"
+      ]
+    }
+  ]
+}

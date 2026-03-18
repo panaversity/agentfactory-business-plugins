@@ -1,0 +1,14 @@
+{
+  "eval_id": 1,
+  "eval_name": "rice-scoring-backlog",
+  "prompt": "Prioritise these 5 backlog items using RICE:\n1. Bulk export (requested by 3 enterprise customers)\n2. SSO integration (blocking 2 enterprise deals worth $120K ARR)\n3. Dashboard performance (page load >5s, affecting all users)\n4. Mobile app notifications (nice to have, low effort)\n5. API rate limiting (technical debt, no customer requests)",
+  "assertions": [
+    "RICE table with Reach, Impact, Confidence, Effort, Score, and Rank columns",
+    "All scoring assumptions are visible (not just numbers)",
+    "Strategic Override Test completed — SSO may be an override candidate given the $120K ARR deal dependency",
+    "Data Gap Test identifies low-confidence items and recommends discovery spikes",
+    "What Would We Regret test completed",
+    "EXPLICITLY NOT BUILDING list is present",
+    "Discovery spike recommended for any low-confidence, high-effort item"
+  ]
+}

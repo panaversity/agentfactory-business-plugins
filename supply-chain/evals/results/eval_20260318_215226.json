@@ -1,0 +1,20 @@
+{
+  "timestamp": "20260318_215226",
+  "results": [
+    {
+      "id": "invoice_reconcile_price_variance",
+      "category": "accuracy",
+      "checks": {
+        "content": {
+          "price variance|variance|overcharge|price difference": true,
+          "outside tolerance|exceeds|exception": true,
+          "5.9": true
+        },
+        "formula": true
+      },
+      "content_pass": true,
+      "status": "pass",
+      "output_preview": "The invoice price is **GBP 12.50** vs PO price of **GBP 11.80**.\n\n**Variance:** (12.50 - 11.80) / 11.80 = **+5.93%**\n\n**Result: EXCEPTION** \u2014 the +5.93% overcharge exceeds your +/-3% tolerance.\n\nThe invoice is \u00a30.70/unit over the PO price, totalling **\u00a370.00 overpayment** on 100 units. This should be flagged for review and likely disputed with the supplier before approval."
+    }
+  ]
+}

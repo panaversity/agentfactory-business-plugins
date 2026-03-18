@@ -1,0 +1,57 @@
+{
+  "skill_name": "hypothesis",
+  "evals": [
+    {
+      "id": 1,
+      "name": "assumption-map-build",
+      "prompt": "I'm building an AI-powered contract review tool for solo attorneys. My hypothesis is that solo attorneys spend 3+ hours reviewing a standard commercial lease and would pay $99/month for a tool that cuts review time by 70%. I've done 6 discovery interviews but no one has paid yet. Build me a complete assumption map.",
+      "expected_output": "A three-tier assumption map (existential, serious, important) covering customer, problem, solution, business model, and technical assumptions — with cheapest test design for each and a prioritized test sequence.",
+      "files": [],
+      "expectations": [
+        "Assumptions are organized into three tiers (TIER 1 existential, TIER 2 serious, TIER 3 important) — tiering forces the founder to focus on assumptions that could kill the business before optimizing ones that merely matter",
+        "Each assumption has an ID (A-001, A-002...), risk level, evidence status, and cheapest test design — without test designs, the assumption map is a worry list rather than an action plan",
+        "The willingness-to-pay assumption ($99/month from solo attorneys) is flagged as TIER 1 existential — solo practitioners are price-sensitive and the assumption that they will pay $99/month recurring is the riskiest business model assumption",
+        "Customer, problem, solution, business model, and technical categories are all covered — incomplete category coverage leaves blind spots where untested assumptions hide",
+        "The cheapest test for each assumption follows the MVT hierarchy (conversation before landing page before MVP) — the goal is to invalidate bad ideas cheaply, not to build first and learn later",
+        "A prioritized test sequence is provided (Week 1-2 for zero-cost tests, Week 3-4 for prototype tests) — without sequencing, founders test what's fun rather than what's risky"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "mvp-design-scoping",
+      "prompt": "Based on my assumption map, my top 3 assumptions to test are: (1) solo attorneys will pay $99/month for contract review, (2) the AI can achieve 90% accuracy on standard commercial lease clauses, (3) attorneys will trust AI-flagged issues enough to skip full manual review. I have a 2-person team and 8 weeks. Design the minimum viable product.",
+      "expected_output": "An MVP design document with minimum feature set (each feature mapped to an assumption), explicitly excluded features, specific success/failure criteria, and an 8-week build plan.",
+      "files": [],
+      "expectations": [
+        "Every feature in the MVP maps to at least one of the 3 critical assumptions — features that don't test a critical assumption are scope creep and must be excluded",
+        "An 'Explicitly Excluded' list is present and at least as long as the included feature list — the exclusion list is what makes the MVP minimum; without it, scope creeps back in",
+        "Success criteria are specific and measurable (e.g., '3 of 5 pilot attorneys pay after free trial' not 'good adoption') — vague criteria let founders declare victory regardless of actual results",
+        "Failure criteria are defined with pivot triggers (e.g., 'if 0 of 5 pay after trial: assumption A-001 is invalidated, consider freemium or different customer segment') — failure criteria are what prevent persevering with a dead idea",
+        "The 8-week build plan is realistic for a 2-person team — overscoped MVPs that take 6 months defeat the purpose of minimum viable testing",
+        "The trust assumption (attorneys trusting AI-flagged issues) is tested through the MVP design, not assumed away — this is often the hardest assumption in AI products and must be explicitly tested"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "negative-idea-generation",
+      "prompt": "I don't have a product idea yet. Can you help me brainstorm 100 ideas for legal tech products? I want a full idea sprint with categories.",
+      "expected_output": "The agent should redirect this to the idea skill, since idea generation is outside the hypothesis skill's scope.",
+      "files": [],
+      "expectations": [
+        "The agent recognizes this is an idea generation request and redirects to the idea skill — hypothesis is for assumption mapping and MVP design, not idea brainstorming",
+        "The agent does NOT produce a list of product ideas within the hypothesis skill — doing so would bypass the idea skill's 100-idea sprint format and DVF scoring framework"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "negative-pilot-results",
+      "prompt": "We ran our MVP for 6 weeks with 5 pilot attorneys. 2 paid, 1 churned in week 3, 2 never converted from free trial. Can you analyze these results and tell me if I should pivot?",
+      "expected_output": "The agent should redirect this to the validate skill, since pilot results analysis and pivot decisions are outside the hypothesis skill's scope.",
+      "files": [],
+      "expectations": [
+        "The agent recognizes this is a pilot results analysis request and redirects to the validate skill — hypothesis is for pre-build assumption mapping, not post-pilot analysis",
+        "The agent does NOT produce a BML analysis or pivot recommendation within the hypothesis skill — doing so would bypass the validate skill's evidence quality standards and pivot decision framework"
+      ]
+    }
+  ]
+}

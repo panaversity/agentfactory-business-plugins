@@ -1,0 +1,62 @@
+{
+  "skill_name": "incident",
+  "evals": [
+    {
+      "id": 1,
+      "name": "payment-outage-postmortem",
+      "prompt": "Write a post-mortem for this incident: Our payment gateway went down at 14:23 on Tuesday. The monitoring alert fired at 14:31. The on-call engineer acknowledged at 14:35 and started investigating. Root cause was a database connection pool exhaustion caused by a config change deployed at 13:00 that reduced the pool size from 100 to 10. The fix was deployed at 15:47 and service was restored at 15:52. During the 89-minute outage, approximately 15,000 transactions failed, estimated value 2.1M. No regulatory notification was required. 3 customers called support.",
+      "expected_output": "A structured post-mortem report with incident summary, detailed timeline with specific timestamps, impact assessment, root cause analysis using Five Whys approach, contributing factors, what went well, specific corrective actions with named owners and dates, and lessons learned.",
+      "files": [],
+      "expectations": [
+        "Output begins with the mandatory header containing TASK, INCIDENT TYPE, CONFIGURATION, DATE, OWNER fields",
+        "Incident type is identified as Post-Mortem",
+        "Incident ID is assigned in INC-YYYY-NNN format",
+        "Severity is classified as P1 (service unavailable, >50% transactions affected, revenue impact >threshold)",
+        "Timeline uses specific timestamps (14:23, 14:31, 14:35, 15:47, 15:52) not vague references",
+        "MTTD (Mean Time to Detect) is noted: 8 minutes from 14:23 to 14:31",
+        "Impact section includes users/transactions affected (15,000), estimated financial impact (2.1M), and regulatory notification status",
+        "Root cause analysis goes beyond the proximate cause (config change) to systemic cause (why was a config change able to reduce pool to 10 without validation)",
+        "Contributing factors section is present and identifies what amplified impact or slowed resolution",
+        "What went well section is present with specific items",
+        "Corrective actions have named owners (not 'the team'), specific dates (not 'ASAP'), and verifiable completion criteria",
+        "Lessons learned section is present with principles for organisation-wide sharing",
+        "A CA review meeting date is scheduled (typically 4 weeks after)"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "five-whys-data-breach",
+      "prompt": "Run a Five Whys analysis on this incident: A customer service agent accidentally emailed a spreadsheet containing 500 customers' personal data (names, emails, phone numbers) to the wrong external recipient. The error was discovered 3 hours later when the intended recipient asked where the file was.",
+      "expected_output": "A structured Five Whys analysis drilling from the proximate cause (wrong email recipient) to the systemic root cause (likely gaps in data handling controls, email DLP, or access to bulk customer data), with corrective actions targeting the root cause not just the proximate event.",
+      "files": [],
+      "expectations": [
+        "Output begins with the mandatory header containing TASK, INCIDENT TYPE, CONFIGURATION, DATE, OWNER fields",
+        "Incident type is identified as Five Whys",
+        "Five progressive why questions are presented, each building on the previous answer",
+        "The analysis moves from proximate cause (wrong recipient) to systemic root cause (process/control gaps)",
+        "The systemic root cause addresses WHY the agent had access to bulk customer data or WHY there were no DLP controls",
+        "A WRONG corrective action example is provided (targeting WHY 1 only)",
+        "A RIGHT corrective action example is provided (targeting WHY 4 or WHY 5 systemic cause)",
+        "The analysis does not frame the issue as individual blame but focuses on systems, processes, and controls"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "ca-tracker-and-lessons-brief",
+      "prompt": "I have 5 open corrective actions from recent incidents:\n1. CA-001 from INC-2025-012 (payment outage): Implement connection pool monitoring -- Owner: Sarah Chen -- Due: 15 Mar 2025 -- Status: Done\n2. CA-002 from INC-2025-012: Add pre-deployment config validation -- Owner: James Park -- Due: 30 Mar 2025 -- Status: Open\n3. CA-003 from INC-2025-015 (data breach): Deploy email DLP rules -- Owner: Maria Lopez -- Due: 1 Mar 2025 -- Status: Open (OVERDUE)\n4. CA-004 from INC-2025-015: Restrict bulk data export to manager approval -- Owner: Tom Singh -- Due: 15 Mar 2025 -- Status: Done\n5. CA-005 from INC-2025-018 (API degradation): Upgrade load balancer firmware -- Owner: Alex Kim -- Due: 20 Mar 2025 -- Status: Open\n\nGenerate a CA tracker and also a lessons learned brief for INC-2025-012.",
+      "expected_output": "A corrective action tracker table showing all 5 CAs with overdue status flagged, plus a separate lessons learned brief for INC-2025-012 written for a non-technical audience.",
+      "files": [],
+      "expectations": [
+        "Output begins with the mandatory header",
+        "A corrective action tracker table is present with columns: CA ID, Incident, Action, Owner, Due, Status, Overdue flag",
+        "All 5 corrective actions are listed with correct details",
+        "CA-003 is flagged as overdue",
+        "Overdue count is reported (1)",
+        "Actions due this week or escalation requirements are noted",
+        "A separate lessons learned brief is generated for INC-2025-012",
+        "The lessons brief includes: what happened (plain language), key lesson, what we changed, and what this means for staff",
+        "The lessons brief is written for a non-technical audience without jargon"
+      ]
+    }
+  ]
+}

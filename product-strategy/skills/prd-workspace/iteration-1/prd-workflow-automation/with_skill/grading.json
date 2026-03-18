@@ -1,0 +1,50 @@
+{
+  "expectations": [
+    {
+      "text": "Contains all 10 PRD sections (Executive Summary through Open Questions)",
+      "passed": true,
+      "evidence": "All 10 sections present: Section 1 (Executive Summary), Section 2 (Business Context), Section 3 (User Requirements), Section 4 (Functional Requirements), Section 5 (Non-Functional Requirements), Section 6 (Technical Architecture Notes), Section 7 (Go-to-Market Requirements), Section 8 (Launch Plan), Section 9 (Dependencies and Risks), Section 10 (Open Questions), plus Appendices."
+    },
+    {
+      "text": "Success metrics include a failure threshold",
+      "passed": true,
+      "evidence": "Section 2 includes: 'Failure threshold: If fewer than 10% of active workspaces create a workflow within 6 months, or if workflow execution reliability falls below 98%, we will re-evaluate the approach'"
+    },
+    {
+      "text": "Uses named personas from product.local.md, not 'users' or 'a user'",
+      "passed": true,
+      "evidence": "Uses named personas 'Ops Olivia' (Operations Manager) and 'Dev Darius' (Platform Engineer). Noted product.local.md not found and personas are illustrative, which is appropriate behavior when config is missing."
+    },
+    {
+      "text": "Functional requirements use MoSCoW prioritisation with no more than 60% MUST",
+      "passed": true,
+      "evidence": "Section 4 uses MoSCoW: 4 MUST (50%), 2 SHOULD (25%), 2 COULD (25%). Explicitly states 'Within the 60% MUST ceiling.'"
+    },
+    {
+      "text": "Technical architecture notes section is present",
+      "passed": true,
+      "evidence": "Section 6 present with detailed architecture notes including key technical decisions, platform dependencies, third-party integrations, data model changes, migration requirements, and feature flags. Includes engineering review gate note."
+    },
+    {
+      "text": "PRD status is marked as DRAFT",
+      "passed": true,
+      "evidence": "Header shows '**Status**: DRAFT' and first line includes 'VERSION: Draft'"
+    },
+    {
+      "text": "Go-to-market section addresses documentation, CS enablement, and sales enablement",
+      "passed": true,
+      "evidence": "Section 7 includes Documentation (user guide, action reference, API reference), Customer Success Enablement (briefing, sandbox, FAQ, training), Sales Enablement (demo script, competitive comparison, talking points), plus Pricing and Beta Programme."
+    },
+    {
+      "text": "Non-functional requirements include performance targets with specific numbers",
+      "passed": true,
+      "evidence": "Section 5 Performance: '< 5 seconds (p95)', '< 2 seconds on broadband', '< 500ms response', '30 seconds per action step'. Reliability: '99.9%', '< 15 minutes RTO'. Scalability: '1,000 concurrent active workflows', '500 events/second'."
+    }
+  ],
+  "summary": {
+    "passed": 8,
+    "failed": 0,
+    "total": 8,
+    "pass_rate": 1.0
+  }
+}

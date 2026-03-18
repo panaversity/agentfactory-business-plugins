@@ -1,0 +1,53 @@
+{
+  "skill_name": "context-loader",
+  "evals": [
+    {
+      "id": 1,
+      "name": "cross-domain-onboarding-context",
+      "prompt": "Load HR + Finance + Ops context for onboarding Dr. Sana Mirza. She is joining as Head of Analytics next Monday and I need to know everything relevant across all domains before her orientation meeting.",
+      "expected_output": "A context brief covering HR onboarding status, finance budget allocations for the analytics team, operations setup requirements, people context for Dr. Sana Mirza, what to watch for during onboarding, and gaps in context that need to be filled.",
+      "files": [],
+      "expectations": [
+        "Context brief identifies this as TYPE 2 (cross-domain context) and loads from HR, Finance, and Operations domains as configured in work.local.md agent_integrations",
+        "Output includes a CORE CONTEXT section with the most important cross-domain facts about Dr. Sana Mirza's onboarding",
+        "Each domain section (HR, Finance, Ops) surfaces domain-specific context relevant to the onboarding — not generic advice",
+        "GAPS IN CONTEXT section explicitly names what is NOT known and how to obtain it — this section must never be omitted"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "decision-context-expansion",
+      "prompt": "Load context for the Islamabad expansion decision. We need to decide by Friday whether to open a satellite office there. Pull in everything relevant from all domains.",
+      "expected_output": "A decision-context brief covering all relevant domain perspectives on the Islamabad expansion — finance (cost projections, budget), HR (talent availability, hiring), operations (logistics, compliance), and any related project or person context from work.local.md.",
+      "files": [],
+      "expectations": [
+        "Context brief identifies this as TYPE 5 (decision context) and loads from all relevant domains configured in work.local.md",
+        "Output includes people context for anyone involved in the Islamabad decision, with communication style and approach tips from work.local.md",
+        "WHAT TO WATCH FOR section provides specific warnings or considerations given the full cross-domain picture",
+        "GAPS IN CONTEXT section is present and names specific missing information needed for the Friday decision"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "negative-should-use-executive-brief",
+      "prompt": "Give me a situation brief on Project Nighthawk before my call with the board. I need the key risks and my recommended talking points.",
+      "expected_output": "This query should be handled by executive-brief, not context-loader. A situation brief with talking points and risk framing is an executive-brief function, not a context injection.",
+      "files": [],
+      "expectations": [
+        "This query is about a situation brief and pre-call preparation — it matches executive-brief triggers (situation brief, before I call, what do I need to know before)",
+        "Context-loader is for injecting background context before work begins, not for producing briefing documents with recommended approaches and talking points"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "negative-should-use-workplace-search",
+      "prompt": "Search across all memory layers for everything we know about the Karachi vendor dispute. Pull up any decisions, meeting notes, and delegation records.",
+      "expected_output": "This query should be handled by workplace-search, not context-loader. A cross-context search across memory layers is a workplace-search function.",
+      "files": [],
+      "expectations": [
+        "This query is about searching and retrieving existing information across all layers — it matches workplace-search triggers (search everything, cross-context search, find everything about)",
+        "Context-loader is for loading domain-specific context before an endeavour, not for searching and retrieving existing workplace memory entries"
+      ]
+    }
+  ]
+}

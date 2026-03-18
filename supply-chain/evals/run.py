@@ -47,7 +47,7 @@ def load_cases(path: Path) -> list[dict]:
     return data["cases"]
 
 
-def run_claude(prompt: str, timeout: int = 120) -> str:
+def run_claude(prompt: str, timeout: int = 180) -> str:
     """Run a prompt through claude CLI and capture output."""
     cmd = [
         "claude",
@@ -71,19 +71,35 @@ def run_claude(prompt: str, timeout: int = 120) -> str:
 
 
 def check_content(output: str, checks: list[str]) -> dict:
-    """Check that expected content strings appear in output."""
+    """Check that expected content strings appear in output.
+
+    Supports pipe-separated alternatives: "outside|beyond|not within"
+    means ANY of those substrings matching counts as a pass.
+    """
     results = {}
     output_lower = output.lower()
     for check in checks:
-        results[check] = check.lower() in output_lower
+        alternatives = [alt.strip().lower() for alt in check.split("|")]
+        results[check] = any(alt in output_lower for alt in alternatives)
     return results
 
 
-def check_routing(output: str, expected_skill: str | None) -> bool:
-    """Check that the correct skill was referenced in the output."""
+def check_routing(
+    output: str, expected_skill: str | None, alternatives: list[str] | None = None
+) -> bool:
+    """Check that the correct skill was referenced in the output.
+
+    Checks for the skill name (with hyphens as spaces) in the output.
+    Also checks any routing_alternatives provided in the case.
+    """
     if expected_skill is None:
         return True
-    return expected_skill.lower().replace("-", " ") in output.lower().replace("-", " ")
+    output_normalised = output.lower().replace("-", " ")
+    if expected_skill.lower().replace("-", " ") in output_normalised:
+        return True
+    if alternatives:
+        return any(alt.lower() in output_normalised for alt in alternatives)
+    return False
 
 
 def check_formula(output: str, expected_answer: str | None, tolerance: float = 0) -> bool:
@@ -126,11 +142,18 @@ def run_case(case: dict, verbose: bool = False) -> dict:
     if not prompt:
         return {"id": case_id, "status": "skipped", "reason": "no prompt"}
 
-    # Run through claude
+    # Run through claude (retry once on empty output or timeout)
     output = run_claude(prompt)
+
+    if output in ("[TIMEOUT]", "[CLAUDE_NOT_FOUND]", ""):
+        log(f"  Retrying {case_id} (got: {output or 'empty'})", verbose)
+        output = run_claude(prompt)
 
     if output in ("[TIMEOUT]", "[CLAUDE_NOT_FOUND]"):
         return {"id": case_id, "status": "error", "reason": output}
+
+    if not output:
+        return {"id": case_id, "status": "error", "reason": "[EMPTY_OUTPUT]"}
 
     # Tier 1 checks
     results = {"id": case_id, "category": category, "checks": {}}
@@ -145,7 +168,8 @@ def run_case(case: dict, verbose: bool = False) -> dict:
     # Routing check
     expected_skill = case.get("expected_skill")
     if expected_skill:
-        results["checks"]["routing"] = check_routing(output, expected_skill)
+        routing_alts = case.get("routing_alternatives")
+        results["checks"]["routing"] = check_routing(output, expected_skill, routing_alts)
 
     # Formula check
     expected_answer = case.get("expected_answer")

@@ -1,0 +1,22 @@
+{
+  "eval_id": 4,
+  "eval_name": "negative-gtm-strategy",
+  "expectations": [
+    {
+      "text": "Agent recognizes GTM request and redirects to gtm skill",
+      "passed": true,
+      "evidence": "Agent redirected to /gtm skill"
+    },
+    {
+      "text": "Agent does NOT produce GTM calendar or outreach plan",
+      "passed": true,
+      "evidence": "No GTM plan produced"
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 0,
+    "total": 2,
+    "pass_rate": 1.0
+  }
+}

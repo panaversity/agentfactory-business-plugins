@@ -1,0 +1,35 @@
+{
+  "expectations": [
+    {
+      "text": "The PRD includes explicit scope boundaries despite the user saying 'full requirements'",
+      "passed": true,
+      "evidence": "Section 4 uses MoSCoW with clear scope: 3 MUST (Semantic Search, Faceted Filtering, Search Analytics), 2 SHOULD (Query Suggestions, Related Content), 1 COULD (Search Personalization). MoSCoW summary table explicitly states '50% of scope (within the 60% guideline)'. Scope is bounded by priority levels."
+    },
+    {
+      "text": "Functional requirements distinguish MUST/SHOULD/COULD for semantic search, faceting, and analytics",
+      "passed": true,
+      "evidence": "Feature 1 (Semantic Search) = MUST, Feature 2 (Faceted Filtering) = MUST, Feature 3 (Search Analytics) = MUST, Feature 4 (Query Suggestions) = SHOULD, Feature 5 (Related Content) = SHOULD, Feature 6 (Search Personalization) = COULD."
+    },
+    {
+      "text": "Dependencies table maps cross-team dependencies (data, frontend, infra)",
+      "passed": true,
+      "evidence": "Section 9 'External Dependencies' table maps 6 dependencies with Owner, Status, and Risk if Delayed columns. Covers: Vector database (Infrastructure), Embedding API (Procurement+Data), GPU compute (Infrastructure), Content permission service (Platform), Event bus (Infrastructure), Design system (Frontend/Design)."
+    },
+    {
+      "text": "Risk table identifies technical risks specific to AI/ML features",
+      "passed": true,
+      "evidence": "Section 9 'Top Risks' includes AI-specific risks: 'Embedding quality insufficient for domain-specific content' (M/H), 'Vector database latency exceeds targets at scale' (M/H), 'Embedding API provider rate limits or outage' (L/H), 'Content backfill takes longer than estimated' (M/M). Each has specific mitigations."
+    },
+    {
+      "text": "Phased rollout plan (beta to GA) is present",
+      "passed": true,
+      "evidence": "Section 8 'Launch Plan' includes 4 phases: Phase 0 (Internal Dogfood, Q2 W1-W2), Phase 1 (Beta, Q2 W3 - Q2 End), Phase 2 (GA, End Q2/Early Q3), Phase 3 (Analytics GA + Enhancements, Mid Q3). Each phase has audience, capabilities, and success gates."
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  }
+}

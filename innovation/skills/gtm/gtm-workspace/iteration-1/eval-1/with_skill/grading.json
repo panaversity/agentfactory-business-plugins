@@ -1,0 +1,42 @@
+{
+  "eval_id": 1,
+  "eval_name": "icp-definition-b2b",
+  "expectations": [
+    {
+      "text": "ICP names specific role, company type, context",
+      "passed": true,
+      "evidence": "AP Manager, manufacturing 100-300 employees, specific context"
+    },
+    {
+      "text": "Buying trigger defined",
+      "passed": true,
+      "evidence": "Specific buying triggers identified"
+    },
+    {
+      "text": "Signals for identifying ICP prospects specified",
+      "passed": true,
+      "evidence": "Identification signals included"
+    },
+    {
+      "text": "NOT a fit section explicitly excludes customer types",
+      "passed": true,
+      "evidence": "Exclusion criteria present"
+    },
+    {
+      "text": "ICP confidence assessed based on 3 customers",
+      "passed": true,
+      "evidence": "Confidence assessed as LOW based on small sample"
+    },
+    {
+      "text": "ICP grounded in 10 interviews and 3 pilots",
+      "passed": true,
+      "evidence": "Evidence-based on provided data"
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  }
+}

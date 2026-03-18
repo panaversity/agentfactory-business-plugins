@@ -1,0 +1,25 @@
+{
+  "expectations": [
+    {
+      "text": "Does NOT produce an org restructuring plan",
+      "passed": true,
+      "evidence": "Output clearly states: 'REQUEST OUTSIDE /match CAPABILITY'. The 'which teams to create' component is identified as org design and redirected to /org-planning. No squad structure or team design is provided."
+    },
+    {
+      "text": "Redirects to the appropriate skill or resource for org planning",
+      "passed": true,
+      "evidence": "Explicitly states: 'This falls outside the scope of /match and should be handled by /org-planning (organizational design and restructuring).' Provides a recommended workflow: 'FIRST: Use /org-planning to design the squad structure'."
+    },
+    {
+      "text": "Does NOT attempt to assign people to teams",
+      "passed": true,
+      "evidence": "No people-to-team assignments made. Output explains that /match CAN help with step 2 (assessing candidates for squad lead roles) but ONLY after org design is complete and specific roles are defined. Lists prerequisites: 'Specific squad lead role requirements are defined', 'Internal candidates have been identified for each squad lead role (at least 2 per role)'."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1.0
+  }
+}

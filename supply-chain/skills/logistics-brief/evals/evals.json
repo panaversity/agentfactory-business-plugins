@@ -1,0 +1,72 @@
+{
+  "skill_name": "logistics-brief",
+  "evals": [
+    {
+      "id": 1,
+      "name": "carrier-performance-scorecard",
+      "prompt": "Review carrier performance for our top 3 carriers over Q1 2024. Here's the data: CarrierA handled 420 shipments, OTD 96.2%, damage rate 0.15%, cost GBP 2.30/kg, tracking 99%. CarrierB handled 310 shipments, OTD 89.5%, damage rate 0.8%, cost GBP 1.95/kg, tracking 94%. CarrierC handled 185 shipments, OTD 93.8%, damage rate 0.3%, cost GBP 2.10/kg, tracking 97%. Please produce a carrier scorecard with recommendations.",
+      "expected_output": "A complete carrier performance scorecard in the skill's defined format, scoring each carrier across OTD, damage, cost, and tracking metrics, with RED/AMBER/PASS flags and specific lane routing recommendations.",
+      "files": [],
+      "expectations": [
+        "Produces the mandatory output header with TASK, CONFIGURATION, and DATA SOURCES fields — every logistics brief output must begin with this header for traceability",
+        "Scores each carrier using the skill's defined scoring key (OTD >= 95%: 5/5, 93-95%: 4/5, 90-93%: 3/5, <90%: FLAG) — CarrierB at 89.5% should be flagged RED",
+        "Flags CarrierB's damage rate of 0.8% as exceeding the 0.5% threshold — the scoring key marks >0.5% as FLAG, indicating a quality problem that needs action",
+        "Flags CarrierB's tracking reliability at 94% as below the 95% threshold — poor tracking means the business cannot provide accurate delivery ETAs to customers",
+        "Includes specific recommended actions with deadlines for each finding — the universal rule requires actions in every output; observations without actions are not acceptable",
+        "Uses cost per kg (not cost per shipment) as the cost metric — the skill explicitly states NEVER use cost per shipment as the sole metric because it doesn't normalise for shipment size"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "expedited-freight-root-cause",
+      "prompt": "Our expedited freight spend hit 18% of total freight budget this quarter, up from 6% last quarter. 70% of expedited shipments originate from our Manchester manufacturing site. The remaining 30% are spread across 4 other sites. What's going on and what should we do?",
+      "expected_output": "An expedited freight analysis identifying that 18% expedited spend signals an upstream supply chain problem (not a logistics problem), with root cause classification focused on the Manchester site concentration and recommended interventions.",
+      "files": [],
+      "expectations": [
+        "Identifies that 18% expedited freight exceeds the 10% threshold that indicates an upstream supply chain design or process problem — the skill's rule states solving this at the logistics level masks the underlying issue",
+        "Focuses root cause analysis on the Manchester site since 70% of expedited shipments originate there — site concentration is a strong signal pointing to a specific operational or planning failure",
+        "Classifies potential root causes using the skill's categories: late supplier delivery, demand forecast error, inventory positioning error, customer emergency, or production planning error",
+        "Does NOT recommend buying more premium freight capacity as the primary solution — the skill explicitly warns that this masks and perpetuates the underlying issue",
+        "Quantifies the potential saving if root cause is addressed — the skill requires quantified savings for each intervention recommendation"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "lane-optimisation-analysis",
+      "prompt": "We ship 200 pallets per month from our Birmingham warehouse to our customer's DC in Munich. Currently using road freight via CarrierX at GBP 3.20/kg with 3.5 day transit and 92% OTD. Average shipment is 800kg. Can you analyse whether there's a better option for this lane?",
+      "expected_output": "A lane optimisation analysis comparing the current road arrangement against alternative modes (rail, combined road-rail) with cost, service, and carbon trade-offs in the skill's defined output format.",
+      "files": [],
+      "expectations": [
+        "Produces the lane analysis in the skill's defined format with origin, destination, shipment profile, service requirement, and option comparison table — this standardised format enables consistent decision-making across lanes",
+        "Compares at least two alternatives against the current arrangement — the skill requires option comparison, not just a recommendation without context",
+        "Includes carbon emissions comparison across transport modes — the skill requires carbon as a dimension alongside cost and service level",
+        "Recommends a specific option with rationale including annual saving estimate, service trade-off, and carbon trade-off — vague recommendations without quantified trade-offs are not actionable",
+        "Does NOT recommend exiting CarrierX without confirming alternative capacity exists for the lane — the skill explicitly prohibits this to avoid leaving the business without coverage"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "negative-network-design-redirect",
+      "prompt": "We're evaluating whether to open a new distribution centre in eastern Poland to serve our growing customer base in the Baltics and Czech Republic. Can you model the scenarios comparing our current UK-only network against a two-DC setup?",
+      "expected_output": "The agent recognizes this is a network design question (facility placement and scenario modelling), not a carrier/logistics performance review, and redirects to the network-design skill.",
+      "files": [],
+      "expectations": [
+        "Recognizes that DC placement and network scenario modelling are network-design skill territory — the skill description explicitly states 'NOT for: supply network facility placement (use network-design)'",
+        "Redirects to the network-design skill or /supply-network-design command — correct routing ensures the user gets the scenario comparison framework with proper objective functions and constraints",
+        "Does NOT attempt to produce a full network design analysis — logistics-brief handles carrier performance, lane optimisation, expedited freight analysis, and carbon assessment, not facility placement decisions"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "negative-vendor-assessment-redirect",
+      "prompt": "I need to do a full vendor assessment of our main packaging supplier — they're coming up for annual review and I want to check their financial health, compliance certifications, and operational performance holistically.",
+      "expected_output": "The agent recognizes this is a vendor assessment request, not a logistics/carrier review, and redirects to the vendor-assessment skill.",
+      "files": [],
+      "expectations": [
+        "Recognizes that holistic vendor assessment (financial, compliance, operational, strategic) is vendor-assessment skill territory — the skill description explicitly excludes vendor assessment",
+        "Redirects to the vendor-assessment skill or /vendor-assess command — the vendor assessment skill has the six-dimension framework needed for this type of review",
+        "Does NOT attempt to produce a vendor assessment — logistics-brief evaluates carrier performance specifically, not general vendor health across multiple dimensions"
+      ]
+    }
+  ]
+}

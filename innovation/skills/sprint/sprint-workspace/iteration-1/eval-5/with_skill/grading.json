@@ -1,0 +1,22 @@
+{
+  "eval_id": 5,
+  "eval_name": "negative-validate-request",
+  "expectations": [
+    {
+      "text": "Agent recognizes BML analysis request and redirects to validate skill",
+      "passed": false,
+      "evidence": "Agent did NOT redirect to /validate. It asked for pilot data to do the analysis itself, treating it as within scope. It did ask follow-up questions rather than producing the analysis, but did not redirect."
+    },
+    {
+      "text": "Agent does NOT produce full BML analysis or pivot recommendation",
+      "passed": true,
+      "evidence": "No BML analysis produced -- agent asked for data inputs first"
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 1,
+    "total": 2,
+    "pass_rate": 0.5
+  }
+}

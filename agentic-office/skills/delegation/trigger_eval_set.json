@@ -1,0 +1,82 @@
+[
+  {
+    "query": "Delegate the quarterly analytics brief to Omar with a clear handoff",
+    "should_trigger": true
+  },
+  {
+    "query": "Create a delegation record for the vendor contract review — assign to Bilal by Thursday",
+    "should_trigger": true
+  },
+  {
+    "query": "Hand off the board presentation to Ayesha with a proper delegation brief",
+    "should_trigger": true
+  },
+  {
+    "query": "What have I delegated? Show me all open delegations and their status",
+    "should_trigger": true
+  },
+  {
+    "query": "Delegate this to Fatima — she should handle the legal review for the Nighthawk contract",
+    "should_trigger": true
+  },
+  {
+    "query": "Set up follow-up tracking for the delegation I gave Omar yesterday",
+    "should_trigger": true
+  },
+  {
+    "query": "Run a delegation audit — which handoffs are overdue and who needs chasing?",
+    "should_trigger": true
+  },
+  {
+    "query": "Who should handle the compliance review? Create a delegation brief for the best person",
+    "should_trigger": true
+  },
+  {
+    "query": "Show me my open delegations — anything overdue or missing confirmation?",
+    "should_trigger": true
+  },
+  {
+    "query": "Assign the workshop content preparation to Ayesha with a proper handoff communication",
+    "should_trigger": true
+  },
+  {
+    "query": "Brain dump: finish the draft, chase Omar, prep for Monday, review the contract — sort by priority",
+    "should_trigger": false
+  },
+  {
+    "query": "Add a task to my list: review the Q3 analytics report by Friday",
+    "should_trigger": false
+  },
+  {
+    "query": "What is the weekly project status? Show me RAG across all projects",
+    "should_trigger": false
+  },
+  {
+    "query": "Give me my daily digest — what do I need to know today?",
+    "should_trigger": false
+  },
+  {
+    "query": "Prep me for the exec weekly meeting with Omar and Ayesha",
+    "should_trigger": false
+  },
+  {
+    "query": "Search all layers for everything about the vendor dispute",
+    "should_trigger": false
+  },
+  {
+    "query": "Load HR and Finance context before I start working on the restructuring proposal",
+    "should_trigger": false
+  },
+  {
+    "query": "Give me a situation brief on Project Nighthawk before my call",
+    "should_trigger": false
+  },
+  {
+    "query": "Mark the analytics brief task as complete — I finished it this morning",
+    "should_trigger": false
+  },
+  {
+    "query": "Configure the agentic office and create my work.local.md",
+    "should_trigger": false
+  }
+]

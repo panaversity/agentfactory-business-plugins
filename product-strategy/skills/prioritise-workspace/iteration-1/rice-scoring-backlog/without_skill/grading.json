@@ -1,0 +1,45 @@
+{
+  "expectations": [
+    {
+      "text": "RICE table with Reach, Impact, Confidence, Effort, Score, and Rank columns",
+      "passed": true,
+      "evidence": "Table has Reach, Impact, Confidence, Effort, RICE Score columns. No explicit Rank column but items are ordered by score."
+    },
+    {
+      "text": "All scoring assumptions are visible (not just numbers)",
+      "passed": false,
+      "evidence": "Table has numbers only. No assumptions section explaining how Reach/Impact/Confidence were estimated. Just raw scores with no rationale."
+    },
+    {
+      "text": "Strategic Override Test completed — SSO may be an override candidate given the $120K ARR deal dependency",
+      "passed": false,
+      "evidence": "No Strategic Override Test. SSO is mentioned in 'Key Considerations' as possibly worth prioritising higher, but this is an informal note, not a structured challenge."
+    },
+    {
+      "text": "Data Gap Test identifies low-confidence items and recommends discovery spikes",
+      "passed": false,
+      "evidence": "No Data Gap Test performed. No mention of discovery spikes."
+    },
+    {
+      "text": "What Would We Regret test completed",
+      "passed": false,
+      "evidence": "No regret test. No mention of regret-based evaluation."
+    },
+    {
+      "text": "EXPLICITLY NOT BUILDING list is present",
+      "passed": false,
+      "evidence": "No 'not building' list. Output just ranks items without stating what should be explicitly deferred."
+    },
+    {
+      "text": "Discovery spike recommended for any low-confidence, high-effort item",
+      "passed": false,
+      "evidence": "No discovery spikes mentioned anywhere in the output."
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 6,
+    "total": 7,
+    "pass_rate": 0.14
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "timestamp": "20260318_215205",
+  "results": [
+    {
+      "id": "route_logistics_carrier",
+      "category": "routing",
+      "checks": {
+        "content": {
+          "carrier": true,
+          "OTD|on-time delivery|on time delivery": true,
+          "scorecard|performance": true
+        },
+        "routing": true
+      },
+      "content_pass": true,
+      "status": "pass",
+      "output_preview": "No local configuration or data files are present. I'll produce the logistics brief using illustrative data structured to the skill's scorecard format, clearly marked as requiring your actual TMS/ERP data to populate.\n\n---\n\n```\nTASK:          Carrier Performance Review \u2014 Q4 2025 (Oct\u2013Dec)\nCONFIGURATION: Not configured (no supply-chain.local.md found)\nDATA SOURCES:  None connected \u2014 illustrative framework below requires\n               TMS / ERP / carrier API data to populate\n```\n\n---\n\n## IMPORTANT"
+    }
+  ]
+}

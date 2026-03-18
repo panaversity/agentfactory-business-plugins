@@ -1,0 +1,45 @@
+{
+  "expectations": [
+    {
+      "text": "Each story uses a named persona, not 'a user'",
+      "passed": false,
+      "evidence": "All 5 stories use 'a dashboard user' as the persona. This is generic — not a named persona. 'Dashboard user' is equivalent to 'a user'."
+    },
+    {
+      "text": "Each 'want' describes a capability (what the user can do), not a UI element (what they click)",
+      "passed": true,
+      "evidence": "Wants are capability-focused: 'select from preset date ranges', 'select a custom start date and end date', 'all dashboard widgets to update when I change the date range', 'my selected date range to persist', 'see a clear error message'."
+    },
+    {
+      "text": "Each 'so that' describes a user outcome (benefit to them), not a system action",
+      "passed": true,
+      "evidence": "Outcomes are user-focused: 'quickly view common reporting periods', 'analyze data for specific periods', 'every chart, table, and metric reflects the same time period', 'don't have to reselect my date range every time', 'understand what went wrong and can correct it'."
+    },
+    {
+      "text": "No AC contains 'and' connecting multiple conditions",
+      "passed": false,
+      "evidence": "Story 2 AC: 'Both start and end dates can be selected via a calendar date picker' — compound statement. Story 5 AC: 'An error is shown if either date field is left empty when submitting a custom range' — tests two things in one."
+    },
+    {
+      "text": "At least one error-state AC per story",
+      "passed": false,
+      "evidence": "Story 1 has no error-state AC — all 6 ACs are happy-path. Story 3 has one error-adjacent AC (empty state) but it says 'not an error'. Story 4 has no error-state AC."
+    },
+    {
+      "text": "Stories are sized (S/M/L) with dependencies noted",
+      "passed": false,
+      "evidence": "No sizing (S/M/L) is provided on any story. No dependencies are listed. Stories are standalone without dependency mapping."
+    },
+    {
+      "text": "Coverage check flags any spec AC not represented in stories",
+      "passed": false,
+      "evidence": "No coverage analysis section is present. No mapping of spec ACs to stories. No gap identification."
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 5,
+    "total": 7,
+    "pass_rate": 0.29
+  }
+}

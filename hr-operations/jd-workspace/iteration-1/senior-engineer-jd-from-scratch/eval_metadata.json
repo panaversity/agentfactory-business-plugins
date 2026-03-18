@@ -1,0 +1,14 @@
+{
+  "eval_id": 1,
+  "eval_name": "senior-engineer-jd-from-scratch",
+  "prompt": "I need a job description for a Senior Software Engineer in our Platform team. They'll be building internal developer tools and CI/CD infrastructure. We're based in London, hybrid 3 days a week. Salary range is £85,000 to £110,000. The team is 6 people and this person will mentor 2 mid-level engineers.",
+  "assertions": [
+    "Leads with THE WORK section before requirements",
+    "Essential requirements list contains 5 or fewer items, each genuinely essential",
+    "Salary range £85,000-£110,000 is explicitly stated",
+    "Includes equal opportunities statement and reasonable adjustments offer",
+    "Zero instances of exclusionary language (rockstar, ninja, guru, digital native, young and dynamic)",
+    "Requirements expressed as skill proficiency levels, not years of experience with specific tools",
+    "Output begins with the mandatory header block (TASK, DOCUMENT TYPE, JURISDICTION, CONFIGURATION, SENSITIVITY)"
+  ]
+}

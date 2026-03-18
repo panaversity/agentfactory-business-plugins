@@ -1,0 +1,40 @@
+{
+  "expectations": [
+    {
+      "text": "Output is a Discovery Brief (Type 2)",
+      "passed": true,
+      "evidence": "Title is 'Discovery Brief: Enterprise Bulk Export Functionality' with a structured sprint plan, objectives, hypotheses, interview guide, and success criteria. While not following the exact skill format, it serves the discovery brief purpose."
+    },
+    {
+      "text": "QUESTIONS TO ANSWER are ranked by priority",
+      "passed": true,
+      "evidence": "Section 2 'Discovery Objectives' lists 6 numbered questions. While not explicitly labeled 'ranked', they are ordered from most fundamental (job-to-be-done) to more specific (segments), implying priority ordering."
+    },
+    {
+      "text": "Methods section specifies interview or analysis methods appropriate for enterprise research",
+      "passed": true,
+      "evidence": "Sprint Plan section details methods: customer interviews (45 min each), support ticket analysis, competitive audit, CRM analysis, synthesis workshop. Interview guide with 15 specific questions is included."
+    },
+    {
+      "text": "Sample section defines who to talk to with minimum n= target",
+      "passed": true,
+      "evidence": "Sprint plan specifies 'Recruit 8-10 enterprise customers for interviews (mix of requesters + non-requesters)'. Section 8 'Team & Roles' further defines stakeholder involvement."
+    },
+    {
+      "text": "OUT OF SCOPE section explicitly lists what is not being explored",
+      "passed": true,
+      "evidence": "Section 10 'Out of Scope' lists 5 explicit exclusions: building/prototyping, delivery timelines, non-enterprise segments, data deletion/GDPR erasure, and real-time streaming."
+    },
+    {
+      "text": "SUCCESS CRITERIA are evidence-based, not activity-based",
+      "passed": true,
+      "evidence": "Section 7 'Success Criteria' includes evidence-based criteria: 'We know the top 2-3 jobs-to-be-done', 'We have validated or invalidated each of the 5 hypotheses with evidence', 'We have a clear segmentation'. However, some criteria like 'rough effort estimates' are output-based rather than purely evidence-based."
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  }
+}

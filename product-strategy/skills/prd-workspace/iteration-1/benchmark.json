@@ -1,0 +1,214 @@
+{
+  "metadata": {
+    "skill_name": "prd",
+    "skill_path": "/Users/mjs/Documents/code/panaversity-official/agentfactory-business-plugins/product-strategy/skills/prd/SKILL.md",
+    "executor_model": "claude-opus-4-6",
+    "timestamp": "2026-03-19T02:06:00Z",
+    "evals_run": [1, 2, 3, 4],
+    "runs_per_configuration": 1
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "eval_name": "prd-workflow-automation",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 8,
+        "failed": 0,
+        "total": 8,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Contains all 10 PRD sections (Executive Summary through Open Questions)", "passed": true, "evidence": "All 10 sections present plus Appendices"},
+        {"text": "Success metrics include a failure threshold", "passed": true, "evidence": "Failure threshold defined with specific criteria"},
+        {"text": "Uses named personas, not 'users' or 'a user'", "passed": true, "evidence": "Ops Olivia and Dev Darius"},
+        {"text": "MoSCoW prioritisation with <=60% MUST", "passed": true, "evidence": "4 MUST (50%), 2 SHOULD, 2 COULD"},
+        {"text": "Technical architecture notes section present", "passed": true, "evidence": "Full Section 6 with engineering review gate"},
+        {"text": "PRD status marked as DRAFT", "passed": true, "evidence": "Status: DRAFT in header"},
+        {"text": "GTM section: documentation, CS, sales enablement", "passed": true, "evidence": "Full Section 7 with all three sub-sections"},
+        {"text": "NFR with specific performance numbers", "passed": true, "evidence": "<5s, <2s, <500ms, 99.9% uptime, etc."}
+      ]
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "prd-workflow-automation",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.375,
+        "passed": 3,
+        "failed": 5,
+        "total": 8,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Contains all 10 PRD sections", "passed": false, "evidence": "Custom 9-section structure, missing Executive Summary, Business Context, GTM, Launch Plan"},
+        {"text": "Success metrics include a failure threshold", "passed": false, "evidence": "Success metrics table but no failure threshold"},
+        {"text": "Uses named personas", "passed": false, "evidence": "Generic types: Operations Manager, Business Analyst, Developer/Admin"},
+        {"text": "MoSCoW prioritisation with <=60% MUST", "passed": false, "evidence": "Uses P0/P1/P2 not MoSCoW"},
+        {"text": "Technical architecture notes present", "passed": true, "evidence": "Section 4 covers architecture"},
+        {"text": "PRD status marked as DRAFT", "passed": true, "evidence": "Status: Draft in header"},
+        {"text": "GTM section: documentation, CS, sales enablement", "passed": false, "evidence": "No GTM section exists"},
+        {"text": "NFR with specific performance numbers", "passed": true, "evidence": "99.5% reliability, <10 min time-to-first-workflow"}
+      ]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "prd-ai-search-platform",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Explicit scope boundaries despite 'full requirements'", "passed": true, "evidence": "MoSCoW table: 3 MUST, 2 SHOULD, 1 COULD (50% MUST)"},
+        {"text": "MUST/SHOULD/COULD for search, faceting, analytics", "passed": true, "evidence": "Semantic Search=MUST, Faceting=MUST, Analytics=MUST, Suggestions=SHOULD, Personalization=COULD"},
+        {"text": "Dependencies table maps cross-team deps", "passed": true, "evidence": "6-row dependency table in Section 9"},
+        {"text": "AI/ML-specific risks identified", "passed": true, "evidence": "Embedding quality, vector DB latency, embedding API rate limits"},
+        {"text": "Phased rollout (beta to GA)", "passed": true, "evidence": "4 phases: Dogfood → Beta → GA → Enhancements"}
+      ]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "prd-ai-search-platform",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.8,
+        "passed": 4,
+        "failed": 1,
+        "total": 5,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Explicit scope boundaries", "passed": true, "evidence": "In Scope / Out of Scope sections present"},
+        {"text": "MUST/SHOULD/COULD for search, faceting, analytics", "passed": false, "evidence": "Uses P0/P1/P2, not MoSCoW"},
+        {"text": "Dependencies table maps cross-team deps", "passed": true, "evidence": "Section 11 with table and ASCII timeline"},
+        {"text": "AI/ML-specific risks identified", "passed": true, "evidence": "Embedding quality, vector DB latency, API cost risks"},
+        {"text": "Phased rollout (beta to GA)", "passed": true, "evidence": "4 phases with exit criteria"}
+      ]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "negative-single-feature-spec",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 2,
+        "failed": 0,
+        "total": 2,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Recognises single-feature scope, redirects to /write-spec", "passed": true, "evidence": "DECLINED — Wrong Tool. Recommends /write-spec."},
+        {"text": "Notes feature spec more appropriate", "passed": true, "evidence": "Explains why PRD is overkill with per-section analysis"}
+      ]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "negative-single-feature-spec",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.0,
+        "passed": 0,
+        "failed": 2,
+        "total": 2,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Recognises single-feature scope, redirects to /write-spec", "passed": false, "evidence": "Wrote a full feature spec with no scope discrimination"},
+        {"text": "Notes feature spec more appropriate", "passed": false, "evidence": "No mention of /write-spec or scope appropriateness"}
+      ]
+    },
+    {
+      "eval_id": 4,
+      "eval_name": "negative-roadmap-planning",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 2,
+        "failed": 0,
+        "total": 2,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Does NOT produce a PRD for roadmap planning", "passed": true, "evidence": "Skill Mismatch Detected — no PRD produced"},
+        {"text": "Redirects to /roadmap-update or /prioritise", "passed": true, "evidence": "Redirects to /roadmap-update with workflow sequence explanation"}
+      ]
+    },
+    {
+      "eval_id": 4,
+      "eval_name": "negative-roadmap-planning",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.0,
+        "passed": 0,
+        "failed": 2,
+        "total": 2,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Does NOT produce a PRD for roadmap planning", "passed": false, "evidence": "Produced a 238-line roadmap document"},
+        {"text": "Redirects to /roadmap-update or /prioritise", "passed": false, "evidence": "No redirect — directly answered the question"}
+      ]
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {"mean": 1.0, "stddev": 0.0, "min": 1.0, "max": 1.0},
+      "time_seconds": {"mean": 0, "stddev": 0, "min": 0, "max": 0},
+      "tokens": {"mean": 0, "stddev": 0, "min": 0, "max": 0}
+    },
+    "without_skill": {
+      "pass_rate": {"mean": 0.294, "stddev": 0.349, "min": 0.0, "max": 0.8},
+      "time_seconds": {"mean": 0, "stddev": 0, "min": 0, "max": 0},
+      "tokens": {"mean": 0, "stddev": 0, "min": 0, "max": 0}
+    },
+    "delta": {
+      "pass_rate": "+0.706",
+      "time_seconds": "0",
+      "tokens": "0"
+    }
+  },
+  "notes": [
+    "With-skill achieves 100% pass rate across all 4 evals (17/17 assertions). Without-skill achieves 29.4% (7/17).",
+    "The skill's strongest advantage is in scope discrimination — negative evals (3 and 4) show 100% vs 0% pass rate. Without the skill, Claude has no concept of when NOT to write a PRD.",
+    "For positive evals, the skill enforces structural completeness (10-section template, MoSCoW, named personas, failure thresholds) that Claude doesn't naturally produce.",
+    "Without-skill output quality is actually decent on eval 2 (80% pass rate) — Claude naturally includes scope boundaries, dependencies, and AI-specific risks for complex topics. The skill's added value is in MoSCoW enforcement and template consistency.",
+    "Timing and token data not captured in this run (JSON parsing failed on CLI output). Future runs should use a more robust output capture method."
+  ]
+}

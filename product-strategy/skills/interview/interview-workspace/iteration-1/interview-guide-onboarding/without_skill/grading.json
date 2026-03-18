@@ -1,0 +1,40 @@
+{
+  "expectations": [
+    {
+      "text": "Guide follows four-segment structure (Opening, Warm-up, Core Discovery, Wrap-up)",
+      "passed": false,
+      "evidence": "Guide uses six sections: Introduction, Background, Current Onboarding Process, Pain Points and Challenges, Feature Exploration, Wrap-Up. Does not follow the four-segment structure (Opening, Warm-up, Core Discovery, Wrap-up)."
+    },
+    {
+      "text": "Questions ask about past behaviour, not hypothetical futures",
+      "passed": false,
+      "evidence": "Multiple hypothetical/opinion questions: Q13 'What would an ideal onboarding experience look like for you?', Q14 'We're considering building a team onboarding feature. What would be most valuable to you?', Q15 'Would you find it helpful to have automated task assignments?', Q17 'Would you pay for a tool that streamlines onboarding?'. Some past-behaviour questions exist (Q10) but they are outnumbered by hypotheticals."
+    },
+    {
+      "text": "No mention of the proposed onboarding feature in the first half of the guide",
+      "passed": false,
+      "evidence": "Section 4 (Feature Exploration) begins at question 14 out of 19 total, which is past the halfway point. However, the section heading 'Feature Exploration' and question 14 explicitly state 'We're considering building a team onboarding feature' — this anchors the interviewee before the problem space has been fully explored. The first half does not mention it, but the guide structurally introduces it too soon relative to discovery depth."
+    },
+    {
+      "text": "Workaround probe is included",
+      "passed": false,
+      "evidence": "No question asks about workarounds, how they handled onboarding before current tools, or what they do when the process breaks. The guide jumps from 'describe current process' to 'what are the challenges' without exploring prior/alternative approaches."
+    },
+    {
+      "text": "Note-taking template includes Key observations, Notable quotes, Surprises, Follow-up questions",
+      "passed": false,
+      "evidence": "No note-taking template exists. The 'Notes' section at the end contains generic reminders ('Record responses carefully', 'Note body language') but no structured template with the specified fields."
+    },
+    {
+      "text": "Guide specifies participant criteria and target sample size",
+      "passed": false,
+      "evidence": "Overview states 'Target: HR managers, team leads, people ops at mid-market companies' but provides no specific criteria (e.g., recency of onboarding experience) and no target sample size (n=X)."
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "failed": 6,
+    "total": 6,
+    "pass_rate": 0.0
+  }
+}

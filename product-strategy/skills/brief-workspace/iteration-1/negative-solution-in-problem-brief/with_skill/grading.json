@@ -1,0 +1,30 @@
+{
+  "expectations": [
+    {
+      "text": "Output is a Problem Brief",
+      "passed": true,
+      "evidence": "Header states 'Type: Problem Brief' and follows the exact Problem Brief format with THE PROBLEM, WHO IS AFFECTED, EVIDENCE, IMPACT OF NOT SOLVING, WHAT WE DO NOT KNOW YET, HYPOTHESIS, DISCOVERY QUESTIONS sections."
+    },
+    {
+      "text": "The CDN and lazy loading solutions are NOT included in the brief body",
+      "passed": true,
+      "evidence": "No mention of CDN or lazy loading anywhere in the brief body. A note at the bottom explicitly states: 'The requesting context included a proposed solution (CDN + lazy loading). Per problem brief protocol, solutions are intentionally excluded from this document to avoid anchoring the team on a specific approach before root cause analysis is complete.'"
+    },
+    {
+      "text": "If the user's suggested solution is mentioned at all, it appears only in a hypothesis section clearly labelled as hypothesis",
+      "passed": true,
+      "evidence": "The HYPOTHESIS section frames the expected outcome ('reducing dashboard load time to under 2 seconds') without mentioning CDN or lazy loading. The only mention of the user's proposed solution is in an explicit note at the bottom, outside the brief body, stating it should be 'evaluated as one candidate during discovery.'"
+    },
+    {
+      "text": "The brief focuses on the problem (slow loading) with evidence and impact",
+      "passed": true,
+      "evidence": "THE PROBLEM section describes slow loading friction. EVIDENCE section includes 5 quantified data points (P50 4.2s, P95 9.8s, 37 tickets up 62% QoQ, NPS verbatim, churn data, 18% session refresh rate). IMPACT section covers user, commercial, competitive, and compounding risk dimensions."
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1.0
+  }
+}

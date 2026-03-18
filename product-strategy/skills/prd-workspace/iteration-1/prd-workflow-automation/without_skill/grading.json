@@ -1,0 +1,50 @@
+{
+  "expectations": [
+    {
+      "text": "Contains all 10 PRD sections (Executive Summary through Open Questions)",
+      "passed": false,
+      "evidence": "Uses a custom structure with 9 sections: Overview, User Personas, Feature Requirements, Architecture, Cross-Team Dependencies, Rollout Plan, Risks, Open Questions, Appendix. Missing: Executive Summary (4-line What/Why/When/Win format), Business Context (commercial evidence, strategic fit), User Requirements (journey maps), Go-to-Market Requirements, Launch Plan (phased rollout with gates). The structure diverges significantly from the 10-section PRD template."
+    },
+    {
+      "text": "Success metrics include a failure threshold",
+      "passed": false,
+      "evidence": "Section 1.3 has a success metrics table with targets but no failure threshold. No mention of when to reconsider or change direction."
+    },
+    {
+      "text": "Uses named personas from product.local.md, not 'users' or 'a user'",
+      "passed": false,
+      "evidence": "Uses generic persona types: 'Operations Manager (non-technical)', 'Business Analyst (semi-technical)', 'Developer/Admin (technical)'. No named personas."
+    },
+    {
+      "text": "Functional requirements use MoSCoW prioritisation with no more than 60% MUST",
+      "passed": false,
+      "evidence": "Uses P0/P1/P2 prioritization scheme instead of MoSCoW (MUST/SHOULD/COULD). No analysis of MUST percentage."
+    },
+    {
+      "text": "Technical architecture notes section is present",
+      "passed": true,
+      "evidence": "Section 4 'Architecture Considerations' covers execution model, data model, security/access control, and limits/quotas."
+    },
+    {
+      "text": "PRD status is marked as DRAFT",
+      "passed": true,
+      "evidence": "Header shows '**Status:** Draft'"
+    },
+    {
+      "text": "Go-to-market section addresses documentation, CS enablement, and sales enablement",
+      "passed": false,
+      "evidence": "No Go-to-Market section exists. No mention of documentation plans, CS enablement, or sales enablement."
+    },
+    {
+      "text": "Non-functional requirements include performance targets with specific numbers",
+      "passed": true,
+      "evidence": "Mentioned in Success Metrics table and Architecture section: '99.5% successful execution rate', 'Median < 10 minutes', '15% improvement in 90-day retention'. Limits table has specific numbers: '50 steps per workflow', '5 minutes max step timeout', '1 hour max workflow timeout'."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 5,
+    "total": 8,
+    "pass_rate": 0.375
+  }
+}

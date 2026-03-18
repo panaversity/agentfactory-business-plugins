@@ -1,0 +1,82 @@
+[
+  {
+    "query": "Assess our vendor KIFTL — they supply all our custom steel fasteners, no alternatives, GBP 1.2M annual spend. I need a full six-dimension review",
+    "should_trigger": true
+  },
+  {
+    "query": "Classify a vendor: GBP 15K annual spend, sole source for a critical custom component, 9-month qualification for alternatives. What Kraljic quadrant?",
+    "should_trigger": true
+  },
+  {
+    "query": "We're onboarding a new packaging supplier we met at a trade show. Run the full vendor due diligence and qualification assessment",
+    "should_trigger": true
+  },
+  {
+    "query": "It's time for our annual vendor review of the top 10 suppliers — produce a scorecard for each across commercial, operational, financial, compliance, strategic, and geopolitical",
+    "should_trigger": true
+  },
+  {
+    "query": "one of our vendors operates from a single site in eastern Turkey and has no documented business continuity plan. should i be worried? what tier are they?",
+    "should_trigger": true
+  },
+  {
+    "query": "Can you check if any of our Strategic or Bottleneck vendors have certifications expiring in the next 90 days? I need to chase renewal evidence",
+    "should_trigger": true
+  },
+  {
+    "query": "Help me evaluate whether we should exit our relationship with GlobalParts — they've been underperforming for 6 months but we have no qualified alternative",
+    "should_trigger": true
+  },
+  {
+    "query": "I need to classify 5 new vendors using the Kraljic matrix and assign them to review tiers. I have their spend data, dependency level, and switching costs",
+    "should_trigger": true
+  },
+  {
+    "query": "Produce a vendor health check for TechParts International — focus on financial viability, operational performance from ERP data, and compliance status",
+    "should_trigger": true
+  },
+  {
+    "query": "We have a vendor who supplies a non-critical commodity (office supplies) with many alternatives. What's the right assessment depth and review frequency?",
+    "should_trigger": true
+  },
+  {
+    "query": "Reconcile this invoice against the PO — the vendor charged 5% above the agreed unit price on 3 line items",
+    "should_trigger": false
+  },
+  {
+    "query": "Review carrier performance for our top 5 carriers — produce a scorecard with OTD, damage, cost per kg",
+    "should_trigger": false
+  },
+  {
+    "query": "Analyze our procurement spend by category and find vendor consolidation opportunities across the business",
+    "should_trigger": false
+  },
+  {
+    "query": "Our steel supplier's credit rating dropped to CCC and they've filed for restructuring — what's the risk brief?",
+    "should_trigger": false
+  },
+  {
+    "query": "Draft a corrective action request letter to our underperforming packaging supplier about their quality rejection rate",
+    "should_trigger": false
+  },
+  {
+    "query": "Generate the weekly supply chain brief for the CPO with traffic light summary",
+    "should_trigger": false
+  },
+  {
+    "query": "We're considering opening a new DC in Poland — model the network design scenarios",
+    "should_trigger": false
+  },
+  {
+    "query": "Our expedited freight is 18% of total — what's the root cause analysis?",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a supply assurance letter to our critical vendor asking for production capacity confirmation",
+    "should_trigger": false
+  },
+  {
+    "query": "What's the market benchmark price for corrugated board packaging in the UK? I think we're overpaying",
+    "should_trigger": false
+  }
+]

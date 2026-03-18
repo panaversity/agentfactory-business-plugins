@@ -1,0 +1,16 @@
+{
+  "eval_id": 3,
+  "eval_name": "negative-no-outcome-data",
+  "prompt": "Run a retro on the search feature. We shipped it last week but I don't have any metrics yet.",
+  "assertions": [
+    {
+      "text": "The skill flags that one week is too early for a meaningful retro — the NEVER rules prohibit running a retro without outcome data"
+    },
+    {
+      "text": "Recommends waiting 4-12 weeks for outcome data to accumulate — rushing a retro without data produces opinion-based blame, not evidence-based improvement"
+    },
+    {
+      "text": "May offer to run a delivery-focused Q2 review (on time? spec quality?) while deferring outcome questions"
+    }
+  ]
+}

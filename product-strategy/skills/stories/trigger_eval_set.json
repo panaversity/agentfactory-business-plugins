@@ -1,0 +1,22 @@
+[
+  {"query": "Break this spec into user stories for sprint planning", "should_trigger": true},
+  {"query": "Write user stories for the dashboard filtering feature with acceptance criteria", "should_trigger": true},
+  {"query": "Decompose the authentication PRD into stories for the engineering team", "should_trigger": true},
+  {"query": "I need stories for the search feature — each with acceptance criteria and sizing", "should_trigger": true},
+  {"query": "Convert these requirements into user stories in As a / I want / So that format", "should_trigger": true},
+  {"query": "Create an epic and story breakdown for the notifications redesign", "should_trigger": true},
+  {"query": "Split this large feature into smaller stories that can each ship in one sprint", "should_trigger": true},
+  {"query": "Write BDD-style stories with Given/When/Then acceptance criteria for the export feature", "should_trigger": true},
+  {"query": "Map out the user stories for our checkout flow improvement", "should_trigger": true},
+  {"query": "Generate acceptance criteria for the new bulk import stories", "should_trigger": true},
+  {"query": "Write a feature spec for the new search functionality with API design", "should_trigger": false},
+  {"query": "Plan our next sprint based on team velocity of 42 points", "should_trigger": false},
+  {"query": "Prioritise our backlog using RICE framework", "should_trigger": false},
+  {"query": "Write a PRD for the workflow automation platform", "should_trigger": false},
+  {"query": "Create a problem brief about declining user activation", "should_trigger": false},
+  {"query": "Generate interview questions for user research on reporting workflows", "should_trigger": false},
+  {"query": "Run a retrospective on the Quick Reports feature", "should_trigger": false},
+  {"query": "Update our product roadmap for Q3 and Q4", "should_trigger": false},
+  {"query": "Write a technical design document for the caching layer", "should_trigger": false},
+  {"query": "Help me draft release notes for the features shipping this week", "should_trigger": false}
+]

@@ -1,0 +1,25 @@
+{
+  "expectations": [
+    {
+      "text": "The skill flags that one week is too early for a meaningful retro — the NEVER rules prohibit running a retro without outcome data",
+      "passed": true,
+      "evidence": "Opens with 'I can't run a meaningful retrospective on the search feature right now.' Explains: 'A product retrospective requires 4-12 weeks of outcome data.' Explicitly states: 'Running a retro without outcome data produces opinions and blame, not evidence-based learning.'"
+    },
+    {
+      "text": "Recommends waiting 4-12 weeks for outcome data to accumulate — rushing a retro without data produces opinion-based blame, not evidence-based improvement",
+      "passed": true,
+      "evidence": "'Schedule the retro for 6-8 weeks post-launch. By then you'll have enough data to evaluate whether the feature solved the problem.' Also includes a data collection checklist for the future retro."
+    },
+    {
+      "text": "May offer to run a delivery-focused Q2 review (on time? spec quality?) while deferring outcome questions",
+      "passed": true,
+      "evidence": "Offers: 'If you want to review how the delivery went while it's fresh, I can run a delivery-focused review covering Q2 (Did we build it as intended?)' with four specific questions that can be answered without outcome data."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1.0
+  }
+}

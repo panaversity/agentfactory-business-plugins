@@ -1,0 +1,42 @@
+{
+  "eval_id": 1,
+  "eval_name": "competitive-landscape-scan",
+  "expectations": [
+    {
+      "text": "Direct competitors profiled with positioning, pricing, strengths, weaknesses, threat level",
+      "passed": true,
+      "evidence": "Multiple competitors profiled with full structure"
+    },
+    {
+      "text": "Strengths described honestly, not minimized",
+      "passed": true,
+      "evidence": "Competitor strengths described honestly"
+    },
+    {
+      "text": "Indirect alternatives include current workaround (Excel, manual, ERP)",
+      "passed": true,
+      "evidence": "Manual processes and ERP modules included as alternatives"
+    },
+    {
+      "text": "Strategic recommendation identifies specific advantage",
+      "passed": true,
+      "evidence": "Where to win/avoid sections present with specific recommendations"
+    },
+    {
+      "text": "Where to avoid section is explicit",
+      "passed": true,
+      "evidence": "Explicit avoid recommendations included"
+    },
+    {
+      "text": "Differentiation to defend is stated",
+      "passed": true,
+      "evidence": "Key differentiation claim identified"
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  }
+}

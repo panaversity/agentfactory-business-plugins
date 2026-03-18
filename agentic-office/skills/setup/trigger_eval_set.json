@@ -1,0 +1,82 @@
+[
+  {
+    "query": "Configure the agentic office for me — I need to set up my workplace memory from scratch",
+    "should_trigger": true
+  },
+  {
+    "query": "Install the agentic office plugin and walk me through the setup process",
+    "should_trigger": true
+  },
+  {
+    "query": "Create work.local.md and initialise my workplace memory with the four layers",
+    "should_trigger": true
+  },
+  {
+    "query": "I need the agentic office orientation — explain the two-plugin architecture",
+    "should_trigger": true
+  },
+  {
+    "query": "Agentic office getting started — what do I need to configure?",
+    "should_trigger": true
+  },
+  {
+    "query": "Initialise workplace memory for my new project workspace",
+    "should_trigger": true
+  },
+  {
+    "query": "Set up the agentic office and configure my agents for the first time",
+    "should_trigger": true
+  },
+  {
+    "query": "I have just installed the plugin — walk me through the workplace configuration",
+    "should_trigger": true
+  },
+  {
+    "query": "Create my work.local file from the template and help me fill in the layers",
+    "should_trigger": true
+  },
+  {
+    "query": "Configure agents and set up the domain integrations for my agentic office",
+    "should_trigger": true
+  },
+  {
+    "query": "Give me my daily digest — what do I need to know today?",
+    "should_trigger": false
+  },
+  {
+    "query": "Add a new person to my workplace memory — Fatima Khan, Head of Legal",
+    "should_trigger": false
+  },
+  {
+    "query": "Brain dump my priorities and sort them into P1 P2 P3",
+    "should_trigger": false
+  },
+  {
+    "query": "Delegate the analytics brief to Omar with a handoff message",
+    "should_trigger": false
+  },
+  {
+    "query": "Search all memory layers for everything about the vendor dispute",
+    "should_trigger": false
+  },
+  {
+    "query": "Give me the executive dashboard with RAG status",
+    "should_trigger": false
+  },
+  {
+    "query": "Prep me for the board meeting with agenda items and stakeholder notes",
+    "should_trigger": false
+  },
+  {
+    "query": "Load cross-domain context from HR and Finance for onboarding",
+    "should_trigger": false
+  },
+  {
+    "query": "Give me a situation brief on Project Nighthawk before my call",
+    "should_trigger": false
+  },
+  {
+    "query": "Initialise my TASKS.md and CLAUDE.md for the productivity dashboard",
+    "should_trigger": false
+  }
+]

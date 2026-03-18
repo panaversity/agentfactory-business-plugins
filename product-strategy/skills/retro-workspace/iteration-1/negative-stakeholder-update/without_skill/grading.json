@@ -1,0 +1,20 @@
+{
+  "expectations": [
+    {
+      "text": "The skill does NOT produce a retro when asked for a stakeholder update — status updates and retrospectives serve different audiences and purposes",
+      "passed": false,
+      "evidence": "The output produces a full stakeholder update document. While it didn't produce a retro (it produced what was asked), the point of this eval is that the retro skill should recognize this isn't its domain and redirect. Without the skill, the model just complied and produced a stakeholder update — it didn't recognize the boundary."
+    },
+    {
+      "text": "Redirects to /stakeholder-update for executive communication",
+      "passed": false,
+      "evidence": "No redirect to /stakeholder-update. The model simply produced the stakeholder update itself, with no mention of dedicated tools or workflows."
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "failed": 2,
+    "total": 2,
+    "pass_rate": 0.0
+  }
+}

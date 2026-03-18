@@ -1,0 +1,45 @@
+{
+  "expectations": [
+    {
+      "text": "Each story uses a named persona, not 'a user'",
+      "passed": true,
+      "evidence": "All 5 stories use named personas: 'Marketing Analyst' (Stories 1-2), 'Sales Manager' (Story 3), 'Executive Stakeholder' (Stories 4-5). Note at top explains personas are inferred due to no product.local.md."
+    },
+    {
+      "text": "Each 'want' describes a capability (what the user can do), not a UI element (what they click)",
+      "passed": true,
+      "evidence": "Wants are capabilities: 'select a preset date range', 'select a custom start and end date', 'all dashboard widgets to update simultaneously', 'my selected date range to persist', 'see a clear error message'. None describe UI elements."
+    },
+    {
+      "text": "Each 'so that' describes a user outcome (benefit to them), not a system action",
+      "passed": true,
+      "evidence": "Outcomes are user-focused: 'quickly scope campaign metrics to standard reporting periods', 'analyse campaign performance for specific promotional windows', 'compare pipeline metrics across a consistent time window', 'do not have to re-select my reporting period every time I switch views', 'understand what to correct instead of seeing a broken or empty dashboard'."
+    },
+    {
+      "text": "No AC contains 'and' connecting multiple conditions",
+      "passed": true,
+      "evidence": "Reviewed all 20 ACs across 5 stories. Each AC tests a single condition-action-result. No compound 'and' statements found."
+    },
+    {
+      "text": "At least one error-state AC per story",
+      "passed": true,
+      "evidence": "Story 1 AC4 (data source error), Story 2 AC3/AC4/AC5 (invalid dates, future dates, missing fields), Story 3 AC3 (widget failure), Story 4 AC4 (invalid range overnight), Story 5 AC2/AC3 (unsupported format, 365-day limit)."
+    },
+    {
+      "text": "Stories are sized (S/M/L) with dependencies noted",
+      "passed": true,
+      "evidence": "Story 1: M/None, Story 2: M/Story 1, Story 3: M/Story 1, Story 4: S/Story 1, Story 5: S/Story 2. All have Size and Dependencies fields."
+    },
+    {
+      "text": "Coverage check flags any spec AC not represented in stories",
+      "passed": true,
+      "evidence": "Coverage Analysis section maps all 5 spec ACs to stories (AC1→S1, AC2→S2, AC3→S3, AC4→S4, AC5→S5+S2). Also identifies 4 gaps: default range, URL shareability, timezone handling, accessibility."
+    }
+  ],
+  "summary": {
+    "passed": 7,
+    "failed": 0,
+    "total": 7,
+    "pass_rate": 1.0
+  }
+}

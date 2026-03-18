@@ -1,0 +1,11 @@
+{
+  "eval_id": 3,
+  "eval_name": "value-vs-effort-quick-sort",
+  "prompt": "I don't need a complex framework. Just help me do a quick value vs effort 2x2 for these items: notification preferences, bulk user import, SSO, dark mode, API webhooks, custom dashboard layouts.",
+  "assertions": [
+    "Uses Value vs Effort matrix as requested, not RICE",
+    "Items are placed in four quadrants (high-value/low-effort, high-value/high-effort, low-value/low-effort, low-value/high-effort)",
+    "Assumptions behind value and effort estimates are visible",
+    "The three mandatory challenges are still run after the framework"
+  ]
+}

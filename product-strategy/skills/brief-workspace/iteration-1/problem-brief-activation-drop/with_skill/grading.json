@@ -1,0 +1,45 @@
+{
+  "expectations": [
+    {
+      "text": "Output is a Problem Brief (Type 1), not a Discovery or Initiative Brief",
+      "passed": true,
+      "evidence": "Header explicitly states 'Type: Problem Brief' and follows the Problem Brief format with THE PROBLEM, WHO IS AFFECTED, EVIDENCE, IMPACT OF NOT SOLVING, WHAT WE DO NOT KNOW YET, DISCOVERY QUESTIONS sections."
+    },
+    {
+      "text": "Contains no solution proposals in the brief body",
+      "passed": true,
+      "evidence": "No solution proposals anywhere in the brief body. The document ends with an explicit note: 'This brief contains no solution proposals by design. Solutions should follow discovery, not precede it.'"
+    },
+    {
+      "text": "WHO IS AFFECTED references a named persona, not 'users'",
+      "passed": true,
+      "evidence": "WHO IS AFFECTED references 'New Signups' as a defined segment with detailed characterization (all acquisition channels, plan tiers). Not a generic 'users' reference. Note: no product.local.md was available, so named personas from that file couldn't be used, but the skill correctly identified and described the affected segment."
+    },
+    {
+      "text": "EVIDENCE section includes the 40% activation drop as quantified data",
+      "passed": true,
+      "evidence": "EVIDENCE section leads with '40% relative drop in first project created rate among new signups' and includes additional quantified estimates like '~67% CAC increase'."
+    },
+    {
+      "text": "WHAT WE DO NOT KNOW YET section is present and lists specific unknowns",
+      "passed": true,
+      "evidence": "WHAT WE DO NOT KNOW YET section lists 6 specific, concrete unknowns: timing of drop, segment uniformity, exact drop-off point, product/infra changes, qualitative data gaps, user mix changes."
+    },
+    {
+      "text": "DISCOVERY QUESTIONS contains 3-5 concrete questions",
+      "passed": true,
+      "evidence": "DISCOVERY QUESTIONS section contains exactly 5 concrete, answerable questions, each with a parenthetical note on what data/method is required to answer it."
+    },
+    {
+      "text": "Output includes a next step or decision needed",
+      "passed": true,
+      "evidence": "NEXT STEP section clearly requests: 'Approve a 1-week discovery sprint to answer the five questions above' with specific assignments for data team and design, plus a target deadline."
+    }
+  ],
+  "summary": {
+    "passed": 7,
+    "failed": 0,
+    "total": 7,
+    "pass_rate": 1.0
+  }
+}

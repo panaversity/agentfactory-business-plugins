@@ -1,0 +1,25 @@
+{
+  "expectations": [
+    {
+      "text": "Does NOT create an onboarding plan",
+      "passed": true,
+      "evidence": "Output states: 'SKILL MISMATCH DETECTED' and 'NO OUTPUT GENERATED'. Explicitly explains why generating an onboarding plan with the knowledge capture template would be wrong: 'Frames the new starter as a knowledge holder (they hold no institutional knowledge yet)'."
+    },
+    {
+      "text": "Redirects to the appropriate skill or resource for onboarding",
+      "passed": true,
+      "evidence": "Recommends: 'This request should be routed to the /onboarding skill' with specific capabilities listed. Even provides context to pass along to /onboarding: role, start date, plan scope, team."
+    },
+    {
+      "text": "Does NOT confuse knowledge transfer with onboarding",
+      "passed": true,
+      "evidence": "Output explicitly distinguishes the two: knowledge capture extracts from departing employees, onboarding sets up new employees. Even identifies how /knowledge could play a supporting role (pre-onboarding capture, knowledge article inventory) without overstepping its scope."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1.0
+  }
+}

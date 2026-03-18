@@ -1,0 +1,20 @@
+{
+  "expectations": [
+    {
+      "text": "The skill does NOT produce a brief — this is a technical implementation request with no brief-related intent",
+      "passed": true,
+      "evidence": "Output is titled 'Request Declined — Outside Skill Scope' and explicitly states: 'The /brief skill handles product briefs, discovery briefs, problem briefs, and initiative framing for PM workflows. It does not generate code, scripts, or technical implementations.' No brief was produced."
+    },
+    {
+      "text": "If the skill somehow activates, it should redirect the user to appropriate tools rather than producing a brief around a code request",
+      "passed": true,
+      "evidence": "The response redirects: '1. For the Python script: Ask Claude directly (without invoking /brief) — it can write the script immediately. 2. If this is part of a product initiative: Frame it as a brief first.' Appropriate redirection provided."
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 0,
+    "total": 2,
+    "pass_rate": 1.0
+  }
+}

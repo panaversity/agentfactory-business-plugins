@@ -1,0 +1,72 @@
+{
+  "skill_name": "market",
+  "evals": [
+    {
+      "id": 1,
+      "name": "competitive-landscape-scan",
+      "prompt": "I'm building an AI-powered accounts payable automation tool for mid-market manufacturers (100-500 employees). I know about Tipalti and Bill.com as competitors. Do a full competitive landscape scan including both direct competitors and indirect alternatives.",
+      "expected_output": "A structured competitive landscape with direct competitors (positioning, pricing, strengths, weaknesses, threat level) and indirect alternatives (Excel, manual process, ERP modules), plus a strategic recommendation on where to win and where to avoid.",
+      "files": [],
+      "expectations": [
+        "Direct competitors are profiled with positioning, pricing, strengths vs us, weaknesses vs us, and threat level (HIGH/MEDIUM/LOW) with specific threat reasons — an investor will have heard of these competitors and expects the founder to know their real strengths",
+        "Strengths of competitors are described honestly, not minimized — describing only weaknesses destroys credibility with investors and leads to blind spots in positioning",
+        "Indirect alternatives include the real current workaround (Excel + manual process, existing ERP AP module) — most mid-market AP teams are not evaluating competing products; they're comparing the new tool to their current manual process",
+        "A strategic recommendation identifies the specific customer/use case where the venture has clear advantage — 'we compete everywhere' is not a strategy; winning requires focus",
+        "The 'Where to avoid' section is explicit — knowing where you're outgunned prevents wasting resources on segments where incumbents have overwhelming advantages",
+        "The differentiation to defend is stated — the one claim the venture must never let a competitor match, which becomes the anchor of all GTM messaging"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "bottom-up-market-sizing",
+      "prompt": "Size the market for our AP automation tool. Target: manufacturers in the US with 100-500 employees. Our price point is $2,000/month. We've piloted with 3 companies. Give me TAM, SAM, SOM using bottom-up methodology only — no top-down analyst numbers.",
+      "expected_output": "A bottom-up market sizing with TAM, SAM, SOM, methodology for each step, and value capture validation — all built from countable customers and known price points.",
+      "files": [],
+      "expectations": [
+        "The sizing uses bottom-up methodology (count customers x price) rather than top-down analyst TAM — top-down figures are misleading because they include segments the venture cannot serve",
+        "Step 1 counts the addressable companies using verifiable sources (Census Bureau, industry associations, LinkedIn) — the total count must be grounded in data, not estimated",
+        "Step 2 qualifies the reachable subset by ICP criteria (manufacturers, 100-500 employees, US) — not every company in the total count is a prospect",
+        "SOM represents a realistic 3-5 year capture target (typically 1-5% of SAM) — claiming 10%+ market share in 3 years requires extraordinary justification",
+        "Value capture validation checks that the $2,000/month price is <10% of the value delivered — if the tool saves $3,000/month in AP labor, a $2,000 price leaves too little value surplus for the customer",
+        "The 3 pilot customers are referenced as the evidence base for pricing and conversion assumptions — pilotless market sizing is hypothesis, not measurement"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "moat-assessment",
+      "prompt": "Assess the moat potential for our AP automation startup. We've been running for 8 months, have 15 paying customers, and our AI learns each customer's unique matching rules from historical invoice data. What moats do we have, what are we building, and what should we invest in?",
+      "expected_output": "An assessment of current moats, moats being built, and moats to invest in — using the 6-type moat framework (data, switching costs, network effects, brand, regulatory, distribution).",
+      "files": [],
+      "expectations": [
+        "All 6 moat types are assessed (data, switching costs, network effects, brand, regulatory, distribution) — skipping a moat type leaves a blind spot",
+        "The data moat from learned matching rules is identified as the strongest current moat being built — 15 customers' matching rules represent proprietary data that competitors cannot replicate without the same customer base",
+        "Switching costs are assessed honestly (early-stage = low switching costs unless deep ERP integration exists) — overclaiming moats the venture doesn't yet have destroys investor credibility",
+        "Network effects are assessed honestly — AP automation is unlikely to have true network effects, and claiming them when they don't exist is a common founder mistake",
+        "Each moat is rated on durability (HIGH/MEDIUM/LOW) with a specific rationale — a moat that sounds good but can be replicated in 3 months is not a moat",
+        "An investment recommendation prioritizes which moat to deepen based on the venture's stage and resources — at 8 months and 15 customers, the recommendation should focus on deepening the data moat through customer accumulation"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "negative-gtm-strategy",
+      "prompt": "I need to figure out how to acquire my first 10 customers. Can you build me a 90-day GTM plan with outreach templates, channel strategy, and a week-by-week calendar?",
+      "expected_output": "The agent should redirect this to the gtm skill, since go-to-market strategy and customer acquisition planning are outside the market skill's scope.",
+      "files": [],
+      "expectations": [
+        "The agent recognizes this is a GTM strategy request and redirects to the gtm skill — market is for intelligence and analysis, not customer acquisition execution",
+        "The agent does NOT produce a GTM calendar or outreach plan within the market skill — doing so would bypass the gtm skill's ICP framework, channel strategy, and 90-day calendar format"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "negative-pitch-deck",
+      "prompt": "I'm pitching to investors next week. Can you help me build the market slide for my pitch deck? I need the narrative, the hook, and the full 9-slide structure.",
+      "expected_output": "The agent should redirect this to the pitch skill for the full deck, while noting it can provide the market data (TAM/SAM/SOM) that feeds into the pitch's market slide.",
+      "files": [],
+      "expectations": [
+        "The agent recognizes that a full pitch deck narrative is outside market skill scope and redirects to the pitch skill — market can provide the data, but narrative architecture belongs to pitch",
+        "The agent offers to provide market sizing data (TAM/SAM/SOM, competitive landscape) that would feed into the pitch skill's market slide — this is a helpful handoff rather than a bare redirect"
+      ]
+    }
+  ]
+}

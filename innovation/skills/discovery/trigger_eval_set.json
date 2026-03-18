@@ -1,0 +1,22 @@
+[
+  {"query": "I need to do customer discovery — create an interview guide for talking to CFOs about their month-end close process", "should_trigger": true},
+  {"query": "Help me synthesize my interview notes from 8 customer discovery conversations", "should_trigger": true},
+  {"query": "What jobs are my target customers trying to get done? Help me build a JTBD map from my interview data", "should_trigger": true},
+  {"query": "Generate How Might We problem statements from our discovery insights", "should_trigger": true},
+  {"query": "Build customer personas from our discovery research — we interviewed 12 AP managers", "should_trigger": true},
+  {"query": "I need to understand what problems my target customers have — help me design a research plan", "should_trigger": true},
+  {"query": "Create outreach messages to recruit interviewees for our customer discovery sprint", "should_trigger": true},
+  {"query": "What are the biggest pain points for accounts payable teams? I want to do empathy mapping from our interviews", "should_trigger": true},
+  {"query": "Help me build an insight map from these raw interview notes — I want non-obvious findings", "should_trigger": true},
+  {"query": "We need to validate our problem hypothesis — design a discovery sprint to talk to 10 customers this week", "should_trigger": true},
+  {"query": "Brainstorm 100 product ideas for solving AP automation problems", "should_trigger": false},
+  {"query": "Build me a complete assumption map with three tiers and test designs for each", "should_trigger": false},
+  {"query": "Our pilot ran for 6 weeks with 5 customers — analyze the results and tell me if I should pivot", "should_trigger": false},
+  {"query": "Create a 9-slide pitch deck for my investor meeting", "should_trigger": false},
+  {"query": "Calculate my unit economics — CAC, LTV, and payback period", "should_trigger": false},
+  {"query": "Plan a 2-week sprint with user stories and story points", "should_trigger": false},
+  {"query": "Write a SQL query to analyze our customer churn data", "should_trigger": false},
+  {"query": "What's the TAM for AP automation in the US market?", "should_trigger": false},
+  {"query": "Help me design a REST API for my invoice processing service", "should_trigger": false},
+  {"query": "Build me a go-to-market strategy with a 90-day calendar", "should_trigger": false}
+]

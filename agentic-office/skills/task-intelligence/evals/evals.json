@@ -1,0 +1,54 @@
+{
+  "skill_name": "task-intelligence",
+  "evals": [
+    {
+      "id": 1,
+      "name": "brain-dump-capture-prioritise",
+      "prompt": "Brain dump: finish the chapter 39 draft, chase Omar on the analytics brief, prep for Monday exec weekly, review Nighthawk facility contract, send workshop content to Ayesha, update Dr Sana onboarding plan, respond to the vendor about pricing, book flights for the Karachi trip, draft the board update email, and review the Q3 revenue numbers.",
+      "expected_output": "A structured capture with all 10 items extracted, enriched with project context from work.local.md, sorted into P1/P2/P3 priority tiers, delegation candidates identified, a critical path of 3-5 items, and blocked/at-risk items flagged.",
+      "files": [],
+      "expectations": [
+        "All 10 distinct items are extracted from the brain dump — nothing is missed or merged",
+        "Each item is enriched with project context from work.local.md (project name, relevant connections)",
+        "P1 tier contains no more than 5 items — force re-prioritisation if the user tries to make everything critical",
+        "Delegation candidates section identifies items that should be handed off to specific people from work.local.md, with brief approach notes",
+        "Critical path section presents the 3-5 items that matter most today — a list of everything is not a plan"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "weekly-planning-session",
+      "prompt": "It is Sunday evening. Help me plan my week. What should my critical path be? I have the exec weekly on Monday, a vendor review on Wednesday, and the board prep on Friday. Show me delegation candidates and any decisions I need to make this week.",
+      "expected_output": "A weekly planning output with this week's critical path (3-5 items), delegation candidates with approach guidance per person, decision items due this week, open delegations from the delegation log, and a day-by-day schedule suggestion.",
+      "files": [],
+      "expectations": [
+        "Weekly plan identifies TYPE 3 (weekly planning) and loads project statuses, open delegations, and upcoming deadlines from work.local.md",
+        "Critical path contains 3-5 items for the week — not a comprehensive list of everything",
+        "Open delegations from the delegation log are surfaced — what the user is waiting for is as important as what they are doing",
+        "Decision items are explicitly called out with owners and deadlines"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "negative-should-use-delegation",
+      "prompt": "Delegate the vendor contract review to Bilal. He needs to produce a summary of the key terms by Thursday. Draft the handoff message in his preferred communication style.",
+      "expected_output": "This query should be handled by delegation, not task-intelligence. Creating a delegation record with handoff communication is a delegation function.",
+      "files": [],
+      "expectations": [
+        "This query is about creating a specific delegation with handoff communication — it matches delegation triggers (delegate, delegation record, handoff, delegation brief)",
+        "Task-intelligence handles brain dump capture and priority sorting, not individual delegation records"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "negative-should-use-task-management",
+      "prompt": "Mark the analytics brief task as complete. I finished it this morning.",
+      "expected_output": "This query should be handled by the official productivity plugin's task-management, not task-intelligence. Basic task CRUD (marking complete) is the official plugin's responsibility.",
+      "files": [],
+      "expectations": [
+        "This query is about basic task status update (marking complete) — it matches official productivity plugin task-management triggers (complete task, done with, finished)",
+        "Task-intelligence handles brain dump capture and priority sorting, not individual task status changes"
+      ]
+    }
+  ]
+}

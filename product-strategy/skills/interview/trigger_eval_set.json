@@ -1,0 +1,22 @@
+[
+  {"query": "Generate an interview guide for understanding how users handle project management", "should_trigger": true},
+  {"query": "I need interview questions for a discovery session about our checkout experience", "should_trigger": true},
+  {"query": "Create a user research protocol for understanding enterprise data migration workflows", "should_trigger": true},
+  {"query": "Help me prepare an interview script for talking to IT admins about SSO setup", "should_trigger": true},
+  {"query": "What questions should I ask users about their reporting workflow?", "should_trigger": true},
+  {"query": "I'm doing JTBD interviews about how finance teams handle month-end close. Help me structure the guide", "should_trigger": true},
+  {"query": "Prepare a contextual inquiry guide for observing how support agents handle ticket escalation", "should_trigger": true},
+  {"query": "I need a customer interview template for understanding why free users don't convert to paid", "should_trigger": true},
+  {"query": "Help me plan qualitative research interviews about collaboration pain points", "should_trigger": true},
+  {"query": "What should I ask in a discovery interview about mobile app usage patterns?", "should_trigger": true},
+  {"query": "Synthesize the findings from last week's 8 user interviews into themes and recommendations", "should_trigger": false},
+  {"query": "Design a quantitative survey with NPS and CSAT questions for our annual review", "should_trigger": false},
+  {"query": "Write a competitive analysis comparing our onboarding to three competitors", "should_trigger": false},
+  {"query": "Create a problem brief for our declining activation rates", "should_trigger": false},
+  {"query": "Write user stories for the search feature based on our research", "should_trigger": false},
+  {"query": "Build a PRD for the new analytics platform", "should_trigger": false},
+  {"query": "Prioritise our backlog using RICE framework", "should_trigger": false},
+  {"query": "Run a post-launch retrospective on the notifications feature", "should_trigger": false},
+  {"query": "Help me write a SQL query to analyze user engagement data", "should_trigger": false},
+  {"query": "Draft a marketing email campaign for our product launch", "should_trigger": false}
+]

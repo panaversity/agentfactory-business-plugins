@@ -1,0 +1,12 @@
+{
+  "eval_id": 2,
+  "eval_name": "interview-guide-enterprise-reporting",
+  "prompt": "I need to understand why enterprise customers keep asking for custom reporting. Create an interview guide targeting CFOs and finance directors at companies with 500+ employees.",
+  "assertions": [
+    "Questions are appropriate for C-level stakeholders",
+    "Duration is appropriate for executive availability (30-45 minutes)",
+    "Core discovery focuses on reporting workflow pain, not feature wish lists",
+    "Includes probes for budget and decision-making authority",
+    "The five design principles are followed (behaviour over opinion, past over hypothetical, problem before solution, silence is data, why five times)"
+  ]
+}

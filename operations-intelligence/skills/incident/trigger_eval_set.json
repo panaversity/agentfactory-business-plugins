@@ -1,0 +1,22 @@
+[
+  {"query": "We had a P1 outage yesterday -- help me write the post-mortem report", "should_trigger": true},
+  {"query": "Run a Five Whys analysis on the payment processing failure from last week", "should_trigger": true},
+  {"query": "Our corrective action tracker has items overdue -- generate the status report", "should_trigger": true},
+  {"query": "Write a lessons learned brief about the data breach incident for all staff", "should_trigger": true},
+  {"query": "Create an incident log entry for the service degradation we experienced this morning", "should_trigger": true},
+  {"query": "Our MTTR for P1 incidents has increased -- help me analyse the root causes across recent incidents", "should_trigger": true},
+  {"query": "The CTO wants a root cause analysis of why our deployment caused a 3-hour outage", "should_trigger": true},
+  {"query": "Help me structure the post-mortem meeting for the major incident we had on Friday", "should_trigger": true},
+  {"query": "Review our corrective actions from the last 3 incidents -- which ones are still open?", "should_trigger": true},
+  {"query": "We need a retrospective on the cascading failure that took down three services", "should_trigger": true},
+  {"query": "Create a change management plan for our upcoming database migration", "should_trigger": false},
+  {"query": "Build a risk register with likelihood and impact scores for our IT operations", "should_trigger": false},
+  {"query": "Map our compliance obligations for GDPR and PCI DSS into a register", "should_trigger": false},
+  {"query": "Help me prepare for the external audit next month", "should_trigger": false},
+  {"query": "Design an operational metrics dashboard for our engineering team", "should_trigger": false},
+  {"query": "Extract obligations and SLAs from our managed services contract", "should_trigger": false},
+  {"query": "Score our infrastructure vendors on reliability and cost-effectiveness", "should_trigger": false},
+  {"query": "Write a business continuity plan for our data centre operations", "should_trigger": false},
+  {"query": "Generate the monthly operations report with RAG status for all KPIs", "should_trigger": false},
+  {"query": "Draft an escalation policy document for our support team", "should_trigger": false}
+]

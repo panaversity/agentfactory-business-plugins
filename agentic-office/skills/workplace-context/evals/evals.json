@@ -1,0 +1,54 @@
+{
+  "skill_name": "workplace-context",
+  "evals": [
+    {
+      "id": 1,
+      "name": "add-person-entry",
+      "prompt": "Add a new person to my workplace memory. Fatima Khan has just joined as Head of Legal. She reports to the CEO, prefers written communication over calls, is currently focused on the vendor contract review, and has a strong preference for structured briefs over casual updates.",
+      "expected_output": "A formatted person entry for work.local.md Layer 2 with all fields: name, role, reports_to, communication style, current_focus, priorities, note — presented for user confirmation before writing.",
+      "files": [],
+      "expectations": [
+        "Person entry includes all required fields: name (Fatima Khan), role (Head of Legal), reports_to (CEO), communication style (prefers written, structured briefs), current_focus (vendor contract review)",
+        "Entry is presented for user confirmation before being written to work.local.md — never auto-applied",
+        "Communication style observation is specific and accurate to what the user provided, not assumed or generic",
+        "Entry uses the exact YAML format shown in the skill definition"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "post-meeting-memory-update",
+      "prompt": "After the exec weekly, update workplace memory with these changes: Project Nighthawk moved from IN PROGRESS to AT RISK because the facility lease is delayed. Omar's current focus has shifted from analytics to the vendor dispute. Decision D-2026-042: approved GBP 50K analytics budget subject to ROI brief.",
+      "expected_output": "A memory update proposal showing specific changes to work.local.md across multiple layers: project status update for Nighthawk, person entry update for Omar, and new decision log entry — all presented for user confirmation.",
+      "files": [],
+      "expectations": [
+        "Update proposal shows current vs proposed text for each change — user can see exactly what will change",
+        "Project Nighthawk status update includes the reason for the change (facility lease delayed), not just the new status",
+        "Omar's person entry update reflects the focus shift to vendor dispute",
+        "Decision log entry uses D-YYYY-NNN numbering convention and includes full decision text with conditions",
+        "All updates are proposed, not applied — user must explicitly confirm"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "negative-should-use-workplace-search",
+      "prompt": "Search all layers of workplace memory for everything related to Project Nighthawk. I want to find all decisions, people involved, and any delegation records.",
+      "expected_output": "This query should be handled by workplace-search, not workplace-context. Cross-context search across all memory layers is a workplace-search function.",
+      "files": [],
+      "expectations": [
+        "This query is about searching across memory layers — it matches workplace-search triggers (search everything, cross-context search, find everything about)",
+        "Workplace-context handles adding, updating, and querying individual entries, not cross-layer search aggregation"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "negative-should-use-memory-management",
+      "prompt": "Remember that the quarterly review is on the 15th. Save this to my memory.",
+      "expected_output": "This query should be handled by the official productivity plugin's memory-management, not workplace-context. Basic memory CRUD (remember this) is the official plugin's responsibility.",
+      "files": [],
+      "expectations": [
+        "This query is about basic memory storage — it matches official productivity plugin memory-management triggers (remember, remember this, memory)",
+        "Workplace-context handles structured four-layer workplace memory (people, projects, terminology), not simple key-value memory items"
+      ]
+    }
+  ]
+}

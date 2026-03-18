@@ -1,0 +1,11 @@
+{
+  "eval_id": 4,
+  "eval_name": "negative-compound-ac",
+  "prompt": "Write user stories for a search feature. Include this AC: 'Given a user searches for a term and clicks a result and the result loads, then the search term should be highlighted in the content'",
+  "assertions": [
+    "The original compound AC with multiple 'and' statements is NOT preserved as-is",
+    "The AC is split into 2-3 separate, independently testable statements",
+    "No single AC contains 'and' connecting multiple conditions",
+    "Each resulting AC is independently testable"
+  ]
+}

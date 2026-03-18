@@ -1,0 +1,20 @@
+{
+  "expectations": [
+    {
+      "text": "The skill does NOT attempt to review metrics",
+      "passed": true,
+      "evidence": "Response explicitly states 'This request is about reviewing product metrics' and does not attempt to review MRR, churn, or NPS."
+    },
+    {
+      "text": "Redirects to /metrics-review for product analytics review",
+      "passed": true,
+      "evidence": "Explicitly says 'use /metrics-review instead' and offers to help with prioritisation if metrics insights should inform priority decisions."
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 0,
+    "total": 2,
+    "pass_rate": 1.0
+  }
+}

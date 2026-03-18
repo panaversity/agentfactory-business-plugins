@@ -1,0 +1,22 @@
+{
+  "eval_id": 4,
+  "eval_name": "negative-discovery-request",
+  "expectations": [
+    {
+      "text": "Agent recognizes discovery request and redirects to discovery skill",
+      "passed": true,
+      "evidence": "Agent stated 'You're asking about customer discovery, not GTM strategy' and recommended /discovery skill"
+    },
+    {
+      "text": "Agent does NOT produce interview guide within GTM skill",
+      "passed": false,
+      "evidence": "Despite the redirect mention, agent proceeded to produce a full interview guide anyway -- 'That said, I can absolutely help you build a solid interview guide'"
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 1,
+    "total": 2,
+    "pass_rate": 0.5
+  }
+}

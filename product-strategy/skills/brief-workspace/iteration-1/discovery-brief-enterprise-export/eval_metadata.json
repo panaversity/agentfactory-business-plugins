@@ -1,0 +1,13 @@
+{
+  "eval_id": 2,
+  "eval_name": "discovery-brief-enterprise-export",
+  "prompt": "We want to run a 2-week discovery sprint to understand why enterprise customers are requesting bulk export functionality. Scope the discovery for me.",
+  "assertions": [
+    "Output is a Discovery Brief (Type 2)",
+    "QUESTIONS TO ANSWER are ranked by priority",
+    "Methods section specifies interview or analysis methods appropriate for enterprise research",
+    "Sample section defines who to talk to with minimum n= target",
+    "OUT OF SCOPE section explicitly lists what is not being explored",
+    "SUCCESS CRITERIA are evidence-based, not activity-based"
+  ]
+}

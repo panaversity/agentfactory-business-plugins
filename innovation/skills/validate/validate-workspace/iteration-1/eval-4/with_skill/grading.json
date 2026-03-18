@@ -1,0 +1,22 @@
+{
+  "eval_id": 4,
+  "eval_name": "negative-assumption-mapping",
+  "expectations": [
+    {
+      "text": "Agent recognizes assumption mapping and redirects to hypothesis skill",
+      "passed": true,
+      "evidence": "Redirected to /hypothesis skill"
+    },
+    {
+      "text": "Agent does NOT produce assumption map within validate skill",
+      "passed": true,
+      "evidence": "No assumption map produced"
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 0,
+    "total": 2,
+    "pass_rate": 1.0
+  }
+}

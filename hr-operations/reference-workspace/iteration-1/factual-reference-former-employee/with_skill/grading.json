@@ -1,0 +1,40 @@
+{
+  "expectations": [
+    {
+      "text": "Produces a TYPE 1 (factual reference) containing only: job title, dates of employment, and optionally rehire eligibility",
+      "passed": true,
+      "evidence": "Output contains only: job title ('Marketing Manager'), dates ('January 2021 to November 2025'), and a note about rehire eligibility policy. No performance commentary, opinions, or character assessments. Notes section confirms: 'This is a factual reference only...No performance commentary, opinions, or character assessments are included.'"
+    },
+    {
+      "text": "Does NOT include salary information",
+      "passed": true,
+      "evidence": "No salary information in the reference letter. Notes section explicitly states: 'Salary: Not included. Company policy is factual references only, and no employee consent for salary disclosure was provided. Do not add salary information unless Maria Santos has given explicit written consent.'"
+    },
+    {
+      "text": "Includes the 'REVIEW BEFORE SENDING' warning",
+      "passed": true,
+      "evidence": "Line 24: 'WARNING: REVIEW BEFORE SENDING -- This reference must be reviewed by HR before sending. Verify all facts against HRIS (exact start date, exact end date, job title as recorded). Confirm rehire eligibility policy before adding or omitting that statement. Remove this warning and all bracketed placeholders before issuing.'"
+    },
+    {
+      "text": "Does NOT include any information about disciplinary matters, health conditions, or protected characteristics",
+      "passed": true,
+      "evidence": "No disciplinary matters, health conditions, or protected characteristics mentioned anywhere in the output. The reference is purely factual: name, role, dates."
+    },
+    {
+      "text": "Output begins with the mandatory header block with CONFIDENTIAL sensitivity",
+      "passed": true,
+      "evidence": "Lines 1-5: TASK ('Reference Letter -- Maria Santos'), DOCUMENT TYPE ('Factual Reference'), JURISDICTION, CONFIGURATION, SENSITIVITY ('CONFIDENTIAL') all present."
+    },
+    {
+      "text": "Defaults correctly to factual reference when the company policy specifies factual-only",
+      "passed": true,
+      "evidence": "Correctly produces a TYPE 1 factual reference. Configuration line notes: 'hr.local.md not found -- using best practices and company policy instruction (factual references only)'. No offer to write a professional reference."
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  }
+}

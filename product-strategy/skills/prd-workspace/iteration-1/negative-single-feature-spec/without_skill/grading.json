@@ -1,0 +1,20 @@
+{
+  "expectations": [
+    {
+      "text": "The skill recognises this as a single-feature scope and recommends /write-spec instead of /prd",
+      "passed": false,
+      "evidence": "Without the skill, Claude wrote a full feature spec ('Feature Spec: Dark Mode Toggle') with no mention of scope discrimination, no recommendation to use a different tool. It simply completed the request as a spec."
+    },
+    {
+      "text": "If a PRD is produced anyway, it should explicitly note that a feature spec would be more appropriate for this scope",
+      "passed": false,
+      "evidence": "A feature spec was produced directly. No note about scope appropriateness. No mention of /write-spec or /prd distinction."
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "failed": 2,
+    "total": 2,
+    "pass_rate": 0.0
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "expectations": [
+    {
+      "text": "Uses the single feature evaluation format, not the full RICE framework",
+      "passed": false,
+      "evidence": "Uses an ad-hoc pros/cons format ('Factors to Consider: For/Against'), not the structured single feature evaluation template. No structured fields for Request source, Frequency, User problem, etc."
+    },
+    {
+      "text": "Includes opportunity cost — what does NOT get built if we build this?",
+      "passed": false,
+      "evidence": "Mentions '3 sprints is not trivial — that's 6 weeks of dev time' under cons, but does not name the specific items that would be displaced. No explicit opportunity cost analysis."
+    },
+    {
+      "text": "Frequency of request is assessed (one customer vs pattern)",
+      "passed": true,
+      "evidence": "Mentions 'Building for one customer's demand can set a bad precedent' and 'Check if other customers have mentioned Slack interest' — recognizes the single-customer concern."
+    },
+    {
+      "text": "Confidence in value is rated with basis",
+      "passed": false,
+      "evidence": "No confidence rating. The output says 'I'd lean toward building it' without rating confidence level or providing structured basis."
+    },
+    {
+      "text": "Recommendation is one of BUILD / DEFER / DECLINE / DISCOVERY SPIKE",
+      "passed": false,
+      "evidence": "Recommendation is 'Build an MVP (1 sprint), validate demand' — a reasonable approach but not framed as one of the four structured options."
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 4,
+    "total": 5,
+    "pass_rate": 0.2
+  }
+}

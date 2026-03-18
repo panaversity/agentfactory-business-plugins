@@ -1,0 +1,252 @@
+{
+  "timestamp": "20260318_214813",
+  "results": [
+    {
+      "id": "route_vendor_assess_strategic",
+      "category": "routing",
+      "checks": {
+        "content": {
+          "classification": true,
+          "strategic": true,
+          "sole-source": true
+        },
+        "routing": true
+      },
+      "content_pass": true,
+      "status": "pass",
+      "output_preview": "```\nTASK:          Vendor Assessment \u2014 KIFTL\nVENDOR TIER:   Strategic (Tier 1)\nCONFIGURATION: Not configured (no supply-chain.local.md detected)\nDATA SOURCES:  Manual input (user-provided context)\n```\n\n---\n\n# VENDOR ASSESSMENT: KIFTL\n\n## Classification: STRATEGIC (Tier 1)\n\n| Question | Answer | Indicator |\n|---|---|---|\n| Are alternatives available? | No \u2014 sole source, no alternative identified | Strategic / Bottleneck |\n| Annual spend? | High (implied \u2014 \"all our packaging\") | Strategic |\n| Impa"
+    },
+    {
+      "id": "route_vendor_assess_bottleneck",
+      "category": "routing",
+      "checks": {
+        "content": {
+          "bottleneck": true,
+          "sole-source": true
+        },
+        "routing": true
+      },
+      "content_pass": true,
+      "status": "pass",
+      "output_preview": "```\nTASK:          Vendor Assessment \u2014 [Vendor Name Not Provided]\nVENDOR TIER:   Bottleneck (Tier 4)\nCONFIGURATION: Not configured (no supply-chain.local.md)\nDATA SOURCES:  Manual input (user-provided description)\n```\n\n---\n\n# VENDOR ASSESSMENT: [Vendor Name \u2014 Please Provide]\n\n## Classification: BOTTLENECK (Tier 4)\n\n| Question                    | Answer                          | Points to          |\n|-----------------------------|---------------------------------|---------------------|\n| Are al"
+    },
+    {
+      "id": "route_invoice_reconcile",
+      "category": "routing",
+      "checks": {
+        "content": {
+          "three-way match": true,
+          "PO": true
+        },
+        "routing": true
+      },
+      "content_pass": true,
+      "status": "pass",
+      "output_preview": "No ERP/MCP data sources are connected, so I'll process this as a manual-input reconciliation. Here is the three-way match framework with the data you've provided:\n\n---\n\n```\nTASK:          Invoice Reconciliation -- INV-2024-0847\nVENDOR TIER:   Unclassified (no vendor master data available)\nCONFIGURATION: Not configured (supply-chain.local.md not found)\nDATA SOURCES:  Manual input\n```\n\n---\n\n## Stage 1: Document Intelligence \u2014 DATA REQUIRED\n\nI have the document references but no source data. To com"
+    },
+    {
+      "id": "route_supplier_risk",
+      "category": "routing",
+      "checks": {
+        "content": {
+          "financial risk": true,
+          "credit": true,
+          "downgrade": true
+        },
+        "routing": true
+      },
+      "content_pass": true,
+      "status": "pass",
+      "output_preview": "Without web search access, I'll produce the risk brief based on the skill framework, clearly labelling where primary data is unavailable. Since you haven't named the specific vendor, I'll structure this as a templated brief you can fill in \u2014 but with all the analytical substance applied to the \"steel supplier + credit downgrade\" scenario.\n\n---\n\n```\nTASK:          Supplier Risk Brief \u2014 [Steel Supplier Name]\nVENDOR TIER:   Strategic (assumed \u2014 key steel supplier implies high dependency)\nCONFIGURAT"
+    },
+    {
+      "id": "route_logistics_carrier",
+      "category": "routing",
+      "checks": {
+        "content": {
+          "carrier": true,
+          "OTD": false,
+          "scorecard": true
+        },
+        "routing": false
+      },
+      "content_pass": false,
+      "status": "fail",
+      "output_preview": "No local configuration file (`supply-chain.local.md`) or shipment data files are present. I don't have access to your TMS, ERP, or carrier APIs to pull actual performance data.\n\nTo produce the carrier performance review, I need the following data for Q4 2025 (Dec 2025 \u2013 Feb 2026) for your top 5 carriers:\n\n**Per carrier:**\n1. **Carrier name** and contracted lanes\n2. **Shipment volume** \u2014 number of shipments + total weight (kg)\n3. **On-time delivery rate** \u2014 shipments delivered on/before promised "
+    },
+    {
+      "id": "route_spend_consolidation",
+      "category": "routing",
+      "checks": {
+        "content": {
+          "consolidation": true
+        },
+        "routing": true
+      },
+      "content_pass": true,
+      "status": "pass",
+      "output_preview": "There's no ERP data, local configuration, or packaging spend data available in the workspace. Here's what I can deliver \u2014 and what I need from you to go further:\n\n---\n\n```\nTASK:          Category Spend Overview \u2014 Packaging \u2014 Consolidation Analysis\nCONFIGURATION: Not configured (no supply-chain.local.md found)\nDATA SOURCES:  None available \u2014 no ERP extract, CSV, or spend file in workspace\n```\n\n## What I Need to Run This Analysis\n\nTo perform a packaging consolidation analysis across all sites, I n"
+    },
+    {
+      "id": "route_network_scenario",
+      "status": "error",
+      "reason": "[EMPTY_OUTPUT]"
+    },
+    {
+      "id": "route_weekly_brief",
+      "category": "routing",
+      "checks": {
+        "content": {
+          "traffic light": true,
+          "vendor performance": true,
+          "decision required": true
+        },
+        "routing": true
+      },
+      "content_pass": true,
+      "status": "pass",
+      "output_preview": "No local configuration or connected data sources are available. I'll generate the brief using the template format with placeholder markers so you can populate it from your systems, or so your MCP-connected data sources can fill it on Monday morning.\n\n```\nTASK:          Weekly Supply Chain Brief -- Week of 2026-03-16\nCONFIGURATION: Not configured (no supply-chain.local.md found)\nDATA SOURCES:  No live ERP / AP / TMS / Contract register / Risk monitoring connected\n```\n\n---\n\n```\nSUPPLY CHAIN WEEKLY"
+    },
+    {
+      "id": "vendor_assess_bottleneck_output",
+      "category": "accuracy",
+      "checks": {
+        "content": {
+          "bottleneck": true,
+          "Tier 4": true,
+          "sole-source": true
+        },
+        "formula": true
+      },
+      "content_pass": true,
+      "status": "pass",
+      "output_preview": "```\nTASK:          Vendor Classification \u2014 Sole-Source Custom-Machined Component Supplier\nVENDOR TIER:   Bottleneck (Tier 4)\nCONFIGURATION: Not configured\nDATA SOURCES:  Manual input\n```\n\n---\n\n## VENDOR CLASSIFICATION: KRALJIC MATRIX\n\n| Question                    | Answer                              | Indicator     |\n|-----------------------------|-------------------------------------|---------------|\n| Are alternatives available? | No \u2014 sole source                    | **Bottleneck** |\n| Annu"
+    },
+    {
+      "id": "invoice_reconcile_price_variance",
+      "category": "accuracy",
+      "checks": {
+        "content": {
+          "price variance": false,
+          "outside tolerance": true,
+          "5.9": true
+        },
+        "formula": true
+      },
+      "content_pass": false,
+      "status": "fail",
+      "output_preview": "The invoice price is **GBP 12.50** vs PO price of **GBP 11.80**.\n\n**Variance calculation:**\n- Difference: \u00a312.50 - \u00a311.80 = \u00a30.70\n- Percentage: \u00a30.70 / \u00a311.80 = **+5.93%**\n\n**Result: EXCEPTION \u2014 outside tolerance.**\n\nThe +5.93% overcharge exceeds the configured \u00b13% threshold. This line should be flagged for review and held from auto-approval. The vendor is charging \u00a370.00 more than the PO across 100 units."
+    },
+    {
+      "id": "invoice_reconcile_duplicate",
+      "category": "accuracy",
+      "checks": {
+        "content": {
+          "duplicate": true,
+          "reject": true,
+          "notify vendor": false
+        },
+        "formula": true
+      },
+      "content_pass": false,
+      "status": "fail",
+      "output_preview": "```\nTASK:          Invoice Reconciliation -- INV-2024-0847\nVENDOR TIER:   Unclassified\nCONFIGURATION: Not configured\nDATA SOURCES:  Manual input\n```\n\n---\n\n## INVOICE RECONCILIATION: INV-2024-0847 | Acme Corp\n\n```\nInvoice date:  Not provided    PO matched:    N/A -- processing stopped\nProcessing:    2026-03-19      GR matched:    N/A -- processing stopped\n\nDUPLICATE DETECTION:\n  Invoice number:  INV-2024-0847\n  Vendor:          Acme Corp\n  Amount:          GBP 4,500.00\n  Prior submission: CONFIRM"
+    },
+    {
+      "id": "supplier_risk_tier2_cascade",
+      "category": "accuracy",
+      "checks": {
+        "content": {
+          "Tier 2": true,
+          "contingency": true,
+          "alternative": true,
+          "escalate": true
+        }
+      },
+      "content_pass": true,
+      "status": "pass",
+      "output_preview": "```\nTASK:          Supplier Risk Brief \u2014 Tier 2 CVA Event (Tier 1 Strategic Supplier Impact)\nVENDOR TIER:   Strategic (Tier 1) / Distressed (Tier 2)\nCONFIGURATION: Not configured (no supply-chain.local.md detected)\nDATA SOURCES:  Manual input (user-provided scenario)\n```\n\n---\n\n```\nSUPPLIER RISK BRIEF: [Tier 1 Strategic Supplier \u2014 Name Not Provided]\nAssessment date: 2026-03-19 | Next scheduled review: 2026-03-26 (weekly during crisis)\n=============================================================="
+    },
+    {
+      "id": "logistics_expedited_root_cause",
+      "category": "accuracy",
+      "checks": {
+        "content": {
+          "upstream": true,
+          "root cause": true,
+          "Manchester": true
+        }
+      },
+      "content_pass": true,
+      "status": "pass",
+      "output_preview": "```\nTASK:          Expedited Freight Root Cause Analysis \u2014 Q1 2026\nCONFIGURATION: Not configured (no supply-chain.local.md loaded)\nDATA SOURCES:  User-provided metrics (manual input)\n```\n\n---\n\n## Expedited Freight Analysis\n\n### The Numbers\n\n| Metric | Last Quarter | This Quarter | Change |\n|--------|-------------|--------------|--------|\n| Expedited as % of total freight spend | 6% | 18% | +200% |\n| Manchester share of expedited shipments | \u2014 | 70% | Dominant origin |\n\n**18% exceeds the 10% thre"
+    },
+    {
+      "id": "spend_price_inconsistency",
+      "category": "accuracy",
+      "checks": {
+        "content": {
+          "price inconsistency|price variance|price difference|price gap|inconsisten": true,
+          "8.50": true
+        },
+        "formula": true
+      },
+      "content_pass": true,
+      "status": "pass",
+      "output_preview": "This is a straightforward spend consolidation calculation:\n\n**Price gap:** \u00a311.20 - \u00a38.50 = **\u00a32.70/unit**\n\n**Saving opportunity:** 25,000 units (Site B) \u00d7 \u00a32.70 = **\u00a367,500/year**\n\nAlign Site B to Site A's \u00a38.50 rate. Since both sites already buy from Supplier X, this is a price harmonisation conversation \u2014 no supplier switching needed. Use the 50,000-unit combined volume as leverage if Supplier X pushes back."
+    },
+    {
+      "id": "network_scenario_comparison",
+      "category": "accuracy",
+      "checks": {
+        "content": {
+          "payback": true,
+          "scenario": true,
+          "capex": true
+        }
+      },
+      "content_pass": true,
+      "status": "pass",
+      "output_preview": "```\nTASK:          Network Design \u2014 EMEA Distribution Review (UK vs UK+Poland)\nCONFIGURATION: Not configured\nDATA SOURCES:  Manual input (user-provided scenario data)\n```\n\n---\n\n```\nNETWORK DESIGN ANALYSIS: Poland DC Expansion\n================================================================\nObjective:       Primary: Cost reduction / Secondary: Service level\nScenarios:       2 scenarios analysed\nHorizon:         Assessed over 5-year horizon\n\nSCENARIO COMPARISON:\n\n                    Scenario A    "
+    },
+    {
+      "id": "weekly_brief_escalation",
+      "category": "accuracy",
+      "checks": {
+        "content": {
+          "escalat": true,
+          "immediate": true,
+          "CPO": true
+        },
+        "formula": true
+      },
+      "content_pass": true,
+      "status": "pass",
+      "output_preview": "This should be **escalated immediately** \u2014 not held for the weekly brief. Here's why:\n\n**Two simultaneous red flags on a Strategic (Tier 1) vendor:**\n\n1. **OTD at 68% vs 95% SLA** \u2014 a 27-point miss isn't drift, it's a potential operational failure (capacity collapse, logistics breakdown, or internal distress manifesting in fulfillment)\n2. **Credit downgrade BB \u2192 B-** \u2014 a two-notch drop into deep speculative territory signals financial distress that could worsen rapidly\n\n**Either signal alone war"
+    },
+    {
+      "id": "negative_out_of_scope_hr",
+      "category": "negative",
+      "checks": {
+        "content": {
+          "outside|beyond|not within|not a human resource|not an hr|supply chain|not equipped|cannot|can't|unable": true
+        }
+      },
+      "content_pass": true,
+      "status": "pass",
+      "output_preview": "That's outside my area of expertise \u2014 I'm a software engineering assistant focused on this codebase of business plugins (supply chain, banking, legal ops, etc.).\n\nFor employee grievance procedures, you'd want to consult your company's HR department or an employment law professional. They can guide you through the proper process based on your jurisdiction and company policies.\n\nIs there something I can help you with in this codebase instead?"
+    },
+    {
+      "id": "negative_out_of_scope_tax",
+      "category": "negative",
+      "checks": {
+        "content": {
+          "outside|beyond|not within|not a tax|tax advisory|supply chain|not equipped|cannot|can't|unable": true
+        }
+      },
+      "content_pass": true,
+      "status": "pass",
+      "output_preview": "I'm not able to help with that. Calculating VAT owed requires your actual sales figures, applicable VAT rates, and knowledge of your jurisdiction's tax rules \u2014 none of which I have access to.\n\nThis is also outside the scope of the supply-chain plugin (which covers procurement, vendor management, logistics, and spend analysis) and outside my capabilities as a software engineering assistant.\n\nFor VAT calculations, you'd want to work with your finance/accounting team or a tax professional who has a"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "skill_name": "stories",
+  "evals": [
+    {
+      "id": 1,
+      "name": "stories-from-spec-date-filter",
+      "prompt": "Here is a feature spec for a date range filter on our analytics dashboard:\n\nProblem: Users cannot filter dashboard data by custom date ranges. They currently export to Excel and filter manually.\n\nSolution: Add a date range picker to the dashboard header that filters all widgets.\n\nACs:\n1. User can select a preset range (7d, 30d, 90d, YTD)\n2. User can select a custom start and end date\n3. All dashboard widgets update when the range changes\n4. Selected range persists across page navigation\n5. Invalid date ranges show an error message\n\nGenerate user stories from this spec.",
+      "expected_output": "User stories with named personas, capability-focused 'want' statements, user-outcome 'so that' statements, and independently testable ACs without 'and'.",
+      "files": [],
+      "expectations": [
+        "Each story uses a named persona, not 'a user' — anonymous personas produce stories that satisfy nobody because they target everybody",
+        "Each 'want' describes a capability (what the user can do), not a UI element (what they click) — 'filter dashboard data by date range' not 'click the date picker'",
+        "Each 'so that' describes a user outcome (benefit to them), not a system action — 'find relevant trends quickly' not 'filter is applied'",
+        "No AC contains 'and' connecting multiple conditions (compound statements are split) — compound ACs are untestable because partial failure is ambiguous",
+        "At least one error-state AC per story — stories without error ACs produce features that crash gracefully only by accident",
+        "Stories are sized (S/M/L) with dependencies noted — sizing without dependencies leads to sprint commitments that can't be parallelised",
+        "Coverage check flags any spec AC not represented in stories — coverage gaps discovered during build are 10x more expensive than gaps caught during story writing"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "stories-from-prd-auth",
+      "prompt": "Break this spec into stories for sprint planning. The spec covers user authentication with SSO, magic link, and password flows. Each flow should work independently. The primary persona is an enterprise IT admin for SSO, and an individual user for magic link and password.",
+      "expected_output": "User stories grouped by persona (IT admin, individual user) covering three auth flows with proper epic/story hierarchy.",
+      "files": [],
+      "expectations": [
+        "Stories are grouped by persona (enterprise IT admin for SSO, individual user for magic link/password) — mixing personas in one story produces confused acceptance criteria",
+        "SSO, magic link, and password are separate epics or story groups — the user said each should work independently, so they should be plannable independently",
+        "Each story is completable in 1-3 days by one engineer — stories too large for one sprint must be flagged as needing splitting",
+        "Acceptance criteria use Given/When/Then format or equivalent testable statements — vague ACs produce 'but I thought it should...' conversations during review",
+        "Error states are covered for each auth flow (invalid credentials, expired links, SSO provider down) — auth error handling is a security surface, not just UX"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "negative-vague-persona",
+      "prompt": "Write a user story: As a user, I want to export my data so that I can use it in other tools.",
+      "expected_output": "The story is rewritten with a named persona instead of 'a user'.",
+      "files": [],
+      "expectations": [
+        "The output does NOT use 'a user' as the persona — the NEVER rules explicitly prohibit this",
+        "A named persona is used (either from product.local.md or a reasonable named alternative) — if product.local.md is not configured, the skill should ask for persona details",
+        "The skill flags that 'a user' is not acceptable and explains why — teaching the user good story hygiene is part of the skill's value",
+        "The 'so that' is improved to describe a user outcome, not just a system action — 'use it in other tools' needs to be reframed in terms of the specific value received"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "negative-compound-ac",
+      "prompt": "Write user stories for a search feature. Include this AC: 'Given a user searches for a term and clicks a result and the result loads, then the search term should be highlighted in the content'",
+      "expected_output": "The compound AC is split into separate, independently testable acceptance criteria without 'and'.",
+      "files": [],
+      "expectations": [
+        "The original compound AC with multiple 'and' statements is NOT preserved as-is — compound ACs cannot be independently tested and produce ambiguous pass/fail results",
+        "The AC is split into 2-3 separate, independently testable statements — each covering one condition-action-result triple",
+        "No single AC contains 'and' connecting multiple conditions — this is an explicit NEVER rule in the skill",
+        "Each resulting AC is independently testable — a QA engineer can verify each one without the others"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "negative-sprint-planning-request",
+      "prompt": "Help me plan our next sprint. We have a velocity of 42 points and need to pull stories from the backlog.",
+      "expected_output": "The skill should redirect to /sprint-planning — this is sprint capacity planning, not story writing.",
+      "files": [],
+      "expectations": [
+        "The skill does NOT perform sprint planning — sprint planning involves capacity allocation and velocity math, which is outside the story-writing scope",
+        "Redirects to /sprint-planning for sprint-level planning"
+      ]
+    }
+  ]
+}

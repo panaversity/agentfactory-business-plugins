@@ -1,0 +1,10 @@
+{
+  "eval_id": 4,
+  "eval_name": "negative-compensation-benchmarking",
+  "prompt": "What's the market rate for a product manager in San Francisco? I need salary benchmarking data to set our compensation bands.",
+  "assertions": [
+    "Does NOT provide salary benchmarking data",
+    "Redirects to the appropriate skill or resource for compensation analysis",
+    "Does NOT attempt to produce market rate data from general knowledge"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "expectations": [
+    {
+      "text": "Does NOT create a knowledge capture plan",
+      "passed": true,
+      "evidence": "Output is titled 'Knowledge Skill — Policy Lookup Request (Negative Case)'. States: 'This query falls outside the scope of the /knowledge skill.' No knowledge capture plan, risk assessment, or interview guide generated."
+    },
+    {
+      "text": "Redirects to the appropriate skill or resource for policy queries",
+      "passed": true,
+      "evidence": "Recommends: 'Use the /policy-lookup skill (if available) — this is the skill the /knowledge description explicitly recommends for policy and FAQ queries.' Also suggests employee handbook and HR team as alternatives."
+    },
+    {
+      "text": "Does NOT attempt to answer the policy question from general knowledge",
+      "passed": true,
+      "evidence": "No maternity leave policy information, weeks, or pay details provided. Output explicitly states: 'No policy data source: The /knowledge skill does not contain or reference company policy documents.' Redirects to authoritative sources only."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1.0
+  }
+}

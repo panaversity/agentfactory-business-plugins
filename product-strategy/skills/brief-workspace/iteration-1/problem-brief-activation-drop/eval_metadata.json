@@ -1,0 +1,14 @@
+{
+  "eval_id": 1,
+  "eval_name": "problem-brief-activation-drop",
+  "prompt": "We're seeing a 40% drop in user activation for our onboarding flow. New signups are completing registration but not creating their first project. Write a problem brief for this.",
+  "assertions": [
+    "Output is a Problem Brief (Type 1), not a Discovery or Initiative Brief",
+    "Contains no solution proposals in the brief body",
+    "WHO IS AFFECTED references a named persona, not 'users'",
+    "EVIDENCE section includes the 40% activation drop as quantified data",
+    "WHAT WE DO NOT KNOW YET section is present and lists specific unknowns",
+    "DISCOVERY QUESTIONS contains 3-5 concrete questions",
+    "Output includes a next step or decision needed"
+  ]
+}

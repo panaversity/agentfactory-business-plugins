@@ -1,0 +1,42 @@
+[
+  {
+    "skill": "pitch",
+    "eval_id": 1,
+    "eval_name": "pitch-deck-narrative-seed",
+    "passed": 6,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  {
+    "skill": "pitch",
+    "eval_id": 2,
+    "eval_name": "hard-questions-prep",
+    "passed": 5,
+    "total": 6,
+    "pass_rate": 0.8333333333333334
+  },
+  {
+    "skill": "pitch",
+    "eval_id": 3,
+    "eval_name": "executive-summary-email",
+    "passed": 5,
+    "total": 5,
+    "pass_rate": 1.0
+  },
+  {
+    "skill": "pitch",
+    "eval_id": 4,
+    "eval_name": "negative-financial-model",
+    "passed": 0,
+    "total": 2,
+    "pass_rate": 0.0
+  },
+  {
+    "skill": "pitch",
+    "eval_id": 5,
+    "eval_name": "negative-market-sizing",
+    "passed": 0,
+    "total": 2,
+    "pass_rate": 0.0
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "expectations": [
+    {
+      "text": "Output is a Problem Brief (Type 1), not a Discovery or Initiative Brief",
+      "passed": true,
+      "evidence": "Title is 'Problem Brief: Onboarding Activation Drop' and structures content as a problem statement with impact, context, hypotheses, and investigation plan."
+    },
+    {
+      "text": "Contains no solution proposals in the brief body",
+      "passed": false,
+      "evidence": "The brief contains a 'Proposed Investigation Plan' table with specific action items and owners, and 5 detailed hypotheses (H1-H5) that strongly suggest solution directions (e.g., H1 mentions 'changed navigation, broken CTA', H3 mentions 'bug, performance regression'). While framed as hypotheses, these effectively anchor the team on specific solution categories. Additionally, 'Acceptance Criteria' section mentions 'Root cause identified' and 'Monitoring alert configured' which are solution-oriented."
+    },
+    {
+      "text": "WHO IS AFFECTED references a named persona, not 'users'",
+      "passed": false,
+      "evidence": "WHO IS AFFECTED equivalent sections use generic terms: 'Power users', 'New users', 'Mobile/low-bandwidth users', 'Internal teams'. No named personas are referenced."
+    },
+    {
+      "text": "EVIDENCE section includes the 40% activation drop as quantified data",
+      "passed": true,
+      "evidence": "Problem Statement opens with 'User activation has dropped 40% in the onboarding flow' and Impact section references '40% fewer users reaching first-project creation compared to the prior baseline period'."
+    },
+    {
+      "text": "WHAT WE DO NOT KNOW YET section is present and lists specific unknowns",
+      "passed": true,
+      "evidence": "A 'What We Don't Know' subsection under Context lists 5 specific unknowns: timing, segments affected, drop-off point, registration flow changes, qualitative reasons."
+    },
+    {
+      "text": "DISCOVERY QUESTIONS contains 3-5 concrete questions",
+      "passed": false,
+      "evidence": "No explicit 'DISCOVERY QUESTIONS' section exists. The 'Open Questions' table at the end lists 5 questions with owners, but they are framed as investigation questions within an investigation plan rather than discovery-scoping questions."
+    },
+    {
+      "text": "Output includes a next step or decision needed",
+      "passed": true,
+      "evidence": "'Recommended Next Step' section states: 'Schedule a 30-minute triage meeting with Product, Engineering, Analytics, and Growth to assign owners to the investigation steps above and set firm due dates.'"
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 3,
+    "total": 7,
+    "pass_rate": 0.57
+  }
+}

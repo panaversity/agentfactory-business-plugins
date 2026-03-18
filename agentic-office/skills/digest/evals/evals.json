@@ -1,0 +1,54 @@
+{
+  "skill_name": "digest",
+  "evals": [
+    {
+      "id": 1,
+      "name": "daily-morning-digest",
+      "prompt": "Give me my daily digest. What do I need to know today? I have three meetings and Omar still has not confirmed the analytics brief delegation from yesterday.",
+      "expected_output": "A one-page daily digest with headline status (GREEN/AMBER/RED), today's critical path (3-5 items max), today's calendar with meeting context, open delegations status showing Omar's unconfirmed analytics brief, flagged items from yesterday, this week at a glance, upcoming deadlines, and weekly priorities reminder.",
+      "files": [],
+      "expectations": [
+        "Digest is no longer than one page / 5 minutes to read — if it exceeds this, items are being over-included",
+        "Critical path contains a maximum of 5 items ordered by importance, not urgency",
+        "Open delegations section prominently flags Omar's unconfirmed analytics brief with a follow-up recommendation",
+        "Weekly priorities reminder section is present — daily urgency must not hijack weekly importance",
+        "Tone is warm and direct like a knowledgeable colleague, not system-style language (no 'Status: pending; Action: review')"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "monday-start-of-week-digest",
+      "prompt": "It is Monday morning. Give me my start of week briefing. What carried over from last week and what is my critical path for this week?",
+      "expected_output": "A Monday variant digest with all standard sections plus 'This Week's Critical Path' (3-5 items that make the week a success) and 'Open from Last Week' (items that carried over with context).",
+      "files": [],
+      "expectations": [
+        "Monday digest variant includes the additional 'This Week's Critical Path' section with 3-5 items that define a successful week",
+        "Monday digest variant includes 'Open from Last Week' section showing carried-over items",
+        "Digest stays within one-page length constraint despite the additional Monday sections",
+        "Weekly priorities reminder anchors the start of the week"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "negative-should-use-progress-tracker",
+      "prompt": "Give me the executive dashboard with RAG status across all projects. I need the full portfolio view with milestones and blockers.",
+      "expected_output": "This query should be handled by progress-tracker, not digest. An executive dashboard with RAG status and portfolio view is a progress-tracker function.",
+      "files": [],
+      "expectations": [
+        "This query is about an executive dashboard with project-level RAG status and milestone tracking — it matches progress-tracker triggers (executive dashboard, RAG status, portfolio view)",
+        "Digest produces a daily briefing focused on today's priorities, not a comprehensive project portfolio view"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "negative-should-use-meeting-intelligence",
+      "prompt": "Prep me for the 2pm board meeting. I need context on each agenda item, stakeholder positions, and what was decided last time we met.",
+      "expected_output": "This query should be handled by meeting-intelligence, not digest. Meeting preparation with agenda context and stakeholder notes is a meeting-intelligence function.",
+      "files": [],
+      "expectations": [
+        "This query is about preparing for a specific meeting with agenda items and stakeholder analysis — it matches meeting-intelligence triggers (meeting prep, before the meeting)",
+        "Digest provides a daily overview across all activities, not deep preparation for a single meeting"
+      ]
+    }
+  ]
+}

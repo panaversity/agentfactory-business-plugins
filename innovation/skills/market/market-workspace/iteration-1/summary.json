@@ -1,0 +1,42 @@
+[
+  {
+    "skill": "market",
+    "eval_id": 1,
+    "eval_name": "competitive-landscape-scan",
+    "passed": 6,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  {
+    "skill": "market",
+    "eval_id": 2,
+    "eval_name": "bottom-up-market-sizing",
+    "passed": 6,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  {
+    "skill": "market",
+    "eval_id": 3,
+    "eval_name": "moat-assessment",
+    "passed": 6,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  {
+    "skill": "market",
+    "eval_id": 4,
+    "eval_name": "negative-gtm-strategy",
+    "passed": 2,
+    "total": 2,
+    "pass_rate": 1.0
+  },
+  {
+    "skill": "market",
+    "eval_id": 5,
+    "eval_name": "negative-pitch-deck",
+    "passed": 0,
+    "total": 2,
+    "pass_rate": 0.0
+  }
+]

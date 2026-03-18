@@ -1,0 +1,9 @@
+{
+  "eval_id": 5,
+  "eval_name": "negative-metrics-review",
+  "prompt": "Review our product metrics for Q2. What's our MRR, churn rate, and NPS trend?",
+  "assertions": [
+    "The skill does NOT attempt to review metrics",
+    "Redirects to /metrics-review for product analytics review"
+  ]
+}

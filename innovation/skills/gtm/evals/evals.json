@@ -1,0 +1,71 @@
+{
+  "skill_name": "gtm",
+  "evals": [
+    {
+      "id": 1,
+      "name": "icp-definition-b2b",
+      "prompt": "We've completed 10 discovery interviews and signed 3 pilot customers for our AI-powered accounts payable automation tool. Our best customers so far are AP Managers at manufacturing companies with 100-300 employees who are drowning in manual three-way matching. Define our ICP.",
+      "expected_output": "A structured ICP with company profile, person profile, buying trigger, identification signals, and explicit 'NOT a fit' exclusions — grounded in the pilot data.",
+      "files": [],
+      "expectations": [
+        "The ICP names a specific role (AP Manager), company type (manufacturing, 100-300 employees), and context — not a generic 'mid-market companies' label that could mean anything",
+        "A buying trigger is defined — the specific event that makes the AP Manager ready to buy RIGHT NOW (e.g., failed audit, month-end crisis, new compliance requirement), because customers without a trigger browse but don't buy",
+        "Signals for identifying ICP prospects are specified (what they post, groups they join, events they attend) — these are what make the ICP actionable for the sales team's daily prospecting",
+        "A 'NOT a fit' section explicitly excludes customer types that waste time — this section saves the sales team hours and prevents chasing bad-fit customers who will churn",
+        "ICP confidence is assessed based on the 3 paying customers — 3 customers is low confidence, and the output should flag which ICP assumptions still need more data",
+        "The ICP is grounded in the 10 interviews and 3 pilots, not in generic market research — evidence-based ICPs convert at 2-3x the rate of assumed ones"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "ninety-day-gtm-calendar",
+      "prompt": "We have our ICP defined (AP Managers at mid-market manufacturers). We're a 2-person founding team with $0 marketing budget. We need 10 paying customers in 90 days. Build me a 90-day GTM calendar.",
+      "expected_output": "A week-by-week activity plan for 90 days with founder-led outreach as the primary channel, decision gates at Day 30 and Day 60, and measurable targets per week.",
+      "files": [],
+      "expectations": [
+        "The plan uses founder-led outreach as the primary channel given the $0 budget constraint — recommending paid channels when there is no budget is useless advice",
+        "Week-by-week activities are specific and actionable (e.g., 'Week 1: identify 50 AP Managers at manufacturers via LinkedIn Sales Navigator') rather than vague ('build pipeline') — specificity is what makes the plan executable",
+        "Decision gates at Day 30 and Day 60 have specific pass/fail criteria (e.g., 'Day 30: 5+ meetings booked, 2+ demos completed') — without gates, the team runs the full 90 days before discovering the approach doesn't work",
+        "The plan accounts for the sales cycle length and works backward from the 10-customer target — if the sales cycle is 30 days, the team needs 10 warm leads by Day 60",
+        "Channel sequencing is realistic for a 2-person team — the plan should not assume both founders can do full-time outreach while also building the product",
+        "The plan includes a referral mechanism from early customers — referral CAC is lowest, and asking for referrals should be built into the process from customer 1"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "positioning-statement",
+      "prompt": "Help me write a positioning statement for our AP automation tool. Our ICP is AP Managers at mid-market manufacturers (100-300 employees). The main pain is manual three-way matching that takes 15+ minutes per invoice. The current alternative is Excel + phone calls to purchasing. Our differentiator is that we auto-resolve 80% of PO mismatches without human intervention.",
+      "expected_output": "A positioning statement in the For/Who/Our product/That/Unlike/We format, grounded in the discovery language and differentiated against the real alternative (Excel + phone calls).",
+      "files": [],
+      "expectations": [
+        "The positioning statement follows the For/Who/Our product/That/Unlike/We format — this structure forces specificity on each element and prevents generic positioning",
+        "The 'For' and 'Who' use the ICP's language (AP Managers at mid-market manufacturers drowning in manual matching) — positioning must resonate with how the customer describes their own problem",
+        "The 'Unlike' references the actual current alternative (Excel + phone calls to purchasing) rather than a competitor product — most prospects are not evaluating competing products; they're comparing you to their current workaround",
+        "The 'We' states the specific differentiating claim (80% auto-resolution) — vague differentiators like 'more efficient' or 'AI-powered' are meaningless without a specific, defensible claim",
+        "The positioning is outcome-focused ('eliminates 80% of manual matching exceptions') rather than feature-focused ('uses AI to match invoices') — customers buy outcomes, not features"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "negative-discovery-request",
+      "prompt": "I haven't talked to any customers yet. Can you help me create an interview guide so I can do customer discovery? I want to understand what AP teams struggle with.",
+      "expected_output": "The agent should redirect this to the discovery skill, since customer discovery interview guides are outside the GTM skill's scope.",
+      "files": [],
+      "expectations": [
+        "The agent recognizes this is a customer discovery request and redirects to the discovery skill — GTM is for go-to-market execution, not pre-product customer research",
+        "The agent does NOT produce an interview guide within the GTM skill — doing so would bypass the discovery skill's interview protocol, question bank structure, and interview style rules"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "negative-competitive-analysis",
+      "prompt": "Who are the main competitors in AP automation? I need a full competitive landscape with TAM/SAM/SOM and market sizing.",
+      "expected_output": "The agent should redirect this to the market skill, since competitive landscape analysis and market sizing are outside the GTM skill's scope.",
+      "files": [],
+      "expectations": [
+        "The agent recognizes this is a market research request and redirects to the market skill — GTM is for customer acquisition strategy, not competitive intelligence or market sizing",
+        "The agent does NOT produce a competitive landscape or market sizing within the GTM skill — doing so would bypass the market skill's bottom-up methodology and moat assessment framework"
+      ]
+    }
+  ]
+}

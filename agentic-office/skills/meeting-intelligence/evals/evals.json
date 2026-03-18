@@ -1,0 +1,53 @@
+{
+  "skill_name": "meeting-intelligence",
+  "evals": [
+    {
+      "id": 1,
+      "name": "meeting-prep-exec-weekly",
+      "prompt": "Prep me for the Monday exec weekly at 10am. Attendees are Omar (CFO), Ayesha (Head of Sales), and Bilal (CTO). Agenda items are Q3 budget review, Nighthawk facility update, and new hire approvals. What do I need to know?",
+      "expected_output": "A meeting prep brief with context per agenda item (Q3 budget, Nighthawk, new hires), stakeholder notes for Omar, Ayesha, and Bilal sourced from work.local.md person entries, meeting rules from work.local.md culture, last time this group met, and what the user needs from this meeting.",
+      "files": [],
+      "expectations": [
+        "Meeting brief includes context, decision needed, user's position, key risk, and stakeholder note for EACH agenda item",
+        "Stakeholder notes section provides communication style and approach guidance for each attendee sourced from work.local.md person entries — not generic advice",
+        "LAST TIME THIS GROUP MET section is present if prior meeting records exist in work.local.md decision log",
+        "WHAT YOU NEED FROM THIS MEETING section restates the user's goal clearly"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "meeting-synthesis-post-meeting",
+      "prompt": "Synthesise these meeting notes from the exec weekly: D: approved GBP 50K analytics budget in principle subject to ROI brief. A: Omar to produce ROI brief by Thursday. A: Ayesha to share Q3 pipeline forecast by Wednesday. Q: do we need a separate Nighthawk review meeting? F: Bilal confirmed API migration on track for November. R: vendor contract renewal deadline is 15 October.",
+      "expected_output": "A structured meeting synthesis with numbered decisions (D-YYYY-NNN), action items with named owners and specific deadlines, deferred items with triggers, open questions with owners, next meeting proposal, and proposed work.local.md updates.",
+      "files": [],
+      "expectations": [
+        "Decisions are numbered D-YYYY-NNN format and are specific (approved GBP 50K analytics budget in principle, subject to ROI brief), not vague (discussed the analytics budget)",
+        "Actions have named individual owners (Omar, Ayesha — not 'the team'), specific dates (Thursday, Wednesday — not ASAP), and describe the output expected",
+        "Deferred items include a trigger for revisit — 'later' is not acceptable",
+        "WORK.LOCAL.MD UPDATES PROPOSED section suggests specific updates to project status, decision log, and action log"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "negative-should-use-executive-brief",
+      "prompt": "Give me a situation brief on Project Nighthawk. What is the current status, what are the risks, and what should my approach be when I discuss it with the board?",
+      "expected_output": "This query should be handled by executive-brief, not meeting-intelligence. A situation brief on a project with recommended approach is an executive-brief function.",
+      "files": [],
+      "expectations": [
+        "This query is about a situation brief for a specific subject — it matches executive-brief triggers (situation brief, what's the situation with, background on)",
+        "Meeting-intelligence handles the three-phase meeting model (before/during/after a specific meeting), not general situation briefs"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "negative-should-use-digest",
+      "prompt": "What is on my calendar today? Give me a quick overview of my day with the meetings I need to prepare for.",
+      "expected_output": "This query should be handled by digest, not meeting-intelligence. A daily calendar overview is a digest function.",
+      "files": [],
+      "expectations": [
+        "This query is about a daily overview of the calendar — it matches digest triggers (what's happening today, daily overview)",
+        "Meeting-intelligence handles deep preparation for specific meetings, not daily calendar summaries"
+      ]
+    }
+  ]
+}

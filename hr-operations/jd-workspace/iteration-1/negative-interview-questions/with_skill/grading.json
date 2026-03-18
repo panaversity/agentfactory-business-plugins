@@ -1,0 +1,25 @@
+{
+  "expectations": [
+    {
+      "text": "Does NOT generate interview questions",
+      "passed": true,
+      "evidence": "Output explicitly states: 'This skill cannot produce interview questions or scoring rubrics. No output generated.' No interview questions appear anywhere in the output."
+    },
+    {
+      "text": "Redirects to the appropriate skill or resource for interview preparation",
+      "passed": true,
+      "evidence": "Output states: 'Recommended action: Use the /interview-prep skill, which is designed for generating structured interview questions, competency-based scoring rubrics, and panel interview guides.'"
+    },
+    {
+      "text": "Does NOT produce a job description unless the user also asked for one",
+      "passed": true,
+      "evidence": "No job description content generated. Output is a scope notice only, correctly declining to produce any JD content since none was requested."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1.0
+  }
+}

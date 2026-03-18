@@ -1,0 +1,20 @@
+{
+  "expectations": [
+    {
+      "text": "The skill does NOT produce a PRD for a roadmap planning request",
+      "passed": false,
+      "evidence": "Without the skill, Claude produced a full 238-line roadmap document titled 'Q3/Q4 Product Roadmap Planning' covering current product landscape, strategic context, 8 initiative candidates with effort/impact/risk assessments, recommended sequencing for Q3 and Q4, explicit cuts, risks, and decision points. While this is a roadmap (not a PRD), the assertion checks whether the response avoids producing a document — and without the skill there's no scope discrimination at all."
+    },
+    {
+      "text": "Redirects to /roadmap-update or /prioritise depending on whether the user needs sequencing or scoring",
+      "passed": false,
+      "evidence": "No redirect to any tool or skill. Claude directly answered the roadmap planning question without referencing /roadmap-update, /prioritise, or any other specialized tool."
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "failed": 2,
+    "total": 2,
+    "pass_rate": 0.0
+  }
+}

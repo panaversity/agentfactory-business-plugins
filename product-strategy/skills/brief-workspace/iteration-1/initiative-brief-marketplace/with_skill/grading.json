@@ -1,0 +1,40 @@
+{
+  "expectations": [
+    {
+      "text": "Output is an Initiative Brief (Type 3)",
+      "passed": true,
+      "evidence": "Header explicitly states 'Initiative Brief: Marketplace Feature' with Status, Champion, and Stakeholders fields. Follows exact Initiative Brief format with THE BET, PROBLEM, PROPOSED DIRECTION, SIZE OF PRIZE, ROUGH EFFORT, RISKS, DECISION NEEDED sections."
+    },
+    {
+      "text": "THE BET section is one sentence capturing what, who, and why now",
+      "passed": true,
+      "evidence": "THE BET is a single sentence: 'We believe that launching a curated marketplace for third-party integrations will unlock ecosystem-driven retention and expansion revenue for power users, and that the competitive window to establish marketplace network effects in our category is closing within the next 2-3 quarters.' Captures what (marketplace), who (power users), and why now (competitive window closing)."
+    },
+    {
+      "text": "SIZE OF PRIZE section quantifies commercial or user impact",
+      "passed": true,
+      "evidence": "SIZE OF PRIZE section includes specific dollar estimates: '$500K-$1.2M ARR annually' for retention impact, '$200K-$600K incremental ARR within 12 months' for marketplace revenue, and '$700K-$1.8M ARR in year one' total. Also includes retention multiplier benchmarks (2-3x higher net retention)."
+    },
+    {
+      "text": "ROUGH EFFORT is expressed as order of magnitude (days/weeks/months/quarters)",
+      "passed": true,
+      "evidence": "ROUGH EFFORT section explicitly states 'Quarters -- this is a multi-quarter initiative' and breaks down by quarter (Q1, Q2, Q3+) with squad allocations. Summary states '2-3 quarters to MVP launch; 4+ quarters to a mature, self-sustaining ecosystem.'"
+    },
+    {
+      "text": "RISKS section lists top 2-3 risks",
+      "passed": true,
+      "evidence": "RISKS section lists exactly 3 risks: supply-side cold start, quality/security liability, and opportunity cost. Each includes a description and mitigation."
+    },
+    {
+      "text": "DECISION NEEDED clearly states what approval is requested",
+      "passed": true,
+      "evidence": "DECISION NEEDED section explicitly requests: 'Approve a 2-week discovery sprint to validate marketplace demand before committing to build' with 4 specific activities and a clear next step of proceeding to PRD if validated."
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  }
+}

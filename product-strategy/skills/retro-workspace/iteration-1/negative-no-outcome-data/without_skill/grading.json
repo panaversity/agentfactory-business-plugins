@@ -1,0 +1,25 @@
+{
+  "expectations": [
+    {
+      "text": "The skill flags that one week is too early for a meaningful retro — the NEVER rules prohibit running a retro without outcome data",
+      "passed": false,
+      "evidence": "The retro does NOT push back. Instead, it proceeds to produce a retrospective with sections like 'What Went Well' ('The feature shipped!'), 'Discussion Points', and metrics table showing 'No data yet'. It notes it's 'preliminary' but does not refuse to run the retro or flag it as too early. It complies with the request rather than challenging the premise."
+    },
+    {
+      "text": "Recommends waiting 4-12 weeks for outcome data to accumulate — rushing a retro without data produces opinion-based blame, not evidence-based improvement",
+      "passed": false,
+      "evidence": "Next Steps says 'Set up a follow-up retro in 4-6 weeks' but this is buried at the end, framed as a supplementary action rather than the primary recommendation. The retro still produced a full output without data."
+    },
+    {
+      "text": "May offer to run a delivery-focused Q2 review (on time? spec quality?) while deferring outcome questions",
+      "passed": false,
+      "evidence": "The 'Discussion Points' section mentions delivery-related questions ('How did the development process go?', 'Was the spec clear enough?') but frames them as team discussion topics, not as a focused delivery review offered as an alternative to the full retro."
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "failed": 3,
+    "total": 3,
+    "pass_rate": 0.0
+  }
+}

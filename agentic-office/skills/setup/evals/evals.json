@@ -1,0 +1,53 @@
+{
+  "skill_name": "setup",
+  "evals": [
+    {
+      "id": 1,
+      "name": "initial-setup-configuration",
+      "prompt": "Configure the agentic office for me. I am starting fresh and need to set up my workplace memory from scratch.",
+      "expected_output": "A guided setup that creates work.local.md from the template, walks through all four layers (Personal, Team, Projects, Organisational) interactively, delivers the two-plugin architecture orientation, and asks about domain agent integrations.",
+      "files": [],
+      "expectations": [
+        "Setup creates work.local.md from the bundled template at ${CLAUDE_PLUGIN_ROOT}/work.local.md.template",
+        "Guided configuration walks through all four layers: Personal (name, role, working style), Team (5-8 people), Projects (active projects with status), Organisational (terminology, recurring meetings, unwritten rules)",
+        "Orientation message explains the two-plugin architecture: official productivity plugin (task CRUD, memory, dashboard) and agentic office plugin (9 professional intelligence skills + 4 agents)",
+        "Setup asks about domain agent integrations from other chapters (finance, sales, HR, operations, supply chain)"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "orientation-existing-setup",
+      "prompt": "I already have a work.local.md file but I have forgotten how the agentic office works. Give me the orientation again and explain what skills and agents are available.",
+      "expected_output": "Since work.local.md already exists, skip creation and go directly to the orientation message explaining the two-plugin architecture, listing all 9 skills and 4 agents, and suggesting try-it prompts.",
+      "files": [],
+      "expectations": [
+        "Setup detects existing work.local.md and skips to STEP 4 (orientation only) — does not overwrite without asking",
+        "Orientation explains the distinction between the official productivity plugin and the agentic office plugin",
+        "All 9 professional intelligence skills are listed with brief descriptions",
+        "All 4 persistent agents are listed with their roles"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "negative-should-use-workplace-context",
+      "prompt": "Add a new person to my workplace memory. Her name is Fatima Khan, she is the new Head of Legal, and she prefers written communication.",
+      "expected_output": "This query should be handled by workplace-context, not setup. Adding a person entry to work.local.md is a workplace-context function.",
+      "files": [],
+      "expectations": [
+        "This query is about adding a person entry to workplace memory — it matches workplace-context triggers (add person, workplace memory)",
+        "Setup handles initial configuration and orientation, not ongoing memory maintenance"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "negative-should-use-productivity-start",
+      "prompt": "Initialise my TASKS.md and CLAUDE.md files for the productivity dashboard. I want the basic task management setup.",
+      "expected_output": "This query should be handled by the official productivity plugin's /productivity:start, not agentic-office setup. TASKS.md and dashboard initialisation is the official plugin's responsibility.",
+      "files": [],
+      "expectations": [
+        "This query is about the official productivity plugin's setup — it matches /productivity:start (initialise TASKS.md + CLAUDE.md + dashboard)",
+        "Agentic office setup handles work.local.md creation and two-plugin orientation, not TASKS.md initialisation"
+      ]
+    }
+  ]
+}

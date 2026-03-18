@@ -1,0 +1,30 @@
+{
+  "expectations": [
+    {
+      "text": "The output does NOT use 'a user' as the persona",
+      "passed": true,
+      "evidence": "The skill explicitly flags 'a user' as a blocker: 'Not a named persona. \"A user\" is generic and tells engineering nothing.' The example stories use 'Analytics Manager' instead."
+    },
+    {
+      "text": "A named persona is used (either from product.local.md or a reasonable named alternative)",
+      "passed": true,
+      "evidence": "The output suggests 4 named alternatives (Enterprise IT admin, Individual contributor, Integration engineer, Account owner) and uses 'Analytics Manager' in the example. Notes that product.local.md is not configured."
+    },
+    {
+      "text": "The skill flags that 'a user' is not acceptable and explains why",
+      "passed": true,
+      "evidence": "Dedicated 'QUALITY CHECK: FAILED' section with table showing Persona has Severity 'Blocker'. Explains: '\"A user\" is generic and tells engineering nothing about who needs this, what permissions they have, or what \"my data\" means to them.' Also includes 'WHY THIS CANNOT BE WRITTEN AS-IS' section."
+    },
+    {
+      "text": "The 'so that' is improved to describe a user outcome, not just a system action",
+      "passed": true,
+      "evidence": "Quality check table flags the original 'so that' as 'Vague outcome'. Example stories show improved outcomes: 'So that I can build custom visualizations in Tableau without manually re-entering data' — specific user benefit, not system action."
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1.0
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "skill_name": "invoice-reconciliation",
+  "evals": [
+    {
+      "id": 1,
+      "name": "three-way-match-price-variance",
+      "prompt": "I just received Invoice INV-2024-0847 from Acme Industrial Supplies for $47,250. It references PO-2024-3391. The PO was for 500 units of steel brackets at $90 per unit ($45,000 total). Our goods receipt GR-2024-1102 confirms 500 units received. The invoice shows 500 units at $94.50 per unit. Our tolerance for price variance on this category is 3%. Please reconcile this invoice and tell me what to do.",
+      "expected_output": "A complete three-way match reconciliation identifying the 5% price variance ($4.50/unit over PO price) as outside the 3% tolerance, with the invoice placed on hold and routed to the category manager for approval, including the mandatory output header and a clear recommended action with deadline.",
+      "files": [],
+      "expectations": [
+        "Produces the mandatory output header with TASK, VENDOR TIER, CONFIGURATION, and DATA SOURCES fields — this header is required by the skill for every reconciliation output and ensures traceability",
+        "Correctly identifies the price variance: invoice price $94.50 vs PO price $90.00 = $4.50/unit or 5% — getting the variance calculation wrong would either approve an overcharge or unnecessarily dispute a valid invoice",
+        "Classifies the variance as OUTSIDE TOLERANCE because 5% exceeds the configured 3% threshold — this distinction determines whether the line auto-approves or requires human intervention",
+        "Routes the exception to the category manager with a 3-business-day deadline as specified in the Stage 3 exception routing rules — routing to the wrong authority or missing the deadline causes payment delays and vendor relationship damage",
+        "Recommends holding payment on the variance amount ($2,250) while approving the undisputed portion ($45,000) — blocking the entire invoice for a line-item dispute unnecessarily damages vendor relationships and working capital",
+        "Includes a vendor communication recommendation referencing /vendor-communicate for the dispute notice — the reconciliation workflow should connect to the communication skill for the formal dispute letter"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "duplicate-invoice-detection",
+      "prompt": "We received Invoice INV-2024-1205 from Global Parts Ltd for $12,800 dated March 15, 2024. When I check our AP system, I see we already processed INV-2024-1205 from Global Parts Ltd for $12,800 on March 3, 2024 and paid it on March 10. The vendor says it's a new invoice for a different order but used the same invoice number by mistake. What should we do?",
+      "expected_output": "Immediate rejection of the duplicate invoice with clear documentation that the same invoice number was already processed and paid, regardless of the vendor's explanation, with specific next steps to resolve.",
+      "files": [],
+      "expectations": [
+        "Rejects the invoice immediately based on duplicate invoice number detection — the skill's universal rule states NEVER process a duplicate invoice, and the vendor's verbal explanation is not sufficient to override this control",
+        "Instructs the vendor to issue a NEW invoice with a UNIQUE invoice number if the charge is legitimate — this preserves the audit trail integrity while giving the vendor a path to get paid for legitimate work",
+        "Flags the incident in the exception register for pattern monitoring — the skill requires logging for weekly pattern detection (same exception from same vendor > 3x in 30 days triggers a systematic issue flag)",
+        "Does NOT approve the invoice based on the vendor's verbal explanation alone — accepting verbal overrides of automated controls is precisely the vulnerability that invoice fraud exploits",
+        "Includes specific recommended actions with deadlines — the universal rule requires actions in every output; observations without actions are not acceptable"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "bank-detail-change-fraud-alert",
+      "prompt": "Invoice INV-2024-2100 from our strategic vendor TechParts International just came in for $185,000 against PO-2024-5500. Everything matches perfectly — quantities, prices, delivery confirmed. But I noticed the bank account details on the invoice are different from what we have in our vendor master. The vendor sent an email last week saying they changed banks. Should I update the bank details and process payment?",
+      "expected_output": "Immediate FRAUD ALERT — all processing stopped regardless of the perfect three-way match. Bank detail changes on vendor invoices are the primary invoice fraud vector and must never be processed based on email notification alone.",
+      "files": [],
+      "expectations": [
+        "Issues a RED FRAUD ALERT and stops all processing immediately — the skill explicitly states bank detail changes are the primary invoice fraud vector and must never be processed without phone verification",
+        "Does NOT update the bank details based on the email — email is an insecure channel and the most common vector for business email compromise (BEC) fraud targeting AP departments",
+        "Instructs the user to contact the vendor by PHONE on a KNOWN number (not a number from the suspect email) to verify the bank change — this is the specific verification protocol defined in the skill",
+        "Escalates to the Finance Director immediately as required by the Stage 3 exception routing for fraud alerts — this is not a category manager decision; it requires senior leadership",
+        "Holds the entire $185,000 payment until verification is complete — despite the perfect three-way match, the payment channel is compromised and no amount should be released"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "negative-spend-analysis-redirect",
+      "prompt": "Can you analyze our total procurement spend by category for the last quarter? I want to see which categories we're spending the most on and where we can consolidate vendors to save money.",
+      "expected_output": "The agent recognizes this is a spend analysis request, not an invoice reconciliation task, and redirects to the spend-analysis skill.",
+      "files": [],
+      "expectations": [
+        "Recognizes that category spend analysis and vendor consolidation are spend-analysis skill territory, not invoice reconciliation — the skill description explicitly excludes spend category analysis",
+        "Redirects the user to the spend-analysis skill or /spend-analysis command — providing the correct routing prevents the user from getting a lower-quality answer from the wrong skill",
+        "Does NOT attempt to produce a spend analysis output — invoice reconciliation processes individual invoices against POs; it does not aggregate spend data across categories"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "negative-bank-reconciliation-redirect",
+      "prompt": "I need to reconcile our bank statement against our general ledger for March. There are several unmatched transactions and I need to figure out the outstanding items.",
+      "expected_output": "The agent recognizes this is a bank reconciliation request, not an invoice/AP reconciliation task, and redirects appropriately.",
+      "files": [],
+      "expectations": [
+        "Recognizes that bank reconciliation (bank statement vs general ledger) is explicitly out of scope — the skill description states 'NOT for: bank reconciliation (use banking plugin)'",
+        "Redirects to the banking plugin — providing the correct routing prevents the user from getting no help at all",
+        "Does NOT attempt to perform bank statement reconciliation — this skill processes vendor invoices against purchase orders and goods receipts, not bank transactions against ledger entries"
+      ]
+    }
+  ]
+}

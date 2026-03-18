@@ -1,0 +1,72 @@
+{
+  "skill_name": "sprint",
+  "evals": [
+    {
+      "id": 1,
+      "name": "innovation-sprint-plan",
+      "prompt": "We're at the VALIDATION stage. Our top untested assumption is A-003: 'AP Managers will adopt the tool without IT department involvement (self-serve onboarding).' We have a 3-person team and estimate 15 story points per sprint. Plan a 2-week innovation sprint that tests this assumption while delivering a self-serve onboarding flow.",
+      "expected_output": "A complete innovation sprint plan with learning goal (tied to A-003), delivery goal, sprint backlog with user stories and acceptance criteria, definition of done, mid-sprint check, review format, and retrospective format.",
+      "files": [],
+      "expectations": [
+        "The sprint has both a learning goal (validate A-003: self-serve adoption without IT) and a delivery goal (build onboarding flow) — an innovation sprint without a learning goal is just a product sprint",
+        "User stories are specific with measurable acceptance criteria (e.g., 'AP Manager completes onboarding in <15 minutes without contacting support or IT') rather than vague ('user can onboard') — vague criteria cannot produce pass/fail outcomes",
+        "The sprint backlog totals approximately 15 story points to match team velocity — overloaded sprints guarantee carry-over and undermine learning",
+        "Each user story maps to assumption A-003 or a supporting assumption — stories that don't test the target assumption should be excluded from an innovation sprint",
+        "A mid-sprint check is defined with specific review criteria — catching problems at Day 7 prevents wasting the second week on a doomed approach",
+        "The retrospective format includes an assumption update section — this is what distinguishes innovation sprints from product sprints and keeps innov.local.md current"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "backlog-prioritisation",
+      "prompt": "Here's my product backlog for the next quarter. Prioritise it using assumption risk x delivery value scoring:\n1. Self-serve onboarding wizard (tests A-003: self-serve adoption)\n2. Slack integration for exception routing (tests A-007: team collaboration)\n3. Dashboard with matching accuracy metrics (no assumption tested)\n4. Multi-ERP support for NetSuite (tests A-005: ERP compatibility)\n5. Email notification system (no assumption tested)\n6. Bulk invoice upload via CSV (tests A-004: volume handling)\n7. Custom matching rule editor (tests A-006: customization need)\n8. API documentation for IT teams (contradicts A-003)\n9. Mobile approval interface (tests A-008: mobile workflow)\n10. White-label option for resellers (tests A-009: channel viability)",
+      "expected_output": "Each item scored on Assumption Risk (1-3) and Delivery Value (1-3) with a priority score (product), ranked from highest to lowest, with items scoring <=2 recommended for backlog deferral.",
+      "files": [],
+      "expectations": [
+        "All 10 items are scored on Assumption Risk (1-3) and Delivery Value (1-3) with Priority Score = Risk x Value — partial scoring leaves items unranked",
+        "Items testing TIER 1 assumptions score 3 on Assumption Risk while items testing no assumption score 1 — the scoring must reflect assumption tier, not feature attractiveness",
+        "Items #3 (dashboard) and #5 (email notifications) score low on Assumption Risk because they test no critical assumption — nice-to-have features should be deprioritized in innovation sprints",
+        "Item #8 (API docs for IT teams) is flagged as contradicting A-003 (self-serve without IT) — building for IT involvement before validating self-serve adoption sends a conflicting signal",
+        "Items scoring <=2 are explicitly recommended for backlog deferral — low-priority items that remain in the sprint steal capacity from learning",
+        "The output recommends a sprint composition from the top-priority items that fits a reasonable velocity — a ranked list alone doesn't tell the team what to put in the next sprint"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "sprint-retrospective",
+      "prompt": "Sprint 3 just ended. Results: We built the self-serve onboarding flow. 4 of 5 pilot AP managers completed onboarding without IT help, but 1 needed IT to whitelist our domain. Average onboarding time was 22 minutes (target was 15). All 5 said they'd use the tool but only 3 actually logged in during Week 2. Run the sprint retrospective.",
+      "expected_output": "A retrospective with learning synthesis, assumption status updates, what worked/didn't, and next sprint priority — grounded in the specific data from the sprint.",
+      "files": [],
+      "expectations": [
+        "Assumption A-003 is updated to PARTIALLY VALIDATED with specific evidence (4/5 self-serve, 1 needed IT for domain whitelisting) — binary VALIDATED/INVALIDATED would miss the nuance",
+        "The 22-minute onboarding time vs 15-minute target is flagged as a concern with specific improvement suggestions — missing acceptance criteria is a learning signal, not just a miss",
+        "The drop-off from 'said they'd use it' (5/5) to 'actually logged in Week 2' (3/5) is surfaced as a critical finding — stated intent vs. actual behavior is the discovery gap the retrospective must catch",
+        "A new assumption is identified from the domain whitelisting issue (security/IT approval may be required for some companies) — unexpected learnings generate new assumptions",
+        "The next sprint priority is recommended based on what was learned — the retrospective must produce a forward-looking recommendation, not just a backward-looking analysis",
+        "The 'what worked / what didn't' section contains specific items rather than generic process observations — 'daily standups helped' is less useful than 'testing with real AP managers in their own ERP revealed issues we couldn't simulate'"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "negative-idea-generation",
+      "prompt": "Before we plan the sprint, I want to brainstorm new product ideas. Can you run a 100-idea sprint for AP automation features?",
+      "expected_output": "The agent should redirect this to the idea skill, since idea generation is outside the sprint skill's scope.",
+      "files": [],
+      "expectations": [
+        "The agent recognizes this is an idea generation request and redirects to the idea skill — sprint is for planning and executing work, not brainstorming new concepts",
+        "The agent does NOT produce a 100-idea list within the sprint skill — doing so would bypass the idea skill's structured categories and DVF scoring framework"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "negative-validate-request",
+      "prompt": "We ran a 6-week pilot with 5 companies. Here are the adoption metrics, NPS scores, and revenue data. Should we pivot or persevere? Give me a full Build-Measure-Learn analysis.",
+      "expected_output": "The agent should redirect this to the validate skill, since pilot analysis and pivot decisions are outside the sprint skill's scope.",
+      "files": [],
+      "expectations": [
+        "The agent recognizes this is a BML analysis request and redirects to the validate skill — sprint handles within-sprint retrospectives, not multi-sprint pilot analysis",
+        "The agent does NOT produce a full BML analysis or pivot recommendation within the sprint skill — doing so would bypass the validate skill's evidence quality hierarchy and pivot decision framework"
+      ]
+    }
+  ]
+}

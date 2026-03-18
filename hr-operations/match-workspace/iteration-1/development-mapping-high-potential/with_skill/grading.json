@@ -1,0 +1,40 @@
+{
+  "expectations": [
+    {
+      "text": "Context is correctly identified as development mapping (not vacancy-driven succession)",
+      "passed": true,
+      "evidence": "Line 12-13: 'This is a proactive development mapping exercise -- no current vacancy. Purpose: identify what each high-potential employee needs to be ready for a Director-level role when one becomes available.'"
+    },
+    {
+      "text": "Does NOT base readiness on tenure alone",
+      "passed": true,
+      "evidence": "Marcus (5 years) is rated READY IN 6 MONTHS while Priya (3 years) is READY IN 12 MONTHS — but the rationale is based on operational foundations and gap bridgeability, not tenure. Li Wei (2 years) is rated DEVELOPING but the rationale centers on level gap (Manager to Director is two levels), not tenure."
+    },
+    {
+      "text": "Includes motivation and career intent dimension for each candidate",
+      "passed": true,
+      "evidence": "All three candidates have explicit 'Career intent: NOT ASSESSED -- no data provided' sections with specific action items to gather this information. The closing note reinforces: 'Development plans should NOT be finalised until career aspiration conversations have taken place.'"
+    },
+    {
+      "text": "Provides specific, actionable development recommendations (not generic advice)",
+      "passed": true,
+      "evidence": "Each candidate has phased development plans with specific interventions: Priya gets 'cross-functional project leadership', 'interim ownership of a budget segment with P&L accountability', '360-degree feedback'. Marcus gets 'strategic leadership programme', 'lead a strategic initiative with external-facing components'. Li Wei gets 'operational rotation or embedded assignment', 'lead cross-functional initiative independently'."
+    },
+    {
+      "text": "Output begins with the mandatory header block including CONFIDENTIAL sensitivity",
+      "passed": true,
+      "evidence": "Lines 1-5: TASK, DOCUMENT TYPE, JURISDICTION, CONFIGURATION, SENSITIVITY headers present. SENSITIVITY reads 'CONFIDENTIAL -- HR AND HIRING MANAGER USE ONLY'."
+    },
+    {
+      "text": "Distinguishes between experience gaps and skill gaps for each candidate",
+      "passed": true,
+      "evidence": "Priya: 2 EXPERIENCE GAPs (cross-functional leadership, executive stakeholder presence), 1 SKILL GAP (commercial P&L ownership), 1 MINDSET GAP (comfort with ambiguity). Marcus: 1 MINDSET GAP (operational to business strategy), 1 SKILL GAP (strategic communication), 1 EXPERIENCE GAP (external-facing leadership). Li Wei: 3 EXPERIENCE GAPs and 1 MINDSET GAP. All gaps explicitly typed."
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  }
+}

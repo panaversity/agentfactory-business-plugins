@@ -1,0 +1,133 @@
+{
+  "metadata": {
+    "skill_name": "interview",
+    "skill_path": "/Users/mjs/Documents/code/panaversity-official/agentfactory-business-plugins/product-strategy/skills/interview/SKILL.md",
+    "executor_model": "claude-opus-4-6",
+    "analyzer_model": "claude-opus-4-6",
+    "timestamp": "2026-03-19T12:00:00Z",
+    "evals_run": [1, 2],
+    "runs_per_configuration": 1
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "eval_name": "interview-guide-onboarding",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Guide follows four-segment structure (Opening, Warm-up, Core Discovery, Wrap-up)", "passed": true, "evidence": "Four segments present: SEGMENT 1: OPENING, SEGMENT 2: WARM-UP, SEGMENT 3: CORE DISCOVERY, SEGMENT 4: WRAP-UP"},
+        {"text": "Questions ask about past behaviour, not hypothetical futures", "passed": true, "evidence": "Core discovery opens with 'walk me through the last time you brought someone new onto your team'. No hypothetical questions in discovery."},
+        {"text": "No mention of the proposed onboarding feature in the first half of the guide", "passed": true, "evidence": "No mention of product feature in Segments 1-3. Interviewer Reminders explicitly state 'Do NOT mention the onboarding feature idea until after Core Discovery'."},
+        {"text": "Workaround probe is included", "passed": true, "evidence": "Explicit workaround probe: 'Before you had your current process... how did you handle it? And do you still use any part of that earlier approach today?'"},
+        {"text": "Note-taking template includes Key observations, Notable quotes, Surprises, Follow-up questions", "passed": true, "evidence": "All four fields present in template plus bonus 'Workarounds in use' field."},
+        {"text": "Guide specifies participant criteria and target sample size", "passed": true, "evidence": "Header: 'People managers and HR/People Ops leads at companies with 50-500 employees who have onboarded at least 2 new hires in the past 6 months; n=8-10 target'"}
+      ]
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "interview-guide-onboarding",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.0,
+        "passed": 0,
+        "failed": 6,
+        "total": 6,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Guide follows four-segment structure (Opening, Warm-up, Core Discovery, Wrap-up)", "passed": false, "evidence": "Uses six sections: Introduction, Background, Current Onboarding Process, Pain Points, Feature Exploration, Wrap-Up."},
+        {"text": "Questions ask about past behaviour, not hypothetical futures", "passed": false, "evidence": "Multiple hypothetical questions: 'What would an ideal onboarding experience look like?', 'Would you find it helpful to have automated task assignments?', 'Would you pay for a tool?'"},
+        {"text": "No mention of the proposed onboarding feature in the first half of the guide", "passed": false, "evidence": "Section 4 explicitly states 'We're considering building a team onboarding feature' — introduces solution before full problem exploration."},
+        {"text": "Workaround probe is included", "passed": false, "evidence": "No workaround probe anywhere in the guide."},
+        {"text": "Note-taking template includes Key observations, Notable quotes, Surprises, Follow-up questions", "passed": false, "evidence": "No note-taking template. Only generic reminders like 'Record responses carefully'."},
+        {"text": "Guide specifies participant criteria and target sample size", "passed": false, "evidence": "Target listed as 'HR managers, team leads, people ops at mid-market companies' — no specific criteria or sample size."}
+      ]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "interview-guide-enterprise-reporting",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Questions are appropriate for C-level stakeholders", "passed": true, "evidence": "Questions at strategic level: 'month-end or quarter-end', 'cost of that delay', budget allocation probes. No granular tactical questions."},
+        {"text": "Duration is appropriate for executive availability (30-45 minutes)", "passed": true, "evidence": "Duration set to '30 minutes (executive-appropriate)'. Segments total 28-32 minutes."},
+        {"text": "Core discovery focuses on reporting workflow pain, not feature wish lists", "passed": true, "evidence": "Discovery opens with 'walk me through the last time you needed a report our product couldn't give you'. No feature wish-list questions in discovery."},
+        {"text": "Includes probes for budget and decision-making authority", "passed": true, "evidence": "Explicit 'Budget and decision-making probe' with 3 questions. Note-taking template includes 'Budget signals' field."},
+        {"text": "The five design principles are followed", "passed": true, "evidence": "All five principles in INTERVIEWER REMINDERS: Behaviour over opinion, Past over hypothetical, Problem before solution, Silence is data, Why five times."}
+      ]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "interview-guide-enterprise-reporting",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.2,
+        "passed": 1,
+        "failed": 4,
+        "total": 5,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Questions are appropriate for C-level stakeholders", "passed": false, "evidence": "Too granular: 'How often do you generate reports?', satisfaction on 1-10 scale, 'What's your budget?' too blunt for executive discovery."},
+        {"text": "Duration is appropriate for executive availability (30-45 minutes)", "passed": false, "evidence": "Duration set to 60 minutes — too long for CFOs."},
+        {"text": "Core discovery focuses on reporting workflow pain, not feature wish lists", "passed": false, "evidence": "Part 4 is a feature wish list: 'What specific customizations?', 'self-service report building or built for you?', 'ideal reporting dashboard?'"},
+        {"text": "Includes probes for budget and decision-making authority", "passed": true, "evidence": "Q15 and Q16 address purchasing decisions and budget, though bluntly."},
+        {"text": "The five design principles are followed", "passed": false, "evidence": "Multiple violations: opinion questions (1-10 scale), hypothetical questions, solution before problem, no silence guidance, no 'why' probes."}
+      ]
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {"mean": 1.0, "stddev": 0.0, "min": 1.0, "max": 1.0},
+      "time_seconds": {"mean": 0, "stddev": 0, "min": 0, "max": 0},
+      "tokens": {"mean": 0, "stddev": 0, "min": 0, "max": 0}
+    },
+    "without_skill": {
+      "pass_rate": {"mean": 0.09, "stddev": 0.13, "min": 0.0, "max": 0.2},
+      "time_seconds": {"mean": 0, "stddev": 0, "min": 0, "max": 0},
+      "tokens": {"mean": 0, "stddev": 0, "min": 0, "max": 0}
+    },
+    "delta": {
+      "pass_rate": "+0.91",
+      "time_seconds": "+0",
+      "tokens": "+0"
+    }
+  },
+  "notes": [
+    "Skill achieves 100% pass rate across both evals (11/11 assertions passed)",
+    "Without skill, pass rate is 9% (1/11 assertions passed — only 'budget probes' in eval 2)",
+    "The skill's strongest differentiator is structural: four-segment format, workaround probes, note-taking templates, and participant criteria are never produced without the skill",
+    "The five design principles (behaviour over opinion, past over hypothetical, problem before solution, silence is data, why five times) are consistently followed with-skill and consistently violated without-skill",
+    "Without-skill outputs default to feature wish-list and hypothetical questions — the exact anti-patterns the skill guards against",
+    "Duration adaptation is a notable differentiator: with-skill correctly shortened to 30 min for executives, without-skill defaulted to 60 min regardless",
+    "Timing and token data unavailable — runs were executed inline rather than via subagents"
+  ]
+}

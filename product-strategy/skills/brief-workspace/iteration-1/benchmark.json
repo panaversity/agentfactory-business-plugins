@@ -1,0 +1,270 @@
+{
+  "metadata": {
+    "skill_name": "brief",
+    "skill_path": "/Users/mjs/Documents/code/panaversity-official/agentfactory-business-plugins/product-strategy/skills/brief/SKILL.md",
+    "executor_model": "claude-sonnet-4-6",
+    "analyzer_model": "claude-opus-4-6",
+    "timestamp": "2026-03-19T02:30:00Z",
+    "evals_run": [1, 2, 3, 4, 5],
+    "runs_per_configuration": 1
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "eval_name": "problem-brief-activation-drop",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 7,
+        "failed": 0,
+        "total": 7,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Output is a Problem Brief (Type 1)", "passed": true, "evidence": "Header states 'Type: Problem Brief' with exact format."},
+        {"text": "Contains no solution proposals", "passed": true, "evidence": "Explicit note: 'This brief contains no solution proposals by design.'"},
+        {"text": "WHO IS AFFECTED references a named persona", "passed": true, "evidence": "'New Signups' as defined segment with characterization."},
+        {"text": "EVIDENCE includes 40% activation drop as quantified data", "passed": true, "evidence": "'40% relative drop' plus ~67% CAC increase."},
+        {"text": "WHAT WE DO NOT KNOW YET lists specific unknowns", "passed": true, "evidence": "6 specific unknowns listed."},
+        {"text": "DISCOVERY QUESTIONS contains 3-5 concrete questions", "passed": true, "evidence": "5 concrete questions with data requirements."},
+        {"text": "Output includes a next step or decision needed", "passed": true, "evidence": "Approve 1-week discovery sprint."}
+      ]
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "problem-brief-activation-drop",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.57,
+        "passed": 4,
+        "failed": 3,
+        "total": 7,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Output is a Problem Brief (Type 1)", "passed": true, "evidence": "Title is 'Problem Brief'."},
+        {"text": "Contains no solution proposals", "passed": false, "evidence": "Contains investigation plan and 5 solution-suggesting hypotheses."},
+        {"text": "WHO IS AFFECTED references a named persona", "passed": false, "evidence": "Generic: 'Power users', 'New users'."},
+        {"text": "EVIDENCE includes 40% activation drop as quantified data", "passed": true, "evidence": "'User activation has dropped 40%'."},
+        {"text": "WHAT WE DO NOT KNOW YET lists specific unknowns", "passed": true, "evidence": "5 specific unknowns in 'What We Don't Know'."},
+        {"text": "DISCOVERY QUESTIONS contains 3-5 concrete questions", "passed": false, "evidence": "No DISCOVERY QUESTIONS section. Open Questions table is investigation-framed."},
+        {"text": "Output includes a next step or decision needed", "passed": true, "evidence": "Triage meeting recommendation."}
+      ]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "discovery-brief-enterprise-export",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Output is a Discovery Brief (Type 2)", "passed": true, "evidence": "Exact format with Duration, Methods, Sample header."},
+        {"text": "QUESTIONS ranked by priority", "passed": true, "evidence": "5 numbered questions labeled '(ranked)'."},
+        {"text": "Methods appropriate for enterprise research", "passed": true, "evidence": "Interviews, ticket analysis, CRM analysis, competitive audit."},
+        {"text": "Sample with minimum n= target", "passed": true, "evidence": "n>=8 enterprise, n>=3 churned, n>=4 internal."},
+        {"text": "OUT OF SCOPE lists exclusions", "passed": true, "evidence": "4 explicit exclusions."},
+        {"text": "SUCCESS CRITERIA are evidence-based", "passed": true, "evidence": "Evidence from 5+ customers, actual revenue figures."}
+      ]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "discovery-brief-enterprise-export",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Output is a Discovery Brief (Type 2)", "passed": true, "evidence": "Structured as discovery brief with sprint plan."},
+        {"text": "QUESTIONS ranked by priority", "passed": true, "evidence": "6 numbered questions ordered fundamentally."},
+        {"text": "Methods appropriate for enterprise research", "passed": true, "evidence": "Interviews, ticket analysis, competitive audit."},
+        {"text": "Sample with minimum n= target", "passed": true, "evidence": "'8-10 enterprise customers'."},
+        {"text": "OUT OF SCOPE lists exclusions", "passed": true, "evidence": "5 exclusions in Section 10."},
+        {"text": "SUCCESS CRITERIA are evidence-based", "passed": true, "evidence": "Hypothesis validation with evidence criteria."}
+      ]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "initiative-brief-marketplace",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Output is an Initiative Brief (Type 3)", "passed": true, "evidence": "Exact format with Status, Champion, Stakeholders."},
+        {"text": "THE BET is one sentence (what, who, why now)", "passed": true, "evidence": "Single sentence: marketplace, power users, competitive window."},
+        {"text": "SIZE OF PRIZE quantifies impact", "passed": true, "evidence": "$500K-$1.2M retention, $200K-$600K marketplace, $700K-$1.8M total."},
+        {"text": "ROUGH EFFORT as order of magnitude", "passed": true, "evidence": "'Quarters — 2-3 quarters to MVP; 4+ to mature.'"},
+        {"text": "RISKS lists top 2-3 risks", "passed": true, "evidence": "3 risks: cold start, quality/security, opportunity cost."},
+        {"text": "DECISION NEEDED states approval requested", "passed": true, "evidence": "'Approve 2-week discovery sprint' with activities."}
+      ]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "initiative-brief-marketplace",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.83,
+        "passed": 5,
+        "failed": 1,
+        "total": 6,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Output is an Initiative Brief (Type 3)", "passed": true, "evidence": "Title 'Initiative Brief: Marketplace Feature'."},
+        {"text": "THE BET is one sentence (what, who, why now)", "passed": false, "evidence": "No THE BET section. Opens with problem bullets."},
+        {"text": "SIZE OF PRIZE quantifies impact", "passed": true, "evidence": "Sizing table with GMV, take-rate, NRR impact."},
+        {"text": "ROUGH EFFORT as order of magnitude", "passed": true, "evidence": "'~1 quarter for MVP' with cost estimate."},
+        {"text": "RISKS lists top 2-3 risks", "passed": true, "evidence": "4 risks with severity and mitigation."},
+        {"text": "DECISION NEEDED states approval requested", "passed": true, "evidence": "'Go/no-go on discovery phase'."}
+      ]
+    },
+    {
+      "eval_id": 4,
+      "eval_name": "negative-solution-in-problem-brief",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Output is a Problem Brief", "passed": true, "evidence": "'Type: Problem Brief'."},
+        {"text": "CDN/lazy loading NOT in brief body", "passed": true, "evidence": "Explicitly excluded with note."},
+        {"text": "Solution only in hypothesis if at all", "passed": true, "evidence": "Hypothesis frames outcome, not specific solution."},
+        {"text": "Focuses on problem with evidence and impact", "passed": true, "evidence": "5 evidence points, 4-dimension impact."}
+      ]
+    },
+    {
+      "eval_id": 4,
+      "eval_name": "negative-solution-in-problem-brief",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.25,
+        "passed": 1,
+        "failed": 3,
+        "total": 4,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Output is a Problem Brief", "passed": true, "evidence": "Title 'Problem Brief'."},
+        {"text": "CDN/lazy loading NOT in brief body", "passed": false, "evidence": "Full 'Proposed Solution' section with CDN and lazy loading."},
+        {"text": "Solution only in hypothesis if at all", "passed": false, "evidence": "Solutions as recommendations, no hypothesis section."},
+        {"text": "Focuses on problem with evidence and impact", "passed": false, "evidence": "Solution dominates (~50 lines vs ~40 lines problem)."}
+      ]
+    },
+    {
+      "eval_id": 5,
+      "eval_name": "negative-off-domain-code-request",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 2,
+        "failed": 0,
+        "total": 2,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Does NOT produce a brief for code request", "passed": true, "evidence": "'Request Declined — Outside Skill Scope'."},
+        {"text": "Redirects to appropriate tools", "passed": true, "evidence": "'Ask Claude directly (without invoking /brief)'."}
+      ]
+    },
+    {
+      "eval_id": 5,
+      "eval_name": "negative-off-domain-code-request",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 2,
+        "failed": 0,
+        "total": 2,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Does NOT produce a brief for code request", "passed": true, "evidence": "Produced Python script, not a brief."},
+        {"text": "Redirects to appropriate tools", "passed": true, "evidence": "Directly produced requested code."}
+      ]
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {"mean": 1.0, "stddev": 0.0, "min": 1.0, "max": 1.0},
+      "time_seconds": {"mean": 0, "stddev": 0, "min": 0, "max": 0},
+      "tokens": {"mean": 0, "stddev": 0, "min": 0, "max": 0}
+    },
+    "without_skill": {
+      "pass_rate": {"mean": 0.73, "stddev": 0.30, "min": 0.25, "max": 1.0},
+      "time_seconds": {"mean": 0, "stddev": 0, "min": 0, "max": 0},
+      "tokens": {"mean": 0, "stddev": 0, "min": 0, "max": 0}
+    },
+    "delta": {
+      "pass_rate": "+0.27",
+      "time_seconds": "0",
+      "tokens": "0"
+    }
+  },
+  "notes": [
+    "with_skill achieves 100% pass rate across all 5 evals (25/25 assertions passed)",
+    "without_skill achieves 73% average pass rate (18/25 assertions passed), with high variance (0.25 to 1.0)",
+    "Eval 4 (negative-solution-in-problem-brief) shows the largest gap: with_skill=100% vs without_skill=25% — the skill's 'no solutions in problem brief' rule is highly effective",
+    "Eval 2 (discovery-brief) shows no gap: both configurations pass all assertions — Claude already produces good discovery briefs without the skill, making this eval non-discriminating",
+    "Eval 5 (off-domain code request) is non-discriminating: both configurations pass 100%",
+    "Eval 1 (problem-brief) shows moderate gap: with_skill=100% vs without_skill=57% — without the skill, Claude includes solutions and uses generic personas",
+    "Eval 3 (initiative-brief) shows small gap: with_skill=100% vs without_skill=83% — only THE BET section formatting was missed without the skill",
+    "The skill's strongest value-add is enforcing problem/solution separation (Eval 4) and structured format compliance (Eval 1)"
+  ]
+}

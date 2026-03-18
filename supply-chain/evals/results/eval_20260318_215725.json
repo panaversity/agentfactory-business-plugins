@@ -1,0 +1,261 @@
+{
+  "timestamp": "20260318_215725",
+  "results": [
+    {
+      "id": "route_vendor_assess_strategic",
+      "category": "routing",
+      "checks": {
+        "content": {
+          "classification": true,
+          "strategic": true,
+          "sole-source": true
+        },
+        "routing": true
+      },
+      "content_pass": true,
+      "status": "pass",
+      "output_preview": "```\nTASK:          Vendor Assessment \u2014 KIFTL\nVENDOR TIER:   Strategic (Tier 1)\nCONFIGURATION: Not configured\nDATA SOURCES:  Manual input (user-provided context only)\n```\n\n---\n\n# VENDOR ASSESSMENT: KIFTL\n\n## Classification: STRATEGIC \u2014 Tier 1\n\n**Rationale:** KIFTL is the sole supplier for all packaging \u2014 a category with high operational dependency and no qualified alternative. This meets the Strategic (Tier 1) criteria: high dependency + sole-source. Review cadence: quarterly + event-triggered.\n\n"
+    },
+    {
+      "id": "route_vendor_assess_bottleneck",
+      "category": "routing",
+      "checks": {
+        "content": {
+          "bottleneck": true,
+          "sole-source": true
+        },
+        "routing": true
+      },
+      "content_pass": true,
+      "status": "pass",
+      "output_preview": "```\nTASK:          Vendor Assessment \u2014 [Unnamed Sole-Source Component Vendor]\nVENDOR TIER:   Bottleneck (Tier 4)\nCONFIGURATION: Not configured (no supply-chain.local.md detected)\nDATA SOURCES:  Manual input (user-provided context only)\n```\n\n---\n\n## VENDOR ASSESSMENT: [Sole-Source Critical Component Vendor]\n\n### Classification: BOTTLENECK \u2014 Tier 4\n\n**Rationale:** Low spend combined with sole-source dependency on a critical component is the textbook definition of a Bottleneck vendor. This is the m"
+    },
+    {
+      "id": "route_invoice_reconcile",
+      "category": "routing",
+      "checks": {
+        "content": {
+          "three-way match": true,
+          "PO": true
+        },
+        "routing": true
+      },
+      "content_pass": true,
+      "status": "pass",
+      "output_preview": "```\nTASK:          Invoice Reconciliation -- INV-2024-0847\nVENDOR TIER:   Unclassified\nCONFIGURATION: Not configured\nDATA SOURCES:  Manual input\n```\n\n---\n\nNo ERP, AP system, or document files (PDF/EDI) have been provided for this reconciliation. To perform the four-stage three-way match, I need the actual data from these three documents.\n\n## What I Need\n\n**Document 1 \u2014 Invoice INV-2024-0847 (from Acme Packaging):**\n- Line items (description, quantity, unit price, line total)\n- Invoice date and t"
+    },
+    {
+      "id": "route_supplier_risk",
+      "category": "routing",
+      "checks": {
+        "content": {
+          "financial risk": false,
+          "credit": false,
+          "downgrade": false
+        },
+        "routing": false
+      },
+      "content_pass": false,
+      "status": "fail",
+      "output_preview": "You've hit your limit \u00b7 resets 4am (Asia/Karachi)"
+    },
+    {
+      "id": "route_logistics_carrier",
+      "category": "routing",
+      "checks": {
+        "content": {
+          "carrier": false,
+          "OTD|on-time delivery|on time delivery": false,
+          "scorecard|performance": false
+        },
+        "routing": false
+      },
+      "content_pass": false,
+      "status": "fail",
+      "output_preview": "You've hit your limit \u00b7 resets 4am (Asia/Karachi)"
+    },
+    {
+      "id": "route_spend_consolidation",
+      "category": "routing",
+      "checks": {
+        "content": {
+          "consolidation": false
+        },
+        "routing": false
+      },
+      "content_pass": false,
+      "status": "fail",
+      "output_preview": "You've hit your limit \u00b7 resets 4am (Asia/Karachi)"
+    },
+    {
+      "id": "route_network_scenario",
+      "category": "routing",
+      "checks": {
+        "content": {
+          "scenario": false,
+          "network": false
+        },
+        "routing": false
+      },
+      "content_pass": false,
+      "status": "fail",
+      "output_preview": "You've hit your limit \u00b7 resets 4am (Asia/Karachi)"
+    },
+    {
+      "id": "route_weekly_brief",
+      "category": "routing",
+      "checks": {
+        "content": {
+          "traffic light": false,
+          "vendor performance": false,
+          "decision required": false
+        },
+        "routing": false
+      },
+      "content_pass": false,
+      "status": "fail",
+      "output_preview": "You've hit your limit \u00b7 resets 4am (Asia/Karachi)"
+    },
+    {
+      "id": "vendor_assess_bottleneck_output",
+      "category": "accuracy",
+      "checks": {
+        "content": {
+          "bottleneck": false,
+          "Tier 4": false,
+          "sole-source": false
+        },
+        "formula": false
+      },
+      "content_pass": false,
+      "status": "fail",
+      "output_preview": "You've hit your limit \u00b7 resets 4am (Asia/Karachi)"
+    },
+    {
+      "id": "invoice_reconcile_price_variance",
+      "category": "accuracy",
+      "checks": {
+        "content": {
+          "price variance|variance|overcharge|price difference": false,
+          "outside tolerance|exceeds|exception": false,
+          "5.9": false
+        },
+        "formula": false
+      },
+      "content_pass": false,
+      "status": "fail",
+      "output_preview": "You've hit your limit \u00b7 resets 4am (Asia/Karachi)"
+    },
+    {
+      "id": "invoice_reconcile_duplicate",
+      "category": "accuracy",
+      "checks": {
+        "content": {
+          "duplicate": false,
+          "reject": false,
+          "notify vendor|contact vendor|inform vendor|vendor notification|notify acme|contact acme": false
+        },
+        "formula": false
+      },
+      "content_pass": false,
+      "status": "fail",
+      "output_preview": "You've hit your limit \u00b7 resets 4am (Asia/Karachi)"
+    },
+    {
+      "id": "supplier_risk_tier2_cascade",
+      "category": "accuracy",
+      "checks": {
+        "content": {
+          "Tier 2": false,
+          "contingency": false,
+          "alternative": false,
+          "escalate": false
+        }
+      },
+      "content_pass": false,
+      "status": "fail",
+      "output_preview": "You've hit your limit \u00b7 resets 4am (Asia/Karachi)"
+    },
+    {
+      "id": "logistics_expedited_root_cause",
+      "category": "accuracy",
+      "checks": {
+        "content": {
+          "upstream": false,
+          "root cause": false,
+          "Manchester": false
+        }
+      },
+      "content_pass": false,
+      "status": "fail",
+      "output_preview": "You've hit your limit \u00b7 resets 4am (Asia/Karachi)"
+    },
+    {
+      "id": "spend_price_inconsistency",
+      "category": "accuracy",
+      "checks": {
+        "content": {
+          "price inconsistency|price variance|price difference|price gap|inconsisten": false,
+          "8.50": false
+        },
+        "formula": false
+      },
+      "content_pass": false,
+      "status": "fail",
+      "output_preview": "You've hit your limit \u00b7 resets 4am (Asia/Karachi)"
+    },
+    {
+      "id": "network_scenario_comparison",
+      "category": "accuracy",
+      "checks": {
+        "content": {
+          "payback": false,
+          "scenario": false,
+          "capex": false
+        }
+      },
+      "content_pass": false,
+      "status": "fail",
+      "output_preview": "You've hit your limit \u00b7 resets 4am (Asia/Karachi)"
+    },
+    {
+      "id": "weekly_brief_escalation",
+      "category": "accuracy",
+      "checks": {
+        "content": {
+          "escalat": false,
+          "immediate": false,
+          "CPO": false
+        },
+        "formula": false
+      },
+      "content_pass": false,
+      "status": "fail",
+      "output_preview": "You've hit your limit \u00b7 resets 4am (Asia/Karachi)"
+    },
+    {
+      "id": "negative_out_of_scope_hr",
+      "category": "negative",
+      "checks": {
+        "content": {
+          "outside|beyond|not within|not a human resource|not an hr|supply chain|not equipped|cannot|can't|unable": false
+        }
+      },
+      "content_pass": false,
+      "status": "fail",
+      "output_preview": "You've hit your limit \u00b7 resets 4am (Asia/Karachi)"
+    },
+    {
+      "id": "negative_out_of_scope_tax",
+      "category": "negative",
+      "checks": {
+        "content": {
+          "outside|beyond|not within|not a tax|tax advisory|supply chain|not equipped|cannot|can't|unable": false
+        }
+      },
+      "content_pass": false,
+      "status": "fail",
+      "output_preview": "You've hit your limit \u00b7 resets 4am (Asia/Karachi)"
+    }
+  ]
+}

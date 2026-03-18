@@ -1,0 +1,82 @@
+[
+  {
+    "query": "Bring me up to speed on Project Nighthawk before my call with the CFO",
+    "should_trigger": true
+  },
+  {
+    "query": "Give me a situation brief on the vendor dispute — what is the current status?",
+    "should_trigger": true
+  },
+  {
+    "query": "Prep me for the budget conversation with Omar — what do I need to know?",
+    "should_trigger": true
+  },
+  {
+    "query": "What is the situation with the Karachi office expansion?",
+    "should_trigger": true
+  },
+  {
+    "query": "Quick brief on Ayesha before I call her about the pipeline numbers",
+    "should_trigger": true
+  },
+  {
+    "query": "What do I need to know before the board presentation on Thursday?",
+    "should_trigger": true
+  },
+  {
+    "query": "Catch me up on the facility lease — what is the history and where are we now?",
+    "should_trigger": true
+  },
+  {
+    "query": "Background on the compliance audit — what has happened so far?",
+    "should_trigger": true
+  },
+  {
+    "query": "Decision brief: should we renew the vendor contract or switch providers?",
+    "should_trigger": true
+  },
+  {
+    "query": "What is the history on the analytics platform migration?",
+    "should_trigger": true
+  },
+  {
+    "query": "Give me my daily digest — what do I need to know today?",
+    "should_trigger": false
+  },
+  {
+    "query": "Load HR and Finance context for the restructuring project",
+    "should_trigger": false
+  },
+  {
+    "query": "Prep me for the 2pm exec weekly — agenda items, stakeholder notes, last meeting decisions",
+    "should_trigger": false
+  },
+  {
+    "query": "Brain dump my priorities and sort them by importance",
+    "should_trigger": false
+  },
+  {
+    "query": "Search all layers for everything we know about Omar",
+    "should_trigger": false
+  },
+  {
+    "query": "Delegate the contract review to Bilal by Thursday",
+    "should_trigger": false
+  },
+  {
+    "query": "What is the weekly project status? RAG across all projects",
+    "should_trigger": false
+  },
+  {
+    "query": "Add a new project to workplace memory — Project Phoenix, P1, Omar owns it",
+    "should_trigger": false
+  },
+  {
+    "query": "Configure the agentic office and create work.local.md",
+    "should_trigger": false
+  },
+  {
+    "query": "Synthesise the meeting notes — decisions, actions, deferred items",
+    "should_trigger": false
+  }
+]

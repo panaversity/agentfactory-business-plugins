@@ -1,0 +1,218 @@
+# Supply Chain Configuration
+# Copy this file to supply-chain.local.md and customise for your organisation.
+# All skills and agents read this file to apply your policies, thresholds, and contacts.
+
+## 1. Organisation Context
+
+- Organisation: [Your Company Name]
+- Industry: [e.g. Manufacturing, Retail, FMCG, Pharma]
+- Currency: GBP
+- Financial year end: [e.g. 31 March]
+- ERP system: [e.g. SAP S/4HANA, Oracle, NetSuite, none]
+
+---
+
+## 2. Vendor Classification Register
+
+### Tier 1: Strategic (high risk, high impact)
+
+| Vendor | Annual Spend | Products/Services | Key Note |
+|--------|-------------|-------------------|----------|
+| [e.g. KIFTL] | [e.g. GBP 2.1M] | [e.g. Packaging — all corrugated] | [e.g. Sole-source, 6-month requalification] |
+| | | | |
+| | | | |
+
+### Tier 2: Tactical (low risk, high impact)
+
+| Vendor | Annual Spend | Products/Services | Key Note |
+|--------|-------------|-------------------|----------|
+| | | | |
+| | | | |
+
+### Tier 3: Commodity (low risk, low impact)
+
+| Vendor | Annual Spend | Products/Services | Key Note |
+|--------|-------------|-------------------|----------|
+| | | | |
+| | | | |
+
+### Tier 4: Bottleneck (high risk, low impact)
+
+> Bottleneck vendors are the most dangerous and most neglected. Low spend means they
+> get ignored, but sole-source dependency means their failure halts production.
+> List ALL sole-source or long-lead-time vendors here regardless of spend.
+
+| Vendor | Annual Spend | Products/Services | Key Note |
+|--------|-------------|-------------------|----------|
+| [e.g. MetalFab] | [e.g. GBP 45K] | [e.g. Custom tooling] | [e.g. Sole-source, 12-week lead time] |
+| | | | |
+
+### Watch List (vendors under active monitoring)
+
+| Vendor | Reason | Since | Review Frequency |
+|--------|--------|-------|-----------------|
+| | | | |
+
+---
+
+## 3. Invoice Tolerance Rules
+
+### Price Variance Tolerance by Category
+
+| Category | Price Tolerance | Quantity Tolerance | Notes |
+|----------|----------------|-------------------|-------|
+| Direct materials | +/- 2% | +/- 0% (pay for what arrived) | Price is contract-fixed |
+| Indirect / MRO | +/- 5% | +/- 5% | |
+| Packaging | +/- 3% | +/- 2% | |
+| Services | +/- 0% | N/A | Must match contract exactly |
+| Freight | +/- 10% | N/A | Fuel surcharge variability |
+| Utilities | +/- 15% | N/A | Tariff variability |
+
+### Escalation Thresholds
+
+- Materiality threshold (auto-approve below): GBP 500
+- Category manager escalation: price variance > GBP 5,000
+- CPO escalation: price variance > GBP 25,000
+- Finance Director escalation: any bank detail change (immediate)
+
+### Fraud Flags (always escalate immediately)
+
+- Bank detail change on any vendor
+- Duplicate invoice number from same vendor
+- Invoice from vendor not on approved list
+- Invoice with no matching PO
+
+---
+
+## 4. Risk Thresholds
+
+### OTD (On-Time Delivery) by Vendor Tier
+
+| Tier | SLA Target | Amber Threshold | Red Threshold | Review Frequency |
+|------|-----------|-----------------|---------------|-----------------|
+| Tier 1 Strategic | 95% | < 90% | < 85% | Monthly |
+| Tier 2 Tactical | 90% | < 85% | < 80% | Quarterly |
+| Tier 3 Commodity | 85% | < 80% | < 75% | Annual |
+| Tier 4 Bottleneck | 95% | < 90% | < 85% | Quarterly (same as Strategic) |
+
+### Quality Rejection Thresholds
+
+| Category | Acceptable | Amber | Red |
+|----------|-----------|-------|-----|
+| Direct materials | < 2% | 2-5% | > 5% |
+| Indirect materials | < 5% | 5-10% | > 10% |
+| Packaging | < 1% | 1-3% | > 3% |
+
+### CPO Hot Alert Triggers (immediate escalation, not weekly brief)
+
+- Any Strategic vendor OTD drops below 75% in a single week
+- Any vendor financial distress signal (credit downgrade, CCJ, CVA filing)
+- Any Bottleneck vendor delivery failure
+- Any bank detail change notification
+
+---
+
+## 5. Carrier SLAs
+
+| Carrier | Contracted OTD | Cost/kg Target | Service Modes | Lanes |
+|---------|---------------|----------------|---------------|-------|
+| [e.g. DHL Express] | 98% | GBP 1.20/kg | Standard, Expedited | UK domestic |
+| [e.g. Kuehne+Nagel] | 95% | GBP 0.85/kg | Standard | EU cross-border |
+| | | | | |
+
+### Market Benchmark Rates
+
+| Mode | Benchmark Rate | Source | Last Updated |
+|------|---------------|--------|-------------|
+| UK domestic road | GBP 0.95/kg | [e.g. FTA rate index] | |
+| EU road | EUR 1.10/kg | | |
+| Air freight | GBP 3.50/kg | | |
+
+### Expedited Freight Alert
+
+- Threshold: expedited freight > 10% of total logistics spend triggers root cause investigation
+- Current expedited %: [fill in]
+
+---
+
+## 6. Escalation Contacts
+
+| Role | Name | Email | When to Escalate |
+|------|------|-------|-----------------|
+| CPO (Chief Procurement Officer) | | | Strategic vendor distress, spend > threshold, policy decisions |
+| Finance Director | | | Bank detail changes, fraud flags, budget impact > GBP 50K |
+| Category Manager — Packaging | | | Packaging vendor issues, price variances |
+| Category Manager — Direct Materials | | | Raw material supply, quality failures |
+| Category Manager — Logistics | | | Carrier performance, expedited freight |
+| Procurement Team Lead | | | Maverick spend alerts, operational escalations |
+| Operations Lead | | | GR discrepancies, quality rejections, production impact |
+
+---
+
+## 7. Commodity Indices to Monitor
+
+| Commodity | Index | Movement Trigger | Action |
+|-----------|-------|-----------------|--------|
+| Steel | LME Steel HRC | +/- 8% | Generate renegotiation brief |
+| Packaging (paper) | FOEX PIX | +/- 8% | Generate renegotiation brief |
+| Energy / fuel | Brent Crude | +/- 15% | Review freight rate impact |
+| Chemicals | ICIS | +/- 10% | Alert category manager |
+| [Add your commodities] | | | |
+
+---
+
+## 8. Contract Register
+
+| Vendor | Contract Description | Start Date | End Date | Notice Period | Auto-Renew? | Category Manager |
+|--------|---------------------|-----------|----------|---------------|-------------|-----------------|
+| | | | | | | |
+| | | | | | | |
+
+> The procurement-calendar-agent monitors notice deadlines. Missing a notice
+> period can extend a contract unwillingly by 12+ months.
+
+---
+
+## 9. Certification Register
+
+| Vendor | Certification | Expiry Date | Required? | Notes |
+|--------|--------------|-------------|-----------|-------|
+| | ISO 9001 | | Yes/No | |
+| | ISO 14001 | | Yes/No | |
+| | IATF 16949 | | Yes/No | Automotive only |
+| | GDPR DPA | | Yes/No | Any vendor processing personal data |
+| | Modern Slavery Statement | | Yes/No | UK vendors > GBP 36M turnover |
+
+---
+
+## 10. Tier 2 Supplier Mapping (Strategic Vendors Only)
+
+> For each Strategic (Tier 1) vendor, document their critical sub-suppliers.
+> The vendor-health-monitor runs weekly Tier 2 signal scans.
+
+| Tier 1 Vendor | Tier 2 Supplier | What They Supply | Financial Visibility? | Single Source to Tier 1? |
+|--------------|----------------|-----------------|----------------------|------------------------|
+| | | | Yes/No | Yes/No |
+| | | | | |
+
+---
+
+## 11. Statutory Deadlines
+
+| Requirement | Frequency | Due Date | Affected Vendors |
+|------------|-----------|---------|-----------------|
+| Modern Slavery Act statements | Annual | Anniversary of statement | UK vendors > GBP 36M turnover |
+| GDPR DPA reviews | Annual | | Vendors processing personal data |
+| Sanctions screening refresh | Quarterly | | All vendors |
+| Trade compliance audit | [As required] | | Vendors in restricted geographies |
+
+---
+
+## 12. Approved Vendor List
+
+> Invoices from vendors NOT on this list are flagged as exceptions.
+
+| Vendor | Approved Since | Categories | Status |
+|--------|---------------|-----------|--------|
+| | | | Active / Under Review / Suspended |
+| | | | |

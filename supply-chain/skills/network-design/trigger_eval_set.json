@@ -1,0 +1,82 @@
+[
+  {
+    "query": "We're considering opening a new distribution centre in Wroclaw, Poland to serve our growing EU customer base. Can you compare our current UK-only network against a dual-DC setup?",
+    "should_trigger": true
+  },
+  {
+    "query": "What happens to our supply chain if the Suez Canal is disrupted for 3 months? We ship 60% of inbound materials via that route from South-East Asia",
+    "should_trigger": true
+  },
+  {
+    "query": "We just acquired a company with overlapping distribution in the Midlands — should we consolidate into one DC or keep both? Model the scenarios for me",
+    "should_trigger": true
+  },
+  {
+    "query": "Our demand in the Nordics has grown 35% this year. Should we add a Scandinavian warehouse or continue serving from our Dutch DC? I need a break-even volume analysis",
+    "should_trigger": true
+  },
+  {
+    "query": "with all these tariff changes, we're thinking about nearshoring some production from China to Turkey. can you model what that does to our total landed cost and transit times?",
+    "should_trigger": true
+  },
+  {
+    "query": "If fuel costs rise another 20%, which of our current network scenarios becomes most robust? We're trying to future-proof the design",
+    "should_trigger": true
+  },
+  {
+    "query": "We need to decide between cross-docking in Frankfurt vs holding inventory in a full DC there. The trade-off is service level vs inventory carrying cost. Can you run the scenario analysis?",
+    "should_trigger": true
+  },
+  {
+    "query": "Our company is evaluating reshoring our electronics assembly from Shenzhen back to the UK. What are the total network cost implications including facility, labour, logistics, and customs?",
+    "should_trigger": true
+  },
+  {
+    "query": "Help me define the objective function for our network optimisation — should we optimise for cost, service level, or carbon? We're trying to hit a 30% Scope 3 reduction target",
+    "should_trigger": true
+  },
+  {
+    "query": "What's the break-even volume for justifying a new DC in the Czech Republic? Current setup is Birmingham only, serving 500 orders/month to Central Europe",
+    "should_trigger": true
+  },
+  {
+    "query": "Review our top 5 carrier OTD rates and produce a quarterly performance scorecard with damage claims and cost per kg",
+    "should_trigger": false
+  },
+  {
+    "query": "Reconcile this invoice from Brenntag against the PO and goods receipt — quantities don't match",
+    "should_trigger": false
+  },
+  {
+    "query": "Analyze our procurement spend by category and find vendor consolidation opportunities",
+    "should_trigger": false
+  },
+  {
+    "query": "Our strategic steel supplier's credit rating just dropped to CCC — assess the risk across all five dimensions",
+    "should_trigger": false
+  },
+  {
+    "query": "Draft a non-renewal notice for our packaging contract with Global Packaging Ltd — the notice deadline is in 30 days",
+    "should_trigger": false
+  },
+  {
+    "query": "Generate the weekly supply chain brief for the CPO — traffic lights, contract calendar, and savings pipeline",
+    "should_trigger": false
+  },
+  {
+    "query": "Help me classify a new vendor using the Kraljic matrix — they're our only source for a custom machined part",
+    "should_trigger": false
+  },
+  {
+    "query": "Our expedited freight is 18% of total freight spend. What's the root cause — is it a logistics or upstream problem?",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a corrective action letter to our steel supplier about their declining OTD trend — they've been below 90% for 3 months",
+    "should_trigger": false
+  },
+  {
+    "query": "Build me a transportation management dashboard in Python that pulls data from our TMS API",
+    "should_trigger": false
+  }
+]

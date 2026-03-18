@@ -1,0 +1,11 @@
+{
+  "eval_id": 3,
+  "eval_name": "negative-vague-persona",
+  "prompt": "Write a user story: As a user, I want to export my data so that I can use it in other tools.",
+  "assertions": [
+    "The output does NOT use 'a user' as the persona",
+    "A named persona is used (either from product.local.md or a reasonable named alternative)",
+    "The skill flags that 'a user' is not acceptable and explains why",
+    "The 'so that' is improved to describe a user outcome, not just a system action"
+  ]
+}

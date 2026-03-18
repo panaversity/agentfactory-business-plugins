@@ -1,0 +1,82 @@
+[
+  {
+    "query": "Brain dump: finish the chapter draft, chase Omar, prep for Monday, review the contract, send content to Ayesha",
+    "should_trigger": true
+  },
+  {
+    "query": "Prioritise my tasks for today — I have too many things and need to focus on what matters",
+    "should_trigger": true
+  },
+  {
+    "query": "Sort my priorities into P1 P2 P3 and show me the critical path for today",
+    "should_trigger": true
+  },
+  {
+    "query": "What should I work on first? Help me figure out my daily priorities",
+    "should_trigger": true
+  },
+  {
+    "query": "Weekly planning session — set my critical path for the week ahead",
+    "should_trigger": true
+  },
+  {
+    "query": "Capture everything in my head right now and organise it by priority",
+    "should_trigger": true
+  },
+  {
+    "query": "Backlog review — drop the dead items and re-prioritise what remains",
+    "should_trigger": true
+  },
+  {
+    "query": "What is most important right now? I am overwhelmed and need clarity",
+    "should_trigger": true
+  },
+  {
+    "query": "Cross-domain plan for the office relocation — HR, Finance, Ops all need action items",
+    "should_trigger": true
+  },
+  {
+    "query": "Sort my priorities — I have 12 items and I do not know what to tackle first",
+    "should_trigger": true
+  },
+  {
+    "query": "Delegate the analytics brief to Omar with a handoff message",
+    "should_trigger": false
+  },
+  {
+    "query": "Add a task to my list: review the Q3 report by Friday",
+    "should_trigger": false
+  },
+  {
+    "query": "Give me my daily digest with today's calendar and priorities",
+    "should_trigger": false
+  },
+  {
+    "query": "What is the weekly project status? RAG across all projects",
+    "should_trigger": false
+  },
+  {
+    "query": "Prep me for the exec weekly meeting with agenda context",
+    "should_trigger": false
+  },
+  {
+    "query": "Search all memory layers for everything about Project Nighthawk",
+    "should_trigger": false
+  },
+  {
+    "query": "Load cross-domain context from HR and Finance for onboarding",
+    "should_trigger": false
+  },
+  {
+    "query": "Give me a situation brief on the vendor dispute",
+    "should_trigger": false
+  },
+  {
+    "query": "Configure the agentic office and set up work.local.md",
+    "should_trigger": false
+  },
+  {
+    "query": "Mark the analytics brief task as complete — finished this morning",
+    "should_trigger": false
+  }
+]

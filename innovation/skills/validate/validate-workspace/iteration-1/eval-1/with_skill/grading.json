@@ -1,0 +1,42 @@
+{
+  "eval_id": 1,
+  "eval_name": "bml-analysis-pilot-results",
+  "expectations": [
+    {
+      "text": "Each of 3 assumptions gets specific outcome with evidence",
+      "passed": true,
+      "evidence": "All 3 assumptions assessed with per-company evidence"
+    },
+    {
+      "text": "A-001 (WTP $2,000) assessed as PARTIALLY VALIDATED",
+      "passed": true,
+      "evidence": "Pricing assumption assessed with mixed evidence: 2 full price, 1 negotiated, 1 discount, 1 churned"
+    },
+    {
+      "text": "A-002 (50%+ time reduction) assessed based on actual measurements",
+      "passed": true,
+      "evidence": "Time reduction assessed: Company A 62%, Company B 45% -- mixed results noted"
+    },
+    {
+      "text": "Unexpected learnings surfaced (ERP integration, price sensitivity)",
+      "passed": true,
+      "evidence": "ERP integration complaint and price sensitivity identified as new signals"
+    },
+    {
+      "text": "Pivot-or-persevere recommendation is specific",
+      "passed": true,
+      "evidence": "Specific recommendation with pricing adjustment and ERP integration priority"
+    },
+    {
+      "text": "Evidence quality assessed honestly (5 pilots = small sample)",
+      "passed": true,
+      "evidence": "Confidence levels flagged, small sample acknowledged"
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  }
+}

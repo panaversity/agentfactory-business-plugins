@@ -1,0 +1,9 @@
+{
+  "eval_id": 3,
+  "eval_name": "negative-single-feature-spec",
+  "prompt": "Write a spec for adding a dark mode toggle to our settings page. It's one feature for the frontend team, should take about a sprint.",
+  "assertions": [
+    "The skill recognises this as a single-feature scope and recommends /write-spec instead of /prd — producing a 10-section PRD for a settings toggle is over-engineering the documentation",
+    "If a PRD is produced anyway, it should explicitly note that a feature spec would be more appropriate for this scope"
+  ]
+}

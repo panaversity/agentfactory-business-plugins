@@ -1,0 +1,70 @@
+{
+  "skill_name": "prioritise",
+  "evals": [
+    {
+      "id": 1,
+      "name": "rice-scoring-backlog",
+      "prompt": "Prioritise these 5 backlog items using RICE:\n1. Bulk export (requested by 3 enterprise customers)\n2. SSO integration (blocking 2 enterprise deals worth $120K ARR)\n3. Dashboard performance (page load >5s, affecting all users)\n4. Mobile app notifications (nice to have, low effort)\n5. API rate limiting (technical debt, no customer requests)",
+      "expected_output": "RICE scoring table with assumptions shown, three mandatory challenges completed, and quarterly priority decision output.",
+      "files": [],
+      "expectations": [
+        "RICE table with Reach, Impact, Confidence, Effort, Score, and Rank columns — the table format enables stakeholders to challenge individual scores rather than debating abstract priorities",
+        "All scoring assumptions are visible (not just numbers) — a RICE score from hidden assumptions is worse than no score because it creates false precision",
+        "Strategic Override Test completed — SSO may be an override candidate given the $120K ARR deal dependency, which is a legitimate strategic override that should be documented",
+        "Data Gap Test identifies low-confidence items and recommends discovery spikes — low-confidence, high-effort items committed to sprints are the #1 source of wasted engineering capacity",
+        "What Would We Regret test completed — this intuition check catches errors that framework scores reliably miss, like underscoring a burning platform issue",
+        "EXPLICITLY NOT BUILDING list is present — the not-building list is as important as the build list because it prevents zombie items from reappearing each quarter",
+        "Discovery spike recommended for any low-confidence, high-effort item — discovery before commitment is cheaper than pivoting mid-sprint"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "single-feature-evaluation",
+      "prompt": "A key customer is asking us to build a Slack integration. They say they'll churn without it. Should we build it? It would take about 3 sprints.",
+      "expected_output": "A single feature evaluation with recommendation (BUILD / DEFER / DECLINE / DISCOVERY SPIKE), including opportunity cost analysis.",
+      "files": [],
+      "expectations": [
+        "Uses the single feature evaluation format, not the full RICE framework — a yes/no decision on one feature requires different analysis than ranking a backlog",
+        "Includes opportunity cost — 'what does NOT get built if we build this?' is the question most feature requests fail to consider",
+        "Frequency of request is assessed (one customer vs pattern) — building for one customer's threat is different from building for a market pattern",
+        "Confidence in value is rated with basis — how sure are we that building this actually prevents the churn?",
+        "Recommendation is one of BUILD / DEFER / DECLINE / DISCOVERY SPIKE — not a wishy-washy 'it depends'"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "value-vs-effort-quick-sort",
+      "prompt": "I don't need a complex framework. Just help me do a quick value vs effort 2x2 for these items: notification preferences, bulk user import, SSO, dark mode, API webhooks, custom dashboard layouts.",
+      "expected_output": "A Value vs Effort 2x2 matrix placing items into quadrants (Quick Wins, Strategic Bets, Fill-ins, Avoid).",
+      "files": [],
+      "expectations": [
+        "Uses Value vs Effort matrix as requested, not RICE — the user explicitly asked for a simpler framework and should get one",
+        "Items are placed in four quadrants (high-value/low-effort, high-value/high-effort, low-value/low-effort, low-value/high-effort) — the quadrant labels help stakeholders immediately see what category each item falls into",
+        "Assumptions behind value and effort estimates are visible — even a 2x2 can mislead if the placement rationale is hidden",
+        "The three mandatory challenges are still run after the framework — quick frameworks are more prone to blind spots, not less"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "negative-sprint-planning",
+      "prompt": "Help me plan our next sprint. I need to decide which stories to pull in based on team velocity of 42 points.",
+      "expected_output": "The skill should redirect to /sprint-planning — this is sprint capacity planning, not strategic prioritisation.",
+      "files": [],
+      "expectations": [
+        "The skill does NOT perform sprint planning — sprint planning involves capacity allocation and story point math, not strategic prioritisation",
+        "Redirects to /sprint-planning for sprint-level work allocation"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "negative-metrics-review",
+      "prompt": "Review our product metrics for Q2. What's our MRR, churn rate, and NPS trend?",
+      "expected_output": "The skill should redirect to /metrics-review — this is a metrics review request, not a prioritisation exercise.",
+      "files": [],
+      "expectations": [
+        "The skill does NOT attempt to review metrics — metrics review is a separate workflow from prioritisation",
+        "Redirects to /metrics-review for product analytics review"
+      ]
+    }
+  ]
+}

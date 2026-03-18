@@ -1,0 +1,9 @@
+{
+  "eval_id": 5,
+  "eval_name": "negative-sprint-planning-request",
+  "prompt": "Help me plan our next sprint. We have a velocity of 42 points and need to pull stories from the backlog.",
+  "assertions": [
+    "The skill does NOT perform sprint planning",
+    "Redirects to /sprint-planning for sprint-level planning"
+  ]
+}

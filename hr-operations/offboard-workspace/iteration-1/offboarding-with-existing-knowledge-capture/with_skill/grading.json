@@ -1,0 +1,40 @@
+{
+  "expectations": [
+    {
+      "text": "References and integrates with the existing /knowledge capture plan rather than creating a duplicate knowledge capture workflow",
+      "passed": true,
+      "evidence": "Lines 11-20: 'NOTE ON KNOWLEDGE CAPTURE: Knowledge capture has already been initiated via /knowledge. Three sessions are scheduled covering: 1. Data pipeline architecture, 2. Vendor contracts, 3. Team processes. These sessions are referenced below where they intersect with the handover timeline. This plan covers the remaining offboarding activities.' Lines 126-130: 'The 3 scheduled /knowledge sessions...will feed directly into handover topics 1, 3, and 4.'"
+    },
+    {
+      "text": "Handover plan timeline aligns with the 3 scheduled knowledge capture sessions",
+      "passed": true,
+      "evidence": "Lines 126-130: 'The 3 scheduled /knowledge sessions (data pipeline architecture, vendor contracts, team processes) will feed directly into handover topics 1, 3, and 4. Raj should reference these capture outputs in his written handover plan rather than duplicating them.' Handover areas include the same domains, building on rather than duplicating the capture sessions."
+    },
+    {
+      "text": "Exit interview questions focus on organisational feedback rather than technical knowledge",
+      "passed": true,
+      "evidence": "Exit interview questions (lines 150-167) focus on: 'What prompted you to start looking', 'What has been most frustrating', 'What should we protect', 'What do you think needs to change', 'What advice would you give your successor'. No technical architecture or system-specific questions -- those are handled by /knowledge sessions."
+    },
+    {
+      "text": "IT access removal checklist is comprehensive for a Head of Data Engineering role",
+      "passed": true,
+      "evidence": "IT Access Inventory table (lines 227-243) lists 13 specific system categories: email, Slack/Teams, HRIS, source control (GitHub/GitLab), cloud platform (AWS/GCP/Azure), data warehouse (Snowflake/BigQuery), CI/CD pipelines (Airflow/dbt), monitoring (Datadog/PagerDuty), VPN, SSO, password manager, vendor portals, physical access. Notes Raj likely has elevated/admin access requiring thorough audit."
+    },
+    {
+      "text": "Includes rehire eligibility documentation in the last-day checklist",
+      "passed": true,
+      "evidence": "Line 193-194: 'Document rehire eligibility decision — [HRBP] — by 2 May'. Also in exit interview output template, line 174: 'Rehire eligible: [YES / NO / CONDITIONAL] — per HR decision'."
+    },
+    {
+      "text": "All checklist items have specific dates and owners assigned",
+      "passed": true,
+      "evidence": "Every action item follows the format: description — [owner] — by [date]. Examples: 'Acknowledge resignation in writing; confirm 6-week notice — [HRBP] — by 22 March', 'Compile full list of Raj's system access — [IT Lead] — by 28 March'. Critical dates summary table (lines 274-286) consolidates all dates with owners."
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  }
+}

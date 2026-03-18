@@ -1,0 +1,53 @@
+{
+  "skill_name": "executive-brief",
+  "evals": [
+    {
+      "id": 1,
+      "name": "pre-meeting-situation-brief",
+      "prompt": "Bring me up to speed on Project Nighthawk before my call with the CFO in 30 minutes. I need the current status, what the key risks are, what the CFO is likely to push on, and my recommended approach for the conversation.",
+      "expected_output": "A situation brief with one-sentence summary, context and history, current status, the key question to resolve, stakeholder positions (CFO's likely concerns and approach), risks, and a specific recommended approach based on work.local.md context.",
+      "files": [],
+      "expectations": [
+        "Brief includes a one-sentence summary at the top — the most senior people read the summary first",
+        "Stakeholder positions section uses work.local.md person entries to provide specific guidance about the CFO's communication style and likely concerns, not generic stakeholder advice",
+        "YOUR RECOMMENDED APPROACH section provides specific, actionable guidance based on work.local.md context — not generic conversation tips",
+        "Brief is appropriately sized — a quick brief for routine meetings (3-4 sections) or full brief for high-stakes meetings (all sections)"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "person-brief-before-call",
+      "prompt": "What do I need to know before I call Ayesha? Give me her current focus, how to approach the conversation, and anything I should be aware of.",
+      "expected_output": "A person brief covering Ayesha's role, current focus, communication style, today's context, specific approach guidance, and any sensitivities — all sourced from work.local.md person entry.",
+      "files": [],
+      "expectations": [
+        "Brief is identified as TYPE 3 (person brief) and loads Ayesha's entry from work.local.md Layer 2 (Team)",
+        "Output includes communication style, current focus, and specific approach tips — not generic professional advice",
+        "Any sensitivity flags from the person entry are applied appropriately (not surfaced in shared outputs)",
+        "One-sentence summary captures the most important thing to know before the call"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "negative-should-use-digest",
+      "prompt": "What is happening today? Give me my morning briefing with today's meetings, open delegations, and what I should focus on.",
+      "expected_output": "This query should be handled by digest, not executive-brief. A daily morning briefing with calendar and delegation overview is a digest function.",
+      "files": [],
+      "expectations": [
+        "This query is about a daily overview of today's activities — it matches digest triggers (what's happening today, morning briefing, daily digest)",
+        "Executive-brief produces situation briefs for specific subjects (meetings, decisions, people, projects), not daily overviews"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "negative-should-use-context-loader",
+      "prompt": "Load HR and Finance context for the restructuring project. I need cross-domain background before I start working on the proposal.",
+      "expected_output": "This query should be handled by context-loader, not executive-brief. Cross-domain context injection before starting work is a context-loader function.",
+      "files": [],
+      "expectations": [
+        "This query is about loading cross-domain context before an endeavour — it matches context-loader triggers (load context, cross-domain context, context from HR, context from finance)",
+        "Executive-brief produces situation briefs with recommended approaches, not raw context injection from domain agents"
+      ]
+    }
+  ]
+}

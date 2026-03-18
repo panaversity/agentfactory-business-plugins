@@ -1,0 +1,10 @@
+{
+  "eval_id": 4,
+  "eval_name": "negative-org-restructuring",
+  "prompt": "We're restructuring the engineering department from functional teams to product-aligned squads. Can you help me figure out which teams to create and who should lead each one?",
+  "assertions": [
+    "Does NOT produce an org restructuring plan",
+    "Redirects to the appropriate skill or resource for org planning",
+    "Does NOT attempt to assign people to teams"
+  ]
+}

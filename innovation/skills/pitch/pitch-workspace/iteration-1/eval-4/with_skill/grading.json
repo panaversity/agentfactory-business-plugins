@@ -1,0 +1,22 @@
+{
+  "eval_id": 4,
+  "eval_name": "negative-financial-model",
+  "expectations": [
+    {
+      "text": "Agent recognizes financial modeling request and redirects to financials skill",
+      "passed": false,
+      "evidence": "Agent did NOT redirect to /financials. Instead, it asked for data to build the model itself, explaining what it needs. It did note 'I can't calculate your unit economics without your actual numbers' but did not redirect to the financials skill."
+    },
+    {
+      "text": "Agent does NOT produce unit economics or runway models",
+      "passed": true,
+      "evidence": "Agent did not produce calculations -- it asked for data inputs first and listed what it would build. No actual CAC/LTV/runway numbers produced."
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 1,
+    "total": 2,
+    "pass_rate": 0.5
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "expectations": [
+    {
+      "text": "The skill does NOT perform sprint planning",
+      "passed": true,
+      "evidence": "The output does not perform sprint planning. It identifies the request as sprint planning, not story writing, and explains why it can't help: 'This request is about sprint planning (selecting stories from backlog to fill a velocity target), not about writing or refining user stories.'"
+    },
+    {
+      "text": "Redirects to /sprint-planning for sprint-level planning",
+      "passed": true,
+      "evidence": "Output recommends: 'Use /sprint-planning for sprint-level planning. That tool handles velocity-based story selection, capacity modeling, and sprint goal alignment.'"
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 0,
+    "total": 2,
+    "pass_rate": 1.0
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "eval_id": 5,
+  "eval_name": "negative-off-domain-code-request",
+  "prompt": "Write me a Python script that loads a CSV and generates a bar chart of monthly revenue.",
+  "assertions": [
+    "The skill does NOT produce a brief — this is a technical implementation request with no brief-related intent",
+    "If the skill somehow activates, it should redirect the user to appropriate tools rather than producing a brief around a code request"
+  ]
+}

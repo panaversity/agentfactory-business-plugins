@@ -1,0 +1,12 @@
+{
+  "eval_id": 2,
+  "eval_name": "single-feature-evaluation",
+  "prompt": "A key customer is asking us to build a Slack integration. They say they'll churn without it. Should we build it? It would take about 3 sprints.",
+  "assertions": [
+    "Uses the single feature evaluation format, not the full RICE framework",
+    "Includes opportunity cost — what does NOT get built if we build this?",
+    "Frequency of request is assessed (one customer vs pattern)",
+    "Confidence in value is rated with basis",
+    "Recommendation is one of BUILD / DEFER / DECLINE / DISCOVERY SPIKE"
+  ]
+}

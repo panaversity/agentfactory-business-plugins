@@ -1,0 +1,35 @@
+{
+  "expectations": [
+    {
+      "text": "Stories are grouped by persona (enterprise IT admin for SSO, individual user for magic link/password)",
+      "passed": true,
+      "evidence": "Output groups stories into 4 epics: 'Epic 1: SSO Authentication (Enterprise IT Admin)', 'Epic 2: Magic Link Authentication (Individual User)', 'Epic 3: Password Authentication (Individual User)', 'Epic 4: Cross-Flow Integration'. Personas are clearly labeled."
+    },
+    {
+      "text": "SSO, magic link, and password are separate epics or story groups",
+      "passed": true,
+      "evidence": "Three separate epics: Epic 1 (SSO, Stories 1-3), Epic 2 (Magic Link, Stories 4-5), Epic 3 (Password, Stories 6-8). Plus Epic 4 for cross-flow integration."
+    },
+    {
+      "text": "Each story is completable in 1-3 days by one engineer",
+      "passed": true,
+      "evidence": "All stories sized S (1 day or 1-2 days) or M (2-3 days). Sprint plan allocates across 3 engineers. No story exceeds 3 days."
+    },
+    {
+      "text": "Acceptance criteria use Given/When/Then format or equivalent testable statements",
+      "passed": true,
+      "evidence": "All ACs use 'Given X, when Y, then Z' format throughout all 11 stories. Each is independently testable."
+    },
+    {
+      "text": "Error states are covered for each auth flow (invalid credentials, expired links, SSO provider down)",
+      "passed": true,
+      "evidence": "SSO: malformed URL (S1), provider rejects (S2), provider down (S3). Magic link: expired (S5), reused (S5), tampered (S5), rate limit (S4), email service down (S4). Password: invalid creds (S7), lockout (S7), expired reset (S8). Comprehensive coverage."
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  }
+}

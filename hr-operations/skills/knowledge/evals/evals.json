@@ -1,0 +1,60 @@
+{
+  "skill_name": "knowledge",
+  "evals": [
+    {
+      "id": 1,
+      "name": "reactive-departure-sole-expert",
+      "prompt": "Our lead infrastructure engineer, David Park, just gave his 4-week notice. He's been here 8 years and is the only person who understands our deployment pipeline, our AWS architecture, and the vendor relationship with our hosting provider. Nobody else has access to these systems at the same level. His last day is March 28th. I need a knowledge capture plan immediately.",
+      "expected_output": "A high-risk knowledge capture plan with a scored risk assessment, prioritised knowledge areas, specific interview questions, and a capture session schedule that completes well before the last day — preventing the 'bus factor = 1' scenario that costs organisations an average of 6-12 months recovery time.",
+      "files": [],
+      "expectations": [
+        "Risk assessment scores HIGH (11-15 range) given 8-year tenure, sole expert status, undocumented knowledge, and no successor — this triggers the full capture programme protocol, not just a standard handover document",
+        "Identifies this as REACTIVE capture (departure confirmed) and prioritises accordingly — reactive capture has a fixed time window; the plan must front-load the highest-risk knowledge areas",
+        "Generates specific interview questions for each knowledge area (deployment pipeline, AWS architecture, vendor relationship) — generic questions miss the critical tacit knowledge; the questions must target what is ONLY in this person's head",
+        "Includes the 'what we should NOT try again' question — the skill's universal rules state this is often the most valuable institutional knowledge captured; 8 years of tribal knowledge about past failures is irreplaceable",
+        "Schedules capture sessions to complete by Week 3 of notice (not the final week) — the skill explicitly warns that departing employees are mentally disengaged in their final week; quality drops sharply",
+        "Output includes CONFIDENTIAL sensitivity label and begins with the mandatory header block — knowledge capture plans reveal organisational vulnerabilities (single points of failure) and must be handled accordingly",
+        "Specifies knowledge article output format with DRAFT status — every captured article must be reviewed for accuracy before being relied upon; marking as DRAFT prevents premature reliance"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "proactive-annual-knowledge-review",
+      "prompt": "We want to do a proactive knowledge audit across our finance team. Nobody is leaving — we just want to identify where our critical knowledge is concentrated and create a risk map. The team has 4 people: CFO (12 years), Financial Controller (6 years), AP/AR Manager (3 years), and a Junior Accountant (1 year).",
+      "expected_output": "A knowledge risk map identifying concentration risk across the finance team, with risk scores per team member and recommended proactive capture priorities — enabling the organisation to build resilience before a departure forces reactive scrambling.",
+      "files": [],
+      "expectations": [
+        "Identifies this as PROACTIVE capture (no departure planned) and adjusts the approach accordingly — proactive capture is systematic and can be thorough, not time-pressured; the plan should build knowledge articles over time, not all at once",
+        "Scores each team member using the five-factor risk assessment (tenure, role criticality, documentation level, successor readiness, client/revenue impact) — the CFO with 12 years tenure likely scores highest, but role criticality and documentation level may shift rankings",
+        "Does NOT classify the CFO as LOW RISK without verifying whether anyone else actually holds their knowledge — the skill's universal rules specifically warn against this: 'I thought [person] knew this too' is a common and expensive mistake",
+        "Recommends different capture methods based on the type of knowledge each person holds — interview-based for tacit/relationship knowledge, document review for procedural knowledge, pair working for technical skills transfer",
+        "Identifies specific knowledge areas for each team member rather than generic 'finance knowledge' — the CFO's board reporting relationships, the Controller's month-end close procedures, the AP/AR Manager's vendor payment terms are each distinct knowledge domains",
+        "Provides a prioritised capture schedule that does NOT require capturing everything immediately — proactive capture should target the highest-risk knowledge first and build a sustainable rhythm"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "negative-policy-lookup",
+      "prompt": "What's our company's maternity leave policy? I need to know how many weeks are covered and whether it's full pay or statutory.",
+      "expected_output": "The agent should recognise this is a policy lookup question and redirect to the appropriate skill, not attempt knowledge capture planning for a policy query.",
+      "files": [],
+      "expectations": [
+        "Does NOT create a knowledge capture plan — policy lookup is explicitly out of scope for /knowledge as stated in the skill description ('NOT for: policy lookup or FAQ queries')",
+        "Redirects to the appropriate skill or resource for policy queries — the skill description states 'use policy-lookup' for this type of request",
+        "Does NOT attempt to answer the policy question from general knowledge — company-specific policies require authoritative sources, not AI-generated answers"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "negative-onboarding-plan",
+      "prompt": "We have a new starter joining the data team next Monday. Can you create an onboarding plan covering their first 30-60-90 days?",
+      "expected_output": "The agent should recognise this is an onboarding task and redirect to the appropriate skill, not attempt to create an onboarding plan under the knowledge capture skill.",
+      "files": [],
+      "expectations": [
+        "Does NOT create an onboarding plan — onboarding is explicitly out of scope for /knowledge as stated in the skill description ('NOT for: onboarding plans (use onboarding)')",
+        "Redirects to the appropriate skill or resource for onboarding — the skill description states 'use onboarding' for this type of request",
+        "Does NOT confuse knowledge transfer (capturing from a departing employee) with onboarding (setting up a new employee) — these are opposite processes with different workflows"
+      ]
+    }
+  ]
+}

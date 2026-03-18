@@ -1,0 +1,22 @@
+[
+  {"query": "Review this vendor MSA and extract all obligations, SLAs, and key dates", "should_trigger": true},
+  {"query": "I need a risk analysis of our SaaS vendor agreement -- flag any unfavourable terms", "should_trigger": true},
+  {"query": "Summarise this contract for our non-legal leadership team in one page", "should_trigger": true},
+  {"query": "Our hosting contract is up for renewal in 4 months -- help me prepare the negotiation", "should_trigger": true},
+  {"query": "Extract the auto-renewal clauses and notice periods from all our vendor contracts", "should_trigger": true},
+  {"query": "This NDA seems one-sided -- what terms should I push back on?", "should_trigger": true},
+  {"query": "What are the liability caps and indemnity clauses in our MSA with Vendor X?", "should_trigger": true},
+  {"query": "Help me identify unfavourable terms in this statement of work before I sign it", "should_trigger": true},
+  {"query": "I need to understand the termination provisions and exit rights in our supplier agreement", "should_trigger": true},
+  {"query": "Extract the SLA targets and penalty clauses from our managed services contract", "should_trigger": true},
+  {"query": "Score and rank our vendors on a 1-5 scale across delivery, quality, and cost", "should_trigger": false},
+  {"query": "Reconcile these invoices against our purchase orders and receiving documents", "should_trigger": false},
+  {"query": "Build a risk register for our procurement operations", "should_trigger": false},
+  {"query": "Write a post-mortem for the service outage caused by our vendor yesterday", "should_trigger": false},
+  {"query": "Map our GDPR compliance obligations into a tracking register", "should_trigger": false},
+  {"query": "Design operational KPIs and metrics for our vendor management team", "should_trigger": false},
+  {"query": "Help me prepare for the ISO 27001 audit next month", "should_trigger": false},
+  {"query": "Create a project status report for the ERP migration steering committee", "should_trigger": false},
+  {"query": "Draft a procurement policy document for our purchasing department", "should_trigger": false},
+  {"query": "Help me set up a three-way match process for invoice validation", "should_trigger": false}
+]

@@ -1,0 +1,42 @@
+{
+  "eval_id": 2,
+  "eval_name": "bottom-up-market-sizing",
+  "expectations": [
+    {
+      "text": "Uses bottom-up methodology (count customers x price)",
+      "passed": true,
+      "evidence": "Bottom-up counting methodology used"
+    },
+    {
+      "text": "Step 1 counts addressable companies using verifiable sources",
+      "passed": true,
+      "evidence": "Sources referenced for counting"
+    },
+    {
+      "text": "Step 2 qualifies reachable subset by ICP criteria",
+      "passed": true,
+      "evidence": "Qualification criteria applied"
+    },
+    {
+      "text": "SOM represents realistic 3-5 year capture target",
+      "passed": true,
+      "evidence": "Conservative SOM estimate provided"
+    },
+    {
+      "text": "Value capture validation checks price vs value delivered",
+      "passed": true,
+      "evidence": "Value capture ratio checked"
+    },
+    {
+      "text": "3 pilot customers referenced as evidence base",
+      "passed": true,
+      "evidence": "Pilot data referenced in assumptions"
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  }
+}

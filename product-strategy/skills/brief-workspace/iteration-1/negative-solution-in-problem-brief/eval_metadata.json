@@ -1,0 +1,11 @@
+{
+  "eval_id": 4,
+  "eval_name": "negative-solution-in-problem-brief",
+  "prompt": "Write a problem brief about our slow dashboard loading times. The solution is to add a CDN and implement lazy loading for widgets.",
+  "assertions": [
+    "Output is a Problem Brief",
+    "The CDN and lazy loading solutions are NOT included in the brief body",
+    "If the user's suggested solution is mentioned at all, it appears only in a hypothesis section clearly labelled as hypothesis",
+    "The brief focuses on the problem (slow loading) with evidence and impact"
+  ]
+}

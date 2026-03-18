@@ -1,0 +1,56 @@
+{
+  "skill_name": "interview",
+  "evals": [
+    {
+      "id": 1,
+      "name": "interview-guide-onboarding",
+      "prompt": "Generate an interview guide for understanding how mid-market companies currently handle their onboarding process for new team members. We're considering building a team onboarding feature.",
+      "expected_output": "A 45-minute interview guide with four segments (Opening, Warm-up, Core Discovery, Wrap-up), following all five design principles, plus a note-taking template.",
+      "files": [],
+      "expectations": [
+        "Guide follows four-segment structure (Opening, Warm-up, Core Discovery, Wrap-up) — this structure prevents the common failure of jumping straight to product questions without building rapport",
+        "Questions ask about past behaviour, not hypothetical futures — 'tell me about the last time you onboarded someone' not 'would you use an onboarding tool?' because users are terrible predictors of their future behaviour",
+        "No mention of the proposed onboarding feature in the first half of the guide — introducing the solution too early anchors the interviewee and you get confirmation bias instead of discovery",
+        "Workaround probe is included ('how did you handle this before...') — workarounds reveal the real workflow and switching costs that determine adoption",
+        "Note-taking template includes Key observations, Notable quotes, Surprises, Follow-up questions — structured notes prevent the synthesis stage from relying on vague memories",
+        "Guide specifies participant criteria and target sample size — interviewing the wrong people or too few produces insights that don't generalise"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "interview-guide-enterprise-reporting",
+      "prompt": "I need to understand why enterprise customers keep asking for custom reporting. Create an interview guide targeting CFOs and finance directors at companies with 500+ employees.",
+      "expected_output": "A structured interview guide tailored for senior finance stakeholders with appropriate executive-level questions and time-conscious format.",
+      "files": [],
+      "expectations": [
+        "Questions are appropriate for C-level stakeholders — 'walk me through how reporting fits into your monthly close process' not 'how do you click to export a CSV'",
+        "Duration is appropriate for executive availability (30-45 minutes) — senior finance executives rarely have 60 minutes for product research",
+        "Core discovery focuses on reporting workflow pain, not feature wish lists — executives describe needs in terms of business outcomes, not UI requirements",
+        "Includes probes for budget and decision-making authority — understanding who buys and why is critical for enterprise product decisions",
+        "The five design principles are followed (behaviour over opinion, past over hypothetical, problem before solution, silence is data, why five times)"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "negative-survey-design",
+      "prompt": "Help me design a quantitative survey with Likert scales to measure customer satisfaction across our product features.",
+      "expected_output": "The skill should not activate — this is a quantitative survey design request, not a qualitative interview guide.",
+      "files": [],
+      "expectations": [
+        "The skill does NOT produce an interview guide for a survey request — surveys and interviews are fundamentally different research instruments",
+        "If the skill activates, it should clarify the distinction and redirect to appropriate survey design resources"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "negative-research-synthesis",
+      "prompt": "I have notes from 12 user interviews about our checkout flow. Help me synthesize the findings into a research report with themes and recommendations.",
+      "expected_output": "The skill should not activate — this is research synthesis from completed interviews, which should use /synthesize-research.",
+      "files": [],
+      "expectations": [
+        "The skill does NOT attempt to synthesize interview notes — the interview skill generates guides, not reports from completed research",
+        "Redirects to /synthesize-research for post-interview analysis"
+      ]
+    }
+  ]
+}

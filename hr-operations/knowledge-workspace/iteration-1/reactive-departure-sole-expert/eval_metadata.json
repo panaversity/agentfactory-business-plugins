@@ -1,0 +1,14 @@
+{
+  "eval_id": 1,
+  "eval_name": "reactive-departure-sole-expert",
+  "prompt": "Our lead infrastructure engineer, David Park, just gave his 4-week notice. He's been here 8 years and is the only person who understands our deployment pipeline, our AWS architecture, and the vendor relationship with our hosting provider. Nobody else has access to these systems at the same level. His last day is March 28th. I need a knowledge capture plan immediately.",
+  "assertions": [
+    "Risk assessment scores HIGH (11-15 range)",
+    "Identifies this as REACTIVE capture (departure confirmed)",
+    "Generates specific interview questions for each knowledge area",
+    "Includes the 'what we should NOT try again' question",
+    "Schedules capture sessions to complete by Week 3 of notice",
+    "Output includes CONFIDENTIAL sensitivity label and mandatory header block",
+    "Specifies knowledge article output format with DRAFT status"
+  ]
+}

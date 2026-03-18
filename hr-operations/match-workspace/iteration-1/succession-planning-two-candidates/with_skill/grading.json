@@ -1,0 +1,45 @@
+{
+  "expectations": [
+    {
+      "text": "Output includes CONFIDENTIAL sensitivity label",
+      "passed": true,
+      "evidence": "Header line 5: 'SENSITIVITY: CONFIDENTIAL -- HR AND HIRING MANAGER USE ONLY'. Also repeated at line 9: '[CONFIDENTIAL -- HR AND HIRING MANAGER USE ONLY]'."
+    },
+    {
+      "text": "Assesses both candidates across all six dimensions",
+      "passed": true,
+      "evidence": "Sarah Chen assessed on: Critical Skills (4 items), Experience (Important requirements section), Performance Trajectory (inferred through platform migration evidence), Readiness Indicators (operating above current level), Development Areas (2 gaps identified with types), Motivation/Career Intent (noted as not yet confirmed). James Okafor assessed on same 6 dimensions. Both receive ratings per dimension."
+    },
+    {
+      "text": "Classifies Sarah's board presentation gap as an EXPERIENCE GAP with a bridging plan",
+      "passed": true,
+      "evidence": "Line 81: 'Gap type: EXPERIENCE GAP. She likely has the communication capability; she needs structured exposure to board-level reporting formats.' Development plan includes: shadow VP in board meetings (Month 1), present one section of board update (Month 2), executive communication coaching (Month 2), present full board update independently (Month 5)."
+    },
+    {
+      "text": "Classifies James's team-scale gap as a meaningful risk factor with a bridging plan",
+      "passed": true,
+      "evidence": "Lines 138-143: 'Has not managed teams larger than 15 people...a 4x scale increase...fundamentally different from managing 60+...Gap type: EXPERIENCE GAP (large) — cannot be fully bridged in 6 months without unacceptable risk.' Bridging plan: expand to 25-30 engineers (Month 1), mid-point check (Month 6), expand to 35-40 (Month 6), full reassessment (Month 12)."
+    },
+    {
+      "text": "Provides a specific readiness classification for each candidate",
+      "passed": true,
+      "evidence": "Sarah Chen: 'Readiness: READY IN 6 MONTHS' (line 35). James Okafor: 'Readiness: READY IN 12 MONTHS' (line 120). Both use the skill's defined classification system."
+    },
+    {
+      "text": "Does NOT make a specific promotion commitment",
+      "passed": true,
+      "evidence": "Line 285-286: 'NEVER SAY: \"You will be the next VP\" or \"This role is yours.\" ALWAYS SAY: \"If development continues on this trajectory, senior leadership becomes a realistic pathway.\"' Overall recommendation states 'these assessments inform decisions; they are not decisions' (line 291-292)."
+    },
+    {
+      "text": "Includes retention risk assessment for each candidate",
+      "passed": true,
+      "evidence": "Sarah: 'Retention risk: HIGH if not developed' (line 94) with rationale about being 'a prime external hire target'. James: 'Retention risk: MEDIUM if not developed' (line 193) with rationale about timeline and market attractiveness. Comparative table also includes retention risk row."
+    }
+  ],
+  "summary": {
+    "passed": 7,
+    "failed": 0,
+    "total": 7,
+    "pass_rate": 1.0
+  }
+}

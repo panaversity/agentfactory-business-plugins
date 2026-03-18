@@ -1,0 +1,82 @@
+[
+  {
+    "query": "Plan my next 2-week innovation sprint — I need a learning goal, user stories, and acceptance criteria",
+    "should_trigger": true
+  },
+  {
+    "query": "Prioritise my product backlog by assumption risk and delivery value",
+    "should_trigger": true
+  },
+  {
+    "query": "Run a sprint retrospective — our sprint just ended and I need to synthesize learnings",
+    "should_trigger": true
+  },
+  {
+    "query": "Help me write user stories with acceptance criteria for our next sprint",
+    "should_trigger": true
+  },
+  {
+    "query": "We need to plan what to build this sprint — which assumptions should we target?",
+    "should_trigger": true
+  },
+  {
+    "query": "Do a mid-sprint check — we're at Day 7 and I want to assess if we're on track",
+    "should_trigger": true
+  },
+  {
+    "query": "Run a sprint review — demo what we built, measure the learning goal, get input",
+    "should_trigger": true
+  },
+  {
+    "query": "How should I scope this sprint? I have 3 developers and 15 story points of velocity",
+    "should_trigger": true
+  },
+  {
+    "query": "What's our sprint velocity telling us? Are we overcommitting? Help me calibrate",
+    "should_trigger": true
+  },
+  {
+    "query": "Plan an innovation sprint focused on testing our pricing assumption with 5 pilot customers",
+    "should_trigger": true
+  },
+  {
+    "query": "Brainstorm 100 product ideas for AP automation",
+    "should_trigger": false
+  },
+  {
+    "query": "Build a complete assumption map with three tiers",
+    "should_trigger": false
+  },
+  {
+    "query": "Analyze our 6-week pilot results — should we pivot?",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a pitch deck for my seed round investor meeting",
+    "should_trigger": false
+  },
+  {
+    "query": "Calculate my unit economics and runway",
+    "should_trigger": false
+  },
+  {
+    "query": "Create an interview guide for customer discovery",
+    "should_trigger": false
+  },
+  {
+    "query": "Do a competitive landscape analysis with market sizing",
+    "should_trigger": false
+  },
+  {
+    "query": "Build a go-to-market plan with ICP and 90-day calendar",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a Kubernetes deployment manifest for my service",
+    "should_trigger": false
+  },
+  {
+    "query": "Build me a business model canvas for my SaaS startup",
+    "should_trigger": false
+  }
+]

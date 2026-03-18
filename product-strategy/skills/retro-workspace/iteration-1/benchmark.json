@@ -1,0 +1,213 @@
+{
+  "metadata": {
+    "skill_name": "retro",
+    "skill_path": "/Users/mjs/Documents/code/panaversity-official/agentfactory-business-plugins/product-strategy/skills/retro/SKILL.md",
+    "executor_model": "claude-opus-4-6",
+    "analyzer_model": "claude-opus-4-6",
+    "timestamp": "2026-03-19T12:00:00Z",
+    "evals_run": [1, 2, 3, 4],
+    "runs_per_configuration": 1
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "eval_name": "retro-quick-reports",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 7,
+        "failed": 0,
+        "total": 7,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Q1 uses actual data (adoption 34% vs 50%, support -60%, NPS 6.2->7.1) without cherry-picking", "passed": true, "evidence": "All three data points with explicit values in Q1 section. Adoption miss flagged as WARN."},
+        {"text": "Q1 verdict reflects mixed results (PARTIALLY SOLVED), not binary", "passed": true, "evidence": "Verdict is 'PARTIALLY SOLVED' with nuanced summary."},
+        {"text": "Q2 flags 1-week delay and PDF export scope change as process issue", "passed": true, "evidence": "Q2 marks scope as [FAIL], calls it 'a process failure, not an engineering failure'."},
+        {"text": "Q3 evaluates metric quality (measurable, sensitive, right thing)", "passed": true, "evidence": "All three metrics evaluated on four dimensions. Metric quality rated MEDIUM."},
+        {"text": "Q4 produces specific, testable process changes", "passed": true, "evidence": "Three specific rules: scope change sign-off, discovery funnel, failure thresholds."},
+        {"text": "PRODUCT.LOCAL.MD UPDATES recommends quality rules", "passed": true, "evidence": "Three quality rules recommended."},
+        {"text": "Follow-on actions have owners and due dates", "passed": true, "evidence": "Five actions with owners and dates."}
+      ]
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "retro-quick-reports",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.14,
+        "passed": 1,
+        "failed": 6,
+        "total": 7,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Q1 uses actual data (adoption 34% vs 50%, support -60%, NPS 6.2->7.1) without cherry-picking", "passed": true, "evidence": "Data present in metrics table and What Didn't Go Well."},
+        {"text": "Q1 verdict reflects mixed results (PARTIALLY SOLVED), not binary", "passed": false, "evidence": "No explicit verdict synthesized."},
+        {"text": "Q2 flags 1-week delay and PDF export scope change as process issue", "passed": false, "evidence": "Scope change mentioned as bullet point, not treated as central process issue."},
+        {"text": "Q3 evaluates metric quality (measurable, sensitive, right thing)", "passed": false, "evidence": "No metrics quality evaluation at all."},
+        {"text": "Q4 produces specific, testable process changes", "passed": false, "evidence": "Action items are vague directions, not specific rules."},
+        {"text": "PRODUCT.LOCAL.MD UPDATES recommends quality rules", "passed": false, "evidence": "No such section exists."},
+        {"text": "Follow-on actions have owners and due dates", "passed": false, "evidence": "No owners or due dates on action items."}
+      ]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "retro-successful-launch",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Q1 verdict reflects exceeded targets", "passed": true, "evidence": "Verdict: SOLVED. 'Exceeded its adoption target by 12 percentage points.'"},
+        {"text": "Q2 delivery shows all-green with WHY documentation", "passed": true, "evidence": "All five items [PASS]. Explains WHY: clear spec, locked scope, team confidence."},
+        {"text": "Q4 produces process observations despite success", "passed": true, "evidence": "Three forward-looking improvements including team confidence tracking."},
+        {"text": "Retro documents what went well, not only problems", "passed": true, "evidence": "Overwhelmingly success-focused. Captures replicable patterns."}
+      ]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "retro-successful-launch",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.5,
+        "passed": 2,
+        "failed": 2,
+        "total": 4,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Q1 verdict reflects exceeded targets", "passed": true, "evidence": "Success noted in What Went Well and metrics table."},
+        {"text": "Q2 delivery shows all-green with WHY documentation", "passed": false, "evidence": "Clean delivery mentioned as bullet point. WHY not explored."},
+        {"text": "Q4 produces process observations despite success", "passed": false, "evidence": "Lessons are vague observations, not specific process changes."},
+        {"text": "Retro documents what went well, not only problems", "passed": true, "evidence": "What Went Well section present and populated."}
+      ]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "negative-no-outcome-data",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 3,
+        "failed": 0,
+        "total": 3,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Flags one week is too early for retro", "passed": true, "evidence": "'I can't run a meaningful retrospective right now.'"},
+        {"text": "Recommends waiting 4-12 weeks", "passed": true, "evidence": "'Schedule the retro for 6-8 weeks post-launch.'"},
+        {"text": "Offers delivery-focused Q2 review as alternative", "passed": true, "evidence": "Offers 'delivery-focused review covering Q2' with four specific questions."}
+      ]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "negative-no-outcome-data",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.0,
+        "passed": 0,
+        "failed": 3,
+        "total": 3,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Flags one week is too early for retro", "passed": false, "evidence": "Proceeds to produce full retro. Notes 'preliminary' but doesn't refuse."},
+        {"text": "Recommends waiting 4-12 weeks", "passed": false, "evidence": "'Follow-up retro in 4-6 weeks' buried in Next Steps, not primary recommendation."},
+        {"text": "Offers delivery-focused Q2 review as alternative", "passed": false, "evidence": "Discussion points touch delivery but not structured as focused alternative."}
+      ]
+    },
+    {
+      "eval_id": 4,
+      "eval_name": "negative-stakeholder-update",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 2,
+        "failed": 0,
+        "total": 2,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Does NOT produce a retro for stakeholder update request", "passed": true, "evidence": "'Not a Retrospective -- Redirecting.' Does not produce retro content."},
+        {"text": "Redirects to /stakeholder-update", "passed": true, "evidence": "'use /stakeholder-update -- it is designed for executive communication.'"}
+      ]
+    },
+    {
+      "eval_id": 4,
+      "eval_name": "negative-stakeholder-update",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.0,
+        "passed": 0,
+        "failed": 2,
+        "total": 2,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Does NOT produce a retro for stakeholder update request", "passed": false, "evidence": "Produces full stakeholder update. No boundary recognition."},
+        {"text": "Redirects to /stakeholder-update", "passed": false, "evidence": "No redirect. Produces the update directly."}
+      ]
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {"mean": 1.0, "stddev": 0.0, "min": 1.0, "max": 1.0},
+      "time_seconds": {"mean": 0, "stddev": 0, "min": 0, "max": 0},
+      "tokens": {"mean": 0, "stddev": 0, "min": 0, "max": 0}
+    },
+    "without_skill": {
+      "pass_rate": {"mean": 0.16, "stddev": 0.22, "min": 0.0, "max": 0.5},
+      "time_seconds": {"mean": 0, "stddev": 0, "min": 0, "max": 0},
+      "tokens": {"mean": 0, "stddev": 0, "min": 0, "max": 0}
+    },
+    "delta": {
+      "pass_rate": "+0.84",
+      "time_seconds": "0",
+      "tokens": "0"
+    }
+  },
+  "notes": [
+    "With-skill achieves 100% pass rate across all 16 assertions (4 evals). Without-skill passes only 3/16 (18.75%).",
+    "The skill's strongest differentiation is on structural/process requirements: metrics quality evaluation (Q3), specific process changes (Q4), PRODUCT.LOCAL.MD updates, and owner/due-date assignment -- none appear in without-skill outputs.",
+    "Negative evals show the biggest gap: without the skill, the model complies with invalid requests (runs retro without data, produces stakeholder update). With the skill, it correctly pushes back and redirects.",
+    "The 'uses actual data' assertion (eval 1) passes in both configurations -- this is non-discriminating and measures baseline LLM capability rather than skill value.",
+    "Time and token data not captured (runs executed inline, not via subagents)."
+  ]
+}

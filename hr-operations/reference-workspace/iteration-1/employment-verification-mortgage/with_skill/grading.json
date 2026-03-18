@@ -1,0 +1,40 @@
+{
+  "expectations": [
+    {
+      "text": "Produces a TYPE 3 (employment verification)",
+      "passed": true,
+      "evidence": "DOCUMENT TYPE header reads 'Employment Verification'. Letter format matches TYPE 3 template: confirms current employment, role, start date, and salary for mortgage application purpose."
+    },
+    {
+      "text": "Includes current salary (£65,000) because explicit written consent has been given",
+      "passed": true,
+      "evidence": "Line 18: 'Current annual salary: £65,000'. Line 13 notes: 'who has given written consent for the disclosure of his employment and salary details.'"
+    },
+    {
+      "text": "Confirms employment is ongoing as of the date of the letter",
+      "passed": true,
+      "evidence": "Line 20: 'This employment is ongoing as of the date of this letter.'"
+    },
+    {
+      "text": "Does NOT include future salary projections or pending bonuses unless confirmed",
+      "passed": true,
+      "evidence": "Only current annual salary stated (£65,000). No projections, pending bonuses, or future compensation mentioned."
+    },
+    {
+      "text": "Includes the 'REVIEW BEFORE SENDING' warning",
+      "passed": true,
+      "evidence": "Line 27: 'WARNING: REVIEW BEFORE SENDING -- This reference must be reviewed by HR before sending. Verify all facts against HRIS. Remove this note before issuing.'"
+    },
+    {
+      "text": "Uses appropriate formal letter structure addressed to 'To Whom It May Concern' or the named lender",
+      "passed": true,
+      "evidence": "Line 9: 'To Whom It May Concern,' — appropriate salutation since no specific lender name was provided. Formal letter structure with date, salutation, subject line, body, closing."
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  }
+}

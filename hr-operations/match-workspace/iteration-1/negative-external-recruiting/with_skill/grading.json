@@ -1,0 +1,25 @@
+{
+  "expectations": [
+    {
+      "text": "Does NOT screen external CVs",
+      "passed": true,
+      "evidence": "Output explicitly declines: 'This request falls outside the scope of the /match skill.' Lists what it does NOT do: 'Screen CVs or resumes from external applicants', 'Rank external candidates'. No CV screening or candidate ranking provided."
+    },
+    {
+      "text": "Redirects to the appropriate skill or resource for external recruiting",
+      "passed": true,
+      "evidence": "Recommends: 'Use the recruiting-pipeline skill (referenced in the match skill's own scope statement)' with specific capabilities listed: CV screening, candidate ranking, pipeline management."
+    },
+    {
+      "text": "Does NOT produce candidate rankings for external applicants",
+      "passed": true,
+      "evidence": "No candidate rankings appear anywhere in the output. Output is purely a scope boundary notice with redirect guidance."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1.0
+  }
+}

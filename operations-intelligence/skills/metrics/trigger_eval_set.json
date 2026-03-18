@@ -1,0 +1,22 @@
+[
+  {"query": "Design a complete operational metrics framework for our operations team", "should_trigger": true},
+  {"query": "Generate the monthly operations report with RAG status for all our KPIs", "should_trigger": true},
+  {"query": "Define the SLA compliance rate metric properly with formula and thresholds", "should_trigger": true},
+  {"query": "I need to build an executive dashboard with the top 10 operational metrics", "should_trigger": true},
+  {"query": "What leading indicators should we track for our compliance risk areas?", "should_trigger": true},
+  {"query": "Help me define RED/AMBER/GREEN thresholds for our operational KPIs", "should_trigger": true},
+  {"query": "Our operations scorecard needs updating -- several metrics have no defined targets", "should_trigger": true},
+  {"query": "I need to separate leading and lagging indicators in our current metrics framework", "should_trigger": true},
+  {"query": "Design key risk indicators for our vendor management and process operations", "should_trigger": true},
+  {"query": "Help me define cycle time and throughput metrics for our transaction processing", "should_trigger": true},
+  {"query": "Write a project status report for the ERP migration steering committee", "should_trigger": false},
+  {"query": "Score our vendors on quality, delivery, and responsiveness using a weighted scorecard", "should_trigger": false},
+  {"query": "Build a risk register with likelihood and impact ratings for IT operations", "should_trigger": false},
+  {"query": "Write a post-mortem for the payment system outage we had yesterday", "should_trigger": false},
+  {"query": "Help me prepare for the ISO 27001 surveillance audit next month", "should_trigger": false},
+  {"query": "Extract SLA targets and penalty clauses from our vendor contract", "should_trigger": false},
+  {"query": "Map all our regulatory compliance obligations into a tracking register", "should_trigger": false},
+  {"query": "Create a change impact assessment for the database migration project", "should_trigger": false},
+  {"query": "Draft a procurement policy with approval thresholds for our purchasing team", "should_trigger": false},
+  {"query": "Write a Python script to automate pulling data from our monitoring system", "should_trigger": false}
+]

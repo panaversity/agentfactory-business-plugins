@@ -1,0 +1,45 @@
+{
+  "expectations": [
+    {
+      "text": "Q1 (Did it solve the problem?) uses the actual data provided — adoption at 34% vs 50% target, support tickets down 60%, NPS up from 6.2 to 7.1 — cherry-picking positive metrics while ignoring the adoption miss would produce a misleading retro",
+      "passed": true,
+      "evidence": "Q1 section includes all three data points with explicit values: '[WARN] Adoption: 34% actual vs. 50% target — below goal by 16pp', '[PASS] Support tickets: reports-related tickets dropped 60%', '[PASS] NPS: reporting NPS improved from 6.2 to 7.1 (+0.9)'. The adoption miss is prominently flagged as WARN, not buried."
+    },
+    {
+      "text": "Q1 verdict reflects mixed results: adoption below target but support impact and NPS strongly positive — binary PASS/FAIL on a nuanced outcome misses the learning",
+      "passed": true,
+      "evidence": "Verdict is 'PARTIALLY SOLVED' with summary explaining 'Quick Reports significantly improved the user experience for those who adopted it' while 'adoption at 34% is well below the 50% target'. Uses nuanced verdict rather than binary."
+    },
+    {
+      "text": "Q2 (Did we build it as intended?) flags the 1-week delay and PDF export scope change — the scope change is the process issue that needs a corrective action, not just a footnote",
+      "passed": true,
+      "evidence": "Q2 marks scope as [FAIL] and explicitly states 'PDF export added without formal change control'. Concludes: 'the process that allowed uncontrolled scope expansion needs a corrective action.' The scope change is treated as the central process issue, not a footnote."
+    },
+    {
+      "text": "Q3 (Were the metrics right?) evaluates whether adoption %, support tickets, and NPS were the right things to measure — metrics quality is often the most valuable retro finding",
+      "passed": true,
+      "evidence": "Q3 evaluates all three metrics against four dimensions (measurable, sensitive, right thing to measure, failure threshold). Identifies that adoption alone is insufficient — recommends adding 'feature awareness' metric. Rates overall metric quality as MEDIUM. Identifies missing failure thresholds as a systemic gap."
+    },
+    {
+      "text": "Q4 (What would we do differently?) produces specific, testable process changes — 'communicate better' is not a process change; 'scope changes after sprint start require PM + eng lead sign-off' is",
+      "passed": true,
+      "evidence": "Three specific process improvements: (1) 'Scope changes after sprint start require written sign-off from both PM and engineering lead, with an explicit timeline impact assessment' (2) 'Every feature launch must include a discovery/activation funnel' (3) 'Every success metric in a spec must have a corresponding failure threshold.' All are specific, testable, enforceable."
+    },
+    {
+      "text": "PRODUCT.LOCAL.MD UPDATES section recommends at least one quality rule — a retro that produces zero configuration changes was a waste of everyone's time",
+      "passed": true,
+      "evidence": "Three PRODUCT.LOCAL.MD updates recommended: failure threshold requirement, scope change sign-off rule, and discovery funnel metrics requirement."
+    },
+    {
+      "text": "Follow-on actions have owners and due dates — actionless retros are therapy sessions, not improvement tools",
+      "passed": true,
+      "evidence": "Five follow-on actions listed, each with owner and due date: e.g., 'Investigate adoption gap: run user research — [PM] — Due: 2026-04-02', 'Update spec template to require failure thresholds — [PM] — Due: 2026-03-26'."
+    }
+  ],
+  "summary": {
+    "passed": 7,
+    "failed": 0,
+    "total": 7,
+    "pass_rate": 1.0
+  }
+}

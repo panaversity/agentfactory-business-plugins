@@ -1,0 +1,53 @@
+{
+  "skill_name": "delegation",
+  "evals": [
+    {
+      "id": 1,
+      "name": "delegate-analytics-brief",
+      "prompt": "Delegate the quarterly analytics brief to Omar. He needs to produce a 10-slide deck for the exec weekly on Monday. The brief should cover Q3 performance vs targets, with recommendations for Q4 budget allocation. Omar prefers async communication and dislikes last-minute requests.",
+      "expected_output": "A complete delegation record with specific deliverable (10-slide deck), named owner (Omar), specific deadline (before Monday exec weekly), context (Q3 performance for exec audience), handoff communication drafted in Omar's preferred async style, and follow-up plan with confirmation window and escalation triggers.",
+      "files": [],
+      "expectations": [
+        "Delegation record includes all seven quality checklist items: specific deliverable, named person, specific deadline, context with purpose and audience, format specified, delegatee's preferred style, and follow-up mechanism",
+        "Handoff communication is drafted in Omar's preferred async style (Slack or email, not a meeting request) and acknowledges any time pressure with an offer to adjust scope",
+        "Follow-up plan includes a confirmation window (24 hours for same-week items), midpoint check-in, and overdue handling protocol",
+        "A delegation log entry is proposed for work.local.md with all required fields including confirmed: false and status: PENDING CONFIRMATION"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "delegation-audit-open-items",
+      "prompt": "Show me all my open delegations. I want to see what I have delegated, to whom, what is overdue, and what needs follow-up this week.",
+      "expected_output": "A structured view of all open delegations from the delegation log in work.local.md, showing each delegation's status, owner, due date, and whether it is overdue or needs follow-up, with specific recommended actions for overdue items.",
+      "files": [],
+      "expectations": [
+        "Output loads the delegation log from work.local.md and presents all entries where status is not COMPLETE",
+        "Overdue delegations are flagged prominently with specific follow-up recommendations based on how long they are overdue (1 day, 3 days, 1 week thresholds)",
+        "Delegations awaiting confirmation are highlighted separately from those in progress",
+        "Output includes a recommended next action for each open delegation"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "negative-should-use-task-intelligence",
+      "prompt": "Brain dump: I need to finish the analytics brief, chase Omar on the vendor contract, prep for Monday exec weekly, and review the Nighthawk facility lease. Sort these by priority.",
+      "expected_output": "This query should be handled by task-intelligence, not delegation. Brain dump capture and P1/P2/P3 prioritisation is a task-intelligence function.",
+      "files": [],
+      "expectations": [
+        "This query is about capturing unstructured items and prioritising them — it matches task-intelligence triggers (brain dump, prioritise)",
+        "Delegation is for creating specific delegation records with handoff communication, not for sorting a personal to-do list"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "negative-should-use-task-management",
+      "prompt": "Add a task to my list: review the Q3 analytics report by Friday. Mark it as high priority.",
+      "expected_output": "This query should be handled by the official productivity plugin's task-management, not delegation. Basic task CRUD is the official plugin's responsibility.",
+      "files": [],
+      "expectations": [
+        "This query is about adding a task to a personal task list — it matches official productivity plugin task-management triggers (add task)",
+        "Delegation is for delegating work to others with handoff communication and follow-up, not for personal task management"
+      ]
+    }
+  ]
+}

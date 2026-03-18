@@ -1,0 +1,30 @@
+{
+  "expectations": [
+    {
+      "text": "Uses Value vs Effort matrix as requested, not RICE",
+      "passed": true,
+      "evidence": "Explicitly selects Value vs. Effort framework via the framework selection logic. Uses 2x2 quadrant matrix, not RICE scoring."
+    },
+    {
+      "text": "Items are placed in four quadrants (high-value/low-effort, high-value/high-effort, low-value/low-effort, low-value/high-effort)",
+      "passed": true,
+      "evidence": "ASCII 2x2 matrix with four quadrants labeled: Quick Wins, Strategic Bets, Fill-ins, Avoid. All 6 items placed in appropriate quadrants."
+    },
+    {
+      "text": "Assumptions behind value and effort estimates are visible",
+      "passed": true,
+      "evidence": "Dedicated 'Assumptions' table with Value Rationale and Effort Rationale columns for each of the 6 items, explaining why each was placed where it was."
+    },
+    {
+      "text": "The three mandatory challenges are still run after the framework",
+      "passed": true,
+      "evidence": "All three challenges present: Strategic Override Test (considers custom dashboard layouts, SSO), Data Gap Test (notification preferences, dark mode), What Would We Regret Test (identifies bulk user import, confirms alignment with matrix)."
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1.0
+  }
+}

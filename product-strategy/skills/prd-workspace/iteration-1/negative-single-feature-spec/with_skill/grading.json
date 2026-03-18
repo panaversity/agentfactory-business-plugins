@@ -1,0 +1,20 @@
+{
+  "expectations": [
+    {
+      "text": "The skill recognises this as a single-feature scope and recommends /write-spec instead of /prd",
+      "passed": true,
+      "evidence": "Response title: 'PRD Skill — Task Declined'. Body: 'Skill Decision: DECLINED — Wrong Tool'. Explicitly recommends: 'Use the /write-spec skill instead, which is designed for single-feature specifications scoped to one team and one-to-three sprints.'"
+    },
+    {
+      "text": "If a PRD is produced anyway, it should explicitly note that a feature spec would be more appropriate for this scope",
+      "passed": true,
+      "evidence": "No PRD was produced. The skill correctly declined. Additionally, it explains what would happen if forced: 'If the PRD template were applied anyway...' with per-section analysis showing most sections would be N/A or over-engineered."
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 0,
+    "total": 2,
+    "pass_rate": 1.0
+  }
+}

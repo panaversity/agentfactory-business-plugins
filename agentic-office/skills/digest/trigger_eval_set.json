@@ -1,0 +1,82 @@
+[
+  {
+    "query": "Give me my daily digest — what do I need to know today?",
+    "should_trigger": true
+  },
+  {
+    "query": "Morning briefing please — what is happening today and what should I focus on?",
+    "should_trigger": true
+  },
+  {
+    "query": "What's happening today? I need the overview before I start",
+    "should_trigger": true
+  },
+  {
+    "query": "Start of day brief — calendar, delegations, priorities",
+    "should_trigger": true
+  },
+  {
+    "query": "It is Monday morning — give me my start of week briefing with the week ahead",
+    "should_trigger": true
+  },
+  {
+    "query": "Weekly digest please — what do I need to know for this week?",
+    "should_trigger": true
+  },
+  {
+    "query": "Friday close — what did we complete this week and what carries over?",
+    "should_trigger": true
+  },
+  {
+    "query": "What is due today? Give me my daily overview",
+    "should_trigger": true
+  },
+  {
+    "query": "Morning rundown — quick summary of today's critical path and meetings",
+    "should_trigger": true
+  },
+  {
+    "query": "What do I need to know today before my first meeting?",
+    "should_trigger": true
+  },
+  {
+    "query": "Give me the executive dashboard with RAG status across all projects",
+    "should_trigger": false
+  },
+  {
+    "query": "Prep me for the 2pm board meeting with agenda context and stakeholder positions",
+    "should_trigger": false
+  },
+  {
+    "query": "Brain dump my priorities and sort them into P1 P2 P3",
+    "should_trigger": false
+  },
+  {
+    "query": "Delegate the analytics brief to Omar with a handoff message",
+    "should_trigger": false
+  },
+  {
+    "query": "Search all memory layers for everything about Project Nighthawk",
+    "should_trigger": false
+  },
+  {
+    "query": "Load cross-domain context for the restructuring project",
+    "should_trigger": false
+  },
+  {
+    "query": "Add a new person to workplace memory — Fatima Khan, Head of Legal",
+    "should_trigger": false
+  },
+  {
+    "query": "Give me a situation brief on the vendor dispute before my call",
+    "should_trigger": false
+  },
+  {
+    "query": "Configure the agentic office and set up my workplace memory",
+    "should_trigger": false
+  },
+  {
+    "query": "Synthesise the meeting notes from the exec weekly — decisions, actions, follow-ups",
+    "should_trigger": false
+  }
+]

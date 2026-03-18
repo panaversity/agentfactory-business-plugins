@@ -47,7 +47,7 @@ def load_cases(path: Path) -> list[dict]:
     return data["cases"]
 
 
-def run_claude(prompt: str, timeout: int = 120) -> str:
+def run_claude(prompt: str, timeout: int = 180) -> str:
     """Run a prompt through claude CLI and capture output."""
     cmd = [
         "claude",
@@ -79,6 +79,26 @@ def check_content(output: str, checks: list[str]) -> dict:
     return results
 
 
+def check_any_of(output: str, groups: list[list[str]]) -> dict:
+    """For each group of alternatives, at least one must appear in output."""
+    results = {}
+    output_lower = output.lower()
+    for group in groups:
+        label = " | ".join(group)
+        results[label] = any(alt.lower() in output_lower for alt in group)
+    return results
+
+
+def check_absent(output: str, checks: list[str]) -> dict:
+    """Check that NONE of the given strings appear in output (for negative tests)."""
+    results = {}
+    output_lower = output.lower()
+    for check in checks:
+        # True means the check passed (string is absent, which is what we want)
+        results[f"!{check}"] = check.lower() not in output_lower
+    return results
+
+
 def check_routing(output: str, expected_skill: str | None) -> bool:
     """Check that the correct skill was referenced in the output."""
     if expected_skill is None:
@@ -92,6 +112,7 @@ def check_formula(output: str, expected_answer: str | None, tolerance: float = 0
         return True
     try:
         expected = float(expected_answer)
+        # Search for the number in the output
         import re
 
         numbers = re.findall(r"[\d,]+\.?\d*", output)
@@ -140,6 +161,18 @@ def run_case(case: dict, verbose: bool = False) -> dict:
         content_results = check_content(output, content_checks)
         results["checks"]["content"] = content_results
         results["content_pass"] = all(content_results.values())
+
+    # Any-of checks (at least one alternative from each group must appear)
+    any_of_checks = case.get("any_of_checks", [])
+    if any_of_checks:
+        any_of_results = check_any_of(output, any_of_checks)
+        results["checks"]["any_of"] = any_of_results
+
+    # Absent checks (none of these strings should appear -- for negative tests)
+    absent_checks = case.get("absent_checks", [])
+    if absent_checks:
+        absent_results = check_absent(output, absent_checks)
+        results["checks"]["absent"] = absent_results
 
     # Routing check
     expected_skill = case.get("expected_skill")

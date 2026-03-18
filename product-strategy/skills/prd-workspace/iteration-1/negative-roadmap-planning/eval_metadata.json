@@ -1,0 +1,9 @@
+{
+  "eval_id": 4,
+  "eval_name": "negative-roadmap-planning",
+  "prompt": "Help me plan our product roadmap for Q3 and Q4. I need to decide which initiatives to pursue and in what order.",
+  "assertions": [
+    "The skill does NOT produce a PRD for a roadmap planning request — roadmap planning involves sequencing multiple initiatives, not documenting one",
+    "Redirects to /roadmap-update or /prioritise depending on whether the user needs sequencing or scoring"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "eval_id": 4,
+  "eval_name": "negative-onboarding-plan",
+  "prompt": "We have a new starter joining the data team next Monday. Can you create an onboarding plan covering their first 30-60-90 days?",
+  "assertions": [
+    "Does NOT create an onboarding plan",
+    "Redirects to the appropriate skill or resource for onboarding",
+    "Does NOT confuse knowledge transfer with onboarding"
+  ]
+}

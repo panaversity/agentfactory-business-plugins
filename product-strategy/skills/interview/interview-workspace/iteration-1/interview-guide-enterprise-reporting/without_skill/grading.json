@@ -1,0 +1,35 @@
+{
+  "expectations": [
+    {
+      "text": "Questions are appropriate for C-level stakeholders",
+      "passed": false,
+      "evidence": "Several questions are too granular for CFOs/Finance Directors: Q5 'What reporting tools do you use? (BI tools, Excel, our product, etc.)' is operational, Q6 'How often do you generate reports?' and Q8 'How satisfied are you with your current reporting capabilities on a scale of 1-10?' are survey-style questions inappropriate for executive interviews. Q16 'What's your budget for reporting solutions?' is too blunt for an executive discovery conversation."
+    },
+    {
+      "text": "Duration is appropriate for executive availability (30-45 minutes)",
+      "passed": false,
+      "evidence": "Duration is set to 60 minutes. CFOs and finance directors at 500+ employee companies rarely have 60 minutes for product research interviews."
+    },
+    {
+      "text": "Core discovery focuses on reporting workflow pain, not feature wish lists",
+      "passed": false,
+      "evidence": "Part 4 'Custom Reporting Needs' is essentially a feature wish list: Q10 'What specific customizations would be most valuable?', Q11 'Would you prefer self-service report building or having reports built for you?', Q12 'How important is real-time data vs. periodic snapshots?', Q13 'What would the ideal reporting dashboard look like for you?', Q14 'Would you be willing to pay more for advanced reporting features?'. The guide leads with solutions rather than exploring pain."
+    },
+    {
+      "text": "Includes probes for budget and decision-making authority",
+      "passed": true,
+      "evidence": "Part 5 includes Q15 'Who makes purchasing decisions for analytics and reporting tools?' and Q16 'What's your budget for reporting solutions?' — these address decision-making and budget, though they are quite direct/blunt for executive interviews."
+    },
+    {
+      "text": "The five design principles are followed (behaviour over opinion, past over hypothetical, problem before solution, silence is data, why five times)",
+      "passed": false,
+      "evidence": "Multiple violations: (1) Behaviour over opinion — Q8 asks for satisfaction on a 1-10 scale (opinion), Q13 asks for 'ideal dashboard' (opinion). (2) Past over hypothetical — Q11, Q12, Q14 are all hypothetical. (3) Problem before solution — Part 4 introduces feature concepts before fully exploring the problem space. (4) Silence is data — not mentioned anywhere. (5) Why five times — no follow-up depth prompts or 'why' probes included. Only Q4 'Walk me through how you currently create and distribute reports' follows best practice."
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 4,
+    "total": 5,
+    "pass_rate": 0.2
+  }
+}

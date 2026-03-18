@@ -1,0 +1,82 @@
+[
+  {
+    "query": "Calculate my unit economics — what's my CAC, LTV, and payback period?",
+    "should_trigger": true
+  },
+  {
+    "query": "Build me a 3-scenario revenue and runway model with breakeven analysis",
+    "should_trigger": true
+  },
+  {
+    "query": "How long will my $200K in the bank last at current burn rate? Show me the runway",
+    "should_trigger": true
+  },
+  {
+    "query": "What are my unit economics? I'm spending $5K/month on ads getting 20 customers at $50/month with 5% monthly churn",
+    "should_trigger": true
+  },
+  {
+    "query": "Am I ready for a Series A? Assess my metrics against typical benchmarks",
+    "should_trigger": true
+  },
+  {
+    "query": "Do a sensitivity analysis — what happens to breakeven if churn doubles?",
+    "should_trigger": true
+  },
+  {
+    "query": "How many customers do I need to break even? My fixed costs are $15K/month and contribution per customer is $30",
+    "should_trigger": true
+  },
+  {
+    "query": "Build me a fundraising model — I'm raising $1M and need to show what the capital buys and when I'll need to raise again",
+    "should_trigger": true
+  },
+  {
+    "query": "What's my MRR and ARR trajectory if I grow at 10% month-over-month for 18 months?",
+    "should_trigger": true
+  },
+  {
+    "query": "My churn is 8% monthly — is that good or bad? What does it mean for my LTV?",
+    "should_trigger": true
+  },
+  {
+    "query": "Build me a business model canvas with all 9 blocks",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a pitch deck narrative for my investor meeting",
+    "should_trigger": false
+  },
+  {
+    "query": "Who are my competitors and what's their market share?",
+    "should_trigger": false
+  },
+  {
+    "query": "Help me brainstorm 100 ideas for a new product",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a customer discovery interview guide for talking to CFOs",
+    "should_trigger": false
+  },
+  {
+    "query": "Plan my next 2-week sprint with user stories",
+    "should_trigger": false
+  },
+  {
+    "query": "What GAAP rules apply to revenue recognition for SaaS?",
+    "should_trigger": false
+  },
+  {
+    "query": "Help me set up a Docker container for my API",
+    "should_trigger": false
+  },
+  {
+    "query": "Write unit tests for my Python billing module",
+    "should_trigger": false
+  },
+  {
+    "query": "Should I pivot based on our pilot results? 2 of 5 customers churned",
+    "should_trigger": false
+  }
+]

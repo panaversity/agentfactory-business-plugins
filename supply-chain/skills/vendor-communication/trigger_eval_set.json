@@ -1,0 +1,22 @@
+[
+  {"query": "Draft an invoice dispute notice for INV-2024-0847 from Acme — there's a GBP 2,250 price variance against the PO and 50 units over-invoiced on line 2", "should_trigger": true},
+  {"query": "Write a corrective action request to Brenntag about their OTD declining from 92% to 85% over the last quarter. Our SLA is 95%", "should_trigger": true},
+  {"query": "Our critical vendor just announced a restructuring. Write an emergency supply assurance request asking them to confirm production capacity for 90 days", "should_trigger": true},
+  {"query": "The notice deadline for our packaging contract with GlobalPack is in 25 days. Draft a non-renewal notice per the contract terms", "should_trigger": true},
+  {"query": "we've decided to exit our relationship with a low-performing MRO vendor. draft a transition notice covering the wind-down timeline, tooling return, and documentation transfer", "should_trigger": true},
+  {"query": "I need to send a formal price dispute letter to our steel supplier — they've been charging above the contracted rate for 3 consecutive months", "should_trigger": true},
+  {"query": "Write a warning letter to a vendor whose quality rejection rate has exceeded our 2% threshold for the second consecutive quarter. Include the performance data and request a response plan", "should_trigger": true},
+  {"query": "Draft an email to our vendor asking them to confirm their ISO 9001 renewal is in progress — it expires in 45 days and we haven't received evidence", "should_trigger": true},
+  {"query": "A vendor wants to change their bank details via email. I know we can't just accept this. Write a communication explaining our verification process and asking them to contact us by phone", "should_trigger": true},
+  {"query": "Write a supply assurance request to 3 vendors in our electronics supply chain after news of a semiconductor shortage — need confirmation they can fulfil our orders for Q2", "should_trigger": true},
+  {"query": "Do a full six-dimension vendor assessment for our packaging supplier — commercial, operational, financial, compliance, strategic, geopolitical", "should_trigger": false},
+  {"query": "Reconcile this invoice against the PO and goods receipt — the price is 5% above agreed rate", "should_trigger": false},
+  {"query": "Review carrier performance for our top 5 carriers and produce a quarterly scorecard", "should_trigger": false},
+  {"query": "Analyze our procurement spend by category and find consolidation opportunities", "should_trigger": false},
+  {"query": "Our steel supplier's credit rating dropped to CCC — produce a full five-dimension risk assessment", "should_trigger": false},
+  {"query": "Generate the weekly supply chain brief for the CPO with traffic lights and contract calendar", "should_trigger": false},
+  {"query": "We're considering opening a DC in Poland — run the network design scenario comparison", "should_trigger": false},
+  {"query": "What's the market benchmark price for corrugated board in the UK? Are we paying above market?", "should_trigger": false},
+  {"query": "Help me classify vendors using the Kraljic matrix — I have 10 vendors to categorise into tiers", "should_trigger": false},
+  {"query": "Our expedited freight is 18% of total spend. Analyze the root causes and recommend interventions", "should_trigger": false}
+]
