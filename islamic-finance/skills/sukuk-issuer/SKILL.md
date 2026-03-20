@@ -6,6 +6,10 @@ description: >
   sukuk originator, sukuk proceeds, purchase undertaking, sukuk liability,
   sukuk equity, FAS 33, IAS 32 sukuk, sukuk derecognition,
   green sukuk, sustainable sukuk, sale and leaseback sukuk.
+metadata:
+  version: "1.0"
+  author: "Panaversity — The AI Agent Factory"
+  standard: "AAOIFI FAS 33 (Investment in Sukuk — Issuer), IAS 32"
 ---
 
 ## SUKUK TYPES AND UNDERLYING STRUCTURES

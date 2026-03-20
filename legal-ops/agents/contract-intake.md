@@ -5,7 +5,13 @@ description: >
   documents, routes to appropriate review workflows, tracks SLA compliance,
   and manages post-execution actions. Use when new contracts, NDAs, or legal
   documents arrive for processing.
-tools: Read, Write, Edit, Bash, Glob, Grep
+tools:
+  - Read
+  - Write
+  - Edit
+  - Bash
+  - Glob
+  - Grep
 model: inherit
 ---
 

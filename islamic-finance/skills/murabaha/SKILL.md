@@ -5,6 +5,10 @@ description: >
   commodity murabaha, tawarruq, FAS 2, murabaha receivable,
   deferred murabaha income, murabaha portfolio, murabaha schedule,
   murabaha profit recognition, mark-up financing.
+metadata:
+  version: "1.0"
+  author: "Panaversity — The AI Agent Factory"
+  standard: "AAOIFI FAS 2 (Murabaha and Murabaha to the Purchase Orderer)"
 ---
 
 ## CORE PRINCIPLE

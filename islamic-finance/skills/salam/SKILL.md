@@ -4,6 +4,10 @@ description: >
   Activate for: salam, forward purchase Islamic, advance payment commodity,
   FAS 7, agricultural finance Islamic, salam receivable, parallel salam,
   commodity forward Islamic, advance purchase contract.
+metadata:
+  version: "1.0"
+  author: "Panaversity — The AI Agent Factory"
+  standard: "AAOIFI FAS 7 (Salam and Parallel Salam)"
 ---
 
 ## THE STRUCTURE

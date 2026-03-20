@@ -5,6 +5,10 @@ description: >
   co-ownership finance, Islamic home finance, declining musharaka,
   bank equity share, FAS 4, diminishing musharaka schedule,
   rental on bank share, equity buy-out, Islamic mortgage.
+metadata:
+  version: "1.0"
+  author: "Panaversity — The AI Agent Factory"
+  standard: "AAOIFI FAS 4 (Musharaka Financing)"
 ---
 
 ## THE STRUCTURE

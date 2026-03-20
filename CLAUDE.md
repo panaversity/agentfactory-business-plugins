@@ -7,11 +7,17 @@ is a self-contained directory following the Claude Code plugin spec.
 
 | Plugin | Path | Skills | Agents | Version |
 |--------|------|--------|--------|---------|
+| Agentic Office | `agentic-office/` | 10 | 4 | 1.0.0 |
 | Banking | `banking/` | 17 | 0 | 2.0.0 |
+| HR Operations | `hr-operations/` | 5 | 4 | 1.0.0 |
+| IDFA Financial Architect | `idfa-financial-architect/` | 2 | 0 | 2.0.0 |
+| Innovation | `innovation/` | 10 | 4 | 1.0.0 |
 | Islamic Finance | `islamic-finance/` | 13 | 0 | 3.0.0 |
-| IDFA Financial Architect | `idfa-financial-architect/` | 2 | 0 | 1.0 |
 | Legal Operations | `legal-ops/` | 6 | 1 | 3.0.0 |
-| Sales, RevOps & Marketing | `sales-revops-marketing/` | 15 | 5 | 1.0 |
+| Operations Intelligence | `operations-intelligence/` | 4 | 4 | 1.0.0 |
+| Product Strategy | `product-strategy/` | 6 | 3 | 1.0.0 |
+| Sales, RevOps & Marketing | `sales-revops-marketing/` | 15 | 5 | 1.0.0 |
+| Supply Chain | `supply-chain/` | 8 | 5 | 1.0.0 |
 
 ## Before Building a New Plugin — Check Anthropic's First-Party Plugins
 

@@ -10,6 +10,7 @@ description: >
   NOT for: IFRS 9 ECL model calculation (use ifrs9-ecl), capital adequacy
   reporting (use basel-capital), AML transaction monitoring (use aml-typologies).
 metadata:
+  version: "1.0"
   author: "Panaversity — The AI Agent Factory"
 ---
 
@@ -226,7 +227,5 @@ Settlement failure: notify front office; calculate cost of fail (penalty or oppo
 - NEVER allow suspense items > 30 days without a documented escalation and write-off assessment on file
 - NEVER produce a reconciliation certificate with unexplained differences
 - NEVER confuse a write-off (balance sheet derecognition) with an impairment charge (P&L event)
-
-ALL OUTPUTS REQUIRE REVIEW BY A QUALIFIED PROFESSIONAL BEFORE USE IN REGULATORY FILINGS OR BUSINESS DECISIONS.
 
 ALL OUTPUTS REQUIRE REVIEW BY A QUALIFIED PROFESSIONAL BEFORE USE IN REGULATORY FILINGS OR BUSINESS DECISIONS.
