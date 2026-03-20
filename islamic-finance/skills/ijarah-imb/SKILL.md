@@ -5,6 +5,10 @@ description: >
   FAS 8, FAS 32, rental income, lease ending in ownership, operating lease Islamic,
   finance lease Islamic, right-of-use asset Islamic, IFRS 16 Islamic,
   ijarah assets, ijarah rental schedule, ijarah depreciation.
+metadata:
+  version: "1.0"
+  author: "Panaversity — The AI Agent Factory"
+  standard: "AAOIFI FAS 8 (Ijarah), FAS 32 (Ijarah)"
 ---
 
 ## THE FUNDAMENTAL SHARIAH DISTINCTION

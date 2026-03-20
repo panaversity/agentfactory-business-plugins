@@ -6,6 +6,10 @@ description: >
   profit equalization reserve, investment risk reserve, restricted investment account,
   unrestricted investment account, FAS 3, profit pool, profit distribution,
   weightage table, Islamic deposit.
+metadata:
+  version: "1.0"
+  author: "Panaversity — The AI Agent Factory"
+  standard: "AAOIFI FAS 3 (Mudaraba Financing)"
 ---
 
 ## THE STRUCTURE

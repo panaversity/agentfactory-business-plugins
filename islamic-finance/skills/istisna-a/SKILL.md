@@ -5,6 +5,10 @@ description: >
   FAS 10, parallel istisna'a, percentage of completion, project finance Islamic,
   istisna'a receivable, istisna'a in progress, construction contract Islamic,
   infrastructure sukuk construction, milestone financing.
+metadata:
+  version: "1.0"
+  author: "Panaversity — The AI Agent Factory"
+  standard: "AAOIFI FAS 10 (Istisna'a and Parallel Istisna'a)"
 ---
 
 ## THE STRUCTURE

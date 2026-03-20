@@ -6,6 +6,10 @@ description: >
   sukuk FVOCI, sukuk FVTPL, FAS 25, sukuk income accrual,
   sukuk mark-to-market, Government Investment Issue, GII,
   Government of Pakistan Ijarah Sukuk, GIS, sukuk ECL.
+metadata:
+  version: "1.0"
+  author: "Panaversity — The AI Agent Factory"
+  standard: "AAOIFI FAS 25 (Investment in Sukuk), IFRS 9 Classification"
 ---
 
 ## INVESTOR CLASSIFICATION — IFRS 9

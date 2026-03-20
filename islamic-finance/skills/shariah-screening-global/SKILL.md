@@ -1,11 +1,15 @@
 ---
 name: shariah-screening-global
 description: >
-  Activate for Shariah screening, halal stocks, Shariah-compliant portfolio,
+  Activate for: Shariah screening, halal stocks, Shariah-compliant portfolio,
   prohibited sectors Islamic, financial ratio screen Islamic, purification,
   PSX Shariah list, SC Malaysia Shariah list, Tadawul Shariah,
   MSCI Islamic index, DJIM, Dow Jones Islamic, AAOIFI Shariah Standard 21,
   non-permissible income, debt ratio screen, interest-bearing securities screen.
+metadata:
+  version: "1.0"
+  author: "Panaversity — The AI Agent Factory"
+  standard: "AAOIFI Shariah Standard 21, SC Malaysia Guidelines, S&P Dow Jones Islamic Index"
 ---
 
 ## THE FOUR SCREENING METHODOLOGIES — GLOBAL COMPARISON

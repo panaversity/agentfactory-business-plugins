@@ -5,6 +5,10 @@ description: >
   institutional zakat, ZATCA zakat, zakat and ushr, sadaqah,
   non-Shariah income purification, charity payable Islamic,
   zakat on bank accounts, zakat disclosure, zakat journal entry.
+metadata:
+  version: "1.0"
+  author: "Panaversity — The AI Agent Factory"
+  standard: "AAOIFI FAS 9 (Zakah), ZATCA Regulations (KSA)"
 ---
 
 ## THE GLOBAL ZAKAT LANDSCAPE

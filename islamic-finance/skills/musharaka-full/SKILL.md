@@ -5,6 +5,10 @@ description: >
   musharaka capital, profit and loss sharing, musharaka investment,
   FAS 4 musharaka, running musharaka, working capital musharaka,
   project musharaka, permanent musharaka.
+metadata:
+  version: "1.0"
+  author: "Panaversity — The AI Agent Factory"
+  standard: "AAOIFI FAS 4 (Musharaka Financing)"
 ---
 
 ## THE STRUCTURE
