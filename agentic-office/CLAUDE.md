@@ -84,6 +84,18 @@ Plus configuration sections: digest, dashboard, agent integrations, decision log
 - **meeting-intelligence-agent**: calendar-triggered meeting prep and synthesis
 - **work-tracker**: delegation lifecycle, overdue alerts, weekly audit
 
+### Cowork Mode
+
+In Cowork, the four background agents do not auto-invoke. They must be activated
+via **Scheduled Tasks** (see `COWORK-SCHEDULED-TASKS.md`). The recommended schedule:
+
+- Memory Keeper: Monday 06:30 AM (weekly staleness checks)
+- Meeting Intelligence: Daily 08:30 AM (meeting prep briefs)
+- Work Tracker: Daily 08:50 AM (delegation and overdue tracking)
+- Chief of Staff: Daily 09:00 AM (morning digest assembly)
+
+All skills work identically in both CLI and Cowork. Only agent invocation differs.
+
 ## Universal Rules -- Non-Negotiable
 
 - NEVER use generic terminology when work.local.md provides specific terms
