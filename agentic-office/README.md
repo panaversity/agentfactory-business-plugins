@@ -73,6 +73,45 @@ This creates your `work.local.md` workplace memory file and walks you through co
 | `meeting-intelligence-agent` | Calendar-triggered prep, post-meeting synthesis, weekly meeting audit     | meeting-intelligence, executive-brief, workplace-context                    |
 | `work-tracker`               | Delegation lifecycle, overdue protocol, weekly delegation audit           | delegation, task-intelligence, progress-tracker                             |
 
+## Cowork Mode: Activating the Agents with Scheduled Tasks
+
+The four agents listed above have `background: true` in their frontmatter. In **Claude Code CLI**, this enables automatic background invocation when trigger conditions are met (new person mentioned, meeting approaching, etc.).
+
+In **Cowork mode**, background agents do not auto-invoke on their own. To get the same persistent agent behavior, you need to create **Scheduled Tasks** that invoke each agent at the right time. This gives you the same daily digest, meeting prep, delegation tracking, and memory maintenance - just powered by Cowork's scheduler instead of CLI background mode.
+
+### Recommended Schedule
+
+| Time (local) | Agent | Frequency | What it does |
+| ------------ | ----- | --------- | ------------ |
+| 06:30 AM Mon | `memory-keeper` | Weekly | Staleness checks on projects, people, terminology, orphaned actions |
+| 08:30 AM | `meeting-intelligence-agent` | Daily | Meeting prep briefs for today's calendar + Friday meeting audit |
+| 08:50 AM | `work-tracker` | Daily | Delegation status, overdue flags, confirmation checks + Friday audit |
+| 09:00 AM | `chief-of-staff` | Daily | Morning digest (Mon: week-ahead brief, Fri: week-close summary) |
+
+### Quick Setup
+
+You can set up all four scheduled tasks at once by giving Claude this prompt in Cowork:
+
+```
+Please read the file at agentic-office/COWORK-SCHEDULED-TASKS.md
+and create all four agent scheduled tasks using the schedule and
+prompts defined there.
+```
+
+Or create them manually from the Cowork sidebar under Scheduled Tasks.
+
+### What Changes in Cowork vs CLI
+
+| Behavior | Claude Code CLI | Cowork |
+| -------- | --------------- | ------ |
+| Agent auto-invocation | `background: true` handles it | Scheduled Tasks handle it |
+| Calendar-triggered meeting prep | Automatic (if calendar MCP connected) | Scheduled task checks calendar daily |
+| Trigger-based memory updates | Detected in conversation | Detected in conversation (same) |
+| Threshold breach alerts | Real-time | Included in next scheduled digest |
+| Weekly audits (Fri/Mon) | Automatic | Scheduled tasks run on those days |
+
+The skills (digest, delegation, meeting-intelligence, etc.) work identically in both modes. Only the agent invocation mechanism differs.
+
 ## Trigger Word Separation
 
 The official Productivity plugin and the Agentic Office plugin use completely separate trigger vocabularies to avoid routing conflicts:
