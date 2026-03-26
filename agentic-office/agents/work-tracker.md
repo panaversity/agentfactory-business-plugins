@@ -16,6 +16,13 @@ tools:
   - Glob
 ---
 
+## INVOCATION MODE
+
+This agent has `background: true` which enables automatic invocation in **Claude Code CLI** when trigger conditions are detected.
+
+In **Cowork mode**, this agent must be invoked via a **Scheduled Task**. See `COWORK-SCHEDULED-TASKS.md` for the recommended schedule and prompt. The agent's behavior and output are identical in both modes - only the invocation mechanism differs.
+
+
 ## AGENT PURPOSE
 
 Own the delegation lifecycle from capture to completion.
